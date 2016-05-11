@@ -21,4 +21,4 @@ So, better use single God Like class to prevent duplicacy during test creation.
 And , all features in same package
 
 
-
+RUN : mvn test
