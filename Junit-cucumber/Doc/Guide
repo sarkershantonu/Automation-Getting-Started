@@ -20,5 +20,41 @@ as all step defination method names are cucumber entry, all names should be uniq
 So, better use single God Like class to prevent duplicacy during test creation.
 And , all features in same package
 
+CucumberOptions allows to have
+  -> steps in different package via glue
+  -> features in different folders via features
+
+Example :
+1. All manually config : all can stay separately
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = {"pretty"}/*Default config upto this, rest of them to support different test organization*/
+        , features = {"src/test/resources/skeleton", "src/test/resources/regression"}  //=> this will allow folder structure inside resources
+        , glue = {"skeleton", "regression"}// this will aloow step definations in different package, no input[glue = {""}] will get all items from package
+)
+public class CucumberTest {
+}
+
+2. Default :(keeping runer in same package)
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = {"pretty"})
+public class CucumberTest {
+
+3. not specifying step def, default it will get all
+
+@RunWith(Cucumber.class)
+@CucumberOptions(plugin = {"pretty"}
+        , features = {"src/test/resources/skeleton", "src/test/resources/regression"}
+        , glue = {""}
+)
+public class CucumberTest {
+}
+
+
+
+
+
+
+
+
 
 RUN : mvn test

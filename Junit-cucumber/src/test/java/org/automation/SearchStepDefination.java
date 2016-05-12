@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 /**
  * TOdo
  */
-public class ProjectStepDefination {
+public class SearchStepDefination {
 
     @Given("^I open firefox browser$")
     public void i_open_firefox_browser() throws Throwable {
