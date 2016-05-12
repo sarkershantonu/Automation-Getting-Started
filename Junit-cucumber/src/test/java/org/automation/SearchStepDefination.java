@@ -23,14 +23,14 @@ public class SearchStepDefination {
 
     }
 
-    @Given("^I open (\\w+) browser$")
+    @Given("^I open (.+) browser$")
     public void i_open_firefox_browser(String nameOfBrowser) throws Throwable {
        driver = Browser.getInstance(nameOfBrowser);
     }
 
     @When("^I type (.+) and press enter$")
     public void i_type_http_demo_opencart_com_and_press_enter(String url) throws Throwable {
-       driver.get(url);
+       driver.navigate().to(url);
     }
 
     @Then("^I can see page loaded with title \"([^\"]*)\"$")
