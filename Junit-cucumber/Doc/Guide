@@ -29,7 +29,7 @@ Example :
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = {"pretty"}/*Default config upto this, rest of them to support different test organization*/
         , features = {"src/test/resources/skeleton", "src/test/resources/regression"}  //=> this will allow folder structure inside resources
-        , glue = {"skeleton", "regression"}// this will aloow step definations in different package, no input[glue = {""}] will get all items from package
+        , glue = {"skeleton", "regression"}// this will aloow step definations in different packages(package name only), no input[glue = {""}] will get all items from package
 )
 public class CucumberTest {
 }
@@ -51,8 +51,13 @@ public class CucumberTest {
 
 
 
+Format/Plugins :
 
+pretty = will show detail in console + test plugins
+html:target/cucumberReport : create a filder that contains whole set of files to show reports in html => use a http server to show
+json:target/cucumber.json : creates a JSON file containing report
 
+Note : a nice example : http://www.srccodes.com/p/article/48/cucumber-test-behavior-driven-development-bdd-feature-step-runner-glue-gherkin-data-table-scenario-given-when-then
 
 
 
