@@ -18,14 +18,15 @@ public class Browser {
 
     public static WebDriver getInstance(String browserName){
         if(driver==null){
-            driver = getABrowser(browserName);
+            //driver = getABrowser(browserName);
+            driver = new FirefoxDriver();
         }
         return driver;
     }
 
     private Browser(){}
 
-    public static WebDriver getABrowser(String nameOfBrowser) {
+    private static WebDriver getABrowser(String nameOfBrowser) {
 
         if (nameOfBrowser == "firefox") {
             return new FirefoxDriver();
@@ -38,7 +39,9 @@ public class Browser {
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
         } else {
+            System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
             return new ChromeDriver();
+
         }
     }
 
