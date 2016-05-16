@@ -3,8 +3,6 @@ package org.pages;
 import lombok.Getter;
 import org.automation.PageBase;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by shantonu on 5/16/16.
@@ -12,8 +10,8 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage extends PageBase {
     public HomePage(WebDriver aDriver) {
         super(aDriver);
-        searchPanel = new Search(driver);
+        search = new SearchPanel(driver);
     }
 
-    private @Getter Search searchPanel;
+    private @Getter SearchPanel search;
 }

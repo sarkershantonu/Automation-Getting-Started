@@ -1,5 +1,6 @@
 package org.automation;
 
+import lombok.Getter;
 import lombok.Setter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -8,8 +9,8 @@ import org.openqa.selenium.support.PageFactory;
  * Created by shantonu on 5/9/16.
  */
 public abstract class PageBase {
-    protected String name;
-    protected @Setter String url;
+    private @Getter @Setter String name;
+    private  @Getter @Setter String url;
     protected WebDriver driver;
 
     private PageBase(){

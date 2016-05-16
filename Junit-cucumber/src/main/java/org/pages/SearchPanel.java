@@ -10,14 +10,14 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by shantonu on 5/17/16.
  */
-public class Search extends PageBase {
+public class SearchPanel extends PageBase {
     @FindBy(xpath = "//div[@id='search']/input")
-    public WebElement searchTextBox ;
+    private @Getter WebElement textBox ;
 
     @FindBy(xpath = "//div[@id='search']/span/button")//property loading or after parsing or static
-    private @Getter WebElement searchButton;
+    private @Getter WebElement button;
 
-    public Search(WebDriver aDriver) {
+    public SearchPanel(WebDriver aDriver) {
         super(aDriver);
     }
 }

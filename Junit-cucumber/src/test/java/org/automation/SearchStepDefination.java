@@ -1,11 +1,8 @@
 package org.automation;
 
-import cucumber.api.java.Before;
 import cucumber.api.java.en.*;
-import cucumber.api.junit.Cucumber;
 import org.junit.Assert;
 import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.pages.HomePage;
 
@@ -45,9 +42,9 @@ public class SearchStepDefination {
     @Then("^I type (.+) in search box  And I click search button$")
     public void i_type_in_Iphone_in_search_box_And_I_click_search_button(String word) throws Throwable {
 
-        home.getSearchPanel().searchTextBox.clear();
-        home.getSearchPanel().searchTextBox.sendKeys(word);
-        home.getSearchPanel().getSearchButton().click();
+        home.getSearch().getTextBox().clear();
+        home.getSearch().getTextBox().sendKeys(word);
+        home.getSearch().getButton().click();
 
     }
 
