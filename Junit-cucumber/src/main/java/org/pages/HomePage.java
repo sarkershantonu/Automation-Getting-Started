@@ -1,5 +1,6 @@
 package org.pages;
 
+import lombok.Getter;
 import org.automation.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,12 +12,8 @@ import org.openqa.selenium.support.FindBy;
 public class HomePage extends PageBase {
     public HomePage(WebDriver aDriver) {
         super(aDriver);
+        searchPanel = new Search(driver);
     }
-    @FindBy(xpath = "")
-    public WebElement searchTextBox;
 
-    @FindBy(xpath = "")//property loading or after parsing or static
-    public WebElement searchButton;
-
-
+    private @Getter Search searchPanel;
 }

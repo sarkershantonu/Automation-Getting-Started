@@ -45,12 +45,15 @@ public class SearchStepDefination {
     @Then("^I type (.+) in search box  And I click search button$")
     public void i_type_in_Iphone_in_search_box_And_I_click_search_button(String word) throws Throwable {
 
+        home.getSearchPanel().searchTextBox.clear();
+        home.getSearchPanel().searchTextBox.sendKeys(word);
+        home.getSearchPanel().getSearchButton().click();
+
     }
 
     @Then("^I can see search results with title \"([^\"]*)\"$")
     public void i_can_see_search_results_with_title(String arg1) throws Throwable {
-
-        ;
+        Assert.assertEquals(arg1, home.getTitle());
     }
     @Then("^I quit browser$")
     public void i_quit_browser() throws Throwable {
