@@ -42,9 +42,9 @@ public class SearchStepDefination {
     @Then("^I type (.+) in search box  And I click search button$")
     public void i_type_in_Iphone_in_search_box_And_I_click_search_button(String word) throws Throwable {
 
-        home.getSearch().getTextBox().clear();
-        home.getSearch().getTextBox().sendKeys(word);
-        home.getSearch().getButton().click();
+        home.search.textBox.clear();
+        home.search.textBox.sendKeys(word);
+        home.search.button.click();
 
     }
 
