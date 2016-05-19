@@ -1,4 +1,17 @@
 
+Installation :
+
+1. Java 8
+2. Maven 3.3.9
+3. IntellijIDEA community
+    install junit & gherkin plugins
+    use maven that you installed
+4. Download from guthub
+5. open with intellij and
+
+RUN all test : mvn test
+or From IDE, tun CucumberTest
+
 
 Mandatory :
 
@@ -62,4 +75,5 @@ Note : a nice example : http://www.srccodes.com/p/article/48/cucumber-test-behav
 
 
 
-RUN : mvn test
+
+
