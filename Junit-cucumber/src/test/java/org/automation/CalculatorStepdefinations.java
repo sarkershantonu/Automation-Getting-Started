@@ -22,10 +22,10 @@ public class CalculatorStepdefinations {
 
     }
 
-    @Then("^I got (\\d+) as result$")
-    public void i_got_as_result(int arg1) throws Throwable {
+    @Then("^I got (.+) as result$")
+    public void i_got_as_result(double arg1) throws Throwable {
 
-        Assert.assertEquals(result,(double) arg1,0.05);
+        Assert.assertEquals(result,arg1,0.05);
     }
     @When("^I in insert (.+) and (.+)$")
     public void i_in_insert(double arg1, double arg2) throws Throwable {

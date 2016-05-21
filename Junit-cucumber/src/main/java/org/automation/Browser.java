@@ -46,7 +46,7 @@ public class Browser {
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
         } else {
-            if(os.contains("winows")){
+            if(os.contains("windows")){
                 System.setProperty("webdriver.chrome.driver"
                         ,"C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
             }else {
