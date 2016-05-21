@@ -45,7 +45,8 @@ public class Browser {
             System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
-        } else {
+        }
+        else {
             if(os.contains("windows")){
                 System.setProperty("webdriver.chrome.driver"
                         ,"C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");

@@ -25,7 +25,7 @@ public class SearchStepDefination {
     }
 
     @Given("^I open (.+) browser$")
-    public void i_open_firefox_browser(String nameOfBrowser) throws Throwable {
+    public void i_open_browser(String nameOfBrowser) throws Throwable {
        driver = Browser.getInstance(nameOfBrowser);
     }
 
