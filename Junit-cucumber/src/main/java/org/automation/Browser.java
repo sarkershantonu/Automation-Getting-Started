@@ -49,7 +49,7 @@ public class Browser {
         else {
             if(os.contains("windows")){
                 System.setProperty("webdriver.chrome.driver"
-                        ,"C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");
+                        ,"C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");// can be changed for your PC
             }else {
 
             System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");

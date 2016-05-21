@@ -6,7 +6,6 @@ import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.server.SystemClock;
 import org.pages.HomePage;
-
 /**
  * Created by shantonu on 5/6/16.
  */
@@ -42,7 +41,7 @@ public class SearchStepDefination {
         Assert.assertEquals(arg1,home.getTitle());
     }
 
-    @Then("^I type (.+) in search box  And I click search button$")
+    @And("^I type (.+) in search box  And I click search button$")
     public void i_type_in_Iphone_in_search_box_And_I_click_search_button(String word) throws Throwable {
         home.search.textBox.clear();
         home.search.textBox.sendKeys(word);
@@ -57,9 +56,8 @@ public class SearchStepDefination {
     }
 
 
-    @Then("^I can see the search should not take more than (\\d+) second$")
+    @And("^I can see the search should not take more than (\\d+) second$")
     public void i_can_see_the_search_should_not_take_more_than_second(int arg1) throws Throwable {
-
         Assert.assertTrue((end-start)<(arg1*1000));
     }
 
