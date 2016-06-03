@@ -251,14 +251,9 @@ public class GooglePage extends PageBase {
     @CacheLookup
     private WebElement youtube;
 
-    public GooglePage() {
-
-    }
 
     public GooglePage(WebDriver driver) {
-        this();
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+        super(driver);
         driver.get(pageUrl);
     }
 
@@ -682,8 +677,5 @@ public class GooglePage extends PageBase {
         return this;
     }
 
-    @Override
-    protected String getUrl() {
-        return pageUrl;
-    }
+
 }

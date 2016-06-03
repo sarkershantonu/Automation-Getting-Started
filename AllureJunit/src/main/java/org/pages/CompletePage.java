@@ -5,5 +5,5 @@ package org.pages;
  */
 public interface CompletePage {
     PageBase openPage();
-    
+
 }
