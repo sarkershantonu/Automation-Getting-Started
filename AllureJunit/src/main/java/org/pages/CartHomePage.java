@@ -9,6 +9,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * This is auto generated from chrome POM plugins
+ */
 public class CartHomePage {
     private Map<String, String> data;
     private WebDriver driver;

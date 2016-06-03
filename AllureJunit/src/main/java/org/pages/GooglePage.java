@@ -3,6 +3,9 @@ package org.pages;
 /**
  * Created by shantonu on 3/12/16.
  */
+/**
+ * This is auto generated from chrome POM plugins
+ */
 import java.util.Map;
 
 import org.openqa.selenium.support.CacheLookup;
