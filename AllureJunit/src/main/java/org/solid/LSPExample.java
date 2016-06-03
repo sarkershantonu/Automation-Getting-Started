@@ -1,13 +1,12 @@
 package org.solid;
 
-import org.automation.Calculator;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.internal.Killable;
-import org.selenium.GooglePage;
+import org.pages.GooglePage;
 
 /**
  * Created by shantonu on 3/12/16.

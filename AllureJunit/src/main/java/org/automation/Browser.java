@@ -1,8 +1,9 @@
-package org.selenium;
+package org.automation;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.automation.browser.BrowserFactory;
 
 import java.util.concurrent.TimeUnit;
 

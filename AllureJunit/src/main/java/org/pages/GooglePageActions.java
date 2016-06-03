@@ -1,4 +1,4 @@
-package org.selenium;
+package org.pages;
 
 /**
  * Created by shantonu on 3/12/16.

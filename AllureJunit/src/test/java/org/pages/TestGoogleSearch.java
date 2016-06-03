@@ -1,11 +1,11 @@
-package org.selenium;
+package org.pages;
 
+import org.automation.Browser;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by shantonu on 3/12/16.

@@ -1,4 +1,4 @@
-package org.selenium;
+package org.pages;
 
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +12,6 @@ public abstract class PageBase {
         return this;
     }
     public String getTitle(){
-
         return driver.getTitle();
     }
     protected abstract String getUrl();
