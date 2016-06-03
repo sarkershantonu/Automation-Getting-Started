@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.browser;
 
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;

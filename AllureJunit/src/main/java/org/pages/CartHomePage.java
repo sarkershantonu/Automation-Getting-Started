@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * This is auto generated from chrome POM plugins
  */
-public class CartHomePage {
+public class CartHomePage extends PageBase implements CompletePage{
     private Map<String, String> data;
     private WebDriver driver;
     private int timeout = 15;
@@ -366,9 +366,7 @@ public class CartHomePage {
 
 
     public CartHomePage(WebDriver driver) {
-
-        this.driver = driver;
-        PageFactory.initElements(driver, this);
+      super(driver);
     }
 
     public CartHomePage(WebDriver driver, Map<String, String> data) {
@@ -931,6 +929,11 @@ public class CartHomePage {
                 return d.getCurrentUrl().contains(pageUrl);
             }
         });
+        return this;
+    }
+
+    public PageBase openPage() {
+        driver.get(pageUrl);
         return this;
     }
 }

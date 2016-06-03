@@ -1,6 +1,6 @@
 package org.pages;
 
-import org.automation.Browser;
+import org.automation.browser.Browser;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
