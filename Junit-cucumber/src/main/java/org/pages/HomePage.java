@@ -12,4 +12,14 @@ public class HomePage extends PageBase {
         super(aDriver);
         search = new SearchPanel(driver);
     }
+
+    public HomePage open(String url){
+        driver.get(url);
+        return this;
+    }
+
+    public PageBase load() {
+        driver.get(getUrl());
+        return this;
+    }
 }

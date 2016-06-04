@@ -6,8 +6,9 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * Created by shantonu on 5/9/16.
  */
-public abstract class PageBase {
+public abstract class PageBase{
     private String name;
+
 
     public String getName() {
         return name;
@@ -39,10 +40,6 @@ public abstract class PageBase {
         PageFactory.initElements(driver,t);
     }
 
-    public PageBase load(){
-        driver.get(url);
-        return this;
-    }
 
     public String getTitle() {
         return driver.getTitle();
