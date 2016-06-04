@@ -56,7 +56,7 @@ public class SearchStepDefination {
         Assert.assertEquals(arg1,resultPage.getTitle());
         end= System.currentTimeMillis();
     }
-/*
+/* => this only takes a word
     @And("^I type (.+) in search box And I click search button$")
     public void i_type_in_Iphone_in_search_box_And_I_click_search_button(String word) throws Throwable {
         home.search.textBox.clear();

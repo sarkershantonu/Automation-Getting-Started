@@ -73,7 +73,7 @@ public class Browser {
 
     public static void close(){
         driver.close();
-        driver = null;
+        driver = null;// to avoid closeing time of browser by JVM
     }
 
     }
