@@ -16,6 +16,6 @@ public abstract class UtilBase {
 
     public UtilBase(WebDriver aDriver){
         this.driver = aDriver;
-
+        executor=(JavascriptExecutor)driver;
     }
 }
