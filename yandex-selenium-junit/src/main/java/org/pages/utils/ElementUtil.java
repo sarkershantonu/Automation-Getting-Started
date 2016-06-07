@@ -1,10 +1,15 @@
 package org.pages.utils;
 
+import org.automation.Browser;
 import org.automation.exceptions.CannotClickElementException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 /**
@@ -48,6 +53,52 @@ public class ElementUtil extends UtilBase {
 
             return false;
         }
+    }
+
+    public void typeUnchecked(TextInput element, CharSequence... charSequences) {
+
+
+        try {
+            element.clear();
+            element.sendKeys(charSequences);
+        } catch (Exception var3) {
+
+        }
+
+    }
+    public boolean isElementVisible(TypifiedElement typifiedElement) {
+        return isElementVisible((TypifiedElement)typifiedElement, 20);
+    }
+    public boolean isElementVisible(TypifiedElement element, int newTimeOut) {
+
+        return isElementVisible((WebElement)element.getWrappedElement(), newTimeOut);
+    }
+    public boolean isFilledWithThatTextAlready(TextInput element, String text) {
+        return element.getText().equals(text);
+    }
+    public boolean isElementVisible(WebElement webElement, int newTimeOut) {
+        WebDriverWait wait = Browser.setWebDriverWait(newTimeOut);
+        try {
+            wait.until(ExpectedConditions.visibilityOf(webElement));
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public void type(TextInput element, CharSequence... charSequences) {
+        String textValue = "";
+        CharSequence[] arr$ = charSequences;
+        int len$ = charSequences.length;
+
+        for(int i$ = 0; i$ < len$; ++i$) {
+            CharSequence charValue = arr$[i$];
+            textValue = textValue + charValue;
+        }
+        if(isElementVisible((TypifiedElement)element) && !isFilledWithThatTextAlready(element, textValue)) {
+            typeUnchecked(element, charSequences);
+        }
+
     }
 
 }
