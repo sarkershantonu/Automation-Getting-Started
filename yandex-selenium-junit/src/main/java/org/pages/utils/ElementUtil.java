@@ -8,10 +8,7 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import ru.yandex.qatools.htmlelements.element.HtmlElement;
-import ru.yandex.qatools.htmlelements.element.Select;
-import ru.yandex.qatools.htmlelements.element.TextInput;
-import ru.yandex.qatools.htmlelements.element.TypifiedElement;
+import ru.yandex.qatools.htmlelements.element.*;
 
 /**
  * Created by shantonu on 6/6/16.
@@ -66,6 +63,29 @@ public class ElementUtil extends UtilBase {
 
         }
 
+    }
+    public String getAttribute(WebElement webElement, String attribute) {
+        String attributeValue = "";
+
+        try {
+            attributeValue = webElement.getAttribute(attribute);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return attributeValue;
+    }
+    public boolean isRadioChecked(WebElement radio) {
+        return getAttribute(radio, "checked") != null;
+    }
+    public boolean isRadioChecked(Radio radio) {
+        return radio.getWrappedElement() != null && isRadioChecked(radio.getWrappedElement());
+    }
+    public boolean isRadioEnabled(WebElement radio) {
+        return getAttribute(radio, "disabled") == null;
+    }
+    public  boolean isRadioEnabled(Radio radio) {
+        return radio.getWrappedElement() != null && isRadioEnabled(radio.getWrappedElement());
     }
     public boolean isElementVisible(TypifiedElement typifiedElement) {
         return isElementVisible((TypifiedElement)typifiedElement, 20);
