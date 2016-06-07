@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
+import ru.yandex.qatools.htmlelements.element.Select;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
@@ -76,6 +77,50 @@ public class ElementUtil extends UtilBase {
     public boolean isFilledWithThatTextAlready(TextInput element, String text) {
         return element.getText().equals(text);
     }
+    public boolean isFilledWithThatTextAlready(Select element, String text) {
+        try {
+            return element.getFirstSelectedOption().getText().equals(text);
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+    public boolean isFilledWithThatValueAlready(Select element, String value) {
+        try {
+            return element.getFirstSelectedOption().getAttribute("value").equals(value);
+        } catch (NoSuchElementException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static void setSelectByValueUnchecked(Select select, String value) {
+        try {
+            select.selectByValue(value);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void setSelectByIndex(Select select, int index) {
+        try {
+            select.selectByIndex(index);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public  void setSelectByValue(Select select, String value) {
+
+        if(!select.getOptions().isEmpty()) {
+            if(!isFilledWithThatValueAlready(select, value)) {
+                setSelectByValueUnchecked(select, value);
+            }
+        } else {
+
+        }
+
+    }
+
     public boolean isElementVisible(WebElement webElement, int newTimeOut) {
         WebDriverWait wait = Browser.setWebDriverWait(newTimeOut);
         try {
