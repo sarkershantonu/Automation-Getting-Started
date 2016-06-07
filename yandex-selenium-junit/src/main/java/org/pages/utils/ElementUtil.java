@@ -5,4 +5,5 @@ package org.pages.utils;
  * this class is responsible for all utilitie for yandex element based pages.
  */
 public class ElementUtil {
+
 }
