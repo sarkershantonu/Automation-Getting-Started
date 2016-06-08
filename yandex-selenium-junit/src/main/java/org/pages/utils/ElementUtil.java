@@ -317,6 +317,7 @@ public class ElementUtil extends UtilBase {
     public  WebElement getFieldByLabel(String label) {
         return driver.findElement(By.xpath("(.//p[@class=\'label\'][contains(text(), \"" + label + "\")]" + "//ancestor::div[@class=\'inputcontainer\']" + "//p[@class=\'field\'])[1]"));
     }
+ // TOdo => adopt with opencart
     public  WebElement getTableRowByLabel(String label) {
         return driver.findElement(By.xpath(".//*[contains(text(), \"" + label + "\")]" + "//ancestor::tr"));
     }
@@ -353,17 +354,17 @@ public class ElementUtil extends UtilBase {
         }
         return webElement;
     }
-
+    // TOdo => adopt with opencart
     public  String getTextInputValueByLabel(String label) {
         TextInput textInput = new TextInput(driver.findElement(By.xpath(".//label[text()=\'" + label + "\']//parent::div//following-sibling::div//input")));
         return getText(textInput);
     }
-
+    // TOdo => adopt with opencart
     public  String getSelectedOptionBylabel(String label) {
         Select select = new Select(driver.findElement(By.xpath(".//label[contains(.,\'" + label + "\')]//parent::div[1]//following-sibling::div[1]//ul//select|.//label[text()=\'" + label + "\']//parent::div//following-sibling::div//div//select")));
         return select.getFirstSelectedOption().getText();
     }
-
+    // TOdo => adopt with opencart
     public  void setSelectedOptionByTextAndLabel(String text, String label) {
         Select select = new Select(driver.findElement(By.xpath(".//label[text()=\'" + label + "\']//parent::div//following-sibling::div//div//select")));
         setSelectByText(select, text);

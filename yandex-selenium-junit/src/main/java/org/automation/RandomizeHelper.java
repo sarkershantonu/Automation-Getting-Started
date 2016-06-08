@@ -13,8 +13,6 @@ public class RandomizeHelper {
         return new SecureRandom().nextInt(b-a+1)+a;
     }
 
-
-
     public static <T> T getRandomItem(List<T> items){
         int max = items.size()-1;
         int random = getInt(0,max).intValue();
