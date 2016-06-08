@@ -27,8 +27,18 @@ public class ElementUtil extends UtilBase {
         }
 
     }
+    public void click(TypifiedElement element) {
 
-    public void click(TypifiedElement element) throws CannotClickElementException {
+        if(isElementVisible(element)) {
+            try {
+                element.getWrappedElement().click();
+            } catch (Exception var2) {
+                click(element);
+            }
+        }
+
+    }
+    public void click(WebElement element) throws CannotClickElementException {
         try {
             executor.executeScript("arguments[0].click();", new Object[]{element});
         } catch (WebDriverException var3) {
@@ -48,22 +58,17 @@ public class ElementUtil extends UtilBase {
         if(element != null && element.getWrappedElement() != null) {
             return true;
         } else {
-
+            return false;
+        }
+    }
+    public static boolean isElementPresent(TypifiedElement element) {
+        if(element != null && element.getWrappedElement() != null) {
+            return true;
+        } else {
             return false;
         }
     }
 
-    public void typeUnchecked(TextInput element, CharSequence... charSequences) {
-
-
-        try {
-            element.clear();
-            element.sendKeys(charSequences);
-        } catch (Exception var3) {
-
-        }
-
-    }
     public String getAttribute(WebElement webElement, String attribute) {
         String attributeValue = "";
 
@@ -86,6 +91,14 @@ public class ElementUtil extends UtilBase {
     }
     public  boolean isRadioEnabled(Radio radio) {
         return radio.getWrappedElement() != null && isRadioEnabled(radio.getWrappedElement());
+    }
+    public  boolean isElementVisible(HtmlElement htmlElement, int newTimeOut) {
+
+        return isElementVisible((WebElement)htmlElement.getWrappedElement(), newTimeOut);
+    }
+
+    public boolean isElementVisible(HtmlElement element) {
+        return isElementVisible((HtmlElement)element, 20);
     }
     public boolean isElementVisible(TypifiedElement typifiedElement) {
         return isElementVisible((TypifiedElement)typifiedElement, 20);
@@ -114,7 +127,7 @@ public class ElementUtil extends UtilBase {
         }
     }
 
-    public static void setSelectByValueUnchecked(Select select, String value) {
+    public void setSelectByValueUnchecked(Select select, String value) {
         try {
             select.selectByValue(value);
         } catch (Exception e) {
@@ -165,5 +178,32 @@ public class ElementUtil extends UtilBase {
         }
 
     }
+    public void typeUnchecked(TextInput element, CharSequence... charSequences) {
+        try {
+            element.clear();
+            element.sendKeys(charSequences);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static void inputFile(FileInput element, String fileName) {
+        String textValue = "";
+        if(isElementPresent((TypifiedElement)element)) {
+            try {
+                element.setFileToUpload(fileName);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public void waitForDisappear(TypifiedElement shouldDisappearElement) {
+        while(isElementVisible(shouldDisappearElement)) {
+           Browser.pause(1);
+        }
+    }
+
 
 }
