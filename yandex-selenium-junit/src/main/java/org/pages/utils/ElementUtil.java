@@ -1,6 +1,7 @@
 package org.pages.utils;
 
 import org.automation.Browser;
+import org.automation.RandomizeHelper;
 import org.automation.exceptions.CannotClickElementException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -217,5 +218,26 @@ public class ElementUtil extends UtilBase {
     public String getAttribute(HtmlElement element, String attribute) {
         return !isElementPresent(element)?"":getAttribute((WebElement)element.getWrappedElement(), attribute);
     }
-    
+    public void setSelectByText(Select select, String text) {
+
+        if(!select.getOptions().isEmpty() && !text.equals("_ignore_")) {
+            if(!text.isEmpty() && !text.equals("_any_")) {
+                if(!isFilledWithThatTextAlready(select, text)) {
+                    setSelectByTextUnchecked(select, text);
+                }
+            } else {
+                setSelectByIndex(select, RandomizeHelper.getInt(1, select.getOptions().size() - 1).intValue());
+            }
+
+        }
+    }
+    public void setSelectByTextUnchecked(Select select, String text) {
+        try {
+            select.selectByVisibleText(text);
+        } catch (Exception e) {
+           e.printStackTrace();
+        }
+
+    }
+
 }
