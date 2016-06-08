@@ -69,17 +69,7 @@ public class ElementUtil extends UtilBase {
         }
     }
 
-    public String getAttribute(WebElement webElement, String attribute) {
-        String attributeValue = "";
 
-        try {
-            attributeValue = webElement.getAttribute(attribute);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return attributeValue;
-    }
     public boolean isRadioChecked(WebElement radio) {
         return getAttribute(radio, "checked") != null;
     }
@@ -187,7 +177,7 @@ public class ElementUtil extends UtilBase {
         }
 
     }
-    public static void inputFile(FileInput element, String fileName) {
+    public  void inputFile(FileInput element, String fileName) {
         String textValue = "";
         if(isElementPresent((TypifiedElement)element)) {
             try {
@@ -204,6 +194,28 @@ public class ElementUtil extends UtilBase {
            Browser.pause(1);
         }
     }
+    public  String getText(TextInput element) {
+        return !isElementPresent((TypifiedElement)element)?"":element.getText();
+    }
 
+    public  String getText(TextBlock element) {
+        return !isElementPresent((TypifiedElement)element)?"":element.getText();
+    }
+    public String getAttribute(TypifiedElement element, String attribute) {
 
+        return !isElementPresent(element)?"":getAttribute((WebElement)element.getWrappedElement(), attribute);
+    }
+    public String getAttribute(WebElement webElement, String attribute) {
+        String attributeValue = "";
+        try {
+            attributeValue = webElement.getAttribute(attribute);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return attributeValue;
+    }
+    public String getAttribute(HtmlElement element, String attribute) {
+        return !isElementPresent(element)?"":getAttribute((WebElement)element.getWrappedElement(), attribute);
+    }
+    
 }
