@@ -3,13 +3,14 @@ package org.pages.utils;
 import org.automation.Browser;
 import org.automation.RandomizeHelper;
 import org.automation.exceptions.CannotClickElementException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriverException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.htmlelements.element.*;
+
+import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by shantonu on 6/6/16.
@@ -195,7 +196,51 @@ public class ElementUtil extends UtilBase {
            Browser.pause(1);
         }
     }
+    public  void waitForAjaxComplete(int waitTime) {
+
+
+        try {
+            Browser.setWebDriverWait(waitTime).until(new ExpectedCondition<Boolean>() {
+                public Boolean apply(WebDriver driver) {
+                    return Boolean.valueOf(isAjaxComplete());
+                }
+            });
+        } catch (Exception var2) {
+            ;
+        }
+
+    }
+    public boolean isAjaxComplete() {
+        try {
+            return ((Boolean)Browser.getJSexcutor().executeScript("return $.active == 0", new Object[0])).booleanValue();
+        } catch (WebDriverException e) {
+            e.printStackTrace();
+            return true;
+        }
+    }
+    public static Boolean isPageLoaded() {
+        try {
+            return ((Boolean)Browser.getJSexcutor().executeScript("return document.readyState", new Object[0]).equals("complete"));
+        } catch (WebDriverException var1) {
+            return Boolean.valueOf(true);
+        }
+    }
+    public static void waitForPageLoaded() {
+        try {
+            Browser.setWebDriverWait(20).until(new ExpectedCondition<Boolean>() {
+                public Boolean apply(WebDriver driver) {
+                    return isPageLoaded();
+                }
+            });
+        } catch (Exception var1) {
+            ;
+        }
+
+    }
     public  String getText(TextInput element) {
+        return !isElementPresent((TypifiedElement)element)?"":element.getText();
+    }
+    public  String getText(WebElement element) {
         return !isElementPresent((TypifiedElement)element)?"":element.getText();
     }
 
@@ -231,13 +276,96 @@ public class ElementUtil extends UtilBase {
 
         }
     }
+    public boolean setSelectByContainedText(Select select, String text) {
+
+        boolean isOptionExist = false;
+        ArrayList<String> optionTextAsList = new ArrayList();
+
+        for(WebElement option : select.getOptions()){
+            if(getText((WebElement)option).contains(text)) {
+                optionTextAsList.add(getText((WebElement)option));
+            }
+        }
+        if(!optionTextAsList.isEmpty()) {
+            setSelectByText(select, RandomizeHelper.getRandomItem(optionTextAsList));
+            isOptionExist = true;
+        }
+
+        return isOptionExist;
+    }
     public void setSelectByTextUnchecked(Select select, String text) {
         try {
             select.selectByVisibleText(text);
         } catch (Exception e) {
            e.printStackTrace();
         }
-
+    }
+    public  String getFieldValue(String label) {
+        return getText((WebElement)getFieldByLabel(label));
     }
 
+    public  String getFieldValueLink(String label) {
+        return getText((WebElement)getFieldByLabel(label).findElement(By.xpath("./a")));
+    }
+
+    /**
+     * This is fully page dependent,
+     * TOdo => adopt with opencart
+     * @param label
+     * @return
+     */
+    public  WebElement getFieldByLabel(String label) {
+        return driver.findElement(By.xpath("(.//p[@class=\'label\'][contains(text(), \"" + label + "\")]" + "//ancestor::div[@class=\'inputcontainer\']" + "//p[@class=\'field\'])[1]"));
+    }
+    public  WebElement getTableRowByLabel(String label) {
+        return driver.findElement(By.xpath(".//*[contains(text(), \"" + label + "\")]" + "//ancestor::tr"));
+    }
+    public  void typeAutoComplete(TextInput txtInput, String value) {
+
+        typeAutoComplete(txtInput, value, 2);
+    }
+    public  void typeAutoComplete(TextInput txtInput, String value, int timeOut) {
+        if(value.isEmpty()) {
+            txtInput.clear();
+        } else if(!getText(txtInput).equals(value)) {
+            type(txtInput, new CharSequence[]{value});
+            waitForAjaxComplete(timeOut);
+
+            try {
+                click(txtInput.getWrappedElement().findElement(By.xpath("./parent::div//li[contains(text(), \"" + value + " (\") or contains(text(), \"" + value + ",\")]")));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+    public  String getDefaultParamIfEmpty(String param) {
+        return param.isEmpty()?"Select an option...":param;
+    }
+
+    public  WebElement getTableCheckboxByLabel(String name) {
+        WebElement webElement = null;
+
+        try {
+            webElement = getTableRowByLabel(name).findElement(By.xpath(".//img[contains(@id, \'checkbox\')]"));
+        } catch (NoSuchElementException e) {
+          e.printStackTrace();
+        }
+        return webElement;
+    }
+
+    public  String getTextInputValueByLabel(String label) {
+        TextInput textInput = new TextInput(driver.findElement(By.xpath(".//label[text()=\'" + label + "\']//parent::div//following-sibling::div//input")));
+        return getText(textInput);
+    }
+
+    public  String getSelectedOptionBylabel(String label) {
+        Select select = new Select(driver.findElement(By.xpath(".//label[contains(.,\'" + label + "\')]//parent::div[1]//following-sibling::div[1]//ul//select|.//label[text()=\'" + label + "\']//parent::div//following-sibling::div//div//select")));
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public  void setSelectedOptionByTextAndLabel(String text, String label) {
+        Select select = new Select(driver.findElement(By.xpath(".//label[text()=\'" + label + "\']//parent::div//following-sibling::div//div//select")));
+        setSelectByText(select, text);
+    }
 }
