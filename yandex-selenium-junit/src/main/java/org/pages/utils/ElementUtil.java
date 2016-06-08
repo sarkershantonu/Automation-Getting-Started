@@ -4,13 +4,13 @@ import org.automation.Browser;
 import org.automation.RandomizeHelper;
 import org.automation.exceptions.CannotClickElementException;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.yandex.qatools.htmlelements.element.*;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * Created by shantonu on 6/6/16.
@@ -368,5 +368,48 @@ public class ElementUtil extends UtilBase {
     public  void setSelectedOptionByTextAndLabel(String text, String label) {
         Select select = new Select(driver.findElement(By.xpath(".//label[text()=\'" + label + "\']//parent::div//following-sibling::div//div//select")));
         setSelectByText(select, text);
+    }
+
+    private Actions actionBuilder;
+
+
+    public void mouseOver(TypifiedElement onElement) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.moveToElement(onElement.getWrappedElement()).build().perform();
+    }
+
+    public void doubleClick(TypifiedElement onElement) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.doubleClick(onElement.getWrappedElement()).build().perform();
+    }
+
+    public void contextClick(TypifiedElement onElement) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.contextClick(onElement.getWrappedElement()).build().perform();
+    }
+
+    public void dragAndDrop(TypifiedElement someElement, TypifiedElement otherElement) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.dragAndDrop(someElement.getWrappedElement(), otherElement.getWrappedElement()).build().perform();
+    }
+
+    public void mouseOverAndClick(TypifiedElement someElement, TypifiedElement otherElement) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.moveToElement(someElement.getWrappedElement()).click(otherElement.getWrappedElement()).build().perform();
+    }
+
+    public void mouseOverAndClick(TypifiedElement someElement) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.moveToElement(someElement.getWrappedElement()).click(someElement.getWrappedElement()).build().perform();
+    }
+
+    public void mouseOverAndSendKeys(TypifiedElement someElement, TypifiedElement otherElement, String text) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.moveToElement(someElement.getWrappedElement()).sendKeys(otherElement.getWrappedElement(), new CharSequence[]{text}).build().perform();
+    }
+
+    public void mouseOverAndSendKeys(TypifiedElement someElement, String text) {
+        this.actionBuilder = new Actions(driver);
+        this.actionBuilder.moveToElement(someElement.getWrappedElement()).sendKeys(someElement.getWrappedElement(), new CharSequence[]{text}).build().perform();
     }
 }
