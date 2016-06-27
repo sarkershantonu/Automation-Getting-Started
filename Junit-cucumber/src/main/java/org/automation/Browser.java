@@ -22,39 +22,42 @@ import java.net.URL;
 public class Browser {
     private static WebDriver driver = null;
 
-    public static WebDriver getInstance(String browserName){
-        if(driver==null){
+    public static WebDriver getInstance(String browserName) {
+        if (driver == null) {
             driver = getABrowser(browserName);
             //driver = new FirefoxDriver();
         }
         return driver;
     }
 
-    private Browser(){}
+    private Browser() {
+    }
 
     //todo , need to complete chrome browser driver execution
     private static WebDriver getABrowser(String nameOfBrowser) {
         String os = System.getProperty("os.name");
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
-            System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
+            if (os.contains("windows")) {
+                System.setProperty("webdriver.firefox.bin","place where you unzipped firefox executable");
+            } else {
+                System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
+            }
             return new FirefoxDriver();
-        }
-        else if ("opera".equals(nameOfBrowser)) {
+        } else if ("opera".equals(nameOfBrowser)) {
             return new OperaDriver();
         } else if ("ie".equals(nameOfBrowser)) {
             File iedriver = new File("SeleniumServer.exePath");//todo for your PC
             System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
-        }
-        else {
-            if(os.contains("windows")){
+        } else {
+            if (os.contains("windows")) {
                 System.setProperty("webdriver.chrome.driver"
-                        ,"C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");// can be changed for your PC
-            }else {
+                        , "C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");// can be changed for your PC
+            } else {
 
-            System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
+                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
             }
             //return new ChromeDriver();
 
@@ -67,15 +70,15 @@ public class Browser {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return new RemoteWebDriver(service.getUrl(),DesiredCapabilities.chrome());
+            return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
 
         }
     }
 
 
-    public static void close(){
+    public static void close() {
         driver.close();
         driver = null;// to avoid closeing time of browser by JVM
     }
 
-    }
+}
