@@ -36,6 +36,8 @@ public class Browser {
     private static WebDriver getABrowser(String nameOfBrowser) {
         String os = System.getProperty("os.name");
         if ("firefox".equals(nameOfBrowser)) {
+            //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
+            System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
             return new FirefoxDriver();
         }
         else if ("opera".equals(nameOfBrowser)) {
