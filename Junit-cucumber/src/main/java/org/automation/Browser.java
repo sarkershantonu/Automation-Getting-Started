@@ -52,12 +52,12 @@ public class Browser {
                         ,"C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");// can be changed for your PC
             }else {
 
-            System.setProperty("webdriver.chrome.driver","/usr/bin/google-chrome");
+            System.setProperty("webdriver.chrome.driver","/usr/local/bin/chromedriver");
             }
             //return new ChromeDriver();
 
             ChromeDriverService service = new ChromeDriverService.Builder()
-                    .usingDriverExecutable(new File("/usr/bin/google-chrome"))
+                    .usingDriverExecutable(new File("/usr/local/bin/chromedriver"))
                     .usingAnyFreePort()
                     .build();
             try {

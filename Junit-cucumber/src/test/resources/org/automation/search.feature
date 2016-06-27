@@ -1,7 +1,7 @@
 Feature: search
 
   Scenario: Going to Opencart and search an item
-    Given I open firefox browser
+    Given I open chrome browser
     When I type http://demo.opencart.com/ and press enter
     Then I can see page loaded with title "Your Store"
     And I type "Iphone" in search box And I click search button
@@ -10,7 +10,7 @@ Feature: search
     Then I quit browser
 
   Scenario: Checking invalid search
-   Given I open firefox browser
+   Given I open chrome browser
     When I type http://demo.opencart.com/ and press enter
     Then I can see page loaded with title "Your Store"
     And I type "invalid check to prove tests" in search box And I click search button
