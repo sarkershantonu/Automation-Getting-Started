@@ -5,13 +5,14 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.WithTag;
 import net.thucydides.core.annotations.WithTags;
-import net.thucydides.showcase.junit.model.ListingItem;
-import net.thucydides.showcase.junit.steps.serenity.BuyerSteps;
+import org.automation.model.ListingItem;
+import org.automation.steps.serenity.BuyerSteps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import static org.assertj.core.api.StrictAssertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 @RunWith(SerenityRunner.class)
 public class DisplayProductDetailsTest {

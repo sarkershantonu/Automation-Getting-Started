@@ -1,13 +1,13 @@
-package org.automation.serenity;
+package org.automation.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
-import net.thucydides.showcase.junit.model.ListingItem;
-import net.thucydides.showcase.junit.model.OrderCostSummary;
-import net.thucydides.showcase.junit.pages.CartPage;
-import net.thucydides.showcase.junit.pages.HomePage;
-import net.thucydides.showcase.junit.pages.ListingPage;
-import net.thucydides.showcase.junit.pages.SearchResultsPage;
+import org.automation.model.ListingItem;
+import org.automation.model.OrderCostSummary;
+import org.automation.pages.CartPage;
+import org.automation.pages.HomePage;
+import org.automation.pages.ListingPage;
+import org.automation.pages.SearchResultsPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -32,7 +32,7 @@ public class BuyerSteps extends ScenarioSteps {
 
     @Step
     public void should_see_results_summary_containing(String keyword) {
-        StrictAssertions.assertThat(searchResultsPage.getSearchHeader()).containsIgnoringCase(keyword);
+        assertThat(searchResultsPage.getSearchHeader()).containsIgnoringCase(keyword);
     }
 
     @Step
@@ -42,7 +42,7 @@ public class BuyerSteps extends ScenarioSteps {
 
     @Step
     public void should_see_shop_search_result_summary_of(String expectedMessage) {
-        StrictAssertions.assertThat(searchResultsPage.getResultSummary()).isEqualToIgnoringCase(expectedMessage);
+        assertThat(searchResultsPage.getResultSummary()).isEqualToIgnoringCase(expectedMessage);
     }
 
     @Step
@@ -64,7 +64,7 @@ public class BuyerSteps extends ScenarioSteps {
 
     @Step
     public void should_see_item_in_cart(ListingItem selectedItem) {
-        StrictAssertions.assertThat(cartPage.getOrderCostSummaries()
+        assertThat(cartPage.getOrderCostSummaries()
                 .stream().anyMatch(order -> order.getName().equals(selectedItem.getName()))).isTrue();
     }
 
@@ -75,13 +75,13 @@ public class BuyerSteps extends ScenarioSteps {
         double itemTotal = orderCostSummary.getItemTotal();
         double shipping = orderCostSummary.getShipping();
 
-        StrictAssertions.assertThat(itemTotal).isEqualTo(selectedItem.getPrice());
-        StrictAssertions.assertThat(shipping).isGreaterThan(0.0);
+        assertThat(itemTotal).isEqualTo(selectedItem.getPrice());
+        assertThat(shipping).isGreaterThan(0.0);
     }
 
     @Step
     public void should_see_product_rating() {
-        StrictAssertions.assertThat(listingPage.getRating()).isGreaterThan(0);
+        assertThat(listingPage.getRating()).isGreaterThan(0);
     }
 
     @Step
@@ -102,7 +102,7 @@ public class BuyerSteps extends ScenarioSteps {
 
     @Step
     public void should_see_nonexistant_field() {
-        StrictAssertions.assertThat(listingPage.clickImaginaryButton()).isFalse();
+        assertThat(listingPage.clickImaginaryButton()).isFalse();
     }
 
 

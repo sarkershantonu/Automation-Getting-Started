@@ -4,7 +4,7 @@ package org.automation.pages;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
-import net.thucydides.showcase.junit.model.ListingItem;
+import org.automation.model.ListingItem;
 import org.openqa.selenium.support.FindBy;
 
 import java.text.NumberFormat;

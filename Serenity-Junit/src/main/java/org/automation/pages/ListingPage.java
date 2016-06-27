@@ -4,8 +4,8 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.core.pages.WebElementState;
 import net.thucydides.core.pages.PageObject;
-import net.thucydides.showcase.junit.model.ListingItem;
 import org.apache.commons.lang3.StringUtils;
+import org.automation.model.ListingItem;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 

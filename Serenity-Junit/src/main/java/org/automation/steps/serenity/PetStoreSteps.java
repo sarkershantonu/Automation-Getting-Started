@@ -1,7 +1,8 @@
-package org.automation.serenity;
+package org.automation.steps.serenity;
 
 import net.thucydides.core.annotations.Step;
-import net.thucydides.showcase.junit.model.Pet;
+import org.automation.model.Pet;
+
 
 import java.util.*;
 
