@@ -3,6 +3,9 @@ package org.automation.features.petstore;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
+import org.automation.model.Pet;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 
 @RunWith(SerenityRunner.class)
