@@ -11,7 +11,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 
-@RunWith(SerenityRunner.class)
+//@RunWith(SerenityRunner.class)
 public class CalculatorTest {
 
     private Calculator calculator;
@@ -25,9 +25,9 @@ public class CalculatorTest {
     }
 
 
-    @Test
-    @Issue("#157")
-    @Issues({"#156","#155"})
+   // @Test
+    //@Issue("#157")
+   // @Issues({"#156","#155"})
     public void testAdd() throws Throwable {
 
         Assert.assertEquals(5.0,calculator.add(3.0, 2.0),0.01);
