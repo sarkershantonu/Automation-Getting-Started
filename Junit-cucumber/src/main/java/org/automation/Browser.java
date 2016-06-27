@@ -43,7 +43,7 @@ public class Browser {
         else if ("opera".equals(nameOfBrowser)) {
             return new OperaDriver();
         } else if ("ie".equals(nameOfBrowser)) {
-            File iedriver = new File("selenium.browser.ie.path");//todo for your PC
+            File iedriver = new File("SeleniumServer.exePath");//todo for your PC
             System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
