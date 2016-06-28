@@ -33,7 +33,7 @@ public class Browser {
     private Browser() {
     }
 
-    //todo , need to complete chrome browser driver execution
+
     private static WebDriver getABrowser(String nameOfBrowser) {
         String os = System.getProperty("os.name");
         if ("firefox".equals(nameOfBrowser)) {
@@ -47,7 +47,7 @@ public class Browser {
         } else if ("opera".equals(nameOfBrowser)) {
             return new OperaDriver();
         } else if ("ie".equals(nameOfBrowser)) {
-            File iedriver = new File("SeleniumServer.exePath");//todo for your PC
+            File iedriver = new File("Point your Selenium Server exe Path");//todo for your PC
             System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
