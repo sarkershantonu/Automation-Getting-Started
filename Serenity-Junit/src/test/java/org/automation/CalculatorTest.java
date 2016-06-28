@@ -19,7 +19,7 @@ public class CalculatorTest {
 
 
 
-    @Before
+    //@Before
     public void init(){
         calculator = new Calculator();
     }
