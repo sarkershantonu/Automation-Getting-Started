@@ -14,6 +14,4 @@ public class HomePage extends PageObject {
     public HomePage() {
         search = new SearchPanel();
     }
-
-
 }
