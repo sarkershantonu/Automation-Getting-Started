@@ -39,7 +39,7 @@ public class Browser {
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
             if (os.contains("windows")) {
-                System.setProperty("webdriver.firefox.bin","place where you unzipped firefox executable");
+                System.setProperty("webdriver.firefox.bin", "place where you unzipped firefox executable");
             } else {
                 System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
             }
@@ -52,26 +52,28 @@ public class Browser {
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
         } else {
+            String pathWindows = "C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe";// can be changed for your PC
+            String pathlunix = "/usr/local/bin/chromedriver";
+            ChromeDriverService service;
             if (os.contains("windows")) {
-                System.setProperty("webdriver.chrome.driver"
-                        , "C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe");// can be changed for your PC
+                System.setProperty("webdriver.chrome.driver", pathWindows);
+                service = new ChromeDriverService.Builder()
+                        .usingDriverExecutable(new File(pathlunix))
+                        .usingAnyFreePort()
+                        .build();
             } else {
-
-                System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+                System.setProperty("webdriver.chrome.driver", pathlunix);
+                service = new ChromeDriverService.Builder()
+                        .usingDriverExecutable(new File(pathlunix))
+                        .usingAnyFreePort()
+                        .build();
             }
-            //return new ChromeDriver();
-
-            ChromeDriverService service = new ChromeDriverService.Builder()
-                    .usingDriverExecutable(new File("/usr/local/bin/chromedriver"))
-                    .usingAnyFreePort()
-                    .build();
             try {
                 service.start();
             } catch (IOException e) {
                 e.printStackTrace();
             }
             return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
-
         }
     }
 
