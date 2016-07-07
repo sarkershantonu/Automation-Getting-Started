@@ -7,7 +7,14 @@ import org.automation.ui.UiBase;
  */
 public class Session extends UiBase {
 
+    public Session(String folder) {
+        super(folder);
+    }
+
     public class Logging extends UiBase{
+        public Logging(String folder) {
+            super(folder);
+        }
     }
 }
 
