@@ -52,7 +52,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.sikulix.testrun.TestRun</mainClass>
+                            <mainClass>org.automation.Application</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

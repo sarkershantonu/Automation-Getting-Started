@@ -19,6 +19,6 @@ public class MatcherUtil extends ScreenBase{
         return false; //// TODO: 7/7/16
     }
     public static boolean areEqual(Image subjectImagePath, Image targetImagePath){
-        return false; //// TODO: 7/7/16  
+        return false; //// TODO: 7/7/16
     }
 }
