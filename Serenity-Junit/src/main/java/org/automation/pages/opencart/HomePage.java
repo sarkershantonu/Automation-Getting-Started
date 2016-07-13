@@ -19,5 +19,7 @@ public class HomePage extends PageObject {
     @FindBy(xpath = "//div[@id='search']/span/button")//property loading or after parsing or static
     public WebElementFacade button;
 
-    
+    public void search(String keyWord){
+        $()
+    }
 }
