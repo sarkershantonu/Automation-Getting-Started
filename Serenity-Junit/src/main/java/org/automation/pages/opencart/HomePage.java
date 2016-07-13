@@ -5,8 +5,6 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 
-import org.openqa.selenium.WebDriver;
-
 /**
  * Created by shantonu on 5/16/16.
  */
@@ -14,12 +12,16 @@ import org.openqa.selenium.WebDriver;
 public class HomePage extends PageObject {
 
     @FindBy(xpath = "//div[@id='search']/input")
-    public WebElementFacade textBox ;
+    public WebElementFacade searchText;
 
     @FindBy(xpath = "//div[@id='search']/span/button")//property loading or after parsing or static
-    public WebElementFacade button;
+    public WebElementFacade searchButton;
 
-    public void search(String keyWord){
-        $()
+    public void typeItemForSearch(String keyWord){
+        searchText.type(keyWord);
+
+    }
+    private void search(){
+        searchButton.click();
     }
 }
