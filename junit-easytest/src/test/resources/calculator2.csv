@@ -1,2 +1,2 @@
-testAddFromCSV,a,b,expected
- ,15.0,25.0,40
+testAdd,a,b,expected
+ ,11.0,16.0,40
