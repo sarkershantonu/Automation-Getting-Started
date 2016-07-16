@@ -34,7 +34,7 @@ public class CustomObjectConverterTest {
     @Test
     @DataLoader(filePaths = "mydata.csv")
     @Converters(MyDataConverter.class)
-    public void testParam(@Param MyData data){
+    public void testParam(MyData data){
 
         System.out.println(data.toString());
     }
