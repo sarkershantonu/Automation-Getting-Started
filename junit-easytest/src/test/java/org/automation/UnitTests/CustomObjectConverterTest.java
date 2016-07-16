@@ -1,8 +1,11 @@
 package org.automation.UnitTests;
 
 import org.automation.Calculator;
+import org.automation.MyData;
 import org.automation.MyDataConverter;
 import org.easetech.easytest.annotation.Converters;
+import org.easetech.easytest.annotation.DataLoader;
+import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.converter.ConverterManager;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Assert;
@@ -15,7 +18,7 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 7/16/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-@Converters(MyDataConverter.class)
+
 public class CustomObjectConverterTest {
     private Calculator calculator;
 
@@ -29,7 +32,10 @@ public class CustomObjectConverterTest {
         calculator = new Calculator();
     }
     @Test
-    public void testAdd(){
-        Assert.assertEquals(25.0, calculator.add(10.5,14.5),0.1);
+    @DataLoader(filePaths = "mydata.csv")
+    @Converters(MyDataConverter.class)
+    public void testParam(@Param MyData data){
+
+        System.out.println(data.toString());
     }
 }
