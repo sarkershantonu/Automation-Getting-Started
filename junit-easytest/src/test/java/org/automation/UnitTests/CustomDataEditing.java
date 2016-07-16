@@ -12,7 +12,7 @@ import java.beans.PropertyEditorManager;
  */
 //todo , writing tests
     // http://docs.oracle.com/javase/6/docs/api/java/beans/PropertyEditorManager.html
-public class ParseMyData extends DataDrivenTest{
+public class CustomDataEditing extends DataDrivenTest{
 
     @BeforeClass
     public static void initClass(){

@@ -18,19 +18,13 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 7/16/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-
 public class CustomObjectConverterTest {
-    private Calculator calculator;
 
     @BeforeClass
     public static void initClass(){
         ConverterManager.registerConverter(MyDataConverter.class);
     }
 
-    @Before
-    public void init(){
-        calculator = new Calculator();
-    }
     @Test
     @DataLoader(filePaths = "mydata.csv")
     @Converters(MyDataConverter.class)
