@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.easetech.easytest.annotation.Display;
 import org.easetech.easytest.annotation.Duration;
+import org.easetech.easytest.annotation.Repeat;
 
 /**
  * Created by shantonu on 7/15/16.
@@ -39,7 +40,7 @@ public class CalculatorTest extends DataDrivenTest {
 
     @Test
     @DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.EXCEL)
-
+    @Repeat(times = 5)
 
     public void testAddFromExcel(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
