@@ -8,6 +8,7 @@ import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.loader.LoaderType;
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.easetech.easytest.annotation.Display;
 import org.easetech.easytest.annotation.Duration;
