@@ -7,7 +7,14 @@ import lombok.Data;
  */
 @Data
 public class MyData {
+
     private String name;
     private String address;
     private Long id;
+
+    public MyData(String name, String address, Long id) {
+        this.name = name;
+        this.address = address;
+        this.id = id;
+    }
 }
