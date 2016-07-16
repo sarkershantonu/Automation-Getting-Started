@@ -7,5 +7,5 @@ import org.automation.DataDrivenTest;
  */
 public class ParseMyData extends DataDrivenTest{
 
-    
+
 }
