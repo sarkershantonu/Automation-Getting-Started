@@ -10,6 +10,9 @@ import org.junit.Test;
 
 /**
  * Created by shantonu on 7/16/16.
+ * Does not support xls & CSV in same data loader
+ * does not support multiple data loader in same class or method
+ * supports only same loader in multiple files, right most is higher priority
  */
 public class MultipleDataLoader extends DataDrivenTest{
 
