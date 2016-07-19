@@ -16,4 +16,5 @@ import org.junit.runner.RunWith;
 @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
 //todo checking @TestConfigProvider
 public class RegressionPolicy {
+
 }
