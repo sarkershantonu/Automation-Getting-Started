@@ -73,11 +73,26 @@ public class Browser {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
             return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
         }
     }
 
+ private static ChromeOptions getLocalChromeOptions(){
+    String exeChromium = "<path to your chtome or chromium >\chrome.exe";
+        ChromeOptions options = new ChromeOptions();
+        String driverLocation = null;
 
+        if (os.contains("Windows")) {
+            driverLocation = "<path to chromium driver>\chromedriver.exe";//windows path
+        } else {
+            driverLocation = "/usr/bin/google-chrome";//linux path, default, you can change it
+        }
+        System.setProperty("webdriver.chrome.driver", driverLocation);
+        options.setBinary(exeChromium);
+
+        return options;
+    }
     public static void close() {
         driver.close();
         driver = null;// to avoid closeing time of browser by JVM
