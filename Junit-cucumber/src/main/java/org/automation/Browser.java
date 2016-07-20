@@ -55,7 +55,7 @@ public class Browser {
             String pathWindows = "C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe";// can be changed for your PC
             String pathlunix = "/usr/local/bin/chromedriver";
             ChromeDriverService service;
-            if (os.contains("windows")) {
+            if (os.contains("Windows")) {
                 System.setProperty("webdriver.chrome.driver", pathWindows);
                 service = new ChromeDriverService.Builder()
                         .usingDriverExecutable(new File(pathWindows))
