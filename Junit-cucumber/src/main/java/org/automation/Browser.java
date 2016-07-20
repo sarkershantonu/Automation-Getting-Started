@@ -97,5 +97,11 @@ public class Browser {
         driver.close();
         driver = null;// to avoid closeing time of browser by JVM
     }
-
+ private static DesiredCapabilities getLocalChrome(){
+     String exeChromium = "<<path to chromium >\chrome.exe";
+        DesiredCapabilities cap = new DesiredCapabilities();
+        cap.setCapability("browserName","chrome");
+        cap.setCapability("binary",exeChromium);
+        return cap;
+    }
 }
