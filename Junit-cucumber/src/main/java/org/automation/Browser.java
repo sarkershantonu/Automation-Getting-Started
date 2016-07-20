@@ -58,7 +58,7 @@ public class Browser {
             if (os.contains("windows")) {
                 System.setProperty("webdriver.chrome.driver", pathWindows);
                 service = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(pathlunix))
+                        .usingDriverExecutable(new File(pathWindows))
                         .usingAnyFreePort()
                         .build();
             } else {
