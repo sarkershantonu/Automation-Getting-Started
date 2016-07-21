@@ -1,7 +1,7 @@
 package org.automation.UnitTests;
 
 import org.automation.Calculator;
-import org.automation.MyDataConverter;
+
 import org.easetech.easytest.converter.ConverterManager;
 import org.easetech.easytest.converter.UserDefinedConverter;
 import org.junit.Assert;
@@ -20,7 +20,7 @@ public class TestCustomObjectConverter {
 
     @BeforeClass
     public static void initClass(){
-        ConverterManager.registerConverter(MyDataConverter.class);
+
     }
 
     @Before

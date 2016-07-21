@@ -1,7 +1,7 @@
 package org.automation.UnitTests;
 
 import org.automation.MyDataType;
-import org.automation.MyDataConverter;
+
 import org.easetech.easytest.annotation.Converters;
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.converter.ConverterManager;
@@ -18,12 +18,12 @@ public class CustomObjectConverterTest {
 
     @BeforeClass
     public static void initClass(){
-        ConverterManager.registerConverter(MyDataConverter.class);
+
     }
 
     @Test
     @DataLoader(filePaths = "mydata.csv")
-    @Converters(MyDataConverter.class)
+
     public void testParam(MyDataType data){
 
         System.out.println(data.toString());
