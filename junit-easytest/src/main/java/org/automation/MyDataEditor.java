@@ -1,6 +1,5 @@
 package org.automation;
 
-import java.beans.PropertyEditor;
 import java.beans.PropertyEditorSupport;
 
 /**
@@ -8,7 +7,7 @@ import java.beans.PropertyEditorSupport;
  */
 public class MyDataEditor extends PropertyEditorSupport {
 
-    public void setAsText(Long id, String name, String address){
-        setValue(new MyData(name, address,id));
+    public void setAsText(String item){
+        setValue(new MyDataType(Long.valueOf(item)));
     }
 }

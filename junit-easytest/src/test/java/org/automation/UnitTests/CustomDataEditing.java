@@ -1,7 +1,7 @@
 package org.automation.UnitTests;
 
 import org.automation.DataDrivenTest;
-import org.automation.MyData;
+import org.automation.MyDataType;
 import org.automation.MyDataEditor;
 import org.junit.BeforeClass;
 
@@ -16,6 +16,6 @@ public class CustomDataEditing extends DataDrivenTest{
 
     @BeforeClass
     public static void initClass(){
-        PropertyEditorManager.registerEditor(MyData.class, MyDataEditor.class);
+        PropertyEditorManager.registerEditor(MyDataType.class, MyDataEditor.class);
 }
 }

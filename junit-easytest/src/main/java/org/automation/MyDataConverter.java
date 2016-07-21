@@ -8,13 +8,11 @@ import java.util.Map;
 /**
  * Created by shantonu on 7/16/16.
  */
-public class MyDataConverter extends AbstractConverter<MyData> {
+public class MyDataConverter extends AbstractConverter<MyDataType> {
     @Override
 
-    public MyData convert(@NonNull Map<String, Object> convertFrom) {
-        MyData data = new MyData();
-        data.setAddress((String) convertFrom.get("address"));
-        data.setName((String) convertFrom.get("name"));
+    public MyDataType convert(@NonNull Map<String, Object> convertFrom) {
+        MyDataType data = new MyDataType();
         data.setId((Long) convertFrom.get("id"));
         return data;
     }
