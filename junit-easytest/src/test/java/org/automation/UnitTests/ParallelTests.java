@@ -1,10 +1,7 @@
 package org.automation.UnitTests;
 
 import org.automation.DataDrivenTest;
-import org.easetech.easytest.annotation.DataLoader;
-import org.easetech.easytest.annotation.Display;
-import org.easetech.easytest.annotation.Parallel;
-import org.easetech.easytest.annotation.Param;
+import org.easetech.easytest.annotation.*;
 import org.easetech.easytest.loader.LoaderType;
 import org.junit.Assert;
 import org.junit.Test;
@@ -12,7 +9,7 @@ import org.junit.Test;
 /**
  * Created by shantonu on 7/16/16.
  */
-@Parallel(threads = 2)//this is very fragile
+@Parallel(threads = 1)//this is very fragile
 public class ParallelTests extends DataDrivenTest{
     @Test
     public void testAdd(){
@@ -21,7 +18,7 @@ public class ParallelTests extends DataDrivenTest{
 
     @Test
     @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
-    @Display(fields = "b")
+    @Display(fields = "expected")
     public void testAddFromCSV(@Param(name = "a") Double a, @Param(name = "b")Double b, @Param(name = "expected")Double expected){
         Assert.assertEquals(expected, calculator.add(a,b),0.1);
     }
@@ -29,6 +26,7 @@ public class ParallelTests extends DataDrivenTest{
     @Test
     @DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.EXCEL)
     @Display(fields = "a")
+    @Repeat(times = 2)
     public void testAddFromExcel(@Param(name = "a") Double a, @Param(name = "b")Double b, @Param(name = "expected")Double expected){
         Assert.assertEquals(expected, calculator.add(a,b),0.1);
     }
