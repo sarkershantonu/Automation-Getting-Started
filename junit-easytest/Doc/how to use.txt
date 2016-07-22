@@ -18,3 +18,5 @@ Limitations :
 
 Note :
 Easy test exceptions are not very much user friendly so, you may struggle to get the root cause. so, be target oriented from start and follow own rules.
+
+So, make it before use
