@@ -1,0 +1,20 @@
+Important Annotation :
+
+
+1. DataLoader => Loades data from Excel, CSV, XML
+Can not use different type of file in same annotation
+One file ignore if multiple same type file loading data.
+
+Usages :
+1. With Test, loads data for test
+2. With class, default data loader for all tests in the class
+3. With policy class, can be used as global test parameter
+
+I prefer, 1 test = 1 data loader to keep it more specific and error free.
+
+Limitations :
+1. Runwith DataDrivenTestRunner.class or BlockJUnit4ClassRunner.class
+
+
+Note :
+Easy test exceptions are not very much user friendly so, you may struggle to get the root cause. so, be target oriented from start and follow own rules.
