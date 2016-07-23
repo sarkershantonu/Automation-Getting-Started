@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
  */
 @TestPolicy(LocalTestPolicy.class)
 @RunWith(DataDrivenTestRunner.class)
-public class CustomType {
+public class CustomTypeTest {
 
     @Test
     public void testParameter(@Param(name = "id", convertEmptyToNull = true)MyDataType id){

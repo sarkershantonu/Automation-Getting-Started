@@ -42,8 +42,15 @@ public class CalculatorTest extends DataDrivenTest {
     @Test
     @DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.EXCEL)
     @Repeat(times = 5)
-
     public void testAddFromExcel(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
+        Assert.assertEquals(expected, calculator.add(a, b), 0.1);
+
+    }
+
+    @Test
+    @DataLoader(filePaths = "calculator.xml", loaderType = LoaderType.XML)
+    @Repeat(times = 5)
+    public void testAddFromXML(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
 
     }
