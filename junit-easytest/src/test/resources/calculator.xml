@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<easytest:InputTestData xmlns:easytest="urn:org:easetech:easytest:1.0"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="urn:org:easetech:easytest:1.0 testDataSchema.xsd">
+
+    <TestMethod name="testAddFromXML">
+        <TestRecord id="1">
+            <Description>First content</Description>
+            <InputData>
+                <Entry key="a" value="33.0"/>
+                <Entry key="b" value="17.0"/>
+                <Entry key="expected" value="50.0"/>
+            </InputData>
+        </TestRecord>
+        <TestRecord id="1">
+            <Description>Second content</Description>
+            <InputData>
+                <Entry key="a" value="63.0"/>
+                <Entry key="b" value="7.0"/>
+                <Entry key="expected" value="70.0"/>
+            </InputData>
+        </TestRecord>
+    </TestMethod>
+
+</easytest:InputTestData>
