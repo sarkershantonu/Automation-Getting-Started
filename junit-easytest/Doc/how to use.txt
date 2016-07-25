@@ -14,7 +14,7 @@ I prefer, 1 test = 1 data loader to keep it more specific and error free.
 
 Limitations :
 1. Runwith DataDrivenTestRunner.class or BlockJUnit4ClassRunner.class
-
+2. Only one loade of a type should be in a test class (if you have two XML file loaders, you may see errors)
 
 Note :
 Easy test exceptions are not very much user friendly so, you may struggle to get the root cause. so, be target oriented from start and follow own rules.

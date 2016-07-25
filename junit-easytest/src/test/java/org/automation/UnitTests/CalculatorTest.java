@@ -2,23 +2,21 @@ package org.automation.UnitTests;
 
 import org.automation.Calculator;
 import org.automation.DataDrivenTest;
-import org.easetech.easytest.annotation.DataLoader;
-import org.easetech.easytest.annotation.Parallel;
-import org.easetech.easytest.annotation.Param;
+import org.easetech.easytest.annotation.*;
 import org.easetech.easytest.loader.LoaderType;
+import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.easetech.easytest.annotation.Display;
-import org.easetech.easytest.annotation.Duration;
-import org.easetech.easytest.annotation.Repeat;
+import org.junit.runner.RunWith;
 
 /**
  * Created by shantonu on 7/15/16.
  */
 
-
+@RunWith(DataDrivenTestRunner.class)
+@Report
 public class CalculatorTest extends DataDrivenTest {
 
     @Test
@@ -51,6 +49,15 @@ public class CalculatorTest extends DataDrivenTest {
     @DataLoader(filePaths = "calculator.xml", loaderType = LoaderType.XML)
     public void testAddFromXML(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
+
+    }
+
+
+    @Test
+    @DataLoader(filePaths = "calculator2.xml", loaderType = LoaderType.XML)
+    public String testAddXMLOutput(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
+        Assert.assertEquals(expected, calculator.add(a, b), 0.1);
+        return "success";
 
     }
 

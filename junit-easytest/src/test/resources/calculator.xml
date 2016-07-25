@@ -6,7 +6,6 @@
 
     <TestMethod name="testAddFromXML">
         <TestRecord id="1">
-            <Description>First content</Description>
             <InputData>
                 <Entry key="a" value="33.0"/>
                 <Entry key="b" value="17.0"/>
@@ -14,7 +13,6 @@
             </InputData>
         </TestRecord>
         <TestRecord id="1">
-            <Description>Second content</Description>
             <InputData>
                 <Entry key="a" value="63.0"/>
                 <Entry key="b" value="7.0"/>
