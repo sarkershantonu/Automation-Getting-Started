@@ -209,7 +209,7 @@ public class GooglePage extends PageBase {
 
     //@FindBy(id = "gb1")
     @FindBy(name = "btnG")
-   // @CacheLookup
+   @CacheLookup
     private WebElement search;
 
     @FindBy(css = "a[href='//support.google.com/websearch/?p=ws_results_help&hl=en-PL&fg=1']")

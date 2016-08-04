@@ -42,9 +42,7 @@ public class Browser {
                 System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
             }
             return new FirefoxDriver();
-        } else if ("opera".equals(nameOfBrowser)) {
-            return new OperaDriver();
-        } else if ("ie".equals(nameOfBrowser)) {
+        }  else if ("ie".equals(nameOfBrowser)) {
             File iedriver = new File("Point your Selenium Server exe Path");//todo for your PC
             System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
             //-Dwebdriver.ie.driver=physicall

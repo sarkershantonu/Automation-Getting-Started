@@ -19,7 +19,7 @@ public class TestGoogleSearch {
     @Before
     public void init(){
         //aBrowser =new FirefoxDriver();
-        aBrowser = Browser.getInstance("chrome");
+        aBrowser = Browser.getInstance("firefox");
         google = new GooglePage(aBrowser);
     }
 
