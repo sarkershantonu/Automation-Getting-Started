@@ -9,7 +9,7 @@
   <properties>
     <jetty.http.port>8888</jetty.http.port>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <allure.version>1.5.0.RC2</allure.version>
+    <allure.version>1.4.24.RC3</allure.version>
     <aspectj.version>1.8.8</aspectj.version>
   </properties>
 
