@@ -3,6 +3,7 @@ package org.automation;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -21,7 +22,7 @@ import java.net.URL;
  */
 public class Browser {
     private static WebDriver driver = null;
-
+    private static String os = System.getProperty("os.name");
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
@@ -35,7 +36,7 @@ public class Browser {
 
 
     private static WebDriver getABrowser(String nameOfBrowser) {
-        String os = System.getProperty("os.name");
+
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
             if (os.contains("windows")) {
@@ -79,12 +80,12 @@ public class Browser {
     }
 
  private static ChromeOptions getLocalChromeOptions(){
-    String exeChromium = "<path to your chtome or chromium >\chrome.exe";
+    String exeChromium = "<path to your chtome or chromium >chrome.exe";
         ChromeOptions options = new ChromeOptions();
         String driverLocation = null;
 
         if (os.contains("Windows")) {
-            driverLocation = "<path to chromium driver>\chromedriver.exe";//windows path
+            driverLocation = "<path to chromium driver>chromedriver.exe";//windows path
         } else {
             driverLocation = "/usr/bin/google-chrome";//linux path, default, you can change it
         }
@@ -98,7 +99,7 @@ public class Browser {
         driver = null;// to avoid closeing time of browser by JVM
     }
  private static DesiredCapabilities getLocalChrome(){
-     String exeChromium = "<<path to chromium >\chrome.exe";
+     String exeChromium = "<path to chromium>chrome.exe";
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("browserName","chrome");
         cap.setCapability("binary",exeChromium);

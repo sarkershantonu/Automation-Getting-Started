@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by shantonu on 3/12/16.
@@ -18,7 +19,7 @@ public class TestGoogleSearch {
     @Before
     public void init(){
         //aBrowser =new FirefoxDriver();
-        aBrowser = Browser.getInstance();
+        aBrowser = Browser.getInstance("chrome");
         google = new GooglePage(aBrowser);
     }
 
