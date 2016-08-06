@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
  */
 @Ignore
 @Parallel(threads = 1)
-@Display(fields = "a")
+@Display(fields = "expected")
 @Report(reportTypes = Report.REPORT_TYPE.DEFAULT, outputFormats = Report.EXPORT_FORMAT.XLS,outputLocation = "classpath:reports")
-@DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
+//@DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
 //todo checking @TestConfigProvider
 public class RegressionPolicy {
 

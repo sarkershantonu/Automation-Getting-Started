@@ -9,3 +9,7 @@ testAddFromCSV,a,b,expected
  ,15.0,25.0,40
  ,15.0,25.0,40
  ,15.0,25.0,40
+ ,900.0,250.0,1150.0
+
+testsubFromCSV,a,b,expected
+,25.0,15.0,10.0
