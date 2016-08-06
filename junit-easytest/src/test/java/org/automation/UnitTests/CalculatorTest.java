@@ -22,10 +22,7 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 outputFormats = Report.EXPORT_FORMAT.HTML)
 public class CalculatorTest extends DataDrivenTest {
 
-    @Test
-    public void testAdd() {
-        Assert.assertEquals(25.0, calculator.add(10.5, 14.5), 0.1);
-    }
+
 
     @Test
     @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)

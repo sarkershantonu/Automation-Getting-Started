@@ -1,6 +1,7 @@
 package org.automation.UnitTests;
 
 import org.automation.Calculator;
+import org.automation.DataDrivenTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -8,14 +9,9 @@ import org.junit.runners.Parameterized;
 
 /**
  * Created by shantonu on 8/6/16.
+ * No use of easy test
  */
-public class TestCalculator {
-    private Calculator calculator;
-
-    @Before
-    public void init(){
-        calculator = new Calculator();
-    }
+public class TestCalculator extends DataDrivenTest{
 
     @Test
     public void testAddition(){
