@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
-        <!--Only mandatory part-->
+        <!--Only mandatory part : start-->
         <dependency>
             <groupId>org.easetech</groupId>
             <artifactId>easytest-core</artifactId>
