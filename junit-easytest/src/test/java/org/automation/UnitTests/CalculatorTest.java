@@ -17,12 +17,9 @@ import org.junit.runners.BlockJUnit4ClassRunner;
  */
 
 @RunWith(DataDrivenTestRunner.class)
-@Report(reportTypes = {Report.REPORT_TYPE.METHOD_DURATION, Report.REPORT_TYPE.DEFAULT}
-,outputLocation ="classpath:Reports",
-outputFormats = Report.EXPORT_FORMAT.HTML)
+@Report(outputLocation = "file:Reports", reportTypes = Report.REPORT_TYPE.METHOD_DURATION)
+@TestProperties(value = "")
 public class CalculatorTest extends DataDrivenTest {
-
-
 
     @Test
     @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
@@ -31,15 +28,10 @@ public class CalculatorTest extends DataDrivenTest {
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected) {
 
-       /* try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
     @Test
-    @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
+    @DataLoader(filePaths = "cal.csv", loaderType = LoaderType.CSV)
     public void testsubFromCSV(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected){
