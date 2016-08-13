@@ -20,3 +20,7 @@ Note :
 Easy test exceptions are not very much user friendly so, you may struggle to get the root cause. so, be target oriented from start and follow own rules.
 
 So, make it before use
+
+important note : if assertion fails, CSV & XML reports are not generated but works fine with Excel
+
+http://stackoverflow.com/questions/27233070/parameterizedassertionerror-using-easytest-when-test-case-fails

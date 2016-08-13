@@ -17,35 +17,32 @@ import org.junit.runners.BlockJUnit4ClassRunner;
  */
 
 @RunWith(DataDrivenTestRunner.class)
-@Report(outputLocation = "file:Reports", reportTypes = Report.REPORT_TYPE.METHOD_DURATION)
-@TestProperties(value = "")
+@Report(outputLocation = "file:Reports", reportTypes = Report.REPORT_TYPE.DEFAULT)
 public class CalculatorTest extends DataDrivenTest {
 
-    @Test
-    @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
-    //@Duration(forClass = CalculatorTest.class, timeInMillis = 100)//duration condition does not work
+   /* @Test
+    @DataLoader(filePaths = "classpath:calculator.csv", loaderType = LoaderType.CSV)
     public void testAddFromCSV(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected) {
 
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
-    }
+    }*/
     @Test
-    @DataLoader(filePaths = "cal.csv", loaderType = LoaderType.CSV)
+    @DataLoader(filePaths = "classpath:cal.csv", loaderType = LoaderType.CSV)
     public void testsubFromCSV(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected){
         Assert.assertEquals(expected, calculator.sub(a, b), 0.1);
 
     }
-    @Test
+    /*@Test
     @DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.EXCEL)
-    @Repeat(times = 5)
     public void testAddFromExcel(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
+    }*/
 
-    }
-    @Test
+   /* @Test
     @DataLoader(filePaths = "calculator.xml", loaderType = LoaderType.XML)
     public void testAddFromXML(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
@@ -58,5 +55,5 @@ public class CalculatorTest extends DataDrivenTest {
         return "success";
 
     }
-
+*/
 }
