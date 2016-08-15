@@ -23,6 +23,12 @@ import java.net.URL;
 public class Browser {
     private static WebDriver driver = null;
     private static String os = System.getProperty("os.name");
+    public static WebDriver getInstance(){
+        if (driver == null) {
+            driver = getABrowser("chrome");
+        }
+        return driver;
+    }
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
