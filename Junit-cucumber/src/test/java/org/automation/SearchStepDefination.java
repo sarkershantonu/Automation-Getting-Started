@@ -1,6 +1,9 @@
 package org.automation;
 
+
+
 import cucumber.api.java.en.*;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +28,11 @@ public class SearchStepDefination {
 
     }
 
+    @After
+    public void finish(){
+
+        System.out.println("I was called ");
+    }
     @Given("^I open (.+) browser$")
     public void i_open_browser(String nameOfBrowser) throws Throwable {
        driver = Browser.getInstance(nameOfBrowser);
@@ -83,6 +91,7 @@ public class SearchStepDefination {
 
     @Then("^I quit browser$")
     public void i_quit_browser() throws Throwable {
+        ScreenshotUtil.takeFullScreen("endingtests"+System.currentTimeMillis(),driver);
         Browser.close();
     }
 }
