@@ -20,27 +20,27 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 @Report(outputLocation = "file:Reports", reportTypes = Report.REPORT_TYPE.DEFAULT)
 public class CalculatorTest extends DataDrivenTest {
 
-   /* @Test
-    @DataLoader(filePaths = "classpath:calculator.csv", loaderType = LoaderType.CSV)
+    @Test
+    @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
     public void testAddFromCSV(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected) {
 
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
-    }*/
-    @Test
+    }
+   /* @Test
     @DataLoader(filePaths = "classpath:cal.csv", loaderType = LoaderType.CSV)
     public void testsubFromCSV(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected){
         Assert.assertEquals(expected, calculator.sub(a, b), 0.1);
 
-    }
-    /*@Test
+    }*/
+    @Test
     @DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.EXCEL)
     public void testAddFromExcel(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
-    }*/
+    }
 
    /* @Test
     @DataLoader(filePaths = "calculator.xml", loaderType = LoaderType.XML)
