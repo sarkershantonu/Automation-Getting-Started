@@ -23,7 +23,6 @@ public class CustomObjectConverterTest {
 
     @Test
     @DataLoader(filePaths = "mydata.csv")
-
     public void testParam(MyDataType data){
 
         System.out.println(data.toString());
