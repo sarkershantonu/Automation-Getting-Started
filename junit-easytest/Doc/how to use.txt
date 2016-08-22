@@ -24,3 +24,4 @@ So, make it before use
 important note : if assertion fails, CSV & XML reports are not generated but works fine with Excel
 
 http://stackoverflow.com/questions/27233070/parameterizedassertionerror-using-easytest-when-test-case-fails
+
