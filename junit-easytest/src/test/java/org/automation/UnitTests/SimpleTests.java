@@ -11,7 +11,7 @@ import org.junit.runners.Parameterized;
  * Created by shantonu on 8/6/16.
  * No use of easy test
  */
-public class TestCalculator extends DataDrivenTest{
+public class SimpleTests extends DataDrivenTest{
 
     @Test
     public void testAddition(){
