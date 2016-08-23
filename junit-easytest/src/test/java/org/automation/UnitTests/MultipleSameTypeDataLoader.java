@@ -1,10 +1,8 @@
 package org.automation.UnitTests;
 
-import org.automation.Calculator;
-import org.automation.DataDrivenTest;
+import org.automation.core.DataDrivenTest;
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;
-import org.easetech.easytest.loader.LoaderType;
 import org.junit.Assert;
 import org.junit.Test;
 

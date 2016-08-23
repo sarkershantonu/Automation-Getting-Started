@@ -1,6 +1,6 @@
 package org.automation.UnitTests;
 
-import org.automation.DataDrivenTest;
+import org.automation.core.DataDrivenTest;
 import org.automation.MyDataType;
 import org.automation.MyDataEditor;
 import org.junit.BeforeClass;

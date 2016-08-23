@@ -1,5 +1,6 @@
-package org.automation;
+package org.automation.core;
 
+import org.automation.Calculator;
 import org.easetech.easytest.annotation.Report;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Before;

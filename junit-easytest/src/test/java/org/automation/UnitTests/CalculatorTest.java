@@ -1,16 +1,12 @@
 package org.automation.UnitTests;
 
-import org.automation.Calculator;
-import org.automation.DataDrivenTest;
+import org.automation.core.DataDrivenTest;
 import org.easetech.easytest.annotation.*;
 import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.BlockJUnit4ClassRunner;
 
 /**
  * Created by shantonu on 7/15/16.

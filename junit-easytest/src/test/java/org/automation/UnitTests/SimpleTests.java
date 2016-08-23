@@ -1,11 +1,8 @@
 package org.automation.UnitTests;
 
-import org.automation.Calculator;
-import org.automation.DataDrivenTest;
+import org.automation.core.DataDrivenTest;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runners.Parameterized;
 
 /**
  * Created by shantonu on 8/6/16.
