@@ -13,10 +13,13 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 8/26/16.
  */
 
-
 @RunWith(DataDrivenTestRunner.class)
-@Report(reportTypes = {Report.REPORT_TYPE.METHOD_DURATION,Report.REPORT_TYPE.DEFAULT }, outputLocation = "file:TestReports")
-public class MultipleTypeReportExample extends DataDrivenTest {
+@Report(outputFormats = {
+        Report.EXPORT_FORMAT.HTML,
+        Report.EXPORT_FORMAT.XLS,
+        Report.EXPORT_FORMAT.PDF},
+        outputLocation = "file:TestReports")
+public class MultipleFormatExampleReport extends DataDrivenTest {
 
     @Test
     @DataLoader(filePaths = "calculator.xls")
@@ -30,3 +33,4 @@ public class MultipleTypeReportExample extends DataDrivenTest {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
 }
+

@@ -1,7 +1,7 @@
 package org.automation.UnitTests;
 
 import org.automation.Calculator;
-import org.automation.policy.RegressionPolicy;
+import org.automation.policy.RegressionPolicyExample;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.Repeat;
 import org.easetech.easytest.annotation.TestPolicy;
@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 7/16/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-@TestPolicy(RegressionPolicy.class)
+@TestPolicy(RegressionPolicyExample.class)
 public class TestWithPolicy {
     protected Calculator calculator;
 

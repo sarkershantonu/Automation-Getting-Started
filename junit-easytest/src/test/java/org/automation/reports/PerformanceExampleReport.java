@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(DataDrivenTestRunner.class)
 @Report(reportTypes = Report.REPORT_TYPE.METHOD_DURATION,outputLocation = "file:TestReports")// report type default is assertion results & multi format allowed
-public class PerformanceReportExample extends DataDrivenTest {
+public class PerformanceExampleReport extends DataDrivenTest {
 
     @Test
     @DataLoader(filePaths = "calculator.xls")

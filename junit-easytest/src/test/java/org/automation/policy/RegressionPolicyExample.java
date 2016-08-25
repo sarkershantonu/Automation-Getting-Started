@@ -12,7 +12,9 @@ import org.junit.runner.RunWith;
 @Ignore
 @Parallel(threads = 1)
 @Display(fields = "expected")
-@Report(reportTypes = Report.REPORT_TYPE.DEFAULT, outputFormats = Report.EXPORT_FORMAT.XLS,outputLocation = "classpath:reports")
-public class RegressionPolicy {
+@Report(reportTypes = Report.REPORT_TYPE.DEFAULT,
+        outputFormats = Report.EXPORT_FORMAT.XLS,
+        outputLocation = "classpath:reports")
+public class RegressionPolicyExample {
 
 }
