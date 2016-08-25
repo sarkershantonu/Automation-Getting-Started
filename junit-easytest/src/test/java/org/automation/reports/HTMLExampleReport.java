@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 8/26/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-@Report(outputFormats = Report.EXPORT_FORMAT.HTML)
+@Report(outputFormats = Report.EXPORT_FORMAT.HTML, outputLocation = "file:TestReports")
 public class HTMLExampleReport extends DataDrivenTest {
 
     @Test
