@@ -4,18 +4,17 @@ import org.automation.core.DataDrivenTest;
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.Report;
-import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
- * Created by shantonu on 8/23/16.
+ * Created by shantonu on 8/26/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-@Report(outputLocation = "classpath:TestReports")
-public class ReportClassPathExample extends DataDrivenTest{
+@Report(outputLocation = "file:TestReports")
+public class CustomPathExampleReport extends DataDrivenTest{
 
     @Test
     @DataLoader(filePaths = "calculator.xls")
