@@ -10,7 +10,7 @@ import org.junit.Test;
  * Created by shantonu on 7/16/16.
  */
 @Parallel(threads = 1)//this is very fragile
-public class ParallelTests extends DataDrivenTest{
+public class ParallelTestExample extends DataDrivenTest{
     @Test
     public void testAdd(){
         Assert.assertEquals(25.0, calculator.add(10.5,14.5),0.1);

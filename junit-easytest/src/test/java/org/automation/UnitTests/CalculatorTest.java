@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
  */
 
 @RunWith(DataDrivenTestRunner.class)
-@Report(outputLocation = "file:Reports", reportTypes = Report.REPORT_TYPE.DEFAULT)
+@Report(outputLocation = "file:TestReports", reportTypes = Report.REPORT_TYPE.DEFAULT)
 public class CalculatorTest extends DataDrivenTest {
 
     @Test

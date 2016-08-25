@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(DataDrivenTestRunner.class)
 @TestPolicy(RegressionPolicyExample.class)
-public class TestWithPolicy {
+public class TestWithPolicyExample {
     protected Calculator calculator;
 
     @Before
