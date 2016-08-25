@@ -1,11 +1,9 @@
 package org.automation.UnitTests;
 
 import org.automation.MyDataType;
-import org.automation.policy.LocalTestPolicy;
-import org.easetech.easytest.annotation.DataLoader;
+import org.automation.policy.TestPolicyExample;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.TestPolicy;
-import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +11,7 @@ import org.junit.runner.RunWith;
 /**
  * Created by shantonu on 7/21/16.
  */
-@TestPolicy(LocalTestPolicy.class)
+@TestPolicy(TestPolicyExample.class)
 @RunWith(DataDrivenTestRunner.class)
 public class CustomTypeTest {
 
