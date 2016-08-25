@@ -3,6 +3,7 @@ package org.automation.reports;
 import org.automation.core.DataDrivenTest;
 import org.easetech.easytest.annotation.DataLoader;
 import org.easetech.easytest.annotation.Param;
+import org.easetech.easytest.annotation.Report;
 import org.easetech.easytest.loader.LoaderType;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Assert;
@@ -13,7 +14,7 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 8/23/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-
+@Report(outputLocation = "classpath:TestReports")
 public class ReportClassPathExample extends DataDrivenTest{
 
     @Test
