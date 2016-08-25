@@ -19,9 +19,9 @@ import org.junit.runner.RunWith;
 @Report(outputLocation = "file:TestReports", reportTypes = Report.REPORT_TYPE.DEFAULT)
 public class DisplayFieldExample extends DataDrivenTest{
     @Test
-    @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
-    @Display(fields = "expected")
-    public void testAddFromCSV(@Param(name = "a") Double a,
+    @DataLoader(filePaths = "calculator2.csv", loaderType = LoaderType.CSV)
+    @Display(fields = "expected")//only expected filed will be shown in test meta info not report
+    public void testAdd(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected) {
 
