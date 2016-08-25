@@ -1,4 +1,4 @@
-package org.automation.UnitTests;
+package org.automation.customtype;
 
 import org.automation.MyDataType;
 
@@ -12,6 +12,7 @@ import org.junit.runner.RunWith;
 
 /**
  * Created by shantonu on 7/16/16.
+ * todo
  */
 @RunWith(DataDrivenTestRunner.class)
 public class CustomObjectConverterTest {

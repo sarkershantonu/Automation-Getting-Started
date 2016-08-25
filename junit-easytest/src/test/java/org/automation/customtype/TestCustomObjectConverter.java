@@ -1,4 +1,4 @@
-package org.automation.UnitTests;
+package org.automation.customtype;
 
 import org.automation.Calculator;
 
@@ -13,7 +13,7 @@ import org.junit.runners.BlockJUnit4ClassRunner;
 
 /**
  * Created by shantonu on 7/16/16.
- * not ready
+ * todo
  */
 
 public class TestCustomObjectConverter {
