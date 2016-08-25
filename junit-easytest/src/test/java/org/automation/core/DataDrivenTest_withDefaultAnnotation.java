@@ -7,10 +7,14 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 
 /**
- * Created by shantonu on 7/15/16.
+ * Created by shantonu on 8/26/16.
  */
-
-public abstract class DataDrivenTest {
+@RunWith(DataDrivenTestRunner.class)
+@Report(outputLocation = "file:TestReports",
+        outputFormats = Report.EXPORT_FORMAT.PDF,
+        reportTypes = {Report.REPORT_TYPE.METHOD_DURATION, Report.REPORT_TYPE.DEFAULT})
+//will crete reports, disable locally
+public abstract class DataDrivenTest_withDefaultAnnotation {
     protected Calculator calculator;
 
     @Before

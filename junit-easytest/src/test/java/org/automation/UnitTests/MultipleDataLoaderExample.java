@@ -9,7 +9,7 @@ import org.junit.Test;
 /**
  * Created by shantonu on 8/22/16.
  */
-public class MultipleDifferentTypeDataLoader extends DataDrivenTest {
+public class MultipleDataLoaderExample extends DataDrivenTest {
     @Test
     @DataLoader(filePaths = {"calculator2.csv","calculator3.xml"})
     public void testAdd(@Param(name = "a") Double a, @Param(name = "b")Double b, @Param(name = "expected")Double expected){

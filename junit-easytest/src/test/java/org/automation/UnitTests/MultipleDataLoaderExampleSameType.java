@@ -12,7 +12,7 @@ import org.junit.Test;
  * does not support multiple data loader in same class or method
  * supports only same loader in multiple files, right most is higher priority
  */
-public class MultipleSameTypeDataLoader extends DataDrivenTest{
+public class MultipleDataLoaderExampleSameType extends DataDrivenTest{
 
     @Test
     @DataLoader(filePaths = {"calculator2.csv","calculator3.csv"})//calculator3 is accepted not 2.
