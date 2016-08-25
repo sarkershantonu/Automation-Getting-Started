@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 8/26/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-@Report(outputLocation = "file:TestReports")
+@Report(outputLocation = "file:TestReports")// default location = project working directory
 public class CustomPathExampleReport extends DataDrivenTest{
 
     @Test
