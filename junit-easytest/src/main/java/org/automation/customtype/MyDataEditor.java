@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.customtype;
 
 import java.beans.PropertyEditorSupport;
 

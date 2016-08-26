@@ -1,11 +1,11 @@
-package org.automation;
+package org.automation.customtype;
 
-import lombok.Data;
+
 
 /**
  * Created by shantonu on 7/16/16.
  */
-@Data
+
 public class MyDataType {
     public MyDataType(Long id) {
         this.id = id;

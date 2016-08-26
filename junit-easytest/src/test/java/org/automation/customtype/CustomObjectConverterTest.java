@@ -1,10 +1,6 @@
 package org.automation.customtype;
 
-import org.automation.MyDataType;
-
-import org.easetech.easytest.annotation.Converters;
 import org.easetech.easytest.annotation.DataLoader;
-import org.easetech.easytest.converter.ConverterManager;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.BeforeClass;
 import org.junit.Test;
