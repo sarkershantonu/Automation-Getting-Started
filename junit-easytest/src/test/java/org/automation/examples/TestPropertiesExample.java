@@ -14,7 +14,8 @@ import java.util.Properties;
 /**
  * Created by shantonu on 8/26/16.
  */
-public class TestPropertyExample extends DataDrivenTest_withDefaultAnnotation {
+
+public class TestPropertiesExample extends DataDrivenTest_withDefaultAnnotation {
 
     @TestProperties(value = {"test.properties"})
     private Properties myProps;

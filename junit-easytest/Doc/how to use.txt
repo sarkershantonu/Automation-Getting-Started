@@ -29,5 +29,5 @@ http://stackoverflow.com/questions/27233070/parameterizedassertionerror-using-ea
 Does not work :
 @Duration => makes tests tobe ignored.
 @Report for failed tests with CSV & XML
-
+@TestProperties at class level
 
