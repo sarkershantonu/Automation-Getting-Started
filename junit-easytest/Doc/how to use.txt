@@ -25,3 +25,7 @@ important note : if assertion fails, CSV & XML reports are not generated but wor
 
 http://stackoverflow.com/questions/27233070/parameterizedassertionerror-using-easytest-when-test-case-fails
 
+
+Does not work :
+@Duration => makes tests tobe ignored.
+

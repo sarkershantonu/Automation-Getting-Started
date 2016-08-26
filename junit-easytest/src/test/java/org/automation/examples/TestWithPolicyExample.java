@@ -3,6 +3,7 @@ package org.automation.examples;
 import org.automation.Calculator;
 import org.automation.core.DataDrivenTest;
 import org.automation.policy.PolicyExample;
+import org.easetech.easytest.annotation.Duration;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.Repeat;
 import org.easetech.easytest.annotation.TestPolicy;
