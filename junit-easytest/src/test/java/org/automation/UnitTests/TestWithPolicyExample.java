@@ -20,7 +20,7 @@ import org.junit.runner.RunWith;
 public class TestWithPolicyExample extends DataDrivenTest {
 
     @Test
-    public void testAddFromCSV(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
+    public void  testAddFromExcel(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
 }

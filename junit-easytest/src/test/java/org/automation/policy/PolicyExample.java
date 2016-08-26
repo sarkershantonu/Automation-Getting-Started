@@ -15,9 +15,11 @@ import org.junit.runner.RunWith;
 
 @Ignore
 @Parallel(threads = 2)
-@Report(reportTypes = {Report.REPORT_TYPE.DEFAULT, Report.REPORT_TYPE.METHOD_DURATION},
-        outputFormats = Report.EXPORT_FORMAT.PDF,outputLocation = "file:TestReports")
-@DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.CSV)// i preffer data loder should be with method
+@Report(reportTypes = {Report.REPORT_TYPE.DEFAULT,
+        Report.REPORT_TYPE.METHOD_DURATION},
+        outputFormats = Report.EXPORT_FORMAT.PDF,
+        outputLocation = "file:TestReports")
+@DataLoader(filePaths = "calculator.xls")// i preffer data loder should be with method
 @Display(fields = "id")
 public class PolicyExample {
 }
