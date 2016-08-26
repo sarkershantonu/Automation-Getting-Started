@@ -8,7 +8,7 @@ import org.junit.Test;
  * Created by shantonu on 8/6/16.
  * No use of easy test
  */
-public class SimpleTests extends DataDrivenTest{
+public class SimpleTest extends DataDrivenTest{
 
     @Test
     public void testAddition(){

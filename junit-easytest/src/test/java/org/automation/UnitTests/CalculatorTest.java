@@ -8,6 +8,8 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.util.Properties;
+
 /**
  * Created by shantonu on 7/15/16.
  */
@@ -16,13 +18,17 @@ import org.junit.runner.RunWith;
 @Report(outputLocation = "file:TestReports", reportTypes = Report.REPORT_TYPE.DEFAULT)
 public class CalculatorTest extends DataDrivenTest {
 
+
+
     @Test
     @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
+
     public void testAddFromCSV(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected) {
 
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
+
     }
    /* @Test
     @DataLoader(filePaths = "classpath:cal.csv", loaderType = LoaderType.CSV)
@@ -34,6 +40,7 @@ public class CalculatorTest extends DataDrivenTest {
     }*/
     @Test
     @DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.EXCEL)
+    @Format(time = "HH:mm")
     public void testAddFromExcel(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
