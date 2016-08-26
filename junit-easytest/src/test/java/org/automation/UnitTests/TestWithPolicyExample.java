@@ -1,7 +1,8 @@
 package org.automation.UnitTests;
 
 import org.automation.Calculator;
-import org.automation.policy.RegressionPolicyExample;
+import org.automation.core.DataDrivenTest;
+import org.automation.policy.PolicyExample;
 import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.Repeat;
 import org.easetech.easytest.annotation.TestPolicy;
@@ -15,17 +16,10 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 7/16/16.
  */
 @RunWith(DataDrivenTestRunner.class)
-@TestPolicy(RegressionPolicyExample.class)
-public class TestWithPolicyExample {
-    protected Calculator calculator;
-
-    @Before
-    public void init(){
-        calculator = new Calculator();
-    }
+@TestPolicy(PolicyExample.class)
+public class TestWithPolicyExample extends DataDrivenTest {
 
     @Test
-    @Repeat(times = 5)
     public void testAddFromCSV(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
