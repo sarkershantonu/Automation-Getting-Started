@@ -32,3 +32,11 @@ Does not work :
 @TestProperties at class level
 
 Not in the example :
+=> Custom type
+And following annotations :
+ Converters
+ TestConfigProvider
+ Intercept
+ PreerveContext
+ Provided
+ TestBean
