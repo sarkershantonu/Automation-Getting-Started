@@ -31,3 +31,4 @@ Does not work :
 @Report for failed tests with CSV & XML
 @TestProperties at class level
 
+Not in the example :
