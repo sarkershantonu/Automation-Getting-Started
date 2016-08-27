@@ -9,6 +9,9 @@ import java.util.Map;
  */
 public class MyDataTypeConverter extends AbstractConverter<MyDataType> {
     public MyDataType convert(Map<String, Object> convertFrom) {
+        MyDataType customType = null;
+
+
         return null;
     }
 }
