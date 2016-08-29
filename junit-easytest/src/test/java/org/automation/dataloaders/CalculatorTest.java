@@ -1,4 +1,4 @@
-package org.automation.UnitTests;
+package org.automation.dataloaders;
 
 import org.automation.core.DataDrivenTest;
 import org.easetech.easytest.annotation.*;

@@ -5,6 +5,7 @@ import org.automation.PageBase;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.How;
 
 /**
  * Created by shantonu on 6/4/16.
