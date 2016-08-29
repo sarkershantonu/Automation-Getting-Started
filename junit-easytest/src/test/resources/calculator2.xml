@@ -13,7 +13,7 @@
             </InputData>
             <OutputData></OutputData>
         </TestRecord>
-        <TestRecord id="1">
+        <TestRecord id="2">
             <InputData>
                 <Entry key="a" value="63.0"/>
                 <Entry key="b" value="7.0"/>

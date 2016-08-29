@@ -30,14 +30,14 @@ public class CalculatorTest extends DataDrivenTest {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
 
     }
-   /* @Test
-    @DataLoader(filePaths = "classpath:cal.csv", loaderType = LoaderType.CSV)
+    @Test
+    @DataLoader(filePaths = "cal.csv", loaderType = LoaderType.CSV)
     public void testsubFromCSV(@Param(name = "a") Double a,
                                @Param(name = "b") Double b,
                                @Param(name = "expected") Double expected){
         Assert.assertEquals(expected, calculator.sub(a, b), 0.1);
 
-    }*/
+    }
     @Test
     @DataLoader(filePaths = "calculator.xls", loaderType = LoaderType.EXCEL)
     @Format(time = "HH:mm")
@@ -45,7 +45,7 @@ public class CalculatorTest extends DataDrivenTest {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
 
-   /* @Test
+    @Test
     @DataLoader(filePaths = "calculator.xml", loaderType = LoaderType.XML)
     public void testAddFromXML(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
@@ -58,5 +58,6 @@ public class CalculatorTest extends DataDrivenTest {
         return "success";
 
     }
-*/
+
+
 }

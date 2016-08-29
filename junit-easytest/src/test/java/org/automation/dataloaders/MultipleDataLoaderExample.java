@@ -13,10 +13,15 @@ import org.junit.runner.RunWith;
  */
 @RunWith(DataDrivenTestRunner.class)
 public class MultipleDataLoaderExample extends DataDrivenTest {
+
+    // only the first loader will be working..
+    // in here "calculator2.csv"
     @Test
     @DataLoader(filePaths = {"calculator2.csv","calculator3.xml"})
     public void testAdd(@Param(name = "a") Double a, @Param(name = "b")Double b, @Param(name = "expected")Double expected){
         Assert.assertEquals(expected, calculator.add(a,b),0.1);
     }
+
+
 
 }
