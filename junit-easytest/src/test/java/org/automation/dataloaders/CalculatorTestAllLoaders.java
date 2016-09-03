@@ -16,7 +16,7 @@ import java.util.Properties;
 
 @RunWith(DataDrivenTestRunner.class)
 @Report(outputLocation = "file:TestReports", reportTypes = Report.REPORT_TYPE.DEFAULT)
-public class CalculatorTest extends DataDrivenTest {
+public class CalculatorTestAllLoaders extends DataDrivenTest {
 
 
 
