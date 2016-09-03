@@ -42,6 +42,6 @@ public class TestGoogleSearch {
 
     @After
     public void cleanup(){
-       aBrowser.close();
+        Browser.close();
     }
 }
