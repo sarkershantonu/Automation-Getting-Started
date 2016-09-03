@@ -17,7 +17,9 @@ public class CSVLoaderExample extends DataDrivenTest {
 
     @Test
     @DataLoader(filePaths = "calculator.csv", loaderType = LoaderType.CSV)
-    public String testAddFromCSV(@Param(name = "a") Double a, @Param(name = "b") Double b, @Param(name = "expected") Double expected) {
+    public String testAddFromCSV(@Param(name = "a") Double a,
+                                 @Param(name = "b") Double b,
+                                 @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
         return "success";
 
