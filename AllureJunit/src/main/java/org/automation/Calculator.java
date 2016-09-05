@@ -1,4 +1,4 @@
-package org.calculator;
+package org.automation;
 
 import ru.yandex.qatools.allure.annotations.Step;
 
