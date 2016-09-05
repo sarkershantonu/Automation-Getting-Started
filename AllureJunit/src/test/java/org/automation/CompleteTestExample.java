@@ -15,12 +15,12 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 @Stories({"User can add two numbers", "User can sub two numbers", "User can multiply two numbers"})
 @Description("This is class ")
 public class CompleteTestExample {
-    private Calculator aCalculator = null;
+    private CalculatorWithSteps aCalculator = null;
 
     @Before
     @Step("Initiation")
     public void init(){
-        aCalculator = new Calculator();
+        aCalculator = new CalculatorWithSteps();
     }
 
     @Test
