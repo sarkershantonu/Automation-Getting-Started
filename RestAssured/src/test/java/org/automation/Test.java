@@ -3,6 +3,7 @@ package org.automation;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.restlet.Route;
 
 import static java.lang.String.format;
 
@@ -13,6 +14,7 @@ public class Test {
     private static final String URL = "";
 
     public Response getPostContent(int postNumber) {
+
 
         return RestAssured.given()
                 .contentType(ContentType.JSON)

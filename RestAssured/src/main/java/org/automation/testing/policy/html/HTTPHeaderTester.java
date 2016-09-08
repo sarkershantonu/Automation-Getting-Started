@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by shantonu on 9/8/16.
  */
-public interface HeaderTester {
+public interface HTTPHeaderTester {
     void testResposeCode(String responseCode);
     void testResposeMessage(String responseMessage);
     void testContentType(String type);
