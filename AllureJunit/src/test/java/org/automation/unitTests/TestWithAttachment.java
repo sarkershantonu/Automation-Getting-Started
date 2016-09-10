@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.IOException;
 
 /**
@@ -28,6 +29,10 @@ public class TestWithAttachment extends TestingCalculator {
                     new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 
             ByteArrayOutputStream bo = new ByteArrayOutputStream();
+
+            // Save as JPEG
+            File file = new File("./screencapture.jpg");
+            ImageIO.write(screencapture, "jpg", file);
             ImageIO.write(screencapture, ".jpg", bo);
             out = bo.toByteArray();
             bo.close();
