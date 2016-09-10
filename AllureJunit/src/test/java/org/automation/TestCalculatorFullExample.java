@@ -1,8 +1,8 @@
 package org.automation;
 
 
+import org.automation.core.TestingCalculator;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import ru.yandex.qatools.allure.annotations.*;
 import ru.yandex.qatools.allure.model.SeverityLevel;
@@ -14,7 +14,7 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 @Features("CR 256 : Changing home screen template")
 @Stories({"User can add two numbers", "User can sub two numbers", "User can multiply two numbers"})
 @Description("This is class ")
-public class CompleteTestExample extends TestingCalculator {
+public class TestCalculatorFullExample extends TestingCalculator {
 
     @Test
     @Title("This will add two numbers")
