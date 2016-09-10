@@ -9,6 +9,7 @@ import io.restassured.config.RestAssuredConfig;
 public class ConfigHTTPUtils {
 
     public RestAssuredConfig defaultConfig(){
+
         return null;
     }
 }
