@@ -1,65 +1,41 @@
 package org.automation.unitTests;
 
-import org.automation.MyRunner;
+import org.automation.ScreenCaptureUtil;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import ru.yandex.qatools.allure.annotations.Attachment;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
+import ru.yandex.qatools.allure.annotations.*;
 
 /**
- * Created by shantonu on 9/5/16.
- * todo
+ * Created by shantonu on 9/11/16.
  */
-@RunWith(MyRunner.class)
 public class TestWithAttachment extends TestingCalculator {
 
-
-    @Attachment(value = "Sample Screenshot", type = "image/png")
-    public static byte[] screenCapture() {
-        byte[] out = null;
-        try {
-            BufferedImage screencapture = new Robot().createScreenCapture(
-                    new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-
-            ByteArrayOutputStream bo = new ByteArrayOutputStream();
-
-            // Save as JPEG
-            File file = new File("./screencapture.jpg");
-            ImageIO.write(screencapture, "jpg", file);
-            ImageIO.write(screencapture, ".jpg", bo);
-            out = bo.toByteArray();
-            bo.close();
-
-        } catch (AWTException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return out;
+    @Test
+    public void testAddition(){
+        Assert.assertEquals(25.0, aCalculator.add(10.0,15.0), 0.01);
+        attachThisMessage("Adding message with default text");
     }
 
     @Test
-    @Attachment(value = "Sample Screenshot", type = "image/png")
-    public byte[] testAddition() {
-        Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
-        return screenCapture();
+    public void testAddition2(){
+        Assert.assertEquals(25.0, aCalculator.add(10.0,15.0), 0.01);
+        attachThisMessage("https://www.google.pl");
     }
-    /*
+
     @Test
-    @Attachment(value = "Sample Screenshot", type = "image/png")
-    public void testAddition2() {
-        Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
-        TestWithAttachment.screenCapture();
+    public void testAddition3(){
+        Assert.assertEquals(25.0, aCalculator.add(10.0,15.0), 0.01);
+        attachScreen();
     }
-    */
+    @Attachment
+    private String attachThisMessage(String message){
+        return message;
+    }
+    @Attachment(value = "Sample Screenshot", type = "image/png")
+    private byte[] attachScreen(){
+        return ScreenCaptureUtil.capture();
+    }
+
 
 }
-
