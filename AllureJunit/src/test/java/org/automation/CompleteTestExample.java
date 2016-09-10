@@ -14,14 +14,7 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 @Features("CR 256 : Changing home screen template")
 @Stories({"User can add two numbers", "User can sub two numbers", "User can multiply two numbers"})
 @Description("This is class ")
-public class CompleteTestExample {
-    private CalculatorWithSteps aCalculator = null;
-
-    @Before
-    @Step("Initiation")
-    public void init(){
-        aCalculator = new CalculatorWithSteps();
-    }
+public class CompleteTestExample extends TestingCalculator {
 
     @Test
     @Title("This will add two numbers")
