@@ -22,7 +22,8 @@ import java.io.IOException;
 public class TestWithAttachment extends TestingCalculator {
 
 
-    public byte[] screenCapture() {
+    @Attachment(value = "Sample Screenshot", type = "image/png")
+    public static byte[] screenCapture() {
         byte[] out = null;
         try {
             BufferedImage screencapture = new Robot().createScreenCapture(
@@ -51,5 +52,14 @@ public class TestWithAttachment extends TestingCalculator {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
         return screenCapture();
     }
+    /*
+    @Test
+    @Attachment(value = "Sample Screenshot", type = "image/png")
+    public void testAddition2() {
+        Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
+        TestWithAttachment.screenCapture();
+    }
+    */
+
 }
 
