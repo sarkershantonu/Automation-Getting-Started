@@ -9,7 +9,7 @@ This repository contains
 And in sider POM : 
 3. Zohhak, for parametrized example
 4. Junit for test
-5. SLF4J/log4k for logging support of allure
+5. SLF4J/log4j for logging support of allure
 6. Allure Junit Adapter
 7. Allure support plugins & reporters 
 8. Jetty server to deploy report locally : pre-configured port 9000 
