@@ -1,6 +1,0 @@
-
-
-
-Run via Jetty :
-jetty:run -Djetty.port=9100
-

@@ -1,6 +1,6 @@
 package org.automation.unitTests.attachment;
 
-import org.automation.core.TestRule_ScreenShotOnEachStep;
+import org.automation.TestRule_ScreenShotOnEachStep;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Rule;
