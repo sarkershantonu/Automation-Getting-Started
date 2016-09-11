@@ -1,5 +1,6 @@
 # Allure Junit
 This repository contains 
+
 1. How can we start Allure Junit
 2. Examples with all annotation supported
 
@@ -8,6 +9,7 @@ This repository contains
 2. maven 3.3.9
 
 And in sider POM : 
+
 3. Zohhak, for parametrized example
 4. Junit for test
 5. SLF4J/log4j for logging support of allure
@@ -20,6 +22,7 @@ And in sider POM :
 2. mvn clean test [for testing]
 3. mvn site [make allure report]
 4. mvn jetty:run 
+
 or if you want to run in your own port 
 jetty:run -Djetty.port=<port>
 
