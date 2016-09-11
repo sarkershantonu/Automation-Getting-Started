@@ -1,6 +1,6 @@
 # Allure Junit
 This repository contains 
-1. How can we start Aluure Junit
+1. How can we start Allure Junit
 2. Examples with all annotation supported
 
 # Project Requirements
