@@ -1,4 +1,4 @@
-package org.automation.unitTests;
+package org.automation.unitTests.parameter;
 
 
 import org.automation.core.TestingCalculator;
@@ -16,17 +16,23 @@ import java.util.Collection;
 /**
  * The difference in this case with single @Parameter using is, no constructor needed but those fields need to be public
  * @author shantonu
+ *=> Allure @Parameter does not works, we can not see in tests about parameters
+ *
+ * because it is not initiated. it works when it is initiated either in method or in constructors. (see constructor parametrized tests)
+ *
  *
  */
 @RunWith(Parameterized.class)
-public class TestParameter extends TestingCalculator{
+public class TestWithParameters extends TestingCalculator{
 
+	@ru.yandex.qatools.allure.annotations.Parameter("Expected")
 	@Parameter(value=0)
 	public int expected;
-	
+
+	@ru.yandex.qatools.allure.annotations.Parameter("First")
 	@Parameter(value=1)
 	public int first;
-	
+	@ru.yandex.qatools.allure.annotations.Parameter("Second")
 	@Parameter(value=2)
 	public int second;
 
@@ -38,12 +44,9 @@ public class TestParameter extends TestingCalculator{
 	}
 	@Test
 	public void testAddWithParameters() {
-
-		System.out.println("TestParameter >>> "+first + " & " + second + " Expected = " + expected);
 		try {
 			Thread.sleep(2000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		Assert.assertEquals(expected, aCalculator.add(first, second),0.01);

@@ -14,15 +14,18 @@ import java.util.Collection;
 /**
  * Each method in this class will run based on how many data given, no matter tests are using the data or not, the test() method will run based on items in collection. 
  * @author shantonu
- *
+ *Allure parameters are all about environment parameters
  */
 @RunWith(Parameterized.class)
-public class ParametersTests extends TestingCalculator{
+public class TestWithParameters_constructor extends TestingCalculator{
+	@ru.yandex.qatools.allure.annotations.Parameter("Expected")
 	private int expected;
+	@ru.yandex.qatools.allure.annotations.Parameter("First")
 	private int first;
+	@ru.yandex.qatools.allure.annotations.Parameter("Second")
 	private int second;
 
-	public ParametersTests(int expecte, int f, int s) {
+	public TestWithParameters_constructor(int expecte, int f, int s) {
 		this.expected = expecte;
 		this.first = f;
 		this.second = s;
