@@ -24,9 +24,38 @@ public class ScreenCaptureUtil {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
+    public static void capturePNG(String filePath) {
+        try {
+            BufferedImage screencapture = new Robot().createScreenCapture(
+                    new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+            File file = new File(filePath);
+            ImageIO.write(screencapture, "png", file);
 
+        } catch (AWTException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public static byte[] capturePNG() {
+        byte[] out = null;
+        try {
+            BufferedImage screencapture = new Robot().createScreenCapture(
+                    new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+
+            ByteArrayOutputStream bo = new ByteArrayOutputStream();
+            ImageIO.write(screencapture, "png", bo);
+            out = bo.toByteArray();
+            bo.close();
+
+        } catch (AWTException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return out;
+    }
     public static byte[] capture() {
         byte[] out = null;
         try {
@@ -34,7 +63,7 @@ public class ScreenCaptureUtil {
                     new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 
             ByteArrayOutputStream bo = new ByteArrayOutputStream();
-            ImageIO.write(screencapture, ".png", bo);
+            ImageIO.write(screencapture, "jpg", bo);
             out = bo.toByteArray();
             bo.close();
 

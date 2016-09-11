@@ -1,26 +1,19 @@
 package org.automation.unitTests;
 
-import org.automation.ScreenCaptureUtil;
+import org.automation.core.TestRule_ScreenShotOnEachStep;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
-import ru.yandex.qatools.allure.annotations.*;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Created by shantonu on 9/11/16.
  */
-public class TestWithAttachment extends TestingCalculator {
+public class TestWithAttachment_Rules extends TestingCalculator {
+
+    @Rule
+    public TestWatcher myWatcher = new TestRule_ScreenShotOnEachStep();
 
     @Test
     public void testAdditionFail() {
@@ -31,9 +24,6 @@ public class TestWithAttachment extends TestingCalculator {
     @Test
     public void testAddition() {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
-        saveAsImage(attach(),"A3.jpg");
     }
-
-
 
 }
