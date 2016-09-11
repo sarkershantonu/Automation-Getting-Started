@@ -24,8 +24,12 @@ public class CalculatorWithSteps {
     public double mul(double a, double b){
         return a*b;
     }
-    @Step("Dividing two numbers")
+    @Step("Dividing two numbers : {0}/{1}")
     public double div(double a, double b){
         return a/b;
+    }
+    @Step("Reminder of : {0}%{1}")
+    public double mod(double a, double b){
+        return a%b;
     }
 }

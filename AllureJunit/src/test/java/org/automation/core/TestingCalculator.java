@@ -51,4 +51,8 @@ public abstract class TestingCalculator {
             e.printStackTrace();
         }
     }
+    @Attachment(value = "{0}", type = "text/html")
+    public static String attachHtml(String html) {
+        return html;
+    }
 }

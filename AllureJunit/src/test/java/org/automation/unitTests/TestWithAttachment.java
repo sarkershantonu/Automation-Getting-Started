@@ -25,13 +25,12 @@ public class TestWithAttachment extends TestingCalculator {
     @Test
     public void testAdditionFail() {
         Assert.assertEquals(35.0, aCalculator.add(10.0, 15.0), 0.01);
-        attachThisMessage("https://www.google.pl");
     }
 
     @Test
     public void testAddition() {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
-        saveAsImage(attach(),"A3.jpg");
+        saveAsImage(attach(),"A3.jpg");//=> not using allure, local saving
     }
 
 
