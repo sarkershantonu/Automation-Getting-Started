@@ -34,7 +34,7 @@ public class ScreenCaptureUtil {
                     new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
 
             ByteArrayOutputStream bo = new ByteArrayOutputStream();
-            //ImageIO.write(screencapture, ".jpg", bo);
+            ImageIO.write(screencapture, ".png", bo);
             out = bo.toByteArray();
             bo.close();
 
