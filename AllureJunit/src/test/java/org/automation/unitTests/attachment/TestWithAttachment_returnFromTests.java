@@ -1,4 +1,4 @@
-package org.automation.unitTests;
+package org.automation.unitTests.attachment;
 
 import junit.framework.AssertionFailedError;
 import org.automation.MyRunner;
