@@ -1,4 +1,4 @@
-package org.automation.steps.serenity;
+package org.automation.steps.serenity.serenity;
 
 import net.thucydides.core.steps.ScenarioSteps;
 
