@@ -1,6 +1,8 @@
 package org.automation.steps.serenity.opencart;
 
 import net.thucydides.core.steps.ScenarioSteps;
+import org.automation.pages.opencart.HomePage;
+import org.automation.pages.opencart.SearchResultPage;
 
 import java.util.List;
 
@@ -8,7 +10,8 @@ import java.util.List;
  * Created by shantonu on 9/12/16.
  */
 public class SearchingSteps extends ScenarioSteps {
-
+    HomePage homePage;
+    SearchResultPage resultPage;
 
 
 }
