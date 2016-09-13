@@ -1,1 +1,4 @@
-Steps :
+@Steps = define steps
+    {method} = will add method name
+    {0}= add parameter count on zero based index
+
