@@ -10,5 +10,10 @@
     _ replace by space, and camel cases are seperated with space.
 
 @Description = will be shown below test class/method title
-Apply on method+ class
-=> use if you need to add some thing about, like spacial cases
+    Apply on method+ class
+    => use if you need to add some thing about, like spacial cases
+
+@Features and @Stories : useful for business owners, stakeholders, scrum team, BDD type
+    Apply on method+ class
+    Will be shown under Behaviours tab
+
