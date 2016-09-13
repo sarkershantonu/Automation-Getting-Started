@@ -3,4 +3,10 @@
     {0}= add parameter count on zero based index
     Apply Only on Methods
 
-@Title =
+@Title = Add Custom Title,
+    Apply on method+ class
+
+    if no title, method names are used as title
+    _ replace by space, and camel cases are seperated with space.
+
+
