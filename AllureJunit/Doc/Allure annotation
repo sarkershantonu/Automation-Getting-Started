@@ -1,3 +1,5 @@
+All of these annotations are useed for adding info in allure reports.
+
 @Steps = define steps
     {method} = will add method name
     {0}= add parameter count on zero based index
@@ -17,3 +19,6 @@
     Apply on method+ class
     Will be shown under Behaviours tab
 
+@Attachment : attaching file or text/string(in file).
+    We can add screenshot also as byte[], example present
+    Apply on methods
