@@ -22,3 +22,7 @@ All of these annotations are useed for adding info in allure reports.
 @Attachment : attaching file or text/string(in file).
     We can add screenshot also as byte[], example present
     Apply on methods
+
+@Severity : a priority notifier , using predefine enums.
+  Apply on method+ class
+
