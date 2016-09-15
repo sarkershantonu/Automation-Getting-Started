@@ -21,7 +21,8 @@ public class TestOpenCart {
 
     @Test
     public void search_an_item(){
-
+        search.openHomePage("Your Store");
+        search.search("iphone");
     }
 
 }
