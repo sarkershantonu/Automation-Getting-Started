@@ -1,9 +1,9 @@
-package org.automation;
+package org.automation.tests;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import org.automation.steps.opencart.SearchingSteps;
+import org.automation.steps.SearchingSteps;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
