@@ -1,5 +1,6 @@
 package org.automation.suits;
 
+import org.automation.tests.TestOpenCart;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -8,5 +9,6 @@ import org.junit.runners.Suite;
  */
 
 @RunWith(Suite.class)
+@Suite.SuiteClasses({TestOpenCart.class})
 public class TestRegressionSuit {
 }
