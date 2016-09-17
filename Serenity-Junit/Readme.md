@@ -1,3 +1,3 @@
 # Serenity Junit starter project
 
-mvn test
+mvn verify
