@@ -1,3 +1,14 @@
 
 
-Step defination :
+Step definition :
+1. your stes class must extends ScenarioSteps//net.thucydides.core.steps.ScenarioSteps
+2. All step method(public, non static)  should be annotated with @Step//net.thucydides.core.annotations.Step;
+3. if you keep a superclass for all steps in your project, make sure that super class extends ScenarioSteps
+4. Step defination class may contains multiple pages, make sure those are following page object.
+The target is, all of those pages should maintain common session. If you need to make a new session, you have to define seperately.
+
+
+Best practice :( i follow)
+1. have assertions for each step
+    Expected data
+    Expected item validation
