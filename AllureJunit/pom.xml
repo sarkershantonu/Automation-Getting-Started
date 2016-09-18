@@ -42,6 +42,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
+              <!--  <artifactId>maven-failsafe-plugin</artifactId>DOES NOT WORK WITH ALLURE-->
                 <version>2.19.1</version>
                 <configuration>
                     <argLine>
