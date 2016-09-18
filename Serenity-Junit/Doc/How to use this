@@ -1,1 +1,2 @@
 
+ mvn verify serenity:aggregate
