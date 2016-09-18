@@ -8,6 +8,8 @@ mvn jerry:run
 
 # Maven settings.xml entry
 Under tag : pluginGroups 
+
     create tag :pluginGroup
+    
     add entry : net.thucydides.maven.plugins
 
