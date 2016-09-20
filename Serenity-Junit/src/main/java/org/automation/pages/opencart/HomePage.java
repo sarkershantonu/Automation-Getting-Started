@@ -10,8 +10,6 @@ import org.openqa.selenium.WebDriver;
  */
 @DefaultUrl("http://demo.opencart.com")
 public class HomePage extends PageObject {
-    public HomePage(WebDriver aDriver) {
-        super(aDriver);
-    }
+
 
 }
