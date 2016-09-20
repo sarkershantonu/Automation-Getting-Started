@@ -11,10 +11,10 @@ import org.openqa.selenium.support.FindBy;
 public class SearchPanel extends PageObject {
 
     @FindBy(xpath = "//div[@id='search']/input")
-    public WebElement textBox ;
+    public WebElementFacade textBox ;
 
     @FindBy(xpath = "//div[@id='search']/span/button")//property loading or after parsing or static
-    public WebElement button;
+    public WebElementFacade button;
 
     public SearchPanel(WebDriver aDriver) {
         super(aDriver);
