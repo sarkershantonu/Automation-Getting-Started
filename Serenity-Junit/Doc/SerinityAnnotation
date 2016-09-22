@@ -1,3 +1,8 @@
 @Step : represents step definition, so you can define a method (only) as a step
 @Steps : represent a object (a field) contains steps in a test class.
 When we are including a class's object as source of multiple step(method), in a test class, we dealer this as field. This class should have methods with @Step
+
+@DefaultUrl : Applied on class level of a page, represents Default URL.
+
+@At : Applied on class level of a page. This is required if we want to use currentPageAt() method to check current page url.
+//important if you are checking your steps before performing to a page.

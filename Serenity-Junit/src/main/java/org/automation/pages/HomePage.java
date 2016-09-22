@@ -47,6 +47,7 @@ public class HomePage extends PageObject {
     public void searchForShopCalled(String shopName) {
         enterSearchTerms(shopName);
         $(SHOP_SUGGESTION).click();
+
     }
 
     public void dismissLocationMessage() {
