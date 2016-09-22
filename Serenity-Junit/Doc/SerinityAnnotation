@@ -1,1 +1,3 @@
-@Step : represents step defination
+@Step : represents step definition, so you can define a method (only) as a step
+@Steps : represent a object (a field) contains steps in a test class.
+When we are including a class's object as source of multiple step(method), in a test class, we dealer this as field. This class should have methods with @Step
