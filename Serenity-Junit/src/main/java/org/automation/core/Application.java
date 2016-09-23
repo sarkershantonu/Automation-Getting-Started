@@ -1,3 +1,4 @@
+package org.automation.core;
 
 import net.thucydides.core.annotations.Feature;
 
