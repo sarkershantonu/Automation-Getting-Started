@@ -1,17 +1,6 @@
 package org.automation;
 
 
-import net.serenitybdd.core.Serenity;
-import net.serenitybdd.junit.runners.SerenityRunner;
-import net.thucydides.core.annotations.Issue;
-import net.thucydides.core.annotations.Issues;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
-
-//@RunWith(SerenityRunner.class)
 public class CalculatorTest {
 
     private Calculator calculator;
