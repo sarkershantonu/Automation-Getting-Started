@@ -12,3 +12,7 @@ host part of the default URL will be overridden by the webdriver.base.url proper
 
 todo : High level Example
 @ImplementedBy
+
+@Features : Apply on class, declearing as feature
+
+

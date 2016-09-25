@@ -49,7 +49,7 @@
                     </execution>
                     <execution>
                         <id>frontpage</id>
-                        <phase>validate</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>copy-resources</goal>
                         </goals>
