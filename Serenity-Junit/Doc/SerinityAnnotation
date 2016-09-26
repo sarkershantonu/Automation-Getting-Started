@@ -28,3 +28,6 @@ Used for specifying Issue number from tracker
 
 @Manual : when a method is not implemented, this will indicate those method as manual tests
 
+@NamedUrl : defines url with names & parameters. Can be used with @DefaultUrl.
+
+@NamedUrls : supporting multiple URLs mapping with  @NamedUrl
