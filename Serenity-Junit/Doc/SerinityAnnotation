@@ -23,3 +23,5 @@ Used for specifying Issue number from tracker
 1. Maintain Unique session (useful for role base testing)
 2. Cookie policy clear, useful for adding security testing or sharing cookies.
 3. driver type (chrome, firefox, etc) this part is explicit usages. I preffer maintain this using properties with flexible options.
+
+@ManagedPages : This is using default page factory support. using this you can used directly pages and items
