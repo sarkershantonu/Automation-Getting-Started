@@ -1,6 +1,7 @@
 package org.automation.tests;
 
 import net.serenitybdd.junit.runners.SerenityRunner;
+import net.thucydides.core.annotations.ClearCookiesPolicy;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import org.automation.steps.SearchingSteps;
@@ -13,7 +14,7 @@ import org.openqa.selenium.WebDriver;
  */
 @RunWith(SerenityRunner.class)
 public class TestOpenCart {
-    @Managed
+    @Managed(uniqueSession = true, clearCookies = ClearCookiesPolicy.Never)
     WebDriver driver;
 
     @Steps
