@@ -31,3 +31,5 @@ Used for specifying Issue number from tracker
 @NamedUrl : defines url with names & parameters. Can be used with @DefaultUrl.
 
 @NamedUrls : supporting multiple URLs mapping with  @NamedUrl
+
+ @Narrative : Add extra info at stories and requirements. It is applicable in class & package level
