@@ -32,4 +32,6 @@ Used for specifying Issue number from tracker
 
 @NamedUrls : supporting multiple URLs mapping with  @NamedUrl
 
- @Narrative : Add extra info at stories and requirements. It is applicable in class & package level
+@Narrative : Add extra info at stories and requirements. It is applicable in class & package level
+
+@Pending : Method level : For Not implemented automated tests.
