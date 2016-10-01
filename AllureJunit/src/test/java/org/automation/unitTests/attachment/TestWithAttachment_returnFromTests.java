@@ -1,7 +1,7 @@
 package org.automation.unitTests.attachment;
 
 import junit.framework.AssertionFailedError;
-import org.automation.MyRunner;
+import org.automation.core.MyRunner;
 import org.automation.ScreenCaptureUtil;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
@@ -33,5 +33,13 @@ public class TestWithAttachment_returnFromTests extends TestingCalculator {
         return "Test Complete for addition";
 
     }
+
+    @Test
+    @Attachment
+    public String testAdditionWithAttachment() {
+        Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
+        return "This text will be attached";
+    }
+
 }
 

@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.core;
 
 import org.junit.internal.runners.InitializationError;
 import org.junit.internal.runners.JUnit4ClassRunner;

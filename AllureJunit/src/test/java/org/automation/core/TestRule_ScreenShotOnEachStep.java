@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.core;
 
 import org.automation.ScreenCaptureUtil;
 import org.junit.rules.TestWatcher;

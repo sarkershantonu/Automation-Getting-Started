@@ -32,6 +32,12 @@ public class TestWithAttachment extends TestingCalculator {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
         saveAsImage(attach(),"A3.jpg");//=> not using allure, local saving
     }
+    @Test
+    @Issue("255")
+    public void testAdditionForText() {
+        Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
+        attachThisMessage("This is for attaching a text response from test");
+    }
 
 
 

@@ -54,6 +54,8 @@
                             <value>ru.yandex.qatools.allure.junit.AllureRunListener</value>
                         </property>
                     </properties>
+
+
                 </configuration>
                 <dependencies>
                     <!--<dependency> need with failsafe
