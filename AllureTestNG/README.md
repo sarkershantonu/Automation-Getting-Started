@@ -28,5 +28,7 @@ jetty:run -Djetty.port=<port>
 Then from browser , if you goto http://localhost:9001 you can see the report. 
 
 # Blog : 
-Please visit detail Junit aluure blog for more explanation. All test examples are from the same project. 
+Please visit detail Junit allure blog for more explanation. 
+All test examples are from the same project. 
+This has only minimal changes that needed to run with testNG.
 http://shantonusarker.blogspot.com/2016/10/allure-maven-test-junit.html
