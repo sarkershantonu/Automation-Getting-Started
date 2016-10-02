@@ -54,5 +54,4 @@ public class TestWithParameterDefaultExample extends TestingCalculator {
         browser = "Firefox";
         Assert.assertEquals(1.0, aCalculator.mod(25.0,3.0), 0.01);
     }
-
 }

@@ -39,18 +39,6 @@ public abstract class TestingCalculator {
         return ScreenShot.capture();
     }
 
-    protected void saveAsImage(byte[] imageAsByteArray, String name) {
-        InputStream in = new ByteArrayInputStream(imageAsByteArray);
-        BufferedImage bImageFromConvert = null;
-        File file;
-        try {
-            file = new File("./Images/"+name);
-            bImageFromConvert = ImageIO.read(new ByteArrayInputStream(imageAsByteArray));
-            ImageIO.write(bImageFromConvert, "jpg", file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     @Attachment(value = "{0}", type = "text/html")
     public static String attachHtml(String html) {
         return html;

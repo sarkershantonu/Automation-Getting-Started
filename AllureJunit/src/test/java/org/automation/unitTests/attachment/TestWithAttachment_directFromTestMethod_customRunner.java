@@ -15,7 +15,7 @@ import ru.yandex.qatools.allure.annotations.Attachment;
 
  */
 @RunWith(MyRunner.class)
-public class TestWithAttachment_returnFromTests extends TestingCalculator {
+public class TestWithAttachment_directFromTestMethod_customRunner extends TestingCalculator {
 
     @Test
     @Attachment(value = "Sample Screenshot", type = "image/png")
@@ -26,17 +26,11 @@ public class TestWithAttachment_returnFromTests extends TestingCalculator {
         }
         return ScreenShot.capture();
     }
-    @Test
-    @Attachment
-    public String testAddition2() {
-        Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
-        return "Test Complete for addition";
 
-    }
 
     @Test
     @Attachment
-    public String testAdditionWithAttachment() {
+    public String testAdditionAndTextAttachment() {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
         return "This text will be attached";
     }

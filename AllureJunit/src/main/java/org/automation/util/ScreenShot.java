@@ -3,15 +3,25 @@ package org.automation.util;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by shantonu on 9/11/16.
  */
 public class ScreenShot {
 
+    public void saveAsImage(byte[] imageAsByteArray, String name) {
+        InputStream in = new ByteArrayInputStream(imageAsByteArray);
+        BufferedImage bImageFromConvert = null;
+        File file;
+        try {
+            file = new File("./Images/"+name);
+            bImageFromConvert = ImageIO.read(new ByteArrayInputStream(imageAsByteArray));
+            ImageIO.write(bImageFromConvert, "jpg", file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     public static void capture(String filePath) {
         try {
             BufferedImage screencapture = new Robot().createScreenCapture(

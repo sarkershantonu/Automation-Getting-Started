@@ -13,10 +13,10 @@ import ru.yandex.qatools.allure.annotations.Title;
  */
 
 @Title("Attachment as text")
-public class TestWithAttachment_Rules extends TestingCalculator {
+public class TestWithAttachment_withEachStepSnapRule extends TestingCalculator {
 
     @Rule
-    public TestWatcher myWatcher = new TestRule_ScreenShotOnEachStep();
+    public TestWatcher screenShotInEachStep = new TestRule_ScreenShotOnEachStep();
 
     @Test
     public void testAdditionFail() {
