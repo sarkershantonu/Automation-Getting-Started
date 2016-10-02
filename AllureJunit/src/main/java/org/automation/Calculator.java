@@ -5,7 +5,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 /**
  * Created by shantonu on 3/5/16.
  */
-public class CalculatorWithSteps {
+public class Calculator {
 
 //@Steps**********************
 //{N} where N is a zero-based positive integer that will be replaced by the Nth method argument

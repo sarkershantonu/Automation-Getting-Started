@@ -1,7 +1,7 @@
 package org.automation.core;
 
-import org.automation.CalculatorWithSteps;
-import org.automation.ScreenCaptureUtil;
+import org.automation.Calculator;
+import org.automation.util.ScreenShot;
 import org.junit.Before;
 import ru.yandex.qatools.allure.annotations.Attachment;
 import ru.yandex.qatools.allure.annotations.Step;
@@ -17,12 +17,12 @@ import java.io.InputStream;
  * Created by shantonu on 9/10/16.
  */
 public abstract class TestingCalculator {
-    protected CalculatorWithSteps aCalculator = null;
+    protected Calculator aCalculator = null;
 
     @Before
     @Step("Initiation in {method}")
     public void init(){
-        aCalculator = new CalculatorWithSteps();
+        aCalculator = new Calculator();
     }
 
     @Attachment(value = "Sample Screenshot from {method} and param {0}")
@@ -31,12 +31,12 @@ public abstract class TestingCalculator {
     }
     @Attachment(value = "Sample Screenshot from {method}", type = "image/png")
     protected byte[] attachPNG() {
-        return ScreenCaptureUtil.capturePNG();
+        return ScreenShot.capturePNG();
     }
 
     @Attachment(value = "Sample Screenshot from {method}", type = "image/jpg")
     protected byte[] attach() {
-        return ScreenCaptureUtil.capture();
+        return ScreenShot.capture();
     }
 
     protected void saveAsImage(byte[] imageAsByteArray, String name) {

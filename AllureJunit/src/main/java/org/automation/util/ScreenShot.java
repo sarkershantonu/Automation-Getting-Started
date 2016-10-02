@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.util;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Created by shantonu on 9/11/16.
  */
-public class ScreenCaptureUtil {
+public class ScreenShot {
 
     public static void capture(String filePath) {
         try {

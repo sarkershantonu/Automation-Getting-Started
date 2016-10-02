@@ -2,7 +2,7 @@ package org.automation.unitTests.attachment;
 
 import junit.framework.AssertionFailedError;
 import org.automation.core.MyRunner;
-import org.automation.ScreenCaptureUtil;
+import org.automation.util.ScreenShot;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,10 +21,10 @@ public class TestWithAttachment_returnFromTests extends TestingCalculator {
     @Attachment(value = "Sample Screenshot", type = "image/png")
     public byte[] testAddition() {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
-        if(ScreenCaptureUtil.capture()==null){
+        if(ScreenShot.capture()==null){
             throw new AssertionFailedError();
         }
-        return ScreenCaptureUtil.capture();
+        return ScreenShot.capture();
     }
     @Test
     @Attachment

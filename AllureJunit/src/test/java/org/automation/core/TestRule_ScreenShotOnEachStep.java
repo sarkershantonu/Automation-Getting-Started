@@ -1,6 +1,6 @@
 package org.automation.core;
 
-import org.automation.ScreenCaptureUtil;
+import org.automation.util.ScreenShot;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import ru.yandex.qatools.allure.annotations.Attachment;
@@ -22,6 +22,6 @@ public class TestRule_ScreenShotOnEachStep extends TestWatcher {
 
     @Attachment(value = "Taking Screenshot with {method}", type = "image/png")
     public byte[] snap() {
-        return ScreenCaptureUtil.capture();
+        return ScreenShot.capture();
     }
 }
