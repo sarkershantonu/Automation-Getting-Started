@@ -20,7 +20,8 @@ public class TestCalculatorFullExample extends TestingCalculator {
     @Title("This will add two numbers")
     @Step("Assertion for Addition")
     @Severity(SeverityLevel.CRITICAL)
-    @Features("This is adding ")
+    @Features("CR 256A :This is adding ")
+    @Stories("User can add two numbers")
     public void testAddition(){
         Assert.assertEquals(25.0, aCalculator.add(10.0,15.0), 0.01);
     }
@@ -31,6 +32,8 @@ public class TestCalculatorFullExample extends TestingCalculator {
     @Severity(SeverityLevel.BLOCKER)
     @Issue(value = "Ticket id 250")
     @Description("This is method")
+    @Features("CR 256B :This is Subtraction ")
+    @Stories("User can sub two numbers")
     public void testSub(){
         Assert.assertEquals(25.0, aCalculator.sub(10.0,15.0), 0.01);
     }

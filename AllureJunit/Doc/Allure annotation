@@ -26,5 +26,4 @@ All of these annotations are useed for adding info in allure reports.
     type - this is  mime type of attach.
 
 @Severity : a priority notifier , using predefine enums.
-  Apply on method+ class
-
+  Apply on method

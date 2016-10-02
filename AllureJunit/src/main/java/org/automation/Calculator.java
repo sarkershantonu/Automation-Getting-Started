@@ -6,7 +6,6 @@ import ru.yandex.qatools.allure.annotations.Step;
  * Created by shantonu on 3/5/16.
  */
 public class Calculator {
-
 //@Steps**********************
 //{N} where N is a zero-based positive integer that will be replaced by the Nth method argument
 //{method} will be replaced by the annotated method name
@@ -15,8 +14,7 @@ public class Calculator {
     public double add(double a, double b){
         return a+b;
     }
-
-    @Step("Substracting {method} two numbers {0},{1}")
+    @Step("Subtracting {method} two numbers {0},{1}")
     public double sub(double a, double b){
         return a-b;
     }
