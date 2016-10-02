@@ -71,12 +71,10 @@ public class ScreenShot {
         try {
             BufferedImage screencapture = new Robot().createScreenCapture(
                     new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
-
             ByteArrayOutputStream bo = new ByteArrayOutputStream();
             ImageIO.write(screencapture, "jpg", bo);
             out = bo.toByteArray();
             bo.close();
-
         } catch (AWTException e) {
             e.printStackTrace();
         } catch (IOException e) {

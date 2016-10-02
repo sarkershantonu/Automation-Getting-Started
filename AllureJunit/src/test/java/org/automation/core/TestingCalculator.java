@@ -30,19 +30,17 @@ public abstract class TestingCalculator {
         return message;
     }
     @Attachment(value = "Sample Screenshot from {method}", type = "image/png")
-    protected byte[] attachPNG() {
+    protected byte[] capturePNG() {
         return ScreenShot.capturePNG();
     }
 
     @Attachment(value = "Sample Screenshot from {method}", type = "image/jpg")
-    protected byte[] attach() {
+    protected byte[] capture() {
         return ScreenShot.capture();
     }
-
     @Attachment(value = "{0}", type = "text/html")
     public static String attachHtml(String html) {
         return html;
     }
-
 
 }
