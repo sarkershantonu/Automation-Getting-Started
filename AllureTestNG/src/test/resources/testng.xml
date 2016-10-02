@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="AllureReportingExamples" parallel="false">
-    <test name="Complete Testing">
+    <test name="Single Test with all annotations">
         <classes>
             <class name="org.automation.TestCalculatorFullExample"/>
-           <!-- <class name="org.automation.unitTests.*"/>-->
         </classes>
+    </test>
+    <test name="Tests for All annotations">
+        <packages>
+            <package name="org.automation.unitTests"/>
+        </packages>
     </test>
 </suite>
