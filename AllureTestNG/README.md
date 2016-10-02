@@ -10,11 +10,11 @@ This repository contains
 
 And in sider POM : 
 
-4. TestNG for test
-5. SLF4J/log4j for logging support of allure
-6. Allure testNG Adapter
-7. Allure support plugins & reporters 
-8. Jetty server to deploy report locally : pre-configured port 9001 
+3. TestNG for test
+4. SLF4J/log4j for logging support of allure
+5. Allure testNG Adapter
+6. Allure support plugins & reporters 
+7. Jetty server to deploy report locally : pre-configured port 9001 
 
 # How to start :
 1. Download this project
