@@ -10,7 +10,6 @@ This repository contains
 
 And in sider POM : 
 
-
 4. TestNG for test
 5. SLF4J/log4j for logging support of allure
 6. Allure testNG Adapter
@@ -27,3 +26,7 @@ or if you want to run in your own port
 jetty:run -Djetty.port=<port>
 
 Then from browser , if you goto http://localhost:9001 you can see the report. 
+
+# Blog : 
+Please visit detail Junit aluure blog for more explanation. All test examples are from the same project. 
+http://shantonusarker.blogspot.com/2016/10/allure-maven-test-junit.html
