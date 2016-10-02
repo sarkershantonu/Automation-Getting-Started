@@ -1,0 +1,91 @@
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.automation</groupId>
+    <artifactId>allureTestNG</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <jetty.http.port>9001</jetty.http.port>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <allure.version>1.4.24.RC3</allure.version>
+        <aspectj.version>1.8.9</aspectj.version>
+        <suit.xml>${build.testOutputDirectory}/testng.xml</suit.xml>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.9.10</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.14</version>
+        </dependency>
+        <!-- allure part -->
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-testng-adaptor</artifactId>
+            <version>${allure.version}</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <!-- does not work <artifactId>maven-failsafe-plugin</artifactId>-->
+                <version>2.19.1</version>
+                <configuration>
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>
+                        </property>
+                    </properties>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suit.xml}</suiteXmlFile>
+                    </suiteXmlFiles>
+
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.3.7.v20160115</version>
+                <configuration>
+                    <webAppSourceDirectory>${project.build.directory}/site/allure-maven-plugin</webAppSourceDirectory>
+                    <httpConnector>
+                        <port>${jetty.http.port}</port>
+                    </httpConnector>
+                    <stopKey>stop</stopKey>
+                    <stopPort>1234</stopPort>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <reporting>
+        <excludeDefaults>true</excludeDefaults>
+        <plugins>
+            <plugin>
+                <groupId>ru.yandex.qatools.allure</groupId>
+                <artifactId>allure-maven-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>

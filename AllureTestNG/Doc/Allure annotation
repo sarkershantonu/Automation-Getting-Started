@@ -1,0 +1,29 @@
+All of these annotations are useed for adding info in allure reports.
+
+@Steps = define steps
+    {method} = will add method name
+    {0}= add parameter count on zero based index
+    Apply Only on Methods
+
+@Title = Add Custom Title,
+    Apply on method+ class
+
+    if no title, method names are used as title
+    _ replace by space, and camel cases are seperated with space.
+
+@Description = will be shown below test class/method title
+    Apply on method+ class
+    => use if you need to add some thing about, like spacial cases
+
+@Features and @Stories : useful for business owners, stakeholders, scrum team, BDD type
+    Apply on method+ class
+    Will be shown under Behaviours tab
+
+@Attachment : attaching file or text/string(in file).
+    We can add screenshot also as byte[], example present
+    Apply on methods
+    value - name of the attach. There you also use parameters and their indexes.
+    type - this is  mime type of attach.
+
+@Severity : a priority notifier , using predefine enums.
+  Apply on method
