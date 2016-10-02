@@ -1,7 +1,7 @@
 # Allure Junit
 This repository contains 
 
-1. How can we start Allure Junit
+1. How can we start Allure Test NG
 2. Examples with all annotation supported
 
 # Project Requirements
@@ -26,4 +26,4 @@ And in sider POM :
 or if you want to run in your own port 
 jetty:run -Djetty.port=<port>
 
-Then from browser , if you goto http://localhost:9000 you can see the report. 
+Then from browser , if you goto http://localhost:9001 you can see the report. 
