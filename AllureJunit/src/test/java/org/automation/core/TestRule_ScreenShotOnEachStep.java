@@ -20,7 +20,7 @@ public class TestRule_ScreenShotOnEachStep extends TestWatcher {
         snap();
     }
 
-    @Attachment(value = "Taking Screenshot with {method}", type = "image/png")
+    @Attachment(value = "Taking Screenshot with Junit rule", type = "image/png")
     public byte[] snap() {
         return ScreenShot.capture();
     }
