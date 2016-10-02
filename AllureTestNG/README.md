@@ -1,4 +1,4 @@
-# Allure Junit
+# Allure TestNG
 This repository contains 
 
 1. How can we start Allure Test NG
