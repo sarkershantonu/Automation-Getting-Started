@@ -3,6 +3,10 @@ package org.performance;
 
 import com.carrotsearch.junitbenchmarks.AbstractBenchmark;
 import com.carrotsearch.junitbenchmarks.BenchmarkOptions;
+import com.carrotsearch.junitbenchmarks.annotation.AxisRange;
+import com.carrotsearch.junitbenchmarks.annotation.BenchmarkHistoryChart;
+import com.carrotsearch.junitbenchmarks.annotation.BenchmarkMethodChart;
+import com.carrotsearch.junitbenchmarks.annotation.LabelType;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -11,16 +15,22 @@ import org.junit.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Properties;
 
-
+@AxisRange(min = 0, max =1)
+@BenchmarkMethodChart(filePrefix = "benchmark-lists2")
+@BenchmarkHistoryChart(labelWith = LabelType.TIMESTAMP, maxRuns = 20)
 public class TestCalculator_MethodLevelExample extends AbstractBenchmark{
     protected Calculator aCalculator = null;
 
-    public static Properties properties = new Properties();
     @BeforeClass
     public static void loadProperties() throws IOException {
-        properties.load(new FileInputStream(new File("jub.properties")));
+        Properties p = new Properties();
+        p.load(new FileInputStream(new File("src/test/resources/jub.properties")));
+        for(String k:p.stringPropertyNames()){
+            System.setProperty(k,p.getProperty(k));
+        }
     }
     @Before
     public void init(){
