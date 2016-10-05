@@ -20,7 +20,7 @@ import java.util.Properties;
 
 @AxisRange(min = 0, max =1)
 @BenchmarkMethodChart(filePrefix = "benchmark-lists")
-@BenchmarkHistoryChart(labelWith = LabelType.TIMESTAMP, maxRuns = 20)
+@BenchmarkHistoryChart(labelWith = LabelType.RUN_ID, maxRuns = 20)
 @BenchmarkOptions(concurrency = 2, warmupRounds = 2, benchmarkRounds = 20)
 public class TestCalculator extends AbstractBenchmark{
 
