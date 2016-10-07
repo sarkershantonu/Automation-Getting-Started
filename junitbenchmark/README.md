@@ -9,3 +9,8 @@ This repository has examples for method level benchmark testing examples using t
 
 # Maven run
 mvn test
+
+# For Chart 
+h2database
+
+Configuration present 
