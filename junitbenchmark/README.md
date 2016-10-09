@@ -31,5 +31,7 @@ you can use this to to test before actual tests for performance. This will help 
     
 3. Mission critical/Business critical data concurrency tests can be easily done by this. 
 Example, business transaction data concurrency testing for a banking or financial domain. This can validate data intregrity when concurrent requests are in place in the system. (Synchronization, locks etc)
-  
-  
+    
+4. simulate deadlock scenario
+ 
+5. Testing individual component, tire, request for Throughput and Error% 
