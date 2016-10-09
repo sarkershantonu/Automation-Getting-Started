@@ -28,3 +28,8 @@ And , important factor, error rate or error tolerant. This type of test can ensu
 you can use this to to test before actual tests for performance. This will help you to know how system behaves when they are intregrated .
    Some time it is very useful to run with manual tests in QA environment.
     A number of parallel request is going on while a manual tester is testing aplication UI behavior. 
+    
+3. Mission critical/Business critical data concurrency tests can be easily done by this. 
+Example, business transaction data concurrency testing for a banking or financial domain. This can validate data intregrity when concurrent requests are in place in the system. (Synchronization, locks etc)
+  
+  
