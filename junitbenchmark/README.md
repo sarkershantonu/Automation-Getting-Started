@@ -24,3 +24,7 @@ So, when you have Strict SLA , use this to validate throughput.
 This type of test is not suitable for Response Time SLAs as this is not user time. 
 And , important factor, error rate or error tolerant. This type of test can ensure (mostly) about server's error possibility. 
   
+2. You have functional integration tests which validates backend request. Like DB request, webservice calls via UI layer. 
+you can use this to to test before actual tests for performance. This will help you to know how system behaves when they are intregrated .
+   Some time it is very useful to run with manual tests in QA environment.
+    A number of parallel request is going on while a manual tester is testing aplication UI behavior. 
