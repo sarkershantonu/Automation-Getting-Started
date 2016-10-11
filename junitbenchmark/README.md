@@ -13,9 +13,18 @@ mvn test
 # For Chart 
 h2database
 
+
 # Configuration 
 in jub.properties. Load those as system properties. and after test chart will be present in chart folder. 
+I am loading all of the properties from jub.properties using this part of the code
 
+ Properties p = new Properties();
+ p.load(new FileInputStream(new File("src/test/resources/jub.properties")));
+ for(String k:p.stringPropertyNames()){
+     System.setProperty(k,p.getProperty(k));
+ }
+ 
+ So, if you need to change any property, you can change in this jub.properties, it will effect before tests. 
  
 # Where to use this 
 1. You have your unit tests, use this to know your concurrency state performance.

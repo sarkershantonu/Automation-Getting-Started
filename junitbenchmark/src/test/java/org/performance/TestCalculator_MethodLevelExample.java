@@ -57,5 +57,4 @@ public class TestCalculator_MethodLevelExample extends AbstractBenchmark{
             e.printStackTrace();
         }
     }
-
 }
