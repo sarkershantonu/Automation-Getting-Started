@@ -35,11 +35,13 @@ mvn test
 
 # Where to use it
 1. When you have single test method with different type of input data
-2. When you want to provide data as parameter for your tests
-3.  
+2. When you want to provide data as parameter for your existing tests
+3. Whe you are designing Data Driven framework or hybrid framework, this will help you to solve data driven part. 
+4. This fills up gap from TestNG data parameter of Junit. Now you can use junit with data drivent tests.    
 
 # Where not to use
-1. Performance tests, it will cause resource concurrence 
+1. Performance tests, it will cause resource concurrency error (busy)
+2. Do not use local reporting while measuring method time. This report generation will add up extra time with tests.   
 
 # This example does not contains 
 1. Custom type which is supported by easy test. 
