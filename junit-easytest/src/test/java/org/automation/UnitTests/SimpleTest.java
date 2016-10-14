@@ -6,7 +6,7 @@ import org.junit.Test;
 
 /**
  * Created by shantonu on 8/6/16.
- * No use of easy test
+ * No use of easy test, this is to prove how we test without easy test
  */
 public class SimpleTest extends DataDrivenTest{
 

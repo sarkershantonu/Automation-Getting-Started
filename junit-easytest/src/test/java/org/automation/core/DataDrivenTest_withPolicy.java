@@ -14,7 +14,6 @@ import org.junit.runner.RunWith;
 @RunWith(DataDrivenTestRunner.class)
 public abstract class DataDrivenTest_withPolicy {
     protected Calculator calculator;
-
     @Before
     public void init(){
         calculator = new Calculator();
