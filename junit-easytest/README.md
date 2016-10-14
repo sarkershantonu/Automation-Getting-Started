@@ -7,8 +7,8 @@ This contains simple example with easy test
 3. Easy Test 1.4.0
 
 # Local Settings : 
-log : logs/
-Report : TestReports
+1. log : logs/
+2. Report : TestReports
 
 # maven command
 mvn test
@@ -25,6 +25,7 @@ mvn test
 2. Only one loade of a type should be in a test class (if you have two XML file loaders, you may see errors)
 3. Can not use different type of file in same annotation(class/method level)
 4. Files will be ignore if multiple same type file loading data (only one)
+5. If you open parameter file while testing, you will see errors as resources are locked/busy
 
 # known bugs : 
 1. Local Report generated only with excel loader 
@@ -33,6 +34,12 @@ mvn test
 4. @TestProperties at class level
 
 # Where to use it
+1. When you have single test method with different type of input data
+2. When you want to provide data as parameter for your tests
+3.  
+
+# Where not to use
+1. Performance tests, it will cause resource concurrence 
 
 # This example does not contains 
 1. Custom type which is supported by easy test. 
