@@ -32,5 +32,14 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.21</version>
         </dependency>
-    </dependencies>
+    </dependencies><build>
+    <resources>
+        <resource>
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </resource>
+    </resources>
+</build>
 </project>
