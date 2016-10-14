@@ -5,6 +5,7 @@ This contains simple example with easy test
 1. JDK 1.8
 2. Maven 3.3.9
 3. Easy Test 1.4.0
+4. Optional Slf4j, Slf4j-Log4j
 
 # Local Settings : 
 1. log : logs/
