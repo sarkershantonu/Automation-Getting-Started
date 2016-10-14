@@ -20,3 +20,9 @@ mvn test
 4. @TestProperties at class level
 
 # Where to use it
+
+# This example does not contains 
+1. Custom type which is supported by easy test. 
+2. Following supported annotations.
+ @Converters,@TestConfigProvider,@Intercept, @PreerveContext, @Provided,@TestBean
+3. 
