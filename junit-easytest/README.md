@@ -1,11 +1,12 @@
 # Easy Test , Data Driven testing for JUnit
 This contains simple example with easy test
 
-You need : 
-JDK 1.8
-Maven 3.3.9
+# Dependency 
+1. JDK 1.8
+2. Maven 3.3.9
+3. Easy Test 1.4.0
 
-Local Settings : 
+# Local Settings : 
 log : /logs/
 Report : TestReports/
 

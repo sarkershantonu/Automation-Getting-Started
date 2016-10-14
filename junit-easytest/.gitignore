@@ -2,7 +2,6 @@
 *.iml
 .idea
 .classpath
-.project
 target/
 .settings/
 .class
@@ -10,3 +9,4 @@ bin/
 obj/
 *.log
 TestReports
+Reports
