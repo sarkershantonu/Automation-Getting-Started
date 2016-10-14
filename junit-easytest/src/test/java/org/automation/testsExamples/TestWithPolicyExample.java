@@ -1,15 +1,11 @@
-package org.automation.examples;
+package org.automation.testsExamples;
 
-import org.automation.Calculator;
 import org.automation.core.DataDrivenTest;
 import org.automation.policy.PolicyExample;
-import org.easetech.easytest.annotation.Duration;
 import org.easetech.easytest.annotation.Param;
-import org.easetech.easytest.annotation.Repeat;
 import org.easetech.easytest.annotation.TestPolicy;
 import org.easetech.easytest.runner.DataDrivenTestRunner;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

@@ -1,11 +1,7 @@
-package org.automation.examples;
+package org.automation.testsExamples;
 
 import org.automation.core.DataDrivenTest_withDefaultAnnotation;
-import org.easetech.easytest.annotation.DataLoader;
-import org.easetech.easytest.annotation.Format;
-import org.easetech.easytest.annotation.Param;
 import org.easetech.easytest.annotation.TestProperties;
-import org.easetech.easytest.loader.LoaderType;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package org.automation.examples;
+package org.automation.testsExamples;
 
 import org.automation.core.DataDrivenTest;
 import org.easetech.easytest.annotation.DataLoader;
