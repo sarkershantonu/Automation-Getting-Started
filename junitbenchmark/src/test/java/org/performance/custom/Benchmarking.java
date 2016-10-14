@@ -38,7 +38,6 @@ public abstract class Benchmarking {
     @Rule
     public TestRule benchmarkRun = new BenchmarkRule();
 
-
     @Before
     public void init(){
         aCalculator = new Calculator();

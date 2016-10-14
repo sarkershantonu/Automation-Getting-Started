@@ -18,6 +18,8 @@
             <artifactId>junit-benchmarks</artifactId>
             <version>0.7.2</version>
         </dependency>
+
+        <!--Only for storing in local DB, you can ignore if you dont need to srore-->
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
