@@ -5,13 +5,6 @@ Important Annotation :
 Can not use different type of file in same annotation
 One file ignore if multiple same type file loading data.
 
-Usages :
-1. With Test, loads data for test
-2. With class, default data loader for all tests in the class
-3. With policy class, can be used as global test parameter
-
-
-
 
 
 Does not work :

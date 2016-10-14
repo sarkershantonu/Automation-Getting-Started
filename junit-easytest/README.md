@@ -15,11 +15,16 @@ mvn test
 
 # Quick Start & Best Practices 
 1. Run with DataDrivenTestRunner.class or BlockJUnit4ClassRunner.class (which needs lots of manual steps configurations.) 
-
+2. It supports Excel, CSV, XML DataLoaders, but use single type in single @DataLoader 
+2. With Test method, loads data for test (not in class level) 
+3. If you use in class, use single data loader for all tests (same type from same file) 
+4. You may keep test settings with policy class, which can be used as global test parameter for test settings. 
 
 # Pain Points
 1. Easy test exceptions are not very much user friendly so, you may struggle to get the root cause. so, be target oriented from start and follow own rules.
 2. Only one loade of a type should be in a test class (if you have two XML file loaders, you may see errors)
+3. Can not use different type of file in same annotation(class/method level)
+4. Files will be ignore if multiple same type file loading data (only one)
 
 # known bugs : 
 1. Local Report generated only with excel loader 
