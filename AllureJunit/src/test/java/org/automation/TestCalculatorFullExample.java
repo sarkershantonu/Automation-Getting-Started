@@ -33,7 +33,9 @@ public class TestCalculatorFullExample extends TestingCalculator {
     @Issue(value = "Ticket id 250")
     @Description("This is method")
     @Features("CR 256B :This is Subtraction ")
-    @Stories("User can sub two numbers")
+    @Stories({"User can sub two numbers",
+            "This will do substruction\n" +
+                    "Among two numbers"} )   //multi line stories
     public void testSub(){
         Assert.assertEquals(25.0, aCalculator.sub(10.0,15.0), 0.01);
     }
