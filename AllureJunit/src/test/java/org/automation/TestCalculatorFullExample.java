@@ -28,7 +28,7 @@ public class TestCalculatorFullExample extends TestingCalculator {
 
     @Test
     @Title("This will substract two numbers")
-    @Step("Assertion for Substraction")
+    @Step("Assertion for Subtraction\n"+"\n SUB \n"+"New Line added")//does not work in multiple lines
     @Severity(SeverityLevel.BLOCKER)
     @Issue(value = "Ticket id 250")
     @Description("This is method")
