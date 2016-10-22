@@ -37,18 +37,18 @@ public class TestCalculator_MethodLevelExample extends AbstractBenchmark{
         aCalculator = new Calculator();
     }
     @Test
-    @BenchmarkOptions(concurrency = 2, warmupRounds = 1, benchmarkRounds = 10)
+    @BenchmarkOptions(concurrency = 6, warmupRounds = 1, benchmarkRounds = 50)
     public void testAddition(){
         Assert.assertEquals(25.0, aCalculator.add(10.0,15.0), 0.01);
         try {
-            Thread.sleep(1000);
+            Thread.sleep(200);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
     @Test
-    @BenchmarkOptions(concurrency = 2, warmupRounds = 0, benchmarkRounds = 5)
+    @BenchmarkOptions(concurrency = 8, warmupRounds = 0, benchmarkRounds = 100)
     public void testSub(){
         Assert.assertEquals(-5.0, aCalculator.sub(10.0,15.0), 0.01);
         try {
