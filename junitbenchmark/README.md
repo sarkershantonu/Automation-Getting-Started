@@ -12,7 +12,6 @@ mvn test
 # For Chart 
 h2database
 
-
 # Configuration 
 in jub.properties. Load those as system properties. and after test chart will be present in chart folder. 
 I am loading all of the properties from jub.properties using this part of the code
