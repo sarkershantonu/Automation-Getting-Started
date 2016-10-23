@@ -45,4 +45,4 @@ Example, business transaction data concurrency testing for a banking or financia
     
 4. simulate thread deadlock scenario 
  
-5.Testing individual component, tire, request for Throughput and Error% 
+5. Testing individual component, tire, request for Throughput and Error% 
