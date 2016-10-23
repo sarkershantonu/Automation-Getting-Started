@@ -53,4 +53,6 @@ Example, business transaction data concurrency testing for a banking or financia
  
 5. simulate OOM scenario
 
-6. Testing individual component, tire, request for Throughput and Error% 
+6. Testing individual component, tire, request for Throughput and Error%
+
+7. Simulate Required Resource Capacity scenario.     
