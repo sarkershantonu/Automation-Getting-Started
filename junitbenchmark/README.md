@@ -31,7 +31,9 @@ This part I am adding in @BeforeClass so that we can get those before test start
 # Chart View 
 See chart folder 
 
-
+# Report Type 
+1. History report
+2. Test Report (for each class) 
  
 # Where to use this 
 1. You have your unit tests, use this to know your concurrency state performance.
