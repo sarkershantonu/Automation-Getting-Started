@@ -2,7 +2,6 @@
 This repository has examples for method level benchmark testing examples using test rules of Junit
 
 # Dependency 
-
 1. Jdk 1.8
 2. Junit 4.12
 3. JUnit Benchmark 0.7.2
@@ -26,7 +25,13 @@ I am loading all of the properties from jub.properties using this part of the co
  
 So, if you need to change any property, you can change in this jub.properties, it will effect before tests.
  
- This part I am adding in @BeforeClass so that we can get those before test starting
+This part I am adding in @BeforeClass so that we can get those before test starting
+ 
+ 
+# Chart View 
+See chart folder 
+
+
  
 # Where to use this 
 1. You have your unit tests, use this to know your concurrency state performance.
