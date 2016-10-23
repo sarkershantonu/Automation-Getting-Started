@@ -43,12 +43,14 @@ And , important factor, error rate or error tolerant. This type of test can ensu
   
 2. You have functional integration tests which validates backend request. Like DB request, webservice calls via UI layer. 
 you can use this to to test before actual tests for performance. This will help you to know how system behaves when they are intregrated .
-   Some time it is very useful to run with manual tests in QA environment.
-    A number of parallel request is going on while a manual tester is testing aplication UI behavior. 
+Some time it is very useful to run with manual tests in QA environment.
+A number of parallel request is going on while a manual tester is testing aplication UI behavior. 
     
 3. Mission critical/Business critical data concurrency tests can be easily done by this. 
 Example, business transaction data concurrency testing for a banking or financial domain. This can validate data intregrity when concurrent requests are in place in the system. (Synchronization, locks etc)
     
 4. simulate thread deadlock scenario 
  
-5. Testing individual component, tire, request for Throughput and Error% 
+5. simulate OOM scenario
+
+6. Testing individual component, tire, request for Throughput and Error% 
