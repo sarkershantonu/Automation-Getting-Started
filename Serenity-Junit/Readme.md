@@ -17,3 +17,6 @@ Under tag : pluginGroups
     
     add entry : net.thucydides.maven.plugins
 
+# How to Project organize 
+
+# Important Properties 
