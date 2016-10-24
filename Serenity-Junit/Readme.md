@@ -1,7 +1,9 @@
 # Serenity Junit starter project
+This is small project using serenity 
 
-To test and generate report : 
+# Run Tests 
 mvn verify serenity:aggregate
+
 
 To run Jetty and see report in local pc @9100 port:  
 mvn jerry:run 
