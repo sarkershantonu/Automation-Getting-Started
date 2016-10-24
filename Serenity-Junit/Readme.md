@@ -5,7 +5,8 @@ This is small project using serenity
 mvn verify serenity:aggregate
 
 
-To run Jetty and see report in local pc @9100 port:  
+# See results in jetty 9100 port
+
 mvn jerry:run 
 
 
