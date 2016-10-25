@@ -22,3 +22,7 @@ Under tag : pluginGroups
 # Important Properties 
 
 # POM design tips & tricks
+
+# Notes
+1. It is based on maven-failsafe-plugin which is less strict than surefire, so the whole test execution will be treaed as intregration tests. 
+   
