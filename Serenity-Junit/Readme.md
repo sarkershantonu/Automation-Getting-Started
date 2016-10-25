@@ -20,3 +20,5 @@ Under tag : pluginGroups
 # How to Project organize 
 
 # Important Properties 
+
+# POM design tips & tricks
