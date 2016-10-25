@@ -27,7 +27,7 @@ Under tag : pluginGroups
 1. Avoid Base Page URL from annotation, use properties. 
 2. Use Page specif URL(path url) inside POM
 3. Never Use Page logic inside Test Classes
-
+4. You should make Steps Pages to reuse the steps
 
 # Notes
 1. It is based on maven-failsafe-plugin which is less strict than surefire, so the whole test execution will be treaed as intregration tests. 
