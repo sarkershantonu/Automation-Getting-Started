@@ -28,11 +28,15 @@ Under tag : pluginGroups
 2. Use Page specif URL(path url) inside POM
 3. Never Use Page logic inside Test Classes
 4. You should make Steps Pages to reuse the steps
+5. Sanity checks : Put assertion in each @step to validate on the spot.
+6. In Test case, keep test data only not sanity check items
+ 
 
 # Reporting :
 1. All test methods names will be seperated
     a. Camel case , space add in middle of words
-    b. Underscores(_)_ are replaced by Space
+    b. Underscores(_) are replaced by Space
+2. 
 
 # Notes
 1. It is based on maven-failsafe-plugin which is less strict than surefire, so the whole test execution will be treaed as intregration tests. 
