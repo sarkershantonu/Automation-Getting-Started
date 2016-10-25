@@ -29,6 +29,13 @@ Under tag : pluginGroups
 3. Never Use Page logic inside Test Classes
 4. You should make Steps Pages to reuse the steps
 
+ 
+# Reporting :
+
+1. All test methods names will be seperated
+    a. Camel case , space add in middle of words
+    b. Under scores are replaced by Space
+
 # Notes
 1. It is based on maven-failsafe-plugin which is less strict than surefire, so the whole test execution will be treaed as intregration tests. 
 2. It is better not to use serenity for non intregration tests (like unit tests)
