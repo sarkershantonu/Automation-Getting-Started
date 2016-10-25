@@ -26,6 +26,7 @@ Under tag : pluginGroups
 # Best Practices
 1. Avoid Base Page URL from annotation, use properties. 
 2. Use Page specif URL(path url) inside POM
+3. Never Use Page logic inside Test Classes
 
 
 # Notes
