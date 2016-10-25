@@ -30,7 +30,7 @@ Under tag : pluginGroups
 4. You should make Steps Pages to reuse the steps
 5. Sanity checks : Put assertion in each @step to validate on the spot.
 6. In Test case, keep test data only not sanity check items
- 
+7. If you have complex validation logic, put in separate package like steps  
 
 # Reporting :
 1. All test methods names will be seperated
