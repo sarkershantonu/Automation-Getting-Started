@@ -23,9 +23,13 @@ Under tag : pluginGroups
 
 # POM design tips & tricks
 
+# Best Practices
+1. Avoid Base Page URL from annotation, use properties. 
+
+
 # Notes
 1. It is based on maven-failsafe-plugin which is less strict than surefire, so the whole test execution will be treaed as intregration tests. 
 2. It is better not to use serenity for non intregration tests (like unit tests)
 3. serenity.properties must be at the project root level (in CI server, at the workspace root)
 4. Project structure samples are inside DOC folder (TBD)
-  
+5.   
