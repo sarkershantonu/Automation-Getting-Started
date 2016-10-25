@@ -24,7 +24,7 @@ Under tag : pluginGroups
 # POM design tips & tricks
 
 # Best Practices
-1. Avoid Base Page URL from annotation, use properties. 
+1. Avoid @DefaultUrl from annotation, use properties. 
 2. Use Page specif URL(path url) inside POM
 3. Never Use Page logic inside Test Classes
 4. You should make Steps Pages to reuse the steps
