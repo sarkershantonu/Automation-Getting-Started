@@ -25,4 +25,5 @@ Under tag : pluginGroups
 
 # Notes
 1. It is based on maven-failsafe-plugin which is less strict than surefire, so the whole test execution will be treaed as intregration tests. 
-   
+2. It is better not to use serenity for non intregration tests (like unit tests)
+ 
