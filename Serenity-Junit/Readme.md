@@ -9,7 +9,6 @@ mvn verify serenity:aggregate
 
 mvn jerry:run 
 
-
 Maven settings.xml entry (this is optional) 
 Under tag : pluginGroups 
 
@@ -30,7 +29,8 @@ Under tag : pluginGroups
 4. You should make Steps Pages to reuse the steps
 5. Sanity checks : Put assertion in each @step to validate on the spot.
 6. In Test case, keep test data only not sanity check items
-7. If you have complex validation logic, put in separate package like steps  
+7. If you have complex validation logic, put in separate package like steps
+8.   
 
 # Reporting :
 1. All test methods names will be seperated
