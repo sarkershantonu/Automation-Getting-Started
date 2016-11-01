@@ -43,23 +43,28 @@ public class Browser {
 
     private static WebDriver getABrowser(String nameOfBrowser) {
 
+        System.out.println("OS>>>"+os);
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
-            if (os.contains("windows")) {
-                System.setProperty("webdriver.firefox.bin", "place where you unzipped firefox executable");
+            if (os.contains("Windows")) {
+                System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+                //System.setProperty("webdriver.firefox.marionette","C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
+                // if not working
+                System.setProperty("webdriver.gecko.driver","C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
             } else {
                 System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
             }
+            System.out.println("PROPERTY >>> "+System.getProperty("webdriver.firefox.bin"));
             return new FirefoxDriver();
         } else if ("opera".equals(nameOfBrowser)) {
             return new OperaDriver();
         } else if ("ie".equals(nameOfBrowser)) {
-            File iedriver = new File("Point your Selenium Server exe Path");//todo for your PC
+            File iedriver = new File("C:\\Users\\ssarker\\JavaTools\\env\\IEDriverServer.exe");//todo for your PC
             System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
         } else {
-            String pathWindows = "C:\\Users\\%USERNAME%\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe";// can be changed for your PC
+            String pathWindows = "C:\\Users\\ssarker\\Downloads\\chrome-win32\\chrome.exe";// can be changed for your PC
             String pathlunix = "/usr/local/bin/chromedriver";
             ChromeDriverService service;
             if (os.contains("Windows")) {

@@ -3,7 +3,7 @@
 Feature: Invalid search
 
   Scenario: Checking invalid search
-   Given I open chrome browser
+   Given I open firefox browser
     When I type http://demo.opencart.com/ and press enter
     Then I can see page loaded with title "Your Store"
     And I type "invalid check to prove tests" in search box And I click search button

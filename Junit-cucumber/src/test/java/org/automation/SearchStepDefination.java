@@ -7,7 +7,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.server.SystemClock;
 import org.pages.HomePage;
 import org.pages.SearchResultPage;
 /**

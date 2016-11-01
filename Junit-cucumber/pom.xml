@@ -10,7 +10,7 @@
 
     <properties>
         <cucumber.version>1.2.4</cucumber.version>
-        <selenium.version>2.53.0</selenium.version>
+        <selenium.version>3.0.1</selenium.version>
 
     </properties>
     <dependencies>
@@ -19,9 +19,16 @@
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumber.version}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server</artifactId>
+            <artifactId>selenium-firefox-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
         <dependency>
