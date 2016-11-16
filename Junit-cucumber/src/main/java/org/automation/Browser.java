@@ -22,10 +22,11 @@ public class Browser {
     private static String chromeDriverPathLINUX = "/usr/local/bin/chromedriver";
     private static String chromePathLINUX="";
     private static String chromePathWIN="";
-    private static String firefoxPathLINUX="";
+    private static String firefoxPathLINUX= "/home/shantonu/ff46/firefox";
     private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
     private static String firefoxGekoDriverPathLINUX="";
     private static String firefoxGekoDriverPathWIN="C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe";
+    private static String IEServerPath = "C:\\Users\\ssarker\\JavaTools\\env\\IEDriverServer.exe";
 
     public static WebDriver getInstance() {
         if (driver == null) {
@@ -46,23 +47,23 @@ public class Browser {
 
     private static WebDriver getABrowser(String nameOfBrowser) {
 
-        System.out.println("OS>>>" + os);
+       // System.out.println("OS>>>" + os);
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
             if (os.contains("Windows")) {
                 System.setProperty("webdriver.firefox.bin", firefoxPathWIN);
-                //System.setProperty("webdriver.firefox.marionette","C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
+                //System.setProperty("webdriver.firefox.marionette",firefoxGekoDriverPathWIN);
                 // if not working
                 System.setProperty("webdriver.gecko.driver", firefoxGekoDriverPathWIN);
             } else {
-                System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
+                System.setProperty("webdriver.firefox.bin",firefoxPathLINUX);
             }
-            System.out.println("PROPERTY >>> " + System.getProperty("webdriver.firefox.bin"));
+           // System.out.println("PROPERTY >>> " + System.getProperty("webdriver.firefox.bin"));
             return new FirefoxDriver();
         } else if ("opera".equals(nameOfBrowser)) {
             return new OperaDriver();
         } else if ("ie".equals(nameOfBrowser)) {
-            File iedriver = new File("C:\\Users\\ssarker\\JavaTools\\env\\IEDriverServer.exe");//todo for your PC
+            File iedriver = new File(IEServerPath);//todo for your PC
             System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
