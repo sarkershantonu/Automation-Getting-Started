@@ -23,9 +23,9 @@ public class Browser {
     private static String chromePathLINUX="";
     private static String chromePathWIN="";
     private static String firefoxPathLINUX="";
-    private static String firefoxPathWIN="";
+    private static String firefoxPathWIN="C:\\Program Files\\Mozilla Firefox\\firefox.exe";
     private static String firefoxGekoDriverPathLINUX="";
-    private static String firefoxGekoDriverPathWIN="";
+    private static String firefoxGekoDriverPathWIN="C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe";
 
     public static WebDriver getInstance() {
         if (driver == null) {
@@ -50,10 +50,10 @@ public class Browser {
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
             if (os.contains("Windows")) {
-                System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+                System.setProperty("webdriver.firefox.bin", firefoxPathWIN);
                 //System.setProperty("webdriver.firefox.marionette","C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
                 // if not working
-                System.setProperty("webdriver.gecko.driver", "C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", firefoxGekoDriverPathWIN);
             } else {
                 System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
             }
