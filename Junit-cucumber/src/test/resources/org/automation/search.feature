@@ -1,7 +1,7 @@
 Feature: valid search
 
   Scenario: Going to Opencart and search an item
-    Given I open firefox browser
+    Given I open chrome browser
     When I type http://demo.opencart.com/ and press enter
     Then I can see page loaded with title "The OpenCart demo store"
     And I type "Iphone" in search box And I click search button
