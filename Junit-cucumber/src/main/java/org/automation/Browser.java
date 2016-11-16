@@ -18,9 +18,15 @@ import java.io.IOException;
 public class Browser {
     private static WebDriver driver = null;
     private static String os = System.getProperty("os.name");
-    private static String chromeDriverPathWIN = "C:\\Users\\ssarker\\Downloads\\chrome-win32\\chrome.exe";// can be changed for your PC
-
+    private static String chromeDriverPathWIN = "C:\\Users\\ssarker\\Downloads\\chromedriver.exe";// can be changed for your PC
     private static String chromeDriverPathLINUX = "/usr/local/bin/chromedriver";
+    private static String chromePathLINUX="";
+    private static String chromePathWIN="";
+    private static String firefoxPathLINUX="";
+    private static String firefoxPathWIN="";
+    private static String firefoxGekoDriverPathLINUX="";
+    private static String firefoxGekoDriverPathWIN="";
+
     public static WebDriver getInstance() {
         if (driver == null) {
             driver = getABrowser("chrome");
