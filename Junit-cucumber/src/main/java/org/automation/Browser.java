@@ -32,7 +32,6 @@ public class Browser {
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
-            //driver = new FirefoxDriver();
         }
         return driver;
     }
