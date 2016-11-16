@@ -1,21 +1,16 @@
 package org.automation;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.safari.SafariDriver;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 /**
  * Created by shantonu on 5/11/16.
@@ -23,12 +18,16 @@ import java.net.URL;
 public class Browser {
     private static WebDriver driver = null;
     private static String os = System.getProperty("os.name");
-    public static WebDriver getInstance(){
+    private static String chromeDriverPathWIN = "C:\\Users\\ssarker\\Downloads\\chrome-win32\\chrome.exe";// can be changed for your PC
+
+    private static String chromeDriverPathLINUX = "/usr/local/bin/chromedriver";
+    public static WebDriver getInstance() {
         if (driver == null) {
             driver = getABrowser("chrome");
         }
         return driver;
     }
+
     public static WebDriver getInstance(String browserName) {
         if (driver == null) {
             driver = getABrowser(browserName);
@@ -39,21 +38,20 @@ public class Browser {
     private Browser() {
     }
 
-
     private static WebDriver getABrowser(String nameOfBrowser) {
 
-        System.out.println("OS>>>"+os);
+        System.out.println("OS>>>" + os);
         if ("firefox".equals(nameOfBrowser)) {
             //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
             if (os.contains("Windows")) {
                 System.setProperty("webdriver.firefox.bin", "C:\\Program Files\\Mozilla Firefox\\firefox.exe");
                 //System.setProperty("webdriver.firefox.marionette","C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
                 // if not working
-                System.setProperty("webdriver.gecko.driver","C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", "C:\\Users\\ssarker\\JavaTools\\env\\geckodriver.exe");
             } else {
                 System.setProperty("webdriver.firefox.bin", "/home/shantonu/ff46/firefox");
             }
-            System.out.println("PROPERTY >>> "+System.getProperty("webdriver.firefox.bin"));
+            System.out.println("PROPERTY >>> " + System.getProperty("webdriver.firefox.bin"));
             return new FirefoxDriver();
         } else if ("opera".equals(nameOfBrowser)) {
             return new OperaDriver();
@@ -63,19 +61,17 @@ public class Browser {
             //-Dwebdriver.ie.driver=physicall
             return new InternetExplorerDriver();
         } else {
-            String pathWindows = "C:\\Users\\ssarker\\Downloads\\chrome-win32\\chrome.exe";// can be changed for your PC
-            String pathlunix = "/usr/local/bin/chromedriver";
             ChromeDriverService service;
             if (os.contains("Windows")) {
-                System.setProperty("webdriver.chrome.driver", pathWindows);
+                System.setProperty("webdriver.chrome.driver", chromeDriverPathWIN);
                 service = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(pathWindows))
+                        .usingDriverExecutable(new File(chromeDriverPathWIN))
                         .usingAnyFreePort()
                         .build();
             } else {
-                System.setProperty("webdriver.chrome.driver", pathlunix);
+                System.setProperty("webdriver.chrome.driver", chromeDriverPathLINUX);
                 service = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(pathlunix))
+                        .usingDriverExecutable(new File(chromeDriverPathLINUX))
                         .usingAnyFreePort()
                         .build();
             }
@@ -89,8 +85,8 @@ public class Browser {
         }
     }
 
- private static ChromeOptions getLocalChromeOptions(){
-    String exeChromium = "<path to your chtome or chromium >chrome.exe";
+    private static ChromeOptions getLocalChromeOptions() {
+        String exeChromium = "<path to your chtome or chromium >chrome.exe";
         ChromeOptions options = new ChromeOptions();
         String driverLocation = null;
 
@@ -104,15 +100,17 @@ public class Browser {
 
         return options;
     }
+
     public static void close() {
         driver.close();
         driver = null;// to avoid closeing time of browser by JVM
     }
- private static DesiredCapabilities getLocalChrome(){
-     String exeChromium = "<path to chromium>chrome.exe";
+
+    private static DesiredCapabilities getLocalChrome() {
+        String exeChromium = "<path to chromium>chrome.exe";
         DesiredCapabilities cap = new DesiredCapabilities();
-        cap.setCapability("browserName","chrome");
-        cap.setCapability("binary",exeChromium);
+        cap.setCapability("browserName", "chrome");
+        cap.setCapability("binary", exeChromium);
         return cap;
     }
 }
