@@ -9,4 +9,4 @@ Feature: Invalid search
     And I type "invalid check to prove tests" in search box And I click search button
     Then I can see invalid search title with "Search - invalid check to prove tests" and message "There is no product that matches the search criteria."
     And I can see the search should not take more than 250 second
-    Then I quit browser
+    Then I quit browser  
