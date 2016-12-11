@@ -7,7 +7,7 @@ This contains simple example with easy test
 3. Easy Test 1.4.0
 4. Optional Slf4j, Slf4j-Log4j
 
-# Local Settings : 
+# Local Settings : (best practices , to keep it under maven ./target ) 
 1. log : logs/
 2. Report : TestReports
 
