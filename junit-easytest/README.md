@@ -7,9 +7,11 @@ This contains simple example with easy test
 3. Easy Test 1.4.0
 4. Optional Slf4j, Slf4j-Log4j
 
-# Local Settings : (best practices , to keep it under maven ./target ) 
+# Local Settings :  
 1. log : logs/
 2. Report : TestReports
+
+(best practices : keep it under maven ./target unless you need to keep record)
 
 # maven command
 mvn test
