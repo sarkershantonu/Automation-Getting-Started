@@ -18,10 +18,7 @@ public class MultipleDataLoaderExample extends DataDrivenTest {
     // in here "calculator2.csv"
     @Test
     @DataLoader(filePaths = {"calculator2.csv","calculator3.xml"})
-    public void testAdd(@Param(name = "a") Double a, @Param(name = "b")Double b, @Param(name = "expected")Double expected){
-        Assert.assertEquals(expected, calculator.add(a,b),0.1);
+    public void testAdd(@Param(name = "a") Double a, @Param(name = "b")Double b, @Param(name = "expected")Double expected) {
+        Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
-
-
-
 }

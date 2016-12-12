@@ -1,9 +1,7 @@
 <?xml version="1.0"?>
-
 <easytest:InputTestData xmlns:easytest="urn:org:easetech:easytest:1.0"
                         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                         xsi:schemaLocation="urn:org:easetech:easytest:1.0 testDataSchema.xsd">
-
     <TestMethod name="testAddFromXML">
         <TestRecord id="1">
             <InputData>
@@ -20,5 +18,4 @@
             </InputData>
         </TestRecord>
     </TestMethod>
-
 </easytest:InputTestData>
