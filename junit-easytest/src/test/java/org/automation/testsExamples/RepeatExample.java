@@ -17,7 +17,6 @@ import org.junit.runner.RunWith;
 @RunWith(DataDrivenTestRunner.class)
 @TestPolicy(PolicyExample.class)
 public class RepeatExample extends DataDrivenTest {
-
     @Test
     @Repeat(times = 5)
     public void testAddFromExcel(@Param(name = "a") Double a,
@@ -25,5 +24,4 @@ public class RepeatExample extends DataDrivenTest {
                                  @Param(name = "expected") Double expected) {
         Assert.assertEquals(expected, calculator.add(a, b), 0.1);
     }
-
 }
