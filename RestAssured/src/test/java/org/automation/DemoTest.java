@@ -6,7 +6,6 @@ import io.restassured.response.Response;
 import org.junit.Test;
 import org.restlet.Route;
 
-import static java.lang.String.format;
 
 /**
  * Created by shantonu on 9/7/16.
@@ -15,15 +14,6 @@ public class DemoTest {
     private static final String URL = "http://localhost:9100";
     private static final String user ="shantonu";
     private static final String pass ="123456";
-
-    public Response getPostContent(int postNumber) {
-
-
-        return RestAssured.given()
-                .contentType(ContentType.JSON)
-                .when()
-                .get(format("%s/posts/%s", URL, Integer.toString(postNumber)));
-    }
 
     private static final String demoBug = "{\n" +
             "\n" +
