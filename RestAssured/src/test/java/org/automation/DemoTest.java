@@ -35,7 +35,7 @@ public class DemoTest {
     public void testViewAllBugs(){
         String path = URL+"/table/bugs";
         RestAssured.given().auth().basic(user,pass).
-                when().get(path).then().statusCode(200);
+                when().get(path).then().statusCode(200).and().contentType(ContentType.JSON);
         RestAssured.given().auth().basic(user,pass).
                 when().get(path).then().contentType(ContentType.JSON);
     }
