@@ -3,6 +3,7 @@ package org.automation;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.junit.Test;
 import org.restlet.Route;
 
 import static java.lang.String.format;
@@ -10,7 +11,7 @@ import static java.lang.String.format;
 /**
  * Created by shantonu on 9/7/16.
  */
-public class Test {
+public class DemoTest {
     private static final String URL = "http://localhost:9100";
     private static final String user ="shantonu";
     private static final String pass ="123456";
@@ -40,11 +41,12 @@ public class Test {
 
 
 
-    @org.junit.Test
-    public void testCreate(){
+    @Test
+    public void testViewAllBugs(){
         String path = URL+"/table/bugs";
         RestAssured.given().auth().basic(user,pass).
                 when().get(path).then().statusCode(200);
-
+        RestAssured.given().auth().basic(user,pass).
+                when().get(path).then().contentType(ContentType.JSON);
     }
 }
