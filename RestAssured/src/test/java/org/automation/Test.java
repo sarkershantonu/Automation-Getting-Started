@@ -21,4 +21,24 @@ public class Test {
                 .when()
                 .get(format("%s/posts/%s", URL, Integer.toString(postNumber)));
     }
+
+    private static String demoBug = "{\n" +
+            "\n" +
+            "     \"title\": \"this is a bug\",\n" +
+            "     \"summary\": \"Sample Bug\" ,\n" +
+            "     \"exceptions\": \"Exception Is not present\",\n" +
+            "     \"comments\": \"Comments \",\n" +
+            "     \"foundDateTime\":\"1st december\",\n" +
+            "     \"tags\": \"New, On production\",\n" +
+            "     \"priority\": \"High\",\n" +
+            "     \"servility\": \"Blocker\",\n" +
+            "     \"attachmentPath\": \"http://\",\n" +
+            "     \"description\": \"Sampel Data \"\n" +
+            "   }";
+
+
+    @org.junit.Test
+    public void testCreate(){
+
+    }
 }
