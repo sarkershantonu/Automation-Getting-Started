@@ -30,22 +30,17 @@ import static org.hamcrest.Matchers.lessThan;
  */
 public class BasicTests extends BugTestBase {
 
-
-
-    @Before
-    public void init(){
-
-
-    }
-
     /**
      * Validations : HTTP status, content type and header
      * if we need to validate defined schema of JSON body , just add  .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(""))
      */
     @Test
     public void testViewAll() {
-       given().when().get().then().assertThat().statusCode(HttpStatus.SC_OK).contentType(ContentType.JSON).header("Content-Type", "application/json;charset=UTF-8").time(lessThan(globalTimeout));
-
+       given().when().get().then().assertThat().
+               statusCode(HttpStatus.SC_OK).
+               contentType(ContentType.JSON).
+               header("Content-Type", "application/json;charset=UTF-8").
+               time(lessThan(globalTimeout));
 
     }
     @Test
@@ -56,7 +51,8 @@ public class BasicTests extends BugTestBase {
                 statusCode(HttpStatus.SC_CREATED).
                 contentType(ContentType.JSON).
                 header("Content-Type", "application/json;charset=UTF-8").
-                body("title",equalTo(aBug.getTitle()));
+                body("title",equalTo(aBug.getTitle())).
+                time(lessThan(globalTimeout));
     }
     @Test
     public void testAddOne_validateResponseObject() {
@@ -74,10 +70,11 @@ public class BasicTests extends BugTestBase {
     @Test
     // assuming that bug with ID 1 present.
     public void testViewABug(){
-        given().get(Integer.toString(1)).then().assertThat()
-                .statusCode(HttpStatus.SC_OK)
-                .contentType(ContentType.JSON).
-                header("Content-Type", "application/json;charset=UTF-8").body("id", equalTo(1));
+        given().get(Integer.toString(1)).then().assertThat().
+                statusCode(HttpStatus.SC_OK).
+                contentType(ContentType.JSON).
+                header("Content-Type", "application/json;charset=UTF-8").
+                body("id", equalTo(1));
 
     }
     @Test
@@ -88,12 +85,19 @@ public class BasicTests extends BugTestBase {
 
     }
     @Test
-    //todo :  add a bug, get the id, then change , validate the change and finally cleanup
+    //
     public void testUpdateeABug(){
-
-        Response response =  given().auth().basic(user, pass).body(TempBugString.getBugStringForModify(4)).contentType(ContentType.JSON).
-                when().put("4").thenReturn();
-
-        System.out.println(response.getStatusLine());
+        Bug createdbug = given().contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).post().as(Bug.class);
+        createdbug.setTitle("This is modified title");
+        createdbug.setDescription("This is modified description");
+       given().contentType(ContentType.JSON).body(createdbug,ObjectMapperType.JACKSON_2).
+               when().put(createdbug.getId().toString()).
+               then().assertThat().
+               statusCode(HttpStatus.SC_ACCEPTED).
+               contentType(ContentType.JSON).
+               header("Content-Type", "application/json;charset=UTF-8").
+               body("id",equalTo(createdbug.getId().intValue()));
+        //cleanup
+        given().delete(createdbug.getId().toString()).then().assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
     }
 }
