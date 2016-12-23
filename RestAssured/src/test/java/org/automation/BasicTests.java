@@ -81,14 +81,11 @@ public class BasicTests extends BugTestBase {
 
     }
     @Test
-    //todo : add a bug, then delete & validate the bug is not present
+    //Add a bug & delete that bug with ID and check http status
     public void testDeleteABug(){
+        Bug respnsebug = given().contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).post().as(Bug.class);
+        given().delete(respnsebug.getId().toString()).then().assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
 
-
-        Response response =  given().auth().basic(user, pass).
-                when().delete("/2").thenReturn();
-        System.out.println(response.getStatusCode());
-        System.out.println(response.getStatusLine());
     }
     @Test
     //todo :  add a bug, get the id, then change , validate the change and finally cleanup
