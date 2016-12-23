@@ -11,7 +11,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 import static org.apache.commons.lang3.Validate.matchesPattern;
-import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.contains;
 
 /**
  * Created by shantonu on 9/7/16.
@@ -32,7 +32,7 @@ public class DemoTest extends TestBase {
             "    \"description\": \"Sampel Data \",\n" +
             "    \"attachmentPath\": \"http://\"\n" +
             "  }";
-    private static final String add = " {\n" +
+    private static final String newBug = " {\n" +
             "    \"title\": \"this is a New\",\n" +
             "    \"summary\": \"Sample Bug\",\n" +
             "    \"exceptions\": \"Exception Is not present\",\n" +
@@ -51,17 +51,17 @@ public class DemoTest extends TestBase {
         RestAssured.baseURI+="/table/bugs";
     }
 
+    /**
+     * Testing HTTP 200 + response JSON
+     */
     @Test
     public void testViewAll() {
-
-        given().auth().basic(user, pass).
-                when().get().then().statusCode(200).contentType(ContentType.JSON).body("id",equalTo(""));
-
+       given().auth().basic(user, pass).when().get().then().statusCode(200).contentType(ContentType.JSON);
     }
 
     @Test
     public void testAddABug() {
-        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(add).when().post("").thenReturn();
+        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(newBug).when().post("").thenReturn();
         System.out.println(response.getBody().asString());
     }
     @Test
