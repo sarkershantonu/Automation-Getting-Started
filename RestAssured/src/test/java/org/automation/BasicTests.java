@@ -1,27 +1,14 @@
 package org.automation;
 
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
-import io.restassured.http.Header;
-import io.restassured.http.Headers;
 import io.restassured.mapper.ObjectMapperType;
-import io.restassured.parsing.Parser;
-import io.restassured.response.Response;
-import io.restassured.response.ResponseBody;
-import io.restassured.response.ResponseBodyData;
+
 import org.apache.http.HttpStatus;
 import org.automation.core.BugTestBase;
 import org.automation.model.Bug;
-import org.automation.model.TempBugString;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-
-
-import static io.restassured.RestAssured.expect;
 import static io.restassured.RestAssured.given;
-import static org.apache.commons.lang3.Validate.matchesPattern;
-import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 
@@ -40,9 +27,13 @@ public class BasicTests extends BugTestBase {
                statusCode(HttpStatus.SC_OK).
                contentType(ContentType.JSON).
                header("Content-Type", "application/json;charset=UTF-8").
-               time(lessThan(globalTimeout));
+               time(lessThan(globalResponseTimeout));
 
     }
+
+    /**
+     * validating basic insertion, type, response body, time of response
+     */
     @Test
     public void testAddOne_validateResponse(){
         Bug aBug = Bug.getABug();
@@ -52,7 +43,7 @@ public class BasicTests extends BugTestBase {
                 contentType(ContentType.JSON).
                 header("Content-Type", "application/json;charset=UTF-8").
                 body("title",equalTo(aBug.getTitle())).
-                time(lessThan(globalTimeout));
+                time(lessThan(globalResponseTimeout));
     }
     @Test
     public void testAddOne_validateResponseObject() {
