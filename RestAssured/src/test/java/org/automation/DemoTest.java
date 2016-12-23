@@ -39,4 +39,9 @@ public class DemoTest {
         RestAssured.given().auth().basic(user,pass).
                 when().get(path).then().contentType(ContentType.JSON);
     }
+
+    @Test
+    public void testAddABug(){
+
+    }
 }
