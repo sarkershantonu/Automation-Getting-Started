@@ -42,9 +42,30 @@ public class DemoTest {
 
     @Test
     public void testAddABug() {
+
         RestAssured.baseURI = URL + "/table/bugs";
         Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(demoBug).when().post("").thenReturn();
-        System.out.println(response);
         System.out.println(response.getBody().asString());
+    }
+    @Test
+    public void testViewABug(){
+
+        for(int i=1; i<=15;i++){
+            RestAssured.baseURI = URL + "/table/bugs/"+i;
+            Response response =  given().auth().basic(user, pass).
+                    when().get("").thenReturn();
+            System.out.println(response.getBody().asString());
+        }
+
+
+
+    }
+    @Test
+    public void testDeleteABug(){
+
+    }
+    @Test
+    public void testUpdateeABug(){
+
     }
 }
