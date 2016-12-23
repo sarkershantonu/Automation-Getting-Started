@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.restlet.Route;
 
 
+import static io.restassured.RestAssured.given;
+
 /**
  * Created by shantonu on 9/7/16.
  */
@@ -41,7 +43,10 @@ public class DemoTest {
     }
 
     @Test
-    public void testAddABug(){
+    public void testAddABug() {
+        RestAssured.baseURI = URL + "/table/bugs";
+        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(demoBug).when().post("");
+
 
     }
 }
