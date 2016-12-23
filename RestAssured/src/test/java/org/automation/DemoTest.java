@@ -25,7 +25,7 @@ public class DemoTest {
             "     \"comments\": \"Comments \",\n" +
             "     \"foundDateTime\":\"1st december\",\n" +
             "     \"tags\": \"New, On production\",\n" +
-            "     \"priority\": \"High\",\n" +
+            "     \"priority\": \"CHANGE\",\n" +
             "     \"servility\": \"Blocker\",\n" +
             "     \"attachmentPath\": \"http://\",\n" +
             "     \"description\": \"Sampel Data \"\n" +
@@ -71,6 +71,10 @@ public class DemoTest {
     }
     @Test
     public void testUpdateeABug(){
+        RestAssured.baseURI = URL + "/table/bugs";
+        Response response =  given().auth().basic(user, pass).body(demoBug).
+                when().put("/4").thenReturn();
 
+        System.out.println(response.getStatusLine());
     }
 }
