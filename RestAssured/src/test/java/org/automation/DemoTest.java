@@ -17,19 +17,19 @@ public class DemoTest {
     private static final String user = "shantonu";
     private static final String pass = "123456";
 
-    private static final String demoBug = "{\n" +
-            "\n" +
-            "     \"title\": \"this is a bug\",\n" +
-            "     \"summary\": \"Sample Bug\" ,\n" +
-            "     \"exceptions\": \"Exception Is not present\",\n" +
-            "     \"comments\": \"Comments \",\n" +
-            "     \"foundDateTime\":\"1st december\",\n" +
-            "     \"tags\": \"New, On production\",\n" +
-            "     \"priority\": \"CHANGE\",\n" +
-            "     \"servility\": \"Blocker\",\n" +
-            "     \"attachmentPath\": \"http://\",\n" +
-            "     \"description\": \"Sampel Data \"\n" +
-            "   }";
+    private static final String demoBug = " {\n" +
+            "    \"id\": 4,\n" +
+            "    \"title\": \"this is a CHANGED BUG\",\n" +
+            "    \"summary\": \"Sample Bug\",\n" +
+            "    \"exceptions\": \"Exception Is not present\",\n" +
+            "    \"comments\": \"Comments \",\n" +
+            "    \"foundDateTime\": \"1st december\",\n" +
+            "    \"tags\": \"New, On production\",\n" +
+            "    \"priority\": \"High\",\n" +
+            "    \"servility\": \"Blocker\",\n" +
+            "    \"description\": \"Sampel Data \",\n" +
+            "    \"attachmentPath\": \"http://\"\n" +
+            "  }";
 
 
     @Test
@@ -72,7 +72,7 @@ public class DemoTest {
     @Test
     public void testUpdateeABug(){
         RestAssured.baseURI = URL + "/table/bugs";
-        Response response =  given().auth().basic(user, pass).body(demoBug).
+        Response response =  given().auth().basic(user, pass).body(demoBug).contentType(ContentType.JSON).
                 when().put("/4").thenReturn();
 
         System.out.println(response.getStatusLine());
