@@ -1,7 +1,6 @@
 package org.automation.model;
 
 
-
 public class Bug {
     public Bug() {}
 
@@ -30,19 +29,19 @@ public class Bug {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public String getAttachmentPath() {
-        return AttachmentPath;
+        return attachmentPath;
     }
 
     public void setAttachmentPath(String attachmentPath) {
-        AttachmentPath = attachmentPath;
+        this.attachmentPath = attachmentPath;
     }
 
     public String getExceptions() {
@@ -96,40 +95,31 @@ public class Bug {
     private Long id;
     private String title;
     private String summary;
-    private String Description;
-    private String AttachmentPath;
+    private String description;
+    private String attachmentPath;
     private String exceptions;
     private String comments;
     private String foundDateTime;
     private String tags;
     private String priority;
+
+    public Bug(Long id, String title, String summary, String description, String attachmentPath, String exceptions, String comments, String foundDateTime, String tags, String priority, String servility) {
+        this.id = id;
+        this.title = title;
+        this.summary = summary;
+        this.description = description;
+        this.attachmentPath = attachmentPath;
+        this.exceptions = exceptions;
+        this.comments = comments;
+        this.foundDateTime = foundDateTime;
+        this.tags = tags;
+        this.priority = priority;
+        this.servility = servility;
+    }
+
     private String servility;
 
-    private static final String modify = " {\n" +
-            "    \"id\": 5,\n" +
-            "    \"title\": \"this is a New\",\n" +
-            "    \"summary\": \"Sample Bug\",\n" +
-            "    \"exceptions\": \"Exception Is not present\",\n" +
-            "    \"comments\": \"Comments \",\n" +
-            "    \"foundDateTime\": \"1st december\",\n" +
-            "    \"tags\": \"New, On production\",\n" +
-            "    \"priority\": \"High\",\n" +
-            "    \"servility\": \"Blocker\",\n" +
-            "    \"description\": \"Sampel Data \",\n" +
-            "    \"attachmentPath\": \"http://\"\n" +
-            "  }";
-    private static final String newBug = " {\n" +
-            "    \"title\": \"this is a New\",\n" +
-            "    \"summary\": \"Sample Bug\",\n" +
-            "    \"exceptions\": \"Exception Is not present\",\n" +
-            "    \"comments\": \"Comments \",\n" +
-            "    \"foundDateTime\": \"1st december\",\n" +
-            "    \"tags\": \"New, On production\",\n" +
-            "    \"priority\": \"High\",\n" +
-            "    \"servility\": \"Blocker\",\n" +
-            "    \"description\": \"Sampel Data \",\n" +
-            "    \"attachmentPath\": \"http://\"\n" +
-            "  }";
-
-
+ public static Bug getABug(){
+     return new Bug(null, "title","summary","description","/home/shantonu","RuntimeException","from code","Today","rest assure","NORM","BLOCKER");
+ }
 }

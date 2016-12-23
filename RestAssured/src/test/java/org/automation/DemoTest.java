@@ -1,9 +1,13 @@
 package org.automation;
 
+import com.github.fge.jsonschema.main.JsonSchema;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.mapper.ObjectMapperType;
+import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.automation.core.TestBase;
+import org.automation.model.Bug;
 import org.automation.model.TempBugString;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,12 +35,15 @@ public class DemoTest extends TestBase {
      */
     @Test
     public void testViewAll() {
-       given().auth().basic(user, pass).when().get().then().statusCode(200).contentType(ContentType.JSON);
+       given().auth().basic(user, pass).when().get().then().statusCode(200).contentType(ContentType.JSON).assertThat();
+        //if we need to validate defined schema of JSON body , just add  .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(""))
+
     }
 
     @Test
     public void testAddOne() {
-        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(TempBugString.getBugStringToAdd()).when().post("").thenReturn();
+        //Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(TempBugString.getBugStringToAdd()).when().post("").thenReturn();
+        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(Bug.getABug(), ObjectMapperType.JACKSON_2).when().post("").thenReturn();
         System.out.println(response.getBody().asString());
     }
     @Test
