@@ -61,6 +61,7 @@ public class DemoTest {
 
     }
     @Test
+    //todo : add a bug, then delete & validate the bug is not present
     public void testDeleteABug(){
 
         RestAssured.baseURI = URL + "/table/bugs";
@@ -70,6 +71,7 @@ public class DemoTest {
         System.out.println(response.getStatusLine());
     }
     @Test
+    //todo :  add a bug, get the id, then change , validate the change and finally cleanup
     public void testUpdateeABug(){
         RestAssured.baseURI = URL + "/table/bugs";
         Response response =  given().auth().basic(user, pass).body(demoBug).contentType(ContentType.JSON).
