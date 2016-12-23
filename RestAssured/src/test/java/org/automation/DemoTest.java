@@ -63,6 +63,11 @@ public class DemoTest {
     @Test
     public void testDeleteABug(){
 
+        RestAssured.baseURI = URL + "/table/bugs";
+        Response response =  given().auth().basic(user, pass).
+                when().delete("/2").thenReturn();
+        System.out.println(response.getStatusCode());
+        System.out.println(response.getStatusLine());
     }
     @Test
     public void testUpdateeABug(){
