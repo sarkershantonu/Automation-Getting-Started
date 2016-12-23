@@ -9,6 +9,7 @@ import io.restassured.parsing.Parser;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
 import io.restassured.response.ResponseBodyData;
+import org.apache.http.HttpStatus;
 import org.automation.core.BugTestBase;
 import org.automation.model.Bug;
 import org.automation.model.TempBugString;
@@ -21,12 +22,13 @@ import static io.restassured.RestAssured.expect;
 import static io.restassured.RestAssured.given;
 import static org.apache.commons.lang3.Validate.matchesPattern;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 
 /**
  * Created by shantonu on 9/7/16.
  */
-public class DemoTest extends BugTestBase {
+public class BasicTests extends BugTestBase {
 
 
 
@@ -42,27 +44,30 @@ public class DemoTest extends BugTestBase {
      */
     @Test
     public void testViewAll() {
-       given().when().get().then().assertThat().statusCode(200).contentType(ContentType.JSON).header("Content-Type", "application/json;charset=UTF-8").time(lessThan(globalTimeout));
+       given().when().get().then().assertThat().statusCode(HttpStatus.SC_OK).contentType(ContentType.JSON).header("Content-Type", "application/json;charset=UTF-8").time(lessThan(globalTimeout));
 
 
     }
     @Test
     public void testAddOne_validateResponse(){
-        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).post("").thenReturn();
-        ResponseBody body = response.getBody();
-        Headers header = response.getHeaders();
-        System.out.println(body.asString());
-        System.out.println(header.toString());
+        Bug aBug = Bug.getABug();
+        given().auth().basic(user, pass).contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).
+                post().then().assertThat().
+                statusCode(HttpStatus.SC_CREATED).
+                contentType(ContentType.JSON).
+                header("Content-Type", "application/json;charset=UTF-8").body("title",equalTo(aBug.getTitle()));
     }
     @Test
     public void testAddOne_validateResponseObject() {
 
         Bug request = Bug.getABug();
-        Bug respnsebug = given().contentType(ContentType.JSON).body(request,ObjectMapperType.JACKSON_2).post().as(Bug.class);
+        Bug respnsebug = given().contentType(ContentType.JSON).
+                                body(request,ObjectMapperType.JACKSON_2).
+                                post().as(Bug.class);
         Assert.assertTrue(request.equals(respnsebug));// validating responseded item is equal to what i put in
         System.out.println(respnsebug.toString());// optional, to view purpose
         //cleanup my data
-
+        given().delete(respnsebug.getId().toString()).then().assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
 
     }
     @Test
