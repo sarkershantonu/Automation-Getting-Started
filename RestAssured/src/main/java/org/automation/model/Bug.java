@@ -104,4 +104,32 @@ public class Bug {
     private String tags;
     private String priority;
     private String servility;
+
+    private static final String modify = " {\n" +
+            "    \"id\": 5,\n" +
+            "    \"title\": \"this is a New\",\n" +
+            "    \"summary\": \"Sample Bug\",\n" +
+            "    \"exceptions\": \"Exception Is not present\",\n" +
+            "    \"comments\": \"Comments \",\n" +
+            "    \"foundDateTime\": \"1st december\",\n" +
+            "    \"tags\": \"New, On production\",\n" +
+            "    \"priority\": \"High\",\n" +
+            "    \"servility\": \"Blocker\",\n" +
+            "    \"description\": \"Sampel Data \",\n" +
+            "    \"attachmentPath\": \"http://\"\n" +
+            "  }";
+    private static final String newBug = " {\n" +
+            "    \"title\": \"this is a New\",\n" +
+            "    \"summary\": \"Sample Bug\",\n" +
+            "    \"exceptions\": \"Exception Is not present\",\n" +
+            "    \"comments\": \"Comments \",\n" +
+            "    \"foundDateTime\": \"1st december\",\n" +
+            "    \"tags\": \"New, On production\",\n" +
+            "    \"priority\": \"High\",\n" +
+            "    \"servility\": \"Blocker\",\n" +
+            "    \"description\": \"Sampel Data \",\n" +
+            "    \"attachmentPath\": \"http://\"\n" +
+            "  }";
+
+
 }
