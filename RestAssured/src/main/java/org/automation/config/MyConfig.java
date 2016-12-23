@@ -1,5 +1,6 @@
 package org.automation.config;
 
+import io.restassured.authentication.FormAuthConfig;
 import io.restassured.config.*;
 import io.restassured.specification.ProxySpecification;
 
@@ -70,5 +71,8 @@ public class MyConfig {
         return null;
     }
 
+    public static FormAuthConfig getFormAuthConfig(){
+        return null;
+    }
 
 }
