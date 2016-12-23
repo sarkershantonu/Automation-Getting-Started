@@ -46,16 +46,16 @@ public class DemoTest extends BugTestBase {
 
 
     }
-
     @Test
-    public void testAddOne() {
-
-      /*  Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).post("").thenReturn();
+    public void testAddOne_validateResponse(){
+        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).post("").thenReturn();
         ResponseBody body = response.getBody();
         Headers header = response.getHeaders();
-         System.out.println(response.getBody().asString());
         System.out.println(body.asString());
-        System.out.println(header.toString());*/
+        System.out.println(header.toString());
+    }
+    @Test
+    public void testAddOne_validateResponseObject() {
 
         Bug request = Bug.getABug();
         Bug respnsebug = given().contentType(ContentType.JSON).body(request,ObjectMapperType.JACKSON_2).post().as(Bug.class);
