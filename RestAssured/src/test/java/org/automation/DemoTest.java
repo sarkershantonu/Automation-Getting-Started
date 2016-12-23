@@ -14,8 +14,8 @@ import static io.restassured.RestAssured.given;
  */
 public class DemoTest {
     private static final String URL = "http://localhost:9100";
-    private static final String user ="shantonu";
-    private static final String pass ="123456";
+    private static final String user = "shantonu";
+    private static final String pass = "123456";
 
     private static final String demoBug = "{\n" +
             "\n" +
@@ -32,21 +32,19 @@ public class DemoTest {
             "   }";
 
 
-
     @Test
-    public void testViewAllBugs(){
-        String path = URL+"/table/bugs";
-        RestAssured.given().auth().basic(user,pass).
-                when().get(path).then().statusCode(200).and().contentType(ContentType.JSON);
-        RestAssured.given().auth().basic(user,pass).
-                when().get(path).then().contentType(ContentType.JSON);
+    public void testViewAllBugs() {
+        RestAssured.baseURI = URL + "/table/bugs";
+        given().auth().basic(user, pass).
+                when().get("").then().statusCode(200).and().contentType(ContentType.JSON);
+
     }
 
     @Test
     public void testAddABug() {
         RestAssured.baseURI = URL + "/table/bugs";
-        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(demoBug).when().post("");
-
-
+        Response response = given().auth().basic(user, pass).contentType(ContentType.JSON).body(demoBug).when().post("").thenReturn();
+        System.out.println(response);
+        System.out.println(response.getBody().asString());
     }
 }
