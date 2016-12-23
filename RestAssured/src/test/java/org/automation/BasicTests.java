@@ -55,7 +55,8 @@ public class BasicTests extends BugTestBase {
                 post().then().assertThat().
                 statusCode(HttpStatus.SC_CREATED).
                 contentType(ContentType.JSON).
-                header("Content-Type", "application/json;charset=UTF-8").body("title",equalTo(aBug.getTitle()));
+                header("Content-Type", "application/json;charset=UTF-8").
+                body("title",equalTo(aBug.getTitle()));
     }
     @Test
     public void testAddOne_validateResponseObject() {
@@ -71,14 +72,13 @@ public class BasicTests extends BugTestBase {
 
     }
     @Test
+    // assuming that bug with ID 1 present.
     public void testViewABug(){
+        given().get(Integer.toString(1)).then().assertThat()
+                .statusCode(HttpStatus.SC_OK)
+                .contentType(ContentType.JSON).
+                header("Content-Type", "application/json;charset=UTF-8").body("id", equalTo(1));
 
-        for(int i=1; i<=15;i++){
-
-            Response response =  given().auth().basic(user, pass).
-                    when().get(Integer.toString(i)).thenReturn();
-            System.out.println(response.getBody().asString());
-        }
     }
     @Test
     //todo : add a bug, then delete & validate the bug is not present
