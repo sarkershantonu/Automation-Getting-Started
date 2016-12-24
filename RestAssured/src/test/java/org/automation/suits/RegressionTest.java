@@ -1,6 +1,6 @@
 package org.automation.suits;
 
-import org.automation.BasicTests;
+import org.automation.tests.BasicTests;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 

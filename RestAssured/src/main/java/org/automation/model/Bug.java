@@ -3,8 +3,9 @@ package org.automation.model;
 
 import java.util.Comparator;
 
-public class Bug  {
-    public Bug() {}
+public class Bug {
+    public Bug() {
+    }
 
     public Long getId() {
         return id;
@@ -103,15 +104,14 @@ public class Bug  {
     private String comments;
     private String foundDateTime;
     private String tags;
-
+    private String priority;
+    private String servility;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Bug)) return false;
-
         Bug bug = (Bug) o;
-
         if (!getTitle().equals(bug.getTitle())) return false;
         if (getSummary() != null ? !getSummary().equals(bug.getSummary()) : bug.getSummary() != null) return false;
         if (getDescription() != null ? !getDescription().equals(bug.getDescription()) : bug.getDescription() != null)
@@ -126,7 +126,6 @@ public class Bug  {
         if (getTags() != null ? !getTags().equals(bug.getTags()) : bug.getTags() != null) return false;
         if (!getPriority().equals(bug.getPriority())) return false;
         return getServility().equals(bug.getServility());
-
     }
 
     @Override
@@ -143,8 +142,6 @@ public class Bug  {
         result = 31 * result + getServility().hashCode();
         return result;
     }
-
-    private String priority;
 
     @Override
     public String toString() {
@@ -177,9 +174,7 @@ public class Bug  {
         this.servility = servility;
     }
 
-    private String servility;
-
- public static Bug getABug(){
-     return new Bug(null, "title","summary","description","/home/shantonu","RuntimeException","from code","Today","rest assure","NORM","BLOCKER");
- }
+    public static Bug getABug() {
+        return new Bug(null, "title", "summary", "description", "/home/shantonu", "RuntimeException", "from code", "Today", "rest assure", "NORM", "BLOCKER");
+    }
 }

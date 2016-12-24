@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.tests;
 
 import io.restassured.http.ContentType;
 import io.restassured.mapper.ObjectMapperType;
@@ -47,15 +47,14 @@ public class BasicTests extends BugTestBase {
     }
     @Test
     public void testAddOne_validateResponseObject() {
-
         Bug request = Bug.getABug();
-        Bug respnsebug = given().contentType(ContentType.JSON).
+        Bug responsedBug = given().contentType(ContentType.JSON).
                                 body(request,ObjectMapperType.JACKSON_2).
                                 post().as(Bug.class);
-        Assert.assertTrue(request.equals(respnsebug));// validating responseded item is equal to what i put in
-        System.out.println(respnsebug.toString());// optional, to view purpose
+        Assert.assertTrue(request.equals(responsedBug));// validating responseded item is equal to what i put in
+        System.out.println(responsedBug.toString());// optional, to view purpose
         //cleanup my data
-        given().delete(respnsebug.getId().toString()).then().assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
+        given().delete(responsedBug.getId().toString()).then().assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
 
     }
     @Test
@@ -76,7 +75,6 @@ public class BasicTests extends BugTestBase {
 
     }
     @Test
-    //
     public void testUpdateeABug(){
         Bug createdbug = given().contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).post().as(Bug.class);
         createdbug.setTitle("This is modified title");
