@@ -37,7 +37,7 @@ public class BasicTests extends BugTestBase {
     @Test
     public void testAddOne_validateResponse(){
         Bug aBug = Bug.getABug();
-        given().auth().basic(user, pass).contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).
+        given().contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).
                 post().then().assertThat().
                 statusCode(HttpStatus.SC_CREATED).
                 contentType(ContentType.JSON).
