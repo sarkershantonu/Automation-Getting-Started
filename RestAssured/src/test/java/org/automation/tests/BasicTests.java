@@ -28,7 +28,6 @@ public class BasicTests extends BugTestBase {
                contentType(ContentType.JSON).
                header("Content-Type", "application/json;charset=UTF-8").
                time(lessThan(globalResponseTimeout));
-
     }
 
     /**
