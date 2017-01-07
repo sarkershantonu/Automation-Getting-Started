@@ -23,7 +23,7 @@ public class BasicTests extends BugTestBase {
      */
     @Test
     public void testViewAll() {
-       given().when().get().then().assertThat().
+       given().when().auth().basic("shantonu", "123456").get().then().assertThat().
                statusCode(HttpStatus.SC_OK).
                contentType(ContentType.JSON).
                header("Content-Type", "application/json;charset=UTF-8").
