@@ -8,10 +8,7 @@ https://github.com/sarkershantonu/Bug-Storing-WS
 We need to run Bug web service release 
 https://github.com/sarkershantonu/Bug-Storing-WS/releases
 
-to test them. 
-
-Use command 
-
 Java -Jar bug-store-1.2-SNAPSHOT.jar 
 
-Credentials : shantonu, 123456
+# Credentials : 
+shantonu, 123456
