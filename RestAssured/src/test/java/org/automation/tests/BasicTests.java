@@ -22,7 +22,8 @@ public class BasicTests extends BugTestBase {
 
     /**
      * Validations : HTTP status, content type and header
-     * if we need to validate defined schema of JSON body , just add  .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(""))
+     * if we need to validate defined schema of JSON body , just add
+     * .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(""))
      */
     @Test
     public void testViewAll() {
