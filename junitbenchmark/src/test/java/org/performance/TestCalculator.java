@@ -21,10 +21,8 @@ import java.util.Properties;
 @AxisRange(min = 0, max = 1)
 @BenchmarkMethodChart(filePrefix = "benchmark-lists")
 @BenchmarkHistoryChart(labelWith = LabelType.RUN_ID, maxRuns = 20)
-
 @BenchmarkOptions(concurrency = 2, warmupRounds = 2, benchmarkRounds = 20)
 public class TestCalculator extends AbstractBenchmark {
-
     public static int i = 0;
     private Calculator aCalculator = null;
 
@@ -53,7 +51,6 @@ public class TestCalculator extends AbstractBenchmark {
         }
         i++;
     }
-
     @Test
     public void testSub() {
         Assert.assertEquals(-5.0, aCalculator.sub(10.0, 15.0), 0.01);
@@ -64,5 +61,4 @@ public class TestCalculator extends AbstractBenchmark {
         }
         i++;
     }
-
 }
