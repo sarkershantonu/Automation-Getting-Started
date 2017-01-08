@@ -2,7 +2,6 @@
 *.iml
 .idea
 .classpath
-charts
 target/
 .settings/
 .class
