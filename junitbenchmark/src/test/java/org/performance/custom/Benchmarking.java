@@ -34,7 +34,6 @@ public abstract class Benchmarking {
             System.setProperty(k,p.getProperty(k));
         }
     }
-
     @Rule
     public TestRule benchmarkRun = new BenchmarkRule();
 

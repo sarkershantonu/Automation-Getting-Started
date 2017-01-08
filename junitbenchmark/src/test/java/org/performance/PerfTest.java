@@ -24,6 +24,8 @@ public class PerfTest {
     @BenchmarkOptions(concurrency = 2, warmupRounds = 0, benchmarkRounds = 5)
     public void testSub(){
         Assert.assertEquals(-5.0, aCalculator.sub(10.0,15.0), 0.01);
+
+        //this sleep to run the test long time. if you dont add, it will run too fast to see.
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
