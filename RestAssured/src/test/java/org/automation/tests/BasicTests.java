@@ -1,5 +1,6 @@
 package org.automation.tests;
 
+import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.mapper.ObjectMapperType;
 
@@ -7,6 +8,8 @@ import org.apache.http.HttpStatus;
 import org.automation.core.BugTestBase;
 import org.automation.model.Bug;
 import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -17,13 +20,25 @@ import static org.hamcrest.Matchers.lessThan;
  */
 public class BasicTests extends BugTestBase {
 
+    @BeforeClass
+    public static void initClass() {
+        RestAssured.baseURI = URL;
+        RestAssured.basic(user, pass);
+        RestAssured.basePath = "/table/bugs/";
+
+    }
+    public void initTest(){
+        RestAssured.basic(user,pass);
+        RestAssured.authentication
+    }
+
     /**
      * Validations : HTTP status, content type and header
      * if we need to validate defined schema of JSON body , just add  .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(""))
      */
     @Test
     public void testViewAll() {
-       given().when().auth().basic("shantonu", "123456").get().then().assertThat().
+       given().auth().basic("shantonu", "123456").get().then().assertThat().
                statusCode(HttpStatus.SC_OK).
                contentType(ContentType.JSON).
                header("Content-Type", "application/json;charset=UTF-8").
