@@ -17,7 +17,8 @@ public abstract class BugTestBase {
 
     @BeforeClass
     public static void initClass(){
-        RestAssured.basePath="/table/bugs/";
+        RestAssured.baseURI = URL;
+        RestAssured.basePath = "/table/bugs/";
     }
     @BeforeClass
     public static void cleanupClass(){
