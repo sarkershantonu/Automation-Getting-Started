@@ -11,5 +11,9 @@ https://github.com/sarkershantonu/Bug-Storing-WS/releases
 
 Java -Jar bug-store-1.2-SNAPSHOT.jar 
 
+# Serenity Test running 
+mvn clean verify deploy
+
+your site should be ready 
 # Credentials : 
 shantonu, 123456

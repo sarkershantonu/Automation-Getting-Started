@@ -10,7 +10,7 @@
     <properties>
         <rest.assure.version>3.0.1</rest.assure.version>
         <serenity.version>1.2.2</serenity.version>
-        <jetty.http.port>9100</jetty.http.port>
+        <jetty.http.port>9001</jetty.http.port>
         <tags></tags>
     </properties>
     <dependencies>
