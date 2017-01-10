@@ -1,9 +1,9 @@
 package org.automation.tests;
 
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import io.restassured.mapper.ObjectMapperType;
 
+
+import com.jayway.restassured.http.ContentType;
+import com.jayway.restassured.internal.mapper.ObjectMapperType;
 import org.apache.http.HttpStatus;
 import org.automation.core.BugTestBase;
 import org.automation.model.Bug;
@@ -11,7 +11,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static io.restassured.RestAssured.given;
+
+
+import static net.serenitybdd.rest.RestRequests.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 
@@ -33,8 +35,7 @@ public class BasicTests extends BugTestBase {
                then().assertThat().
                statusCode(HttpStatus.SC_OK).
                contentType(ContentType.JSON).
-               header("Content-Type", "application/json;charset=UTF-8").
-               time(lessThan(globalResponseTimeout));
+               header("Content-Type", "application/json;charset=UTF-8");
     }
 
     /**
@@ -45,13 +46,12 @@ public class BasicTests extends BugTestBase {
         Bug aBug = Bug.getABug();
         given().
                 auth().basic(user,pass).
-                contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).
+                contentType(ContentType.JSON).body(Bug.getABug(), ObjectMapperType.JACKSON_1).
                 post().then().assertThat().
                 statusCode(HttpStatus.SC_CREATED).
                 contentType(ContentType.JSON).
                 header("Content-Type", "application/json;charset=UTF-8").
-                body("title",equalTo(aBug.getTitle())).
-                time(lessThan(globalResponseTimeout));
+                body("title",equalTo(aBug.getTitle()));
     }
     @Test
     public void testAddOne_validateResponseObject() {

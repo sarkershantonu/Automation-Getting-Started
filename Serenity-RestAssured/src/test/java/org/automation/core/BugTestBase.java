@@ -1,7 +1,9 @@
 package org.automation.core;
 
-import io.restassured.RestAssured;
-import io.restassured.mapper.ObjectMapperType;
+
+
+import net.serenitybdd.rest.RestRequests;
+import net.serenitybdd.rest.SerenityRest;
 import org.junit.BeforeClass;
 
 /**
@@ -17,8 +19,7 @@ public abstract class BugTestBase {
 
     @BeforeClass
     public static void initClass(){
-        RestAssured.baseURI = URL;
-        RestAssured.basePath = "/table/bugs/";
+
     }
     @BeforeClass
     public static void cleanupClass(){
