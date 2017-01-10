@@ -1,6 +1,7 @@
 # Rest Assure Example with serenity 
 Demo web service testing project
 Report will be created by serenity
+Report will be published locally using jetty 
 
 # Test Webservice 
 https://github.com/sarkershantonu/Bug-Storing-WS
