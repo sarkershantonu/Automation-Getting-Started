@@ -14,6 +14,9 @@ Java -Jar bug-store-1.2-SNAPSHOT.jar
 # Serenity Test running 
 mvn clean verify deploy
 
+mvn jetty:run 
+
+you can see reports in localhost:9001 
 your site should be ready 
 # Credentials : 
 shantonu, 123456
