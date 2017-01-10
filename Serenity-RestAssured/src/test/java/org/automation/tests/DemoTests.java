@@ -16,19 +16,18 @@ import org.junit.Test;
 import org.junit.rules.MethodRule;
 import org.junit.runner.RunWith;
 
+import static net.serenitybdd.rest.RestRequests.given;
+
 /**
  * Created by shantonu on 1/7/17.
  */
 @RunWith(SerenityRunner.class)
 public class DemoTests {
-
-
     @Rule
     public MethodRule methodRule  = new RestConfigurationRule();
 
     @Test
     public void seeAllBugs(){
-        SerenityRest.
                 given().
                 auth().basic("shantonu", "123456").
                 get("http://localhost:9100/table/bugs").
@@ -41,7 +40,6 @@ public class DemoTests {
     @Test
     public void addABug(){
         Bug aBug = Bug.getABug();
-        RestRequests.
                 given().
                 auth().basic("shantonu", "123456").
                 contentType(ContentType.JSON).

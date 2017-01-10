@@ -4,6 +4,7 @@ package org.automation.tests;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.internal.mapper.ObjectMapperType;
+import net.serenitybdd.junit.runners.SerenityRunner;
 import org.apache.http.HttpStatus;
 import org.automation.core.BugTestBase;
 import org.automation.model.Bug;
@@ -11,7 +12,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
+import org.junit.runner.RunWith;
 
 import static net.serenitybdd.rest.RestRequests.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -20,8 +21,10 @@ import static org.hamcrest.Matchers.lessThan;
 /**
  * Created by shantonu on 9/7/16.
  */
+@RunWith(SerenityRunner.class)
 public class BasicTests extends BugTestBase {
 
+    private static String URL = base+"/table/bugs/";
     /**
      * Validations : HTTP status, content type and header
      * if we need to validate defined schema of JSON body , just add
@@ -31,7 +34,7 @@ public class BasicTests extends BugTestBase {
     public void testViewAll() {
        given().
                auth().basic(user,pass).
-               get().
+               get(URL).
                then().assertThat().
                statusCode(HttpStatus.SC_OK).
                contentType(ContentType.JSON).
@@ -46,8 +49,8 @@ public class BasicTests extends BugTestBase {
         Bug aBug = Bug.getABug();
         given().
                 auth().basic(user,pass).
-                contentType(ContentType.JSON).body(Bug.getABug(), ObjectMapperType.JACKSON_1).
-                post().then().assertThat().
+                contentType(ContentType.JSON).body(Bug.getABug(), ObjectMapperType.JACKSON_2).
+                post(URL).then().assertThat().
                 statusCode(HttpStatus.SC_CREATED).
                 contentType(ContentType.JSON).
                 header("Content-Type", "application/json;charset=UTF-8").
@@ -60,13 +63,13 @@ public class BasicTests extends BugTestBase {
                 auth().basic(user,pass).
                 contentType(ContentType.JSON).
                 body(request,ObjectMapperType.JACKSON_2).
-                post().as(Bug.class);
+                post(URL).as(Bug.class);
         Assert.assertTrue(request.equals(responsedBug));// validating responseded item is equal to what i put in
         System.out.println(responsedBug.toString());// optional, to view purpose
 
         //cleanup my data
         given().auth().basic(user,pass).
-                delete(responsedBug.getId().
+                delete(URL+responsedBug.getId().
                         toString()).then().
                 assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
 
@@ -76,7 +79,7 @@ public class BasicTests extends BugTestBase {
     public void testViewABug(){
         given().
                 auth().basic(user,pass).
-                get(Integer.toString(1)).then().assertThat().
+                get(URL+Integer.toString(1)).then().assertThat().
                 statusCode(HttpStatus.SC_OK).
                 contentType(ContentType.JSON).
                 header("Content-Type", "application/json;charset=UTF-8").
@@ -91,12 +94,11 @@ public class BasicTests extends BugTestBase {
                         auth().basic(user,pass).
                         contentType(ContentType.JSON).
                         body(Bug.getABug(),ObjectMapperType.JACKSON_2).
-                        post().as(Bug.class);
+                        post(URL).as(Bug.class);
         given().auth().basic(user,pass).
-                delete(respnsebug.getId().toString()).
+                delete(URL+respnsebug.getId().toString()).
                 then().assertThat().
                 statusCode(HttpStatus.SC_NO_CONTENT);
-
     }
     @Test
     public void testUpdateeABug(){
@@ -105,7 +107,7 @@ public class BasicTests extends BugTestBase {
                         auth().basic(user,pass).
                         contentType(ContentType.JSON).
                         body(Bug.getABug(),ObjectMapperType.JACKSON_2).
-                        post().as(Bug.class);
+                        post(URL).as(Bug.class);
 
         createdbug.setTitle("This is modified title");
         createdbug.setDescription("This is modified description");
@@ -113,7 +115,7 @@ public class BasicTests extends BugTestBase {
         given().
                 auth().basic(user,pass).
                 contentType(ContentType.JSON).body(createdbug,ObjectMapperType.JACKSON_2).
-                when().put(createdbug.getId().toString()).
+                when().put(URL+createdbug.getId().toString()).
                 then().assertThat().
                 statusCode(HttpStatus.SC_ACCEPTED).
                 contentType(ContentType.JSON).
@@ -122,7 +124,7 @@ public class BasicTests extends BugTestBase {
         //cleanup
         given().
                 auth().basic(user,pass).
-                delete(createdbug.getId().toString()).
+                delete(URL+createdbug.getId().toString()).
                 then().assertThat().
                 statusCode(HttpStatus.SC_NO_CONTENT);
     }
