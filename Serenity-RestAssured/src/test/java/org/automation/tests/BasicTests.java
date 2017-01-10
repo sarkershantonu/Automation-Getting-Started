@@ -16,7 +16,6 @@ import org.junit.runner.RunWith;
 
 import static net.serenitybdd.rest.RestRequests.given;
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.lessThan;
 
 /**
  * Created by shantonu on 9/7/16.
