@@ -90,7 +90,7 @@ public class SearchStepDefination {
 
     @Then("^I quit browser$")
     public void i_quit_browser() throws Throwable {
-        ScreenshotUtil.takeFullScreen("endingtests"+System.currentTimeMillis(),driver);
+       // ScreenshotUtil.takeFullScreen("endingtests"+System.currentTimeMillis(),driver);
         Browser.close();
     }
 }
