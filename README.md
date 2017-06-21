@@ -1,22 +1,22 @@
 # Automation-Getting-Started
 This repository contains only getting started projects for different automation framework
 
-#Target 
+# Target 
 To help new automation people to start project 
 
 # ******* Links ******* 
 
-#Sikuli
+# Sikuli
 
-#Selenium 
+# Selenium 
 
-#Junit
+# Junit
 
-#TestNG
+# estNG
 
-#Allure
+# Allure
 
-#Cucumber
+# Cucumber
 
-#Serenity
+# Serenity
 
