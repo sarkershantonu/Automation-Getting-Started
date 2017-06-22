@@ -17,8 +17,6 @@
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumber.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-firefox-driver -->
-
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
