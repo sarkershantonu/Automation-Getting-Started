@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <allure.version>1.4.24.RC3</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
-        <test.runner>org.automation.CucumberTests.java</test.runner>
+        <test.runner>org.automation.CucumberRunner.class</test.runner>
     </properties>
     <dependencies>
         <dependency>
@@ -37,18 +37,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <version>2.4</version>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
