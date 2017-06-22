@@ -13,18 +13,13 @@ public class CalculatorStepdefinations {
     private Calculator calculator;
     private double result;
 
-    @Before
-    public void init(){
-        calculator = new Calculator();
-    }
     @Given("^I want to test calculator$")
     public void i_want_to_test_calculator() throws Throwable {
-
+        calculator = new Calculator();
     }
 
     @Then("^I got (.+) as result$")
     public void i_got_as_result(double arg1) throws Throwable {
-
         Assert.assertEquals(result,arg1,0.05);
     }
     @When("^I in insert (.+) and (.+)$")
