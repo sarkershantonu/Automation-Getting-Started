@@ -70,6 +70,8 @@ public class BasicTests extends BugTestBase {
                         toString()).then().
                 assertThat().statusCode(HttpStatus.SC_NO_CONTENT);
 
+
+        given().auth().basic("","").contentType(ContentType.JSON).body(request,ObjectMapperType.JACKSON_2).post();
     }
     @Test
     // assuming that bug with ID 1 present.
