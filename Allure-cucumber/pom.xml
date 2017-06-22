@@ -13,7 +13,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <allure.version>1.4.24.RC3</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
-        <test.runner>org.automation.CucumberRunner.class</test.runner>
+        <test.runner>org.automation.CucumberTests.java</test.runner>
     </properties>
     <dependencies>
         <dependency>
