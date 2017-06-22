@@ -14,6 +14,7 @@
         <allure.version>1.4.24.RC3</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
         <test.runner>org.automation.CucumberRunner.class</test.runner>
+        <failsafe.version>2.19.1</failsafe.version>
     </properties>
     <dependencies>
         <dependency>
@@ -52,9 +53,8 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-               <!--  <artifactId>maven-failsafe-plugin</artifactId>-->
-                <version>2.19.1</version>
+                 <artifactId>maven-failsafe-plugin</artifactId>
+                <version>${failsafe.version}</version>
                 <configuration>
                     <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
@@ -66,11 +66,11 @@
                     </includes>
                 </configuration>
                 <dependencies>
-                    <!--dependency>
+                    <dependency>
                         <groupId>org.apache.maven.surefire</groupId>
                         <artifactId>surefire-junit47</artifactId>
-                        <version>2.19.1</version>
-                    </dependency>-->
+                        <version>${failsafe.version}</version>
+                    </dependency>
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
