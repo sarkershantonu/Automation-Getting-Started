@@ -22,4 +22,4 @@ To help new automation people to start project
 
 # restassured
 
-s Postman
+# Postman
