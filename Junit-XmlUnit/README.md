@@ -1,17 +1,7 @@
-# Allure Cucumber Example
-Using Allure with cucumber JVM
+# Xml Unit Example 
+
+A simple XML compare example 
 
 # Target 
-a simple calculator with allure report
 
-# Testing command 
-
-(use maven 3.3.9)
-
-mvn clean test 
-
-mvn jetty:run 
-
-# Report 
-
-See in your http://localhost:9000 
+In a project, it is very common to compare XML attributes/data.This project have some examples. 
