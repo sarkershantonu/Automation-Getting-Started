@@ -9,9 +9,10 @@ import java.io.IOException;
  */
 public class TestXmlCompare {
 
+    private static String root_path = "./src/test/resources/";
 
     @Test
     public void testXml() throws IOException, SAXException {
-        XMLCompare.compare("","");
+        XMLCompare.compare(root_path+"original.xml",root_path+"response.xml");
     }
 }
