@@ -13,6 +13,6 @@ public class TestXmlCompare {
 
     @Test
     public void testXml() throws IOException, SAXException {
-        XMLCompare.compare(root_path+"original.xml",root_path+"response.xml");
+        XMLCompare.compare(root_path+"test1a.xml",root_path+"test2a.xml");
     }
 }
