@@ -12,7 +12,13 @@ public class TestXmlCompare {
     private static String root_path = "./src/test/resources/";
 
     @Test
-    public void testXml() throws IOException, SAXException {
+    public void testDiff() throws IOException, SAXException {
         XMLCompare.compare(root_path+"test1a.xml",root_path+"test2a.xml");
+    }
+
+
+    @Test
+    public void testSame() throws IOException, SAXException {
+        XMLCompare.compare(root_path+"test1a.xml",root_path+"test1a.xml");
     }
 }
