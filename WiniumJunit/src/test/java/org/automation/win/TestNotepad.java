@@ -12,12 +12,12 @@ import java.net.MalformedURLException;
  * Created by shantonu on 7/6/17.
  */
 public class TestNotepad {
-    private WiniumDriver driver;
-    private Notepad notepad;
+    private static WiniumDriver driver;
+    private static Notepad notepad;
 
 
     @BeforeClass
-    public void init() throws MalformedURLException {
+    public static void init() throws MalformedURLException {
         driver = new WindowsDesktop().initDriver();
         notepad = new Notepad(driver);
     }
