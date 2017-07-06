@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.win.config;
 
 import java.io.File;
 import java.io.FileInputStream;
