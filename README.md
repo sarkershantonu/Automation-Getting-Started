@@ -20,11 +20,11 @@ To help new automation people to start project
 
 # Serenity
 
-# restassured
 
 # Postman
 
 # WebService 
+- restassured
 
 # Web UI
 
