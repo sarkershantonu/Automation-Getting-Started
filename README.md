@@ -6,9 +6,10 @@ To help new automation people to start project
 
 # ******* Links ******* 
 
-# Sikuli
+# Desktop/Screen Image based automation 
+- Sikuli
 
-# Selenium 
+#  
 
 # Junit
 
@@ -28,6 +29,7 @@ To help new automation people to start project
 - Soap UI
 
 # Web UI
+- Selenium
 
 # Android
 
