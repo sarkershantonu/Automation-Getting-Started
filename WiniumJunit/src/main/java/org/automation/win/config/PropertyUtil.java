@@ -34,10 +34,9 @@ public class PropertyUtil {
 
     public static void initProperties() {
         try {
-            loadProperties(USER_WORKING_DIR + "/src/test/resources/app.properties");
-            loadProperties(USER_WORKING_DIR + "/src/test/resources/log4j.properties");
-            loadProperties(USER_WORKING_DIR + "/src/test/resources/winium.properties");
-
+            loadProperties( "./src/main/resources/app.properties");
+            loadProperties("./src/main/resources/test.properties");
+            loadProperties( "./src/main/resources/winium.properties");
 
         } catch (IOException e) {
             e.printStackTrace();
