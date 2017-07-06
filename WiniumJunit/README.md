@@ -19,3 +19,9 @@ winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.
 # Main Site Link  
 
 - https://github.com/2gis/Winium/tree/master/java
+
+# Step by Step 
+1. Download this project 
+2. Download Winium Server 
+3. Run the server 
+4. Run the test
