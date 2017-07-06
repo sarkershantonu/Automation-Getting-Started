@@ -21,10 +21,11 @@ To help new automation people to start project
 # Serenity
 
 
-# Postman
-
+# 
 # WebService 
 - restassured
+- Postman
+- Soap UI
 
 # Web UI
 
