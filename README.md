@@ -6,14 +6,12 @@ To help new automation people to start project
 
 # ******* Links ******* 
 
-# Desktop/Screen Image based automation 
+# Screen Image based automation 
 - Sikuli
 
-#  
-
-# Junit
-
-# TestNG
+# Unit Testing 
+- Junit
+- TestNG
 
 # Allure
 
