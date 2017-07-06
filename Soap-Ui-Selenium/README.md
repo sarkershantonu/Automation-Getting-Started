@@ -1,17 +1,11 @@
-# Allure Cucumber Example
-Using Allure with cucumber JVM
-
-# Target 
-a simple calculator with allure report
-
-# Testing command 
+# Soap UI Example with Selenium
+# Testing command
 
 (use maven 3.3.9)
 
-mvn clean test 
+mvn clean test
 
-mvn jetty:run 
+mvn jetty:run
 
-# Report 
-
-See in your http://localhost:9100 
+# Target
+- Adding SoapUI for extending capability of existing project 
