@@ -25,3 +25,6 @@ winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.
 2. Download Winium Server 
 3. Run the server 
 4. Run the test
+
+# Todo 
+Running from a linux host to remote window PC/VM :) 
