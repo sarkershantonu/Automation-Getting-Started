@@ -31,4 +31,5 @@ To help new automation people to start project
 # Android
 
 # Windows 8/10 apps
+ - Winimum Example 
 # IOS
