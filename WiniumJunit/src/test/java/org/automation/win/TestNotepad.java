@@ -1,6 +1,7 @@
 package org.automation.win;
 
 import org.automation.win.app.notepad.Notepad;
+import org.automation.win.config.PropertyUtil;
 import org.automation.win.core.WindowsDesktop;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -18,8 +19,10 @@ public class TestNotepad {
 
     @BeforeClass
     public static void init() throws MalformedURLException {
+        PropertyUtil.initProperties();
         driver = new WindowsDesktop().initDriver();
         notepad = new Notepad(driver);
+
     }
 
     @Test
