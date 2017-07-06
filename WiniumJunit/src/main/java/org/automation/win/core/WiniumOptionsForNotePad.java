@@ -7,6 +7,8 @@ import org.openqa.selenium.winium.WiniumOptions;
 
 /**
  * Created by shantonu on 7/6/17.
+ * Contains all Config option of application
+ *
  */
 public class WiniumOptionsForNotePad extends DesktopOptions {
 
@@ -18,5 +20,6 @@ public class WiniumOptionsForNotePad extends DesktopOptions {
         this.setApplicationPath(System.getProperty("notepad.path"));
         this.setKeyboardSimulator(KeyboardSimulatorType.BasedOnWindowsFormsSendKeysClass);
         this.setLaunchDelay(Integer.valueOf(System.getProperty("init.launcher.delay")));
+        this.setDebugConnectToRunningApp(Boolean.FALSE);
     }
 }
