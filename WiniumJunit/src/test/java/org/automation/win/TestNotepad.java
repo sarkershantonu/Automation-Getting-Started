@@ -3,6 +3,7 @@ package org.automation.win;
 import org.automation.win.app.notepad.Notepad;
 import org.automation.win.config.PropertyUtil;
 import org.automation.win.core.WindowsDesktop;
+import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.winium.WiniumDriver;
@@ -28,5 +29,10 @@ public class TestNotepad {
     @Test
     public void testTyping(){
         notepad.type("Shantonu Demo");
+        notepad.saveFileAs("SKTEST");
+    }
+    @AfterClass
+    public static void quit(){
+        notepad.close();
     }
 }
