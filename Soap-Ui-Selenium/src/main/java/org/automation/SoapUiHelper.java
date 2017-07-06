@@ -8,8 +8,16 @@ import com.eviware.soapui.tools.SoapUITestCaseRunner;
  */
 public class SoapUiHelper {
 
-    private void runWithSoapUI(String soap_ui_tc_path){
-        SoapUITestCaseRunner runner = new SoapUITestCaseRunner("./testcases/test1.xml");
+    private String[] prop;//need init
+    private void runWithSoapUI(String soap_ui_tc_path) throws Exception {
+        SoapUITestCaseRunner runner = new SoapUITestCaseRunner();
+        runner.setProjectFile(soap_ui_tc_path);
+        runner.setProjectProperties(prop);
 
+        runner.setTestSuite("");//define suit
+        runner.setTestCase("");//define test cases
+        runner.setPrintReport(true);
+        runner.setJUnitReport(true);
+        runner.run();
     }
 }
