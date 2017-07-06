@@ -31,4 +31,17 @@ public class PropertyUtil {
             System.setProperty(k, p.getProperty(k));
         }
     }
+
+    public static void initProperties() {
+        try {
+            loadProperties(USER_WORKING_DIR + "/src/test/resources/app.properties");
+            loadProperties(USER_WORKING_DIR + "/src/test/resources/log4j.properties");
+            loadProperties(USER_WORKING_DIR + "/src/test/resources/winium.properties");
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
