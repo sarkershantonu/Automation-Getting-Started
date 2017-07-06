@@ -13,14 +13,14 @@ To help new automation people to start project
 - Junit
 - TestNG
 
-# Allure
-
-# Cucumber
+# Reporting 
+- Allure
+# BDD 
+- Cucumber
+- Fitnesse
 
 # Serenity
 
-
-# 
 # WebService 
 - restassured
 - Postman
@@ -29,8 +29,9 @@ To help new automation people to start project
 # Web UI
 - Selenium
 
-# Android
+# Mobile
+- Robotium
+- Appium
 
 # Windows 8/10 apps
  - Winimum Example 
-# IOS
