@@ -22,9 +22,10 @@ winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.
 
 # Step by Step 
 1. Download this project 
-2. Download Winium Server 
-3. Run the server 
-4. Run the test
+2. Download Winium Desktop APP 
+3. Create a folder in & put this desktop app
+3. Run the server (or you can use my script)
+4. Run the test 
 
 # Todo 
 Running from a linux host to remote window PC/VM :) 
