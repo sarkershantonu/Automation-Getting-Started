@@ -5,7 +5,7 @@ a simple calculator with allure report
 Java 
 Junit
 winium
-winium Desktop APP 
+winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.6.0/Winium.Desktop.Driver.zip)
 
 # Testing command 
 
