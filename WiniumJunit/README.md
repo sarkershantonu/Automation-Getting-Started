@@ -1,5 +1,9 @@
 # Example Project with Winium
-a simple calculator with allure report
+A simple Project which 
+
+1. opens notepad
+2. type a text
+3. Save a file to specific location 
 
 # Dependency 
 Java 
