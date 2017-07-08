@@ -31,5 +31,24 @@ winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.
 # Project Structure 
 ![Project](project_structure.JPG)
 
-# Todo 
-Running from a linux host to remote window PC/VM :) 
+# How to run Remotely 
+- Example : I will run with win8 VM
+
+- Step 1 : Create a windows VM & make it accessible via intranet. 
+I use VmWare, network in bridge mode so that I can access from other PC in network. 
+ 
+- Step 2 : Get the IP address of the VM 
+
+- Step 3 : Create a folder which has permission to save file. 
+I create C:\winium\ and allowed current user (me) and admins to have full access. 
+
+- Step 4 : Start Winium Server in VM 
+
+![Configuration of VM](vmConfig.jpg)
+
+- Step 5 : (optional) Now add IP, Port & folder in project as property. 
+
+![Saving file in VM](VMsavingFIle.jpg)  
+  
+And Run it as Junit test from you Linux Host...  Done :)   
+ 
