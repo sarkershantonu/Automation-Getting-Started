@@ -27,9 +27,15 @@ public class TestNotepad {
     }
 
     @Test
-    public void testTyping(){
+    public void testTypeAndSaveLocally(){
         notepad.type("Shantonu Demo");
-        notepad.saveFileAs("SKTEST");
+        notepad.saveFileAs("_MyFile.txt");
+    }
+
+    @Test
+    public void testTypeAndSaveRemotePC(){
+        notepad.type("Shantonu Demo");
+        notepad.saveFileInSpecificLocation(System.getProperty("vm.folder")+System.currentTimeMillis()+"_MyFile.txt");
     }
     @AfterClass
     public static void quit(){

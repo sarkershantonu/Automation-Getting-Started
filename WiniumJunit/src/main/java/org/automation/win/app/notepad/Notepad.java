@@ -35,6 +35,15 @@ public class Notepad {
         driver.getKeyboard().pressKey("\n");
 
     }
+    //this is required for remote PC path
+    public void saveFileInSpecificLocation(String completePathWithExt) {
+        String file_path = completePathWithExt;
+        driver.findElementByName("File").click();
+        driver.findElementByName("Save As...").click();
+        driver.findElementByClassName("Edit").sendKeys(file_path);
+        driver.getKeyboard().pressKey("\n");
+
+    }
 
     public void type(String text) {
         driver.findElementByClassName("Edit").sendKeys(text);
