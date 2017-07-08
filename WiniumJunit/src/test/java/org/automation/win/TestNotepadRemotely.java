@@ -12,6 +12,8 @@ import java.net.MalformedURLException;
 
 /**
  * Created by shantonu on 7/8/17.
+ * //this will run remotely, please see readme for detail (https://github.com/sarkershantonu/Automation-Getting-Started/tree/master/WiniumJunit)
+ *
  */
 public class TestNotepadRemotely {
     private static WiniumDriver driver;
