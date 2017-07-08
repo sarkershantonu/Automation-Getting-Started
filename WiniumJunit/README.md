@@ -20,7 +20,8 @@ winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.
 
 - https://github.com/2gis/Winium/tree/master/java
 
-# Step by Step 
+# Running test locally Step by Step
+ 
 1. Download this project 
 2. Download Winium Desktop APP 
 3. Create a folder in & put this desktop app
@@ -31,7 +32,7 @@ winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.
 # Project Structure 
 ![Project](project_structure.JPG)
 
-# How to run Remotely 
+# How to run Remotely (step by Step) 
 
 - Example : I will run with win8 VM
 
