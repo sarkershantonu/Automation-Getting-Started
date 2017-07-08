@@ -13,7 +13,7 @@ import java.net.URL;
 
 /**
  * Created by shantonu on 7/6/17.
- * act as browser of selenium
+ * act as browser controller of selenium
  */
 public class WindowsDesktop {
     private WiniumDriver driver ;
