@@ -10,7 +10,7 @@ import java.io.File;
  */
 public class Notepad {
 
-    public WiniumDriver driver;
+    private WiniumDriver driver;
 
     public Notepad(WiniumDriver driver) {
         this.driver = driver;
@@ -36,10 +36,9 @@ public class Notepad {
     }
     //this is required for remote PC path
     public void saveFileInSpecificLocation(String completePathWithExt) {
-        String file_path = completePathWithExt;
         driver.findElementByName("File").click();
         driver.findElementByName("Save As...").click();
-        driver.findElementByClassName("Edit").sendKeys(file_path);
+        driver.findElementByClassName("Edit").sendKeys(completePathWithExt);
         driver.getKeyboard().pressKey("\n");
 
     }
