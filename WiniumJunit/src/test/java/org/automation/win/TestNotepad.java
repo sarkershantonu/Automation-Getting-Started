@@ -21,7 +21,7 @@ public class TestNotepad {
     @BeforeClass
     public static void init() throws MalformedURLException {
         PropertyUtil.initProperties();
-        driver = new WindowsDesktop().initDriver();
+        driver = new WindowsDesktop().initDriverInLocalVM();
         notepad = new Notepad(driver);
 
     }
