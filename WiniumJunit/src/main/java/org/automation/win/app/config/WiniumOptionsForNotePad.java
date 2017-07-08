@@ -1,4 +1,4 @@
-package org.automation.win.core;
+package org.automation.win.app.config;
 
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.winium.DesktopOptions;

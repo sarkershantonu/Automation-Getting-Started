@@ -1,7 +1,6 @@
 package org.automation.win.app.notepad;
 
-import org.automation.win.config.PropertyUtil;
-import org.automation.win.core.WindowsDesktop;
+import org.automation.win.app.config.PropertyUtil;
 import org.openqa.selenium.winium.WiniumDriver;
 
 import java.io.File;
