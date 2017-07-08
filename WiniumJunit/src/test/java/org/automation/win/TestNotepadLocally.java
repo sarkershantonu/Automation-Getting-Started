@@ -13,7 +13,7 @@ import java.net.MalformedURLException;
 /**
  * Created by shantonu on 7/6/17.
  */
-public class TestNotepad {
+public class TestNotepadLocally {
     private static WiniumDriver driver;
     private static Notepad notepad;
 
@@ -21,7 +21,7 @@ public class TestNotepad {
     @BeforeClass
     public static void init() throws MalformedURLException {
         PropertyUtil.initProperties();
-        driver = new WindowsDesktop().initDriverInRemoteVM();
+        driver = new WindowsDesktop().initDriverLocally();
         notepad = new Notepad(driver);
 
     }
@@ -32,11 +32,6 @@ public class TestNotepad {
         notepad.saveFileAs("_MyFile.txt");
     }
 
-    @Test
-    public void testTypeAndSaveRemotePC(){
-        notepad.type("Shantonu Demo");
-        notepad.saveFileInSpecificLocation(System.getProperty("vm.folder")+System.currentTimeMillis()+"_MyFile.txt");
-    }
     @AfterClass
     public static void quit(){
         notepad.close();

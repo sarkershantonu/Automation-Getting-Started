@@ -22,7 +22,7 @@ public class WindowsDesktop {
     public WindowsDesktop(){
         options = new WiniumOptionsForNotePad();
     }
-    public WiniumDriver initDriver() throws MalformedURLException {
+    public WiniumDriver initDriverLocally() throws MalformedURLException {
         host = new URL("http://"+System.getProperty("winium.host")+":"+System.getProperty("winium.port"));
         driver = new WiniumDriver(host,options);
         return driver;
