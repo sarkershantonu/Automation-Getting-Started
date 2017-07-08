@@ -38,4 +38,9 @@ public class WindowsDesktop {
         driver = new WiniumDriver(service,options);
         return driver;
     }
+    public WiniumDriver initDriverInLocalVM() throws MalformedURLException {
+        host = new URL("http://"+System.getProperty("vm.host")+":"+System.getProperty("vm.port"));
+        driver = new WiniumDriver(host,options);
+        return driver;
+    }
 }
