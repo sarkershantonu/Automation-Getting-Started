@@ -4,6 +4,7 @@ This repository contains only getting started projects for different automation 
 # Target 
 To help new automation people to start project 
 
+Note : Please Coomment on your experience using this.
 # ******* Links ******* 
 
 # Screen Image based automation 
