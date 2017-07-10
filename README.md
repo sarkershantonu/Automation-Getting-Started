@@ -15,7 +15,7 @@ To help new automation people to start project
 
 # Reporting 
 - Allure
-- serinity
+- serinity(report using)
 
 # BDD 
 - Cucumber
