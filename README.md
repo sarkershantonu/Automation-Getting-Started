@@ -19,8 +19,6 @@ To help new automation people to start project
 - Cucumber
 - Fitnesse
 
-# Serenity
-
 # WebService 
 - restassured
 - Postman
@@ -28,6 +26,7 @@ To help new automation people to start project
 
 # Web UI
 - Selenium
+- Serenity
 
 # Mobile
 - Robotium
