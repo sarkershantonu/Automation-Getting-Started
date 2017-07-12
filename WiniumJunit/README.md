@@ -7,6 +7,7 @@ A simple Project which
 
 # Run Environment 
 - Natively Windows 8/10
+- Remotely windows 8/10
 
 # Dependency 
 Java 
