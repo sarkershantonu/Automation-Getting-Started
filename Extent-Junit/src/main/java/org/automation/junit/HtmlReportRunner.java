@@ -11,14 +11,14 @@ import org.junit.runners.model.Statement;
 /**
  * Created by shantonu on 7/12/17.
  */
-public class MyRunner extends BlockJUnit4ClassRunner {
+public class HtmlReportRunner extends BlockJUnit4ClassRunner {
     /**
      * Creates a BlockJUnit4ClassRunner to run {@code klass}
      *
      * @param klass
      * @throws InitializationError if the test class is malformed.
      */
-    public MyRunner(Class<?> klass) throws InitializationError {
+    public HtmlReportRunner(Class<?> klass) throws InitializationError {
         super(klass);
     }
 

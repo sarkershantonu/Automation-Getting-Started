@@ -15,7 +15,7 @@ import java.net.UnknownHostException;
  * Created by shantonu on 7/12/17.
  * this is a junit test rule, so applied for each and every test
  */
-public class TestListnerForHTMLReporting extends TestWatcher{
+public class HTMLReportWatcher extends TestWatcher{
     private ExtentHtmlReporter htmlReporter;
     private ExtentTest testLogger;
     private ExtentReports report;
@@ -72,7 +72,7 @@ public class TestListnerForHTMLReporting extends TestWatcher{
         }
     }
 
-    public TestListnerForHTMLReporting() {
+    public HTMLReportWatcher() {
         super();
         init();
     }
