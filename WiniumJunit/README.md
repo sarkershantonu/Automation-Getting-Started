@@ -5,6 +5,9 @@ A simple Project which
 2. type a text
 3. Save a file to specific location 
 
+# Run Environment 
+- Natively Windows 8/10
+
 # Dependency 
 Java 
 Junit
