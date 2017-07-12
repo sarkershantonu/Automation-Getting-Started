@@ -8,7 +8,5 @@ Using soap UI libs to run soap UI test cases
 
 mvn clean test
 
-mvn jetty:run
-
 # Target
 - Adding SoapUI for extending capability of existing project 
