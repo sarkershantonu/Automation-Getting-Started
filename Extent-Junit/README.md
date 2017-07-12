@@ -1,5 +1,5 @@
 # Extent report example with Junit
-Making report with extent
+Making report with extent community edition
 
 # Target 
 We will use custom Junit runner/watcher to create report. 
