@@ -13,3 +13,6 @@ http://extentreports.com/community/
 
 # Generated Report 
 ![Report Example](ExtentReport.jpg)
+
+# Project Structure
+![Project](project.jpg)
