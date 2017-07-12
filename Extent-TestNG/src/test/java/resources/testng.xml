@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="ExtentHtmlReporter Demo">
+    <test name="Simple calculator">
+        <classes>
+            <class name="org.automation.testng.TestCalculator"/>
+        </classes>
+    </test>
+</suite>
