@@ -2,10 +2,19 @@
 Making report with extent
 
 # Target 
-We will use custom TestNG Junit to create report. 
+We will use custom Junit runner/watcher to create report. 
 So that we do not need to manually inject reporting. 
 Just annotate our listener to the test class. 
-TestNG will do the rest
+
+# Ways :
+ 
+ 1. Using Junit rules , see HTMLReportWatcher.java
+ Limitations : For each test, there will be a report. 
+ So, I use current time as prefix to distinguished.
+  And I think it is less useful(lot of report will be generated)
+ 
+ 2. Using Junit RunListener, see HtmlReportListner.java
+ Limitations: As Junit does not listen passed test case, so only failed test cases will be included in the report. 
 
 # main project link 
 http://extentreports.com/community/ 
@@ -15,10 +24,12 @@ http://extentreports.com/community/
 2. With maven : mvn clean test
 
 # Running in IDE 
-![IDE Running ](run_ide.jpg)
+![IDE Running ](ide_running.jpg)
 
 # Generated Report 
-![Report Example](ExtentReport.jpg)
+As Junit Makes report for failed/skipped tests 
+
+![Report Example](generated_repot.jpg)
 
 # Project Structure
-![Project](project.jpg)
+![Project](project_structure.jpg)
