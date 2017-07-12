@@ -3,7 +3,6 @@ package org.automation.junit;
 import org.automation.calculator.Calculator;
 import org.junit.*;
 import org.junit.rules.TestRule;
-import org.junit.runner.RunWith;
 
 
 /**
@@ -15,7 +14,7 @@ public class TestCalculator {
     private Calculator aCalculator;
 
     @Rule
-    public TestRule htmlReporting = new TestListnerForHTMLReporting();//this will generate a html file for each test.
+    public TestRule htmlReporting = new HTMLReportWatcher();//this will generate a html file for each test.
     @Before
     public void initTest(){
         aCalculator = new Calculator();

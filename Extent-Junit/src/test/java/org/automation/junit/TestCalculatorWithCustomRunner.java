@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
  * Created by shantonu on 7/12/17.
  */
 
-@RunWith(MyRunner.class)
+@RunWith(HtmlReportRunner.class)
 public class TestCalculatorWithCustomRunner {
 
     private Calculator aCalculator;
