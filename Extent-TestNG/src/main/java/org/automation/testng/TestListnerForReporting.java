@@ -31,11 +31,10 @@ public class TestListnerForReporting implements ITestListener, IConfigurationLis
     }
 
     public void onTestStart(ITestResult result) {
-        System.out.println(" Starting with name " + result.getClass().getName());
+
     }
 
     public void onTestSuccess(ITestResult result) {
-        System.out.println(" Success with name " + result.getMethod().getMethodName());
         testLogger = report.createTest("testPassed:"+result.getMethod().getMethodName());
         testLogger.pass(result.getMethod().getMethodName());
     }

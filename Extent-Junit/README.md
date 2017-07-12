@@ -1,8 +1,8 @@
-# Extent report example with TestNG
+# Extent report example with Junit
 Making report with extent
 
 # Target 
-We will use custom TestNG Listener to create report. 
+We will use custom TestNG Junit to create report. 
 So that we do not need to manually inject reporting. 
 Just annotate our listener to the test class. 
 TestNG will do the rest

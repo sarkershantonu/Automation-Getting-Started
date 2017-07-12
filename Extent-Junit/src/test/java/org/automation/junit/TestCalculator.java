@@ -1,21 +1,22 @@
 package org.automation.junit;
 
 import org.automation.calculator.Calculator;
-import org.testng.Assert;
-import org.testng.SkipException;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.junit.*;
+import org.junit.rules.TestRule;
+import org.junit.runner.RunWith;
+
 
 /**
  * Created by shantonu on 7/12/17.
  */
-@Listeners(TestListnerForReporting.class)
+
 public class TestCalculator {
 
     private Calculator aCalculator;
 
-    @BeforeTest
+    @Rule
+    public TestRule htmlReporting = new TestListnerForHTMLReporting();//this will generate a html file for each test.
+    @Before
     public void initTest(){
         aCalculator = new Calculator();
     }
@@ -23,14 +24,18 @@ public class TestCalculator {
     @Test
     public void testAddPass(){
         Assert.assertEquals(25.0,aCalculator.add(10.0,15.0),0.1);
+
     }
     @Test
     public void testAddFail(){
         Assert.assertEquals(27.0,aCalculator.add(10.0,15.0),0.1);
     }
+
     @Test
+    @Ignore("ignoring intentionally ")
     public void testAddSkip(){
 
-        throw new SkipException("Skipping a test");
     }
+
+
 }
