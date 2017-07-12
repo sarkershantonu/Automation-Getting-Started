@@ -10,10 +10,11 @@ A simple Project which
 - Remotely windows 8/10
 
 # Dependency 
-Java 
-Junit
-winium
-winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.6.0/Winium.Desktop.Driver.zip)
+- Java 
+- Junit
+- winium
+- winium Desktop APP (https://github.com/2gis/Winium.Desktop/releases/download/v1.6.0/Winium.Desktop.Driver.zip)
+- A accessable folder to save file. 
 
 # Testing command 
 
