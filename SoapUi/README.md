@@ -4,9 +4,9 @@ Using soap UI libs to run soap UI test cases
 
 # Target 
 
-1. Functional test runner 
+1. Functional Test Runner 
 
-2. 
+2. Performance Test Runner 
 
 # Testing command
 (use maven 3.3.9)
