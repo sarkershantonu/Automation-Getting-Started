@@ -8,6 +8,8 @@ Using soap UI libs to run soap UI test cases
 
 2. Performance Test Runner 
 
+3. Security Test Runner 
+
 # Testing command
 (use maven 3.3.9)
 
