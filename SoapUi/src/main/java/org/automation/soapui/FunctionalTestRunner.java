@@ -5,7 +5,7 @@ import com.eviware.soapui.tools.SoapUITestCaseRunner;
 /**
  * Created by shantonu on 7/8/17.
  */
-public class FunctionalTestRunner extends SoapUiTCRunner implements Runnable{
+public class FunctionalTestRunner extends SoapUiRunner implements Runnable{
     private SoapUITestCaseRunner runner;
 
 

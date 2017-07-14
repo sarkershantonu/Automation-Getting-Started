@@ -6,7 +6,7 @@ import com.eviware.soapui.tools.SoapUISecurityTestRunner;
 /**
  * Created by shantonu on 7/12/17.
  */
-public class SecurityTestRunner extends SoapUiTCRunner implements Runnable{
+public class SecurityTestRunner extends SoapUiRunner implements Runnable{
     private SoapUISecurityTestRunner runner;
     private String security_test_name;
 

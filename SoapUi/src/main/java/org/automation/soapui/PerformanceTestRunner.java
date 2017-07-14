@@ -1,12 +1,11 @@
 package org.automation.soapui;
 
 import com.eviware.soapui.tools.SoapUILoadTestRunner;
-import com.eviware.soapui.tools.SoapUITestCaseRunner;
 
 /**
  * Created by shantonu on 7/12/17.
  */
-public class PerformanceTestRunner extends SoapUiTCRunner implements Runnable {
+public class PerformanceTestRunner extends SoapUiRunner implements Runnable {
 
     private SoapUILoadTestRunner runner;
     private String loadTestName;

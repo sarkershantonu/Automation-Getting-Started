@@ -10,7 +10,7 @@ import java.util.Properties;
 /**
  * Created by shantonu on 7/12/17.
  */
-public abstract class SoapUiTCRunner {
+public abstract class SoapUiRunner {
     protected String suit_name;
     protected String tc_name;
     protected String path_xml_tc;
