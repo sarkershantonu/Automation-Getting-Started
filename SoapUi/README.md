@@ -2,8 +2,9 @@
 
 Using soap UI libs to run soap UI test cases 
 
-# Testing command
+# Target 
 
+# Testing command
 (use maven 3.3.9)
 
 mvn clean test
