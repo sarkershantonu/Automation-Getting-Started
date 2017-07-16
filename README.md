@@ -17,6 +17,7 @@ Note : Please Coomment on your experience using this.
 - Allure
 - serinity(report using)
 - Extent
+- Maven Unit Test Reporting 
 
 # BDD 
 - Cucumber
