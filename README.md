@@ -19,6 +19,7 @@ Note : Please Coomment on your experience using this.
 - Extent
 - Maven Unit Test Reporting 
 - Cucumber Reporting
+- Fitnesse Reporting
 
 # BDD 
 - Cucumber
