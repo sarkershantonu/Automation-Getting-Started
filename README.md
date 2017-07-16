@@ -16,6 +16,7 @@ Note : Please Coomment on your experience using this.
 # Reporting 
 - Allure
 - serinity(report using)
+- Extent
 
 # BDD 
 - Cucumber
