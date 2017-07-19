@@ -20,10 +20,10 @@ public abstract class SoapUiRunner {
     protected String end_point_url;
     protected String output_folder;
     protected String settings_file_path;
+
     protected String[] initProperties() throws IOException {
         Properties p = new Properties();
         String[] props = new String[30];
-
         int i=0;
         p.load(new FileInputStream(new File("./testcases/app.properties")));
         for (String k : p.stringPropertyNames()) {
