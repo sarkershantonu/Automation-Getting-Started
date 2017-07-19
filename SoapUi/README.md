@@ -11,7 +11,9 @@ Using soap UI libs to run soap UI test cases
 3. Security Test Runner 
 
 # Prerequisite
+ - Download and run SOAP UI to make a test case
  - You should have test cases generated from SoapUI 
+ 
 
 # Testing command
 (use maven 3.3.9)
