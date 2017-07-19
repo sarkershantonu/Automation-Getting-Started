@@ -36,8 +36,6 @@ public class FunctionalTestRunner extends SoapUiRunner implements Runnable{
 
 
     protected void init(){//init for functional tests
-
-
         runner.setIgnoreErrors(false);
         runner.setExportAll(true);
         runner.setJUnitReport(true);
