@@ -31,6 +31,7 @@ public abstract class SoapUiRunner {
         }
         return props;
     }
+
     protected String[] initProperties(String pathOfApplicationProperty) throws IOException {
         Properties p = new Properties();
         String[] props = new String[30];
