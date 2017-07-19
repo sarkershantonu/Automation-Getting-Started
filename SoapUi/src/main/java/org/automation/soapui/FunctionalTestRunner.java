@@ -45,6 +45,7 @@ public class FunctionalTestRunner extends SoapUiRunner implements Runnable{
         runner.setProjectProperties(prop);
         runner.setTestCase(tc_name);
         runner.setTestSuite(suit_name);
+        runner.setOutputFolder(output_folder);
 
         runner.setIgnoreErrors(false);
         runner.setExportAll(true);
