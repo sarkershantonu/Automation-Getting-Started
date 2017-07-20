@@ -43,7 +43,6 @@ public class FunctionalTestRunner extends SoapUiRunner implements Runnable{
         runner.setEndpoint(end_point_url);
 
         //Test Properties
-        runner.setSettingsFile(settings_file_path);
         runner.setProjectProperties(prop);
         runner.setTestCase(tc_name);
         runner.setTestSuite(suit_name);
@@ -52,7 +51,7 @@ public class FunctionalTestRunner extends SoapUiRunner implements Runnable{
         //config
         runner.setEnableUI(true);
         runner.setIgnoreErrors(false);
-
+        runner.setSettingsFile(settings_file_path);
 
 
 
