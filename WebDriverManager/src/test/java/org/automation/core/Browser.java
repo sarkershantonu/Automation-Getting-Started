@@ -11,6 +11,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 /**
  * Created by shantonu on 7/20/17.
+ * this is the main class where we are taking advantages of webdriver manager
  */
 public class Browser {
     private static WebDriver driver;
