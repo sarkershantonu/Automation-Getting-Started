@@ -7,6 +7,7 @@ To help new automation people to start project
 # Learning 
 - Architecture & Organizationn
 - How to start coding to test.
+- Reports for veriius stake holders 
 
 Note : Please Coomment on your experience using this.
 
