@@ -47,6 +47,7 @@ Note : Please Coomment on your experience using this.
  - Winimum Example 
 
 # Unit Test /integration 
+- Spring test
 
 
 # Help wanted
