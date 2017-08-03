@@ -12,7 +12,8 @@ Start automation today. To help new automation people to start project
 Note : Please Coomment on your experience using this.
 
 # Screen Image based automation 
-- Sikuli
+- Sikuli UI
+- Sikuli API
 
 # Unit Testing 
 - Junit
