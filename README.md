@@ -2,7 +2,7 @@
 This repository contains only getting started projects for different automation framework
 
 # Target 
-To help new automation people to start project 
+Start automation today. To help new automation people to start project 
 
 # Learning 
 - Architecture & Organizationn
