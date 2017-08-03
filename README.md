@@ -11,7 +11,7 @@ Start automation today. To help new automation people to start project
 
 Note : Please Coomment on your experience using this.
 
-# Screen Image based automation 
+# Screen based automation 
 - Sikuli UI
 - Sikuli API
 
