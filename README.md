@@ -35,6 +35,7 @@ Note : Please Coomment on your experience using this.
 - restassured
 - Postman
 - Soap UI
+- newman
 
 # Web UI
 - Selenium
