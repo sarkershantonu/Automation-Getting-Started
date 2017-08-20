@@ -18,7 +18,7 @@ Note : Please Coomment on your experience using this.
 - Sikuli API
 
 # Unit Testing 
-- Junit
+- Junit 4.12
 - TestNG
 
 # Reporting 
