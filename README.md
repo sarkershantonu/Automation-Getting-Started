@@ -19,7 +19,7 @@ Note : Please Coomment on your experience using this.
 
 # Unit Testing 
 - Junit 4.12
-- TestNG
+- TestNG 6.6.9
 
 # Reporting 
 - Allure
