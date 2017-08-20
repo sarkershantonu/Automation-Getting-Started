@@ -32,6 +32,7 @@ Note : Please Coomment on your experience using this.
 # BDD 
 - Cucumber
 - Fitnesse
+- With allure annotation
 
 # WebService 
 - restassured
