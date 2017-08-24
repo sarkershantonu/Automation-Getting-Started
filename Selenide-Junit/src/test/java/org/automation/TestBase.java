@@ -6,9 +6,9 @@ import java.util.Properties;
 /**
  * Created by shantonu on 8/14/17.
  */
-public abstract class TestBase2 {
+public abstract class TestBase {
 
-    protected TestBase2(){
+    protected TestBase(){
         Properties properties = System.getProperties();
         try {
             properties.load(this.getClass().getResourceAsStream("/selenide.properties"));
