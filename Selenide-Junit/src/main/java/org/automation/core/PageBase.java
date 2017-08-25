@@ -7,4 +7,5 @@ public abstract class PageBase {
     public String title_css="h1";
 
     public String base_url="demo.opencart.com";
+
 }
