@@ -37,8 +37,6 @@ public class ProductPreviewPage extends PageBase {
     public WebElement wishlist_button;
 
 
-    public ProductPreviewPage(WebDriver aDriver) {
-        super(aDriver);
-    }
+
     public void takeScreenshotOfPage(){}
 }

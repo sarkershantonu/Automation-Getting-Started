@@ -18,9 +18,7 @@ public class SearchPanel extends PageBase {
     @FindBy(xpath = "//div[@id='search']/span/button")//property loading or after parsing or static
     public WebElement button;
 
-    public SearchPanel(WebDriver aDriver) {
-        super(aDriver);
-    }
+
 
 
     @FindBy(xpath = "")
