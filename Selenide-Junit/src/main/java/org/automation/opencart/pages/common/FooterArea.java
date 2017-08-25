@@ -1,9 +1,6 @@
 package org.automation.opencart.pages.common;
 
 import org.automation.core.PageBase;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.String;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 public class FooterArea extends PageBase {

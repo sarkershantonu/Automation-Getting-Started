@@ -16,9 +16,7 @@ import org.openqa.selenium.support.How;
  * complete the write a review function.
  */
 public class ProductPage_AppleCinema extends PageBase {
-    public ProductPage_AppleCinema(WebDriver aDriver) {
-        super(aDriver);
-    }
+
 
     @FindBy(how= How.LINK_TEXT, linkText = "Description")
     public WebElement description_link;
@@ -53,15 +51,6 @@ public class ProductPage_AppleCinema extends PageBase {
         return false;
     }
 
-    /**
-     * This will get all image links from a loaded product which has thumbnail.
-     * @return
-     * todo
-     */
-    public String[] getAllImageLinks(){
-        final String source = driver.getPageSource();
-        String pattern = "class=\"thumbnail\"\\shref=\"(.+?jpg)";
-        return null;
-    }
+
 
 }
