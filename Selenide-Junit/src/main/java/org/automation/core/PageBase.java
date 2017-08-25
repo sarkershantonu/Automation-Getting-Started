@@ -5,8 +5,6 @@ package org.automation.core;
  */
 public abstract class PageBase {
     public String title_css="h1";
+    public String base_host="demo.opencart.com";
 
-    public String base_url="demo.opencart.com";
-
-    public String
 }
