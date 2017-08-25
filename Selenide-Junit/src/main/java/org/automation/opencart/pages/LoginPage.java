@@ -12,15 +12,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class LoginPage extends PageBase {
     private final String pageUrl = "/index.php?route=account/login";
-    public LoginPage(WebDriver aDriver) {
-        super(aDriver);
-    }
-    public PageBase submit() {
-        clickLoginButton();
 
-        PageFactory.initElements(driver, this);
-        return this;
-    }
     @FindBy(id = "input-email")
     @CacheLookup
     private WebElement emailAddress;
