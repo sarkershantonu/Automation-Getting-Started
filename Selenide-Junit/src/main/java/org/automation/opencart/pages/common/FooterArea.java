@@ -1,11 +1,12 @@
 package org.automation.opencart.pages.common;
 
 import org.automation.core.PageBase;
+import org.automation.util.CssHelper;
 import org.openqa.selenium.support.FindBy;
 
 public class FooterArea extends PageBase {
 
-    private String opencart_css="a[href='http://www.opencart.com']";
+    private String opencart_css= CssHelper.getLinkCSS(base_url);
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=4']")
     

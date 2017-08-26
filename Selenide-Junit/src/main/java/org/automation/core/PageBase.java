@@ -5,7 +5,7 @@ package org.automation.core;
  */
 public abstract class PageBase {
     public String title_css="h1";
-    public String base_host=System.getProperty("host.protocol")+"://"+
+    public String base_url =System.getProperty("host.protocol")+"://"+
             System.getProperty("app.host")+":"+System.getProperty("host.port");
 
 }
