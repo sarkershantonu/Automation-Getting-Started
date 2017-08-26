@@ -5,7 +5,9 @@ package org.automation.util;
  */
 public class CssHelper {
 
-    public String getLinkCSS(String link){
+    public static String getLinkCSS(String link){
 
+
+        return "a[href='"+link+"']";
     }
 }
