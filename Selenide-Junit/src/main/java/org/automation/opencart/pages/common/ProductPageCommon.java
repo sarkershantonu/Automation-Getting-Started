@@ -10,24 +10,13 @@ import org.openqa.selenium.support.FindBy;
  * Created by shantonu on 4/27/17.
  */
 public class ProductPageCommon extends PageBase{
-    @FindBy(css = "a[href='#tab-description']")
-    @CacheLookup
-    public WebElement description_tab;
-    @FindBy(css = "a[href='#tab-review']")
-    @CacheLookup
-    public WebElement review_tab;
+
+    public String description_tab_css="a[href='#tab-description']";
+    public String review_tab_css="a[href='#tab-review']";
 
     public void addToWishList(){
-        //its JS even
     }
-
-    @FindBy(id = "button-cart")
-    @CacheLookup
-    private WebElement addToCart;
-    public ProductPageCommon(WebDriver aDriver) {
-        super(aDriver);
-    }
-
+    private String addToCart_id="button-cart";
     public void compareThis(){
         //its a java script event, so we need to call with product identifier
     }
