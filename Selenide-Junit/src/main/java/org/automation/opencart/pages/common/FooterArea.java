@@ -9,7 +9,7 @@ public class FooterArea extends PageBase {
 
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=4']")
     
-    public String aboutUsLink;
+    public String aboutUsLink_css;
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=6']")
     
     public String deliveryInfoLink;
