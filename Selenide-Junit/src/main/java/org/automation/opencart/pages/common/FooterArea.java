@@ -15,8 +15,8 @@ public class FooterArea extends PageBase {
     
     public String termsAndConditionLink;
     @FindBy(css = ".account-login footer div.container div.row div:nth-of-type(2) ul.list-unstyled li:nth-of-type(1) a")
-    
-    public String contactUsLink;
+
+    public String contactUsLink_css = CssHelper.getLinkCSS(base_url + "/index.php?route=information/contact");
     public String returnsLink;
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/sitemap']")
     
