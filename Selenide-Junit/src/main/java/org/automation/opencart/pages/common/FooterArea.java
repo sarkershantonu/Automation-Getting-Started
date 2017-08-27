@@ -1,41 +1,39 @@
 package org.automation.opencart.pages.common;
 
 import org.automation.core.PageBase;
-import org.automation.util.CssHelper;
+import static org.automation.util.CssHelper.getLinkCSS;
 import org.openqa.selenium.support.FindBy;
 
 public class FooterArea extends PageBase {
 
-    private String opencart_css= CssHelper.getLinkCSS(base_url);
-    public String aboutUsLink_css=CssHelper.getLinkCSS(base_url+"/index.php?route=information/information&information_id=4");
-    public String deliveryInfoLink_css =CssHelper.getLinkCSS(base_url+ "/index.php?route=information/information&information_id=6");
-    public String privacyPolicyLink_css =  CssHelper.getLinkCSS(base_url+"/index.php?route=information/information&information_id=3");
+    private String opencart_css= getLinkCSS(base_url);
+    public String aboutUsLink_css=getLinkCSS(base_url+"/index.php?route=information/information&information_id=4");
+    public String deliveryInfoLink_css =getLinkCSS(base_url+ "/index.php?route=information/information&information_id=6");
+    public String privacyPolicyLink_css =  getLinkCSS(base_url+"/index.php?route=information/information&information_id=3");
+    public String termsAndConditionLink_css =getLinkCSS(base_url +"/index.php?route=information/information&information_id=5") ;
 
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=5']")
-    
-    public String termsAndConditionLink;
     @FindBy(css = ".account-login footer div.container div.row div:nth-of-type(2) ul.list-unstyled li:nth-of-type(1) a")
 
-    public String contactUsLink_css = CssHelper.getLinkCSS(base_url + "/index.php?route=information/contact");
+    public String contactUsLink_css = getLinkCSS(base_url + "/index.php?route=information/contact");
     public String returnsLink;
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/sitemap']")
+    @FindBy(css = "/index.php?route=information/sitemap")
     
     public String siteMapLink;
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/manufacturer']")
+    @FindBy(css = "/index.php?route=product/manufacturer")
     
     public String brandsLink;
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=account/voucher']")
+    @FindBy(css = "/index.php?route=account/voucher")
     
     public String giftVoucersLink;
 
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=affiliate/account']")
+    @FindBy(css = "/index.php?route=affiliate/account")
     
     public String affiliatesLink;
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=product/special']")
+    @FindBy(css = "/index.php?route=product/special")
     
     public String specialsLink;
 
-    @FindBy(css = "a[title='My Account']")
+    @FindBy(css = "a[title='My Account")
     
     public String myAccountLink;
     @FindBy(css = "#column-right div.list-group a:nth-of-type(7)")
