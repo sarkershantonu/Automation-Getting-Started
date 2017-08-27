@@ -7,17 +7,12 @@ import org.openqa.selenium.support.FindBy;
 public class FooterArea extends PageBase {
 
     private String opencart_css= CssHelper.getLinkCSS(base_url);
+    public String aboutUsLink_css=CssHelper.getLinkCSS(base_url+"/index.php?route=information/information&information_id=4");
+    public String deliveryInfoLink_css =CssHelper.getLinkCSS(base_url+ "/index.php?route=information/information&information_id=6");
 
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=4']")
-    
-    public String aboutUsLink_css;
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=6']")
-    
-    public String deliveryInfoLink;
 
-    @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=3']")
     
-    public String privacyPolicyLink;
+    public String privacyPolicyLink_css =  CssHelper.getLinkCSS(base_url+"/index.php?route=information/information&information_id=3");
     @FindBy(css = "a[href='https://demo.opencart.com/index.php?route=information/information&information_id=5']")
     
     public String termsAndConditionLink;
