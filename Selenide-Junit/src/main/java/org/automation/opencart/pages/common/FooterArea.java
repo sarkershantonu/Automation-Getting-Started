@@ -6,19 +6,15 @@ import org.openqa.selenium.support.FindBy;
 
 public class FooterArea extends PageBase {
 
-    private String opencart_css= getLinkCSS(base_url);
+    public String opencart_css= getLinkCSS(base_url);
     public String aboutUsLink_css=getLinkCSS(base_url+"/index.php?route=information/information&information_id=4");
     public String deliveryInfoLink_css =getLinkCSS(base_url+ "/index.php?route=information/information&information_id=6");
     public String privacyPolicyLink_css =  getLinkCSS(base_url+"/index.php?route=information/information&information_id=3");
     public String termsAndConditionLink_css =getLinkCSS(base_url +"/index.php?route=information/information&information_id=5") ;
-
-    @FindBy(css = ".account-login footer div.container div.row div:nth-of-type(2) ul.list-unstyled li:nth-of-type(1) a")
-
     public String contactUsLink_css = getLinkCSS(base_url + "/index.php?route=information/contact");
-    public String returnsLink;
-    @FindBy(css = "/index.php?route=information/sitemap")
-    
-    public String siteMapLink;
+    public String returnsLink_css=getLinkCSS(base_url + "/index.php?route=account/return/add");
+
+    public String siteMapLink_css=getLinkCSS(base_url +"/index.php?route=information/sitemap");
     @FindBy(css = "/index.php?route=product/manufacturer")
     
     public String brandsLink;
