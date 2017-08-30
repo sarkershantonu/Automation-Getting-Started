@@ -13,10 +13,14 @@ import static com.codeborne.selenide.Selenide.*;
  */
 public class CheckAllFooterLinks extends TestBase {
 
+    static {
+        TestBase.loadProperties();
+    }
     private FooterArea footers;
 
     @Before
     public void init(){
+
         footers = new FooterArea();
     }
 
