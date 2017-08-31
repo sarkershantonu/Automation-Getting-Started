@@ -30,5 +30,7 @@ public class CheckAllFooterLinks extends TestBase {
         System.out.println("####"+footers.aboutUsLink_css);
         $(By.cssSelector(footers.aboutUsLink_css)).click();
        // Assert.assertEquals("About us",title());
+
+
     }
 }
