@@ -19,7 +19,7 @@ public class FooterArea extends PageBase {
     public String brandsLink_css=getLinkCSS(base_url +"/index.php?route=product/manufacturer");
     @FindBy(css = "/index.php?route=account/voucher")
     
-    public String giftVoucersLink;
+    public String giftVoucersLink_css = getLinkCSS(base_url +"");
 
     @FindBy(css = "/index.php?route=affiliate/account")
     
