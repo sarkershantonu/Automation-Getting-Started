@@ -23,7 +23,7 @@ public class FooterArea extends PageBase {
 
     @FindBy(css = "/index.php?route=affiliate/account")
     
-    public String affiliatesLink;
+    public String affiliatesLink_css=getLinkCSS(base_url +"");
     @FindBy(css = "/index.php?route=product/special")
     
     public String specialsLink;
