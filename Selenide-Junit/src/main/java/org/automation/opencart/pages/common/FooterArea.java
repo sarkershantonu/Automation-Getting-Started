@@ -26,23 +26,23 @@ public class FooterArea extends PageBase {
     public String affiliatesLink_css=getLinkCSS(base_url +"");
     @FindBy(css = "/index.php?route=product/special")
     
-    public String specialsLink;
+    public String specialsLink_css = getLinkCSS(base_url +"");
 
     @FindBy(css = "a[title='My Account")
     
-    public String myAccountLink;
+    public String myAccountLink_css=getLinkCSS(base_url +"");
     @FindBy(css = "#column-right div.list-group a:nth-of-type(7)")
     
-    public String orderHistoryLink;
+    public String orderHistoryLink_css=getLinkCSS(base_url +"");
     @FindBy(id = "wishlist-total")
     
 
-    public String wishListLink;
+    public String wishListLink_css=getLinkCSS(base_url +"");
     @FindBy(css = "#column-right div.list-group a:nth-of-type(12)")
     
-    public String newsLetterLink;
+    public String newsLetterLink_css=getLinkCSS(base_url +"");
 
-    public String copyright;
+    public String copyright_css=getLinkCSS(base_url +"");
 
     //this
 
