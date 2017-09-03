@@ -24,12 +24,7 @@ public class FooterArea extends PageBase {
     @FindBy(css = "#column-right div.list-group a:nth-of-type(7)")
     
     public String orderHistoryLink_css=getLinkCSS(base_url +"");
-    @FindBy(id = "wishlist-total")
-    
-
-    public String wishListLink_css=getLinkCSS(base_url +"");
-    @FindBy(css = "#column-right div.list-group a:nth-of-type(12)")
-    
+    public String wishListLink_css=getLinkCSS(base_url +"/index.php?route=account/wishlist");
     public String newsLetterLink_css=getLinkCSS(base_url +"/index.php?route=account/newsletter");
 
     public String copyright_xpath="html/body/footer/div/p";
