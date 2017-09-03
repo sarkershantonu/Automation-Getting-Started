@@ -23,7 +23,7 @@ public class FooterArea extends PageBase {
     public String myAccountLink_css=getLinkCSS(base_url +"");
     @FindBy(css = "#column-right div.list-group a:nth-of-type(7)")
     
-    public String orderHistoryLink_css=getLinkCSS(base_url +"");
+    public String orderHistoryLink_css=getLinkCSS(base_url +"/index.php?route=account/order");
     public String wishListLink_css=getLinkCSS(base_url +"/index.php?route=account/wishlist");
     public String newsLetterLink_css=getLinkCSS(base_url +"/index.php?route=account/newsletter");
 
