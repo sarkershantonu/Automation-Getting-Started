@@ -27,10 +27,8 @@ public class CheckAllFooterLinks extends TestBase {
     @Test
     public void TestAllFooterLinks() {
         open(footers.base_url);
-        System.out.println("####"+footers.aboutUsLink_css);
+       // System.out.println("####"+footers.aboutUsLink_css);
         $(By.cssSelector(footers.aboutUsLink_css)).click();
-       // Assert.assertEquals("About us",title());
-
-
+        Assert.assertEquals("About Us",title());
     }
 }
