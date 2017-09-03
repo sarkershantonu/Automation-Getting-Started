@@ -32,7 +32,7 @@ public class FooterArea extends PageBase {
     
     public String newsLetterLink_css=getLinkCSS(base_url +"");
 
-    public String copyright_css=getLinkCSS(base_url +"");
+    public String copyright_xpath="html/body/footer/div/p";
 
     //this
 
