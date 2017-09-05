@@ -19,16 +19,18 @@ import static org.automation.validation.validator.linkValidator;
  */
 public class CheckAllFooterLinks extends TestBase {
     private static final Logger log = Logger.getLogger(CheckAllFooterLinks.class.getName());
+
     static {
         TestBase.loadProperties();
     }
+
     private FooterArea footers;
 
     @Rule
     public ErrorCollector collector = new ErrorCollector();
 
     @Before
-    public void init(){
+    public void init() {
 
         footers = new FooterArea();
     }
@@ -50,10 +52,10 @@ public class CheckAllFooterLinks extends TestBase {
             linkValidator(By.cssSelector(footers.affiliatesLink_css), "Affiliate Program");
             linkValidator(By.cssSelector(footers.specialsLink_css), "Special Offers");
             linkValidator(By.cssSelector(footers.myAccountLink_css), "About Us");
-            linkValidator(By.cssSelector(footers.orderHistoryLink_css), "About Us");
-            linkValidator(By.cssSelector(footers.wishListLink_css), "About Us");
-            linkValidator(By.cssSelector(footers.newsLetterLink_css), "Privacy Policy");
-        }catch (AssertionError e){
+            linkValidator(By.cssSelector(footers.orderHistoryLink_css), "Account Logi");
+            linkValidator(By.cssSelector(footers.wishListLink_css), "Account Logi");
+            linkValidator(By.cssSelector(footers.newsLetterLink_css), "Account Logi");
+        } catch (AssertionError e) {
             collector.addError(e);
         }
     }

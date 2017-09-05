@@ -20,7 +20,8 @@ public class FooterArea extends PageBase {
 
     public String specialsLink_css = getLinkCSS(base_url +"/index.php?route=product/special");
     public String myAccountLink_css=getLinkCSS(base_url +"/index.php?route=account/account");
-    public String orderHistoryLink_css=getLinkCSS(base_url +"/index.php?route=account/order");
+    public String
+            orderHistoryLink_css=getLinkCSS(base_url +"/index.php?route=account/order");
     public String wishListLink_css=getLinkCSS(base_url +"/index.php?route=account/wishlist");
     public String newsLetterLink_css=getLinkCSS(base_url +"/index.php?route=account/newsletter");
     public String copyright_xpath="html/body/footer/div/p";
