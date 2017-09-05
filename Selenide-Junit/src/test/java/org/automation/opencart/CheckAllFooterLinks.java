@@ -47,7 +47,7 @@ public class CheckAllFooterLinks extends TestBase {
             linkValidator(By.cssSelector(footers.siteMapLink_css), "Site Map");
             linkValidator(By.cssSelector(footers.brandsLink_css), "Find Your Favorite Brand");
             linkValidator(By.cssSelector(footers.giftVoucersLink_css), "Purchase a Gift Certificate");
-            linkValidator(By.cssSelector(footers.affiliatesLink_css), "About Us");
+            linkValidator(By.cssSelector(footers.affiliatesLink_css), "Affiliate Program");
             linkValidator(By.cssSelector(footers.specialsLink_css), "About Us");
             linkValidator(By.cssSelector(footers.myAccountLink_css), "About Us");
             linkValidator(By.cssSelector(footers.orderHistoryLink_css), "About Us");
