@@ -9,7 +9,8 @@ import java.lang.annotation.Target;
  * Created by shantonu on 9/5/17.
  */
 @Retention(value = RetentionPolicy.RUNTIME)
-@Target({ElementType.TYPE})
+@Target({ElementType.FIELD})
+//when an user will use any steps , they will declear as field
 public @interface UseSteps {
     Class<? extends StepBase> classes();
 }
