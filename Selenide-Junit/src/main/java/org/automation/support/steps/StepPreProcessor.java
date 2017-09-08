@@ -5,4 +5,7 @@ package org.automation.support.steps;
  */
 //this will process steps before execution
 public class StepPreProcessor {
+    public static void processPrivateMethods(){
+
+    }
 }

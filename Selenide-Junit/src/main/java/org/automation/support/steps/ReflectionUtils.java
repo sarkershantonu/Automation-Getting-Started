@@ -29,11 +29,11 @@ public class ReflectionUtils {
                 method = m;
 
 
-                return new Object[3];
+
             }else
                 return null;
         }
-
+        return new Object[3];
     }
 
 }
