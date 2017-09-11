@@ -16,3 +16,7 @@ Selenide is a selenium wrapper framework that makes selenium easy to use and org
 
 # Test 1 
 Simple searching google (my name)
+
+# Side goal
+
+Adding steps logs 
