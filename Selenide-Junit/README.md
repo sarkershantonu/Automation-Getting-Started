@@ -20,3 +20,4 @@ Simple searching google (my name)
 # Side goal
 
 Adding steps logs 
+An annotaion way 
