@@ -42,6 +42,8 @@ public class ReflectionUtils {
         Object old = field.get(Class.forName(aClass));
         field.set(old, value);
     }
-
+    private static String seperator(){
+        return System.getProperty("path.separator");
+    }
 
 }
