@@ -36,4 +36,12 @@ public class ReflectionUtils {
         return new Object[3];
     }
 
+    public static void setStaticField(final String aClass, final String aField, final Object value) throws ClassNotFoundException, IllegalAccessException, NoSuchFieldException {
+        Field field = Class.forName(aClass).getDeclaredField(aField);
+        field.setAccessible(true);
+        Object old = field.get(Class.forName(aClass));
+        field.set(old, value);
+    }
+
+
 }
