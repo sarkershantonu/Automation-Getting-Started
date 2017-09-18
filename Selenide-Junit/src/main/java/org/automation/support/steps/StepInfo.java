@@ -7,5 +7,5 @@ import java.util.List;
  */
 public class StepInfo {
     public String method_name;
-    public List<Object[]> parameter_type_values;
+    public List<ParamInfo> parameters;
 }
