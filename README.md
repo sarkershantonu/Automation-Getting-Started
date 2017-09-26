@@ -49,6 +49,7 @@ Note : Please Coomment on your experience using this.
 
 # Windows 8/10 apps
  - Winimum Example 
+ - win 8
 
 # Unit Test /integration 
 - Spring test
