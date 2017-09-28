@@ -1,9 +1,10 @@
 # Automation-Getting-Started
 This repository contains only getting started projects for different automation framework
 
-# Target : testing 
+# Target : 
 - To help new automation people to start project 
 - Keep advance reporting 
+- Advance usages of JUnit/TestNG
 
 # Learning 
 - Architecture & Organizationn
