@@ -3,7 +3,7 @@ This repository contains
 
 1. How can we start Allure Junit
 2. Examples with all annotation supported
-3. This is maven surefire plugins base execution.
+3. This is maven surefire plugins base execution. if you want integration tests, use failsafe. 
 
 # Project Requirements
 1. JDK 8
