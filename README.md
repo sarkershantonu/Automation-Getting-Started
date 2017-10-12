@@ -21,6 +21,8 @@ Note : Please Coomment on your experience using this.
 - Junit 4.12
 - TestNG 6.6.9
 
+# integration Tests
+
 # Reporting 
 - Allure
 - serinity(report using)
