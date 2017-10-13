@@ -18,7 +18,7 @@ This repository contains only getting started projects for different automation 
 - Sikuli UI
 - Sikuli API
 
-# Unit Testing (runners)
+# UnitTesting (runners)
 - Junit 4.12
 - TestNG 6.6.9
 
