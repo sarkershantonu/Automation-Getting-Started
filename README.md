@@ -11,7 +11,8 @@ This repository contains only getting started projects for different automation 
 - How to start coding to test.
 - Reports for veriius stake holders 
 
-Note : Please Coomment on your experience using this.
+#Comments
+- Please Coomment on your experience using this.
 
 # Screen based automation 
 - Sikuli UI
