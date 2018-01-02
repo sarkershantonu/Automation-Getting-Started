@@ -5,6 +5,7 @@ This repository contains only getting started projects for different automation 
 - To help new automation people to start project 
 - Keep advance reporting 
 - Advance usages of JUnit/TestNG
+- Restructure required for organizing 
 
 # Learning 
 - Architecture & Organizationn
