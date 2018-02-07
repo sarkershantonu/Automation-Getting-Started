@@ -1,10 +1,9 @@
-.project
 *.iml
-.idea
-.classpath
-.project
+*.idea
+*.classpath
+*.project
 target/
-.settings/
+*.settings
 .class
 bin/
 obj/
