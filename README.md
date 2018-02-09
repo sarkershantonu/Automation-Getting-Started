@@ -12,7 +12,7 @@ This repository contains only getting started projects for different automation 
 - How to start coding to test.
 - Reports for veriius stake holders 
 
-#Comments
+# bComments
 - Please Coomment on your experience using this.
 
 # Screen based automation 
