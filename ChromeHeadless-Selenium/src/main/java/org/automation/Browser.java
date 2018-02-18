@@ -9,34 +9,51 @@ import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.io.File;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 public class Browser {
 
     private static WebDriver driver;
     private static void initChrome(){
-        initChromeWithOptions();
+        initChromeAsService();
 
     }
     private static void initDefaultChrome(){
         driver = new ChromeDriver();
     }
     private static void initChromeWithOptions(){
-
         driver = new ChromeDriver(ChromeBrowser.getHeadlessOptions());
     }
 
-    private static WebDriver initChromeAsService(){
-        ChromeOptions options = new ChromeOptions();
+    private static void initChromeAsService(){
+        ChromeOptions options = ChromeBrowser.getHeadlessOptions();
+        final ChromeDriverService service = new ChromeDriverService.Builder().
+                usingAnyFreePort().
+                withVerbose(Boolean.getBoolean("chrome.verbose")).
+                withSilent(true).build();
 
+        driver = new ChromeDriver(service, options);
+    }
+    private static void initChromeServiceWithLog(){
+        ChromeOptions options = ChromeBrowser.getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
                 withSilent(true).
-                withLogFile(new File(System.getProperty("chrome.log.path"))).build();
+                withLogFile(new File(System.getProperty("chrome.log.path"))).
+                build();
 
-        return new ChromeDriver(service, options);
+        driver = new ChromeDriver(service, options);
     }
+    private static void initChromeServiceWithEnvParameter(Map<String,String> env){
+        ChromeOptions options = ChromeBrowser.getHeadlessOptions();
+        final ChromeDriverService service = new ChromeDriverService.Builder().
+                usingAnyFreePort().
+                withEnvironment(env).
+                withSilent(true).build();
 
+        driver = new ChromeDriver(service, options);
+    }
     public static WebDriver getBrowser(){
         if(driver==null){
             initChrome();

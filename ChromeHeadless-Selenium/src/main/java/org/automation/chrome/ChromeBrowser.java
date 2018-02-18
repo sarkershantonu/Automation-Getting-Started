@@ -83,16 +83,11 @@ public class ChromeBrowser {
 
     public static ChromeOptions setArguments(ChromeOptions options) {
         options.addArguments(HEADLESS, DISABLED_GPU, DEBUG);
-
         return options;
     }
 
 
-    public static WebDriver getChromeWithOptions(ChromeOptions option) {
 
-        return new ChromeDriver(option);
-
-    }
 
     public static WebDriver getChrome() {
         ChromeOptions options = new ChromeOptions();
