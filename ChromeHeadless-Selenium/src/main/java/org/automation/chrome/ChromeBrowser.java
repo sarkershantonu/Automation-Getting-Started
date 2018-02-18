@@ -36,12 +36,12 @@ public class ChromeBrowser {
     }
 
     public static ChromeOptions enableDebugging(ChromeOptions options, final Long port) {
-        options.addArguments("remote-debugging-port=" + port);
+        options.addArguments(DEBUG + port);
         return options;
     }
 
     public static ChromeOptions setWindowSize(ChromeOptions options, final Dimension size) {
-        options.addArguments("window-size=" + size.width + "x" + size.height);
+        options.addArguments(RESOLUTION + size.width + "x" + size.height);
         return options;
     }
 

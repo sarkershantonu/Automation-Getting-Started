@@ -26,4 +26,8 @@ public class ChromeArguments {
 
         return new String[] {HEADLESS,DEBUG};
     }
+
+    public static String getCliOption(String arg){
+        return "--"+arg;
+    }
 }
