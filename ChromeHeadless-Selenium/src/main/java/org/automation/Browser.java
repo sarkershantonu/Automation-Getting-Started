@@ -16,17 +16,17 @@ public class Browser {
 
     private static WebDriver driver;
     private static void initChrome(){
-        initChromeAsService();
+        headLessChrome();
 
     }
     private static void initDefaultChrome(){
         driver = new ChromeDriver();
     }
-    private static void initChromeWithOptions(){
+    private static void headLessChrome(){
         driver = new ChromeDriver(ChromeBrowser.getHeadlessOptions());
     }
 
-    private static void initChromeAsService(){
+    private static void initHeadlessChromeAsService(){
         ChromeOptions options = ChromeBrowser.getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
@@ -35,7 +35,7 @@ public class Browser {
 
         driver = new ChromeDriver(service, options);
     }
-    private static void initChromeServiceWithLog(){
+    private static void initHeadLessChromeServiceWithLog(){
         ChromeOptions options = ChromeBrowser.getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
