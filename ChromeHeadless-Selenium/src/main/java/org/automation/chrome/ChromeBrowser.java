@@ -60,6 +60,27 @@ public class ChromeBrowser {
         options = setBinary(options, System.getProperty("linux.chrome.bin"));
         options = setHeadless(options);
         options = acceptsCertificates(options);
+        options.addArguments(stable_release_mode);
+        options.addArguments(dump_dom);
+        options.addArguments(disable_gpu);
+
+        return options;
+    }
+    public static ChromeOptions getUIOptions() {
+        ChromeOptions options = new ChromeOptions();
+        options = setBinary(options, System.getProperty("linux.chrome.bin"));
+        options = acceptsCertificates(options);
+        options.addArguments(stable_release_mode);
+        options.addArguments(show_fps_counter);
+        options.addArguments(no_default_browser_check);
+        options.addArguments(incognito);
+        options.addArguments(enable_smooth_scrolling);
+        options.addArguments(enable_logging);
+        options.addArguments(enable_automation);
+        options.addArguments(disable_suggestions_ui);
+        options.addArguments(disable_single_click_autofill);
+        options.addArguments(disable_default_apps);
+
         return options;
     }
 

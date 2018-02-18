@@ -6,6 +6,6 @@ import org.automation.annotations.RunWithChrome;
 public class TestAnnotation {
 
     public void test(){
-        
+
     }
 }
