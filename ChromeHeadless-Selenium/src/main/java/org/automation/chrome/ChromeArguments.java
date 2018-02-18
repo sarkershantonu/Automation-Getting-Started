@@ -1,7 +1,10 @@
 package org.automation.chrome;
 
 
-
+/***
+ * See the main link
+ * https://peter.sh/experiments/chromium-command-line-switches/
+ */
 public class ChromeArguments {
 
     public static final String HEADLESS="headless";
