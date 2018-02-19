@@ -12,6 +12,8 @@ import java.io.File;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static org.automation.chrome.ChromeBrowser.*;
+
 public class Browser {
 
     private static WebDriver driver;
@@ -23,11 +25,13 @@ public class Browser {
         driver = new ChromeDriver();
     }
     private static void headLessChrome(){
-        driver = new ChromeDriver(ChromeBrowser.getHeadlessOptions());
+        driver = new ChromeDriver(getHeadlessOptions());
     }
-
+    private static void uiChrome(){
+        driver = new ChromeDriver(getUIOptions());
+    }
     private static void initHeadlessChromeAsService(){
-        ChromeOptions options = ChromeBrowser.getHeadlessOptions();
+        ChromeOptions options = getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
                 withVerbose(Boolean.getBoolean("chrome.verbose")).
@@ -36,7 +40,7 @@ public class Browser {
         driver = new ChromeDriver(service, options);
     }
     private static void initHeadLessChromeServiceWithLog(){
-        ChromeOptions options = ChromeBrowser.getHeadlessOptions();
+        ChromeOptions options = getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
                 withSilent(true).
@@ -46,7 +50,7 @@ public class Browser {
         driver = new ChromeDriver(service, options);
     }
     private static void initChromeServiceWithEnvParameter(Map<String,String> env){
-        ChromeOptions options = ChromeBrowser.getHeadlessOptions();
+        ChromeOptions options = getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
                 withEnvironment(env).

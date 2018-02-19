@@ -61,7 +61,6 @@ public class ChromeBrowser {
         options = setHeadless(options);
         options = acceptsCertificates(options);
         options.addArguments(stable_release_mode);
-        options.addArguments(dump_dom);
         options.addArguments(disable_gpu);
 
         return options;
@@ -76,7 +75,7 @@ public class ChromeBrowser {
         options.addArguments(incognito);
         options.addArguments(enable_smooth_scrolling);
         options.addArguments(enable_logging);
-        options.addArguments(enable_automation);
+        options.addArguments(dump_dom);
         options.addArguments(disable_suggestions_ui);
         options.addArguments(disable_single_click_autofill);
         options.addArguments(disable_default_apps);

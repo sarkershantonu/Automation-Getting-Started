@@ -26,10 +26,12 @@ public class TestChromeArguments {
         driver.get("https://www.linkedin.com");
     }
 
-    @Test public void testChromeHeadless(){
+    @Test public void testChromeHeadless() throws InterruptedException {
         driver = Browser.getBrowser();
         driver.get("https://www.facebook.com");
         Assert.assertEquals("Facebook - Log In or Sign Up",driver.getTitle());
+
+        Thread.sleep(10000);
     }
 
     @After public void end(){
