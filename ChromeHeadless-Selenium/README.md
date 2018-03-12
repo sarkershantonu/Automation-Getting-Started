@@ -5,4 +5,3 @@ A simple example project to show examples on running chrome in headless mode for
 
 # Ways 
  - using Chrome Options 
- - using desired capabilities 
