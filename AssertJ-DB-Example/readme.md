@@ -1,0 +1,1 @@
+# AssertJ-DB example
