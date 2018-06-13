@@ -22,3 +22,7 @@ mvn deploy
 mvn jetty:run 
 
 you can see reports in http://localhost:9001 , your site should be ready 
+
+Note : 
+
+- Need to update
