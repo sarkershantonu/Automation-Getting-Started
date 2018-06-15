@@ -12,3 +12,6 @@ Java -Jar bug-store-1.2-SNAPSHOT.jar
 
 # Credentials : 
 shantonu, 123456
+
+# Reporting 
+Need to integrate with Alluer 
