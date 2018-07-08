@@ -37,6 +37,18 @@ public class BasicTests extends BugTestBase {
                time(lessThan(globalResponseTimeout));
     }
 
+    @Test
+    public void testViewAll_BADCredentials() {
+        given().
+                auth().basic(user,pass+5).
+                get().
+                then().assertThat().
+                statusCode(HttpStatus.SC_UNAUTHORIZED).
+                contentType(ContentType.JSON).
+                header("Content-Type", "application/json;charset=UTF-8").
+                time(lessThan(globalResponseTimeout));
+    }
+
     /**
      * validating basic insertion, type, response body, time of response
      */
