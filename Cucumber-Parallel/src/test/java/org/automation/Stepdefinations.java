@@ -1,7 +1,6 @@
 package org.automation;
 
 import cucumber.api.java.en.*;
-import org.calculator.Calculator;
 import org.junit.Assert;
 
 /**
