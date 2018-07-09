@@ -12,6 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.runner>org.automation.CucumberRunner.java</test.runner>
         <cucumber.version>1.2.5</cucumber.version>
+        <featuresDirectory>src/test/resources/org/automation</featuresDirectory>
     </properties>
     <dependencies>
         <dependency>
@@ -36,9 +37,51 @@
             <version>2.12.2</version>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.github.temyers</groupId>
+                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+                <version>5.0.0</version>
+                <executions>
+                    <execution>
+                        <id>generateRunners</id>
+                        <phase>generate-test-sources</phase>
+                        <goals>
+                            <goal>generateRunners</goal>
+                        </goals>
+                        <configuration>
+                            <glue>
+                                <package>org.automation</package>
+                            </glue>
+                            <outputDirectory>${project.build.directory}/generated-test-sources/cucumber
+                            </outputDirectory>
+                            <featuresDirectory>${featuresDirectory}</featuresDirectory>
+                            <cucumberOutputDir>target/cucumberReport/parallel</cucumberOutputDir>
+                            <plugins>
+                                <plugin>
+                                    <name>json</name>
+                                </plugin>
+                                <plugin>
+                                    <name>html</name>
+                                 </plugin>
+                            </plugins>
+                            <strict>true</strict>
+                            <monochrome>true</monochrome>
+                            <!--<tags><tag></tag></tags>-->
+                            <useTestNG>false</useTestNG>
+                            <namingScheme>simple</namingScheme>
+                            <namingPattern>Parallel{c}IT</namingPattern>
+                            <!--<parallelScheme>SCENARIO</parallelScheme>-->
+                            <parallelScheme>FEATURE</parallelScheme>
+                            <customVmTemplate>${featuresDirectory}/cucumber-runner.java.vm</customVmTemplate>
+                            <packageName>org.automation</packageName>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -59,10 +102,10 @@
                     </execution>
                 </executions>
                 <configuration>
-                <includes>
-                    <include>${test.runner}</include>
-                </includes>
-                <testFailureIgnore>false</testFailureIgnore>
+                    <includes>
+                        <include>${test.runner}</include>
+                    </includes>
+                    <testFailureIgnore>false</testFailureIgnore>
                 </configuration>
             </plugin>
             <plugin>
