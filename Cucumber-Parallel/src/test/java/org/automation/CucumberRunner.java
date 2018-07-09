@@ -14,5 +14,5 @@ import org.junit.runner.RunWith;
                 "json:target/cucumberReport/cucumber.json" }
         , features = {"src/test/resources/org/automation"}
         , glue = {""})
-public class CucumberTestRunner {
+public class CucumberRunner {
 }
