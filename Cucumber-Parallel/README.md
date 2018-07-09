@@ -2,12 +2,12 @@
 Using Allure with cucumber JVM
 
 # Target 
-a simple calculator for testing cucumber features in parallel
+a simple calculator for testing cucumber features/scenarios in parallel
 
 # Testing command 
 (use maven 3.3.9)
 
-mvn clean test 
+mvn clean verify 
 
 # How it works
  1. First it reads the pom configuration 
