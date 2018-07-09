@@ -1,5 +1,5 @@
 # Parallel Cucumber Example
-Using Allure with cucumber JVM
+Parallel run cucumber JVM
 
 # Target 
 a simple calculator for testing cucumber features/scenarios in parallel
