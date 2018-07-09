@@ -1,4 +1,4 @@
-# Junit Report Example
+# Simple Report Example for Junit (TODO)
 Junit Test Reports similar to cucumber pretty reports 
 
 # Target 
