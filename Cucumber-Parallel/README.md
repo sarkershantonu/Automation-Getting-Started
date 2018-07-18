@@ -2,11 +2,14 @@
 Parallel run cucumber JVM
 
 # Target 
-a simple calculator for testing cucumber features/scenarios in parallel
+- Cucumber Runner 
+- Running Scenarios in parallel 
+- Running Features in parallel
 
-# Testing command 
-(use maven 3.3.9)
+# Project
+A simple calculator for testing cucumber features/scenarios in parallel
 
+# Testing command (use maven 3.3.9)
 mvn clean verify 
 
 # How it works
@@ -19,4 +22,6 @@ mvn clean verify
  Here is a image of target folder
  
  ![target](generated_runners.JPG)
+ 
+
 
