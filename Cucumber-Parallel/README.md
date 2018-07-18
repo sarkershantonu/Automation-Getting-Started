@@ -6,6 +6,11 @@ Parallel run cucumber JVM
 - Running Scenarios in parallel 
 - Running Features in parallel
 
+# Key Config 
+Find out "parallelScheme" and make it 
+- FEATURE to run fetures parallel (i prefer)
+- SCENARIO to run scenarios parallel
+
 # Project
 A simple calculator for testing cucumber features/scenarios in parallel
 
