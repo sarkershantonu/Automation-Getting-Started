@@ -18,7 +18,7 @@ import static org.hamcrest.Matchers.lessThan;
  * Created by SSarker on 8/4/2018.
  */
 @RunWith(Parameterized.class)
-public class TestsAuthentication extends BugTestBase {
+public class AuthenticationTests extends BugTestBase {
     @Parameterized.Parameter
     public User credential;
 
@@ -38,4 +38,6 @@ public class TestsAuthentication extends BugTestBase {
                .get().then().assertThat().statusCode(HttpStatus.SC_UNAUTHORIZED)
                .time(lessThan(globalResponseTimeout));
     }
+
+
 }
