@@ -13,7 +13,7 @@ public abstract class BugTestBase extends TestBase{
     protected static final String URL = "http://localhost:9100";
     protected static final String user = "shantonu";
     protected static final String pass = "123456";
-    protected static final Long globalResponseTimeout = 2000l;
+    protected static final Long globalResponseTimeout = 4000l;
 
 
     @BeforeClass
