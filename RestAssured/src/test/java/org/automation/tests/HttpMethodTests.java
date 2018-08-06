@@ -25,5 +25,5 @@ public class HttpMethodTests extends BugTestBase {
     public void test_patch_method_off(){
         given().auth().basic(user,pass+5).patch().then().assertThat().statusCode(HttpStatus.SC_UNAUTHORIZED);
     }
-  
+
 }
