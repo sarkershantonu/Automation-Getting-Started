@@ -1,6 +1,9 @@
 # This contains all test classes
 
 # Functional Tests 
+- Sunny day scenarios
+- Boundery Scenarios
+- Invalid data scenarios
 
 # Exception tests/invalid data tests
 - for all HTTP exceptions except 200. 
