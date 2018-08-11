@@ -55,6 +55,7 @@ public class BasicTests extends BugTestBase {
     @Test
     public void testAddOne_validateResponse(){
         Bug aBug = Bug.getABug();
+
         given().
                 auth().basic(user,pass).
                 contentType(ContentType.JSON).body(Bug.getABug(),ObjectMapperType.JACKSON_2).
