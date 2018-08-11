@@ -5,6 +5,9 @@
 # Exception tests/invalid data tests
 
 # Basic Security Tests
+- CSRF 
+- XSS
+- Injections (auth, SQL)
 
 # Performance Tests 
 - Performance /Load
