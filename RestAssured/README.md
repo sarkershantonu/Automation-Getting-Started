@@ -21,3 +21,6 @@ Exception test cases
 
 # Security testing
 - Source : https://www.owasp.org/index.php/REST_Security_Cheat_Sheet
+- Checking Headers
+- Checking HTTP Methods
+- Checking required BODY parameters 
