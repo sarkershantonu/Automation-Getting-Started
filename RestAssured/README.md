@@ -30,3 +30,6 @@ Exception test cases
 
 # Data Driven Testing
 - With Excel
+
+# Note 
+- Avoiding Cucumber 
