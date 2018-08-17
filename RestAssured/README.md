@@ -24,3 +24,7 @@ Exception test cases
 - Checking Headers
 - Checking HTTP Methods
 - Checking required BODY parameters 
+
+# Performance Testing
+ - with Junit 
+# 
