@@ -26,7 +26,7 @@ Exception test cases
 - Checking required BODY parameters 
 
 # Performance Testing
- - with Junit 
+ - with Junit & junitbenchmark 
 
 # Data Driven Testing
 - With Excel file data source
