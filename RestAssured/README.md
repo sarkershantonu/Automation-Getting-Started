@@ -29,7 +29,7 @@ Exception test cases
  - with Junit 
 
 # Data Driven Testing
-- With Excel
+- With Excel file data source
 
 # Note 
 - Avoiding Cucumber 
