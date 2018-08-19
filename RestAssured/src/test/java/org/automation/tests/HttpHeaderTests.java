@@ -1,7 +1,7 @@
 package org.automation.tests;
 
 import io.restassured.response.Response;
-import org.automation.config.Constants;
+import org.automation.config.HTTP_HEADERS_VALUES;
 import org.automation.core.BugTestBase;
 import org.junit.Assert;
 import org.junit.Before;
@@ -23,18 +23,18 @@ public class HttpHeaderTests extends BugTestBase {
 //Restrict other sites from placing it in an iframe in order to prevent ClickJacking attacks
     @Test
     public void testRestrictIframing() {
-        Assert.assertNotNull(response.getHeaders().getValue(Constants.XFRAMEOPTIONS));
-        Assert.assertEquals("DENY",response.getHeaders().getValue(Constants.XFRAMEOPTIONS));
+        Assert.assertNotNull(response.getHeaders().getValue(HTTP_HEADERS_VALUES.XFRAMEOPTIONS));
+        Assert.assertEquals("DENY",response.getHeaders().getValue(HTTP_HEADERS_VALUES.XFRAMEOPTIONS));
 
     }
     @Test
     public void testXSSProtection(){
-        Assert.assertNotNull(response.getHeaders().getValue(Constants.XXSSPROTECTION));
-        Assert.assertEquals("1; mode=block",response.getHeaders().getValue(Constants.XXSSPROTECTION));
+        Assert.assertNotNull(response.getHeaders().getValue(HTTP_HEADERS_VALUES.XXSSPROTECTION));
+        Assert.assertEquals("1; mode=block",response.getHeaders().getValue(HTTP_HEADERS_VALUES.XXSSPROTECTION));
     }
 
     @Test
     public void testNoCach(){
-        Assert.assertEquals("no-cache, no-store, max-age=0, must-revalidate",response.getHeaders().getValue(Constants.CACHECONTROL));
+        Assert.assertEquals("no-cache, no-store, max-age=0, must-revalidate",response.getHeaders().getValue(HTTP_HEADERS_VALUES.CACHECONTROL));
     }
 }
