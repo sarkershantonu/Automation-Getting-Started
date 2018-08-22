@@ -34,4 +34,4 @@ Exception test cases
 # Note 
 - Avoiding Cucumber 
 
-# Request Examples 
+# Request Examples : GET 
