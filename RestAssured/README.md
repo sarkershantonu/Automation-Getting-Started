@@ -37,3 +37,5 @@ Exception test cases
 # Request Examples : GET 
 # Request Examples : POST 
 # Request Examples : POST/Mutipart 
+# Request Examples : PUT
+# Request Examples : PUT/Mutipart
