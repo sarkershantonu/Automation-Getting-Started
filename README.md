@@ -63,6 +63,9 @@ This repository contains only getting started projects for different automation 
 - Stub
 - mock projects 
 
+# Completed 
+
+# Ongoing
 # Help wanted
 - As ubuntu user, i used to test them either ubuntu or some time windiws VM. I need help to test them with Mac
 
