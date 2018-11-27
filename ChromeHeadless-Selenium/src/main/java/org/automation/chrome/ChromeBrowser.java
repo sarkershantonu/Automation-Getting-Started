@@ -65,11 +65,12 @@ public class ChromeBrowser {
 
         return options;
     }
-     public static ChromeOptions getDefaultOptions() {
-          ChromeOptions options = new ChromeOptions();
-         options.addArguments("--headless");
+     public static DesiredCapabilities getDesiredCapabilities() {
+	     DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+          	ChromeOptions options = new ChromeOptions();
+         	options.addArguments("--headless");
 		capabilities.setCapability(ChromeOptions.CAPABILITY, options);         
-          return options;
+          return capabilities;
      }
     public static ChromeOptions getUIOptions() {
         ChromeOptions options = new ChromeOptions();
