@@ -65,6 +65,12 @@ public class ChromeBrowser {
 
         return options;
     }
+     public static ChromeOptions getDefaultOptions() {
+          ChromeOptions options = new ChromeOptions();
+         options.addArguments("--headless");
+		capabilities.setCapability(ChromeOptions.CAPABILITY, options);         
+          return options;
+     }
     public static ChromeOptions getUIOptions() {
         ChromeOptions options = new ChromeOptions();
         options = setBinary(options, System.getProperty("linux.chrome.bin"));
