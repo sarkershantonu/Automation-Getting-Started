@@ -1,5 +1,5 @@
 # Rest Assure Example 
-Demo web service testing project
+End to end  web service testing project
 
 # Test Webservice 
 https://github.com/sarkershantonu/Bug-Storing-WS
