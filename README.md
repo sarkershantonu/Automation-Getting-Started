@@ -1,7 +1,7 @@
 # Automation-Getting-Started
 This repository contains only getting started projects for different automation framework. 
 
-language : java mainly 
+language : java (mainly ), python is also good. 
 
 # Target : 
 - To help new automation people to start project 
