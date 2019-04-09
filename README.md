@@ -14,7 +14,7 @@ language : java (mainly ), python .
 - How to start coding to test.
 - Reports for veriius stake holders 
 
-# bComments
+# Comments
 - Please Coomment on your experience using this.
 
 # Screen based automation 
