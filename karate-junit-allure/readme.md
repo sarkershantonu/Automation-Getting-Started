@@ -1,3 +1,7 @@
 # karate Example 
 
-# todo 
+# Technology Stack
+- Java
+- Maven
+- Karate
+- Allure
