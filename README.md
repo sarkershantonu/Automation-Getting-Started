@@ -72,3 +72,7 @@ language : java (mainly ), python .
 - As ubuntu user, i used to test them either ubuntu or some time windiws VM. I need help to test them with Mac
 
 - please mail me if you want to participate 
+
+# Test OS 
+- Win 10 
+- Ubuntu(coming)
