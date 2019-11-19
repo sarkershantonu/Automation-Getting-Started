@@ -11,3 +11,4 @@ A simple example project to show examples on running chrome in headless mode for
  - working for chrome 63+ only 
 
 # How to use this 
+- Use this library to get Java constant to include in CLI path
