@@ -1,7 +1,8 @@
 # Architecture Basic
 
 # Layered 
-
+- benifits
+- problems
 # N-Tire 
 
 # Event Driven
