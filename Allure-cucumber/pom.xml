@@ -14,12 +14,23 @@
         <allure.version>1.4.24.RC3</allure.version>
         <aspectj.version>1.8.9</aspectj.version>
         <test.runner>org.automation.CucumberRunner.class</test.runner>
+        <slf4j.version>1.7.30</slf4j.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>
             <artifactId>allure-cucumber-jvm-adaptor</artifactId>
             <version>1.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>${slf4j.version}</version>
         </dependency>
     </dependencies>
     <build>
