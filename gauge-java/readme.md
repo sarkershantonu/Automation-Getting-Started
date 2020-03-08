@@ -6,8 +6,11 @@ A small business case testing framework
 
 For my case, I am using windows 10 installation. 
 - https://github.com/getgauge/gauge/releases/download/v1.0.6/gauge-1.0.6-windows.x86_64.exe
+- Options : I have chosen all language & reporting plugins (everything)
 
 # How to use the example
 
+# Documentation Home 
+- https://docs.gauge.org/index.html
 # IntelliJ Plugins
 - https://plugins.jetbrains.com/plugin/7535-gauge
