@@ -1,5 +1,6 @@
-# Guage Java
-A small business case testing framework
+# Gauge Java (todo)
+A small business case testing framework 
+
 
 # Installation 
 - Download this in your PC or server where test will run
@@ -9,6 +10,12 @@ For my case, I am using windows 10 installation.
 - Options : I have chosen all language & reporting plugins (everything)
 
 ![installing option](./img/install.jpg)
+
+
+# Use Maven Arc type
+-gauge-archetype-java
+
+
 
 # How to use the example
 
