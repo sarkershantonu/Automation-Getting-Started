@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculatorTestAddition extends CalculatorTestBase {
+public class TestAddition extends CalculatorTestBase {
     @BeforeEach
     public void initTest(){
         myCal = new Calculator();
