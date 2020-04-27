@@ -16,6 +16,37 @@
 
 
 # Allure : POM integration
+- Add allure & aspectJ version property (optional, but i follow as best practices)
+
+         <allure.version>2.13.2</allure.version>
+         <aspectj.version>1.9.5</aspectj.version>
+- Add allure as dependency under dependencies 
+        
+         <dependency>
+              <groupId>io.qameta.allure</groupId>
+              <artifactId>allure-junit5</artifactId>
+              <version>${allure.version}</version>
+          </dependency>
+          
+- Add allure plugins
+
+          <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.10.0</version>
+                    <configuration>
+                         <reportVersion>${allure.version}</reportVersion>
+                         <allureDownloadUrl>https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/${allure.version}/allure-commandline-${allure.version}.zip</allureDownloadUrl>
+                    </configuration>
+           </plugin>
+
+# Allure Properties
+- create an allure.properties file and keep in class path (src/test/resources/)
+- Add at least report folder property 
+
+        allure.results.directory=target/allure-results
+- To include this in class path, you may use this maven build configuration. 
+![maven build include ](images/mave-build-congif.JPG)
 
 # Allure : Annotation (explain  => todo)
 - @Step :
