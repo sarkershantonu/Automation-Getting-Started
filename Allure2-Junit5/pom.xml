@@ -13,7 +13,6 @@
         <aspectj.version>1.9.5</aspectj.version>
         <allure.version>2.13.2</allure.version>
         <junit.jupiter.version>5.6.2</junit.jupiter.version>
-        <allure.report.version></allure.report.version>
         <test.suite>org.automation.junit5.tests.TestAddition.class</test.suite>
         <slf4j.version>1.7.30</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
