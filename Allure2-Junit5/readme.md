@@ -1,5 +1,6 @@
 # Allure 2 with Junit 5 examples
 
+# Maven 
 # Run commands 
 - To test 
         
@@ -13,13 +14,31 @@
 # Test Project  
 - Calculator class for test app 
 
-# Allure : Installations  
- 1. Download latest allure ZIP file from [here](https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/) . I used 2.13.2.
- 2. Extract & goto bin directory, you can see allure.bat/allure. Put this directory path as system path. In my case, i have added in win 10 path variable this path "C:\Users\Shantonu\apps\allure-2.13.2\bin"   
 
 # Allure : POM integration
 
-# Allure : Annotation
+# Allure : Annotation (explain  => todo)
+- @Step :
+- @AllureId :
+- @Attachment :
+- @Description :
+- @Epic :
+- @Epics :
+- @Feature :
+- @Features :
+- @Flaky :
+- @Issue :
+- @Issues :
+- @Lead :
+- @Link :
+- @Links :
+- @Muted :
+- @Owner :
+- @Severity :
+- @Stories :
+- @Story :
+- @TmsLink :
+- @TmsLinks :
 
 # Junit 5 Basics
 - There are three projects groups in Junit 5
@@ -28,3 +47,27 @@
 - JUnit Vintage:(back compatibility) To support running JUnit 3 and JUnit 4 written tests on the JUnit 5 platform.
 - Annotation comparison with Junit 4 
 ![junit 5 annotations](./images/junit5-vs-junit4.JPG)
+
+# Junit 5 : Annotations(explain -> todo)
+- @AfterAll
+- @AfterEach : 
+- @BeforeAll :
+- @BeforeEach :
+- @Disabled :
+- @DisplayName :
+- @DisplayNameGeneration :
+- @Nested :
+- @Order :
+- @RepeatedTest :
+- @Tag :
+- @Tags :
+- @Test :
+- @TestFactory :
+- @TestInstance :
+- @TestMethodOrder :
+- @TestTemplate :
+- @Timeout :
+
+# Allure : Installations  (optional:if you want to use allure in CLI)
+ 1. Download latest allure ZIP file from [here](https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/) . I used 2.13.2.
+ 2. Extract & goto bin directory, you can see allure.bat/allure. Put this directory path as system path. In my case, i have added in win 10 path variable this path "C:\Users\Shantonu\apps\allure-2.13.2\bin"   
