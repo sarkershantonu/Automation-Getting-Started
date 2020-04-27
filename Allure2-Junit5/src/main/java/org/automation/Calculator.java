@@ -28,4 +28,18 @@ public class Calculator {
         }
         return (T) sum;
     }
+    public String add(String... strings){
+        if(null==strings || strings.length<=0)
+        {
+            return "empty_input";
+        }
+        else
+        {
+            StringBuffer sb = new StringBuffer();
+            for (String a:strings){
+                sb.append(a);
+            }
+            return sb.toString();
+        }
+    }
 }
