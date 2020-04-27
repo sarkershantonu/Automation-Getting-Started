@@ -1,7 +1,6 @@
 # Allure 2 with Junit 5 examples
 
-# Maven 
-# Run commands 
+# Maven Run commands 
 - To test 
         
       ./mvnw clean varify
@@ -12,7 +11,7 @@
       ./mvnw allure:serve
 
 # Test Project  
-- Calculator class for test app 
+- Calculator class to test 
 
 
 # Allure : POM integration
@@ -46,10 +45,11 @@
 
         allure.results.directory=target/allure-results
 - To include this in class path, you may use this maven build configuration. 
+
 ![maven build include ](images/mave-build-congif.JPG)
 
 # Allure : Annotation (explain  => todo)
-- @Step :
+- @Step : Each step method to perform a test
 - @AllureId :
 - @Attachment :
 - @Description :
