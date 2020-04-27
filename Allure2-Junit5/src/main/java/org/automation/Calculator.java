@@ -1,10 +1,13 @@
 package org.automation;
 
+import io.qameta.allure.Step;
+
 public class Calculator {
+    @Step
     public int add(int a, int b) {
         return a + b;
     }
-
+    @Step
     public int add(int[] a) {
         int result = 0;
         for (int i : a) {
@@ -12,7 +15,7 @@ public class Calculator {
         }
         return result;
     }
-
+    @Step
     public Integer add(Integer... numbers) {
         Integer result = new Integer(0);
         for (Integer i : numbers) {
@@ -20,7 +23,7 @@ public class Calculator {
         }
         return result;
     }
-
+    @Step
     public <T extends Number> T add(T... t) {
         Double sum = new Double(0.0);
         for (T i : t) {
@@ -28,6 +31,7 @@ public class Calculator {
         }
         return (T) sum;
     }
+    @Step
     public String add(String... strings){
         if(null==strings || strings.length<=0)
         {
