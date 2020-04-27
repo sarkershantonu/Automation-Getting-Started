@@ -1,8 +1,7 @@
 package org.automation.junit5.tests;
 
 import org.automation.Calculator;
-import org.automation.junit5.CalculatorTestBase;
-import org.junit.jupiter.api.Assertions;
+import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
