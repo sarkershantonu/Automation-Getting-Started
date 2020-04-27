@@ -31,3 +31,4 @@ build/
 .vscode/
 .allure/
 allure-results/
+reports/
