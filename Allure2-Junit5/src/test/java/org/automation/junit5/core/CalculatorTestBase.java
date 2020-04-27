@@ -1,4 +1,4 @@
-package org.automation.junit5;
+package org.automation.junit5.core;
 
 import org.automation.Calculator;
 import org.junit.jupiter.api.AfterAll;
