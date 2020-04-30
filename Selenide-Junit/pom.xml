@@ -7,17 +7,19 @@
     <groupId>org.automation</groupId>
     <artifactId>selenide-junit</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <properties>
+        <selenide.version>5.11.1</selenide.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>4.5.1</version>
+            <version>${selenide.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13</version>
         </dependency>
         <dependency>
             <groupId>org.hamcrest</groupId>
