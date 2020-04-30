@@ -1,8 +1,8 @@
-package org.automation.opencart;
+package org.automation.tests.google.opencart;
 
+import com.opencart.demo.pages.common.FooterArea;
 import org.automation.TestBase;
-import org.automation.opencart.pages.common.FooterArea;
-import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
