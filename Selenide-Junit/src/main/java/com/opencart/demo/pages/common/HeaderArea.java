@@ -1,16 +1,14 @@
-package org.automation.opencart.pages.common;
+package com.opencart.demo.pages.common;
 
-import org.automation.core.PageBase;
-import org.openqa.selenium.WebDriver;
+import com.opencart.demo.pages.OpenCartPageBase;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by shantonu on 12/14/16.
  * todo => get all the link locators
  */
-public class HeaderArea extends PageBase {
+public class HeaderArea extends OpenCartPageBase {
 
 
     @FindBy(css = "#logo a")

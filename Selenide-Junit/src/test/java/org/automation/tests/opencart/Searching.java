@@ -1,7 +1,7 @@
-package org.automation.tests.google.opencart;
+package org.automation.tests.opencart;
 
 import com.codeborne.selenide.junit.ScreenShooter;
-import org.automation.TestBase;
+import org.automation.core.TestBase;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;

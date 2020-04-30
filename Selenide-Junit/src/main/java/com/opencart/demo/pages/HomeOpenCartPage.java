@@ -1,15 +1,12 @@
-package org.automation.opencart.pages;
+package com.opencart.demo.pages;
 
 
-import org.automation.core.PageBase;
-
-import org.automation.opencart.pages.common.FooterArea;
-import org.openqa.selenium.WebDriver;
+import com.opencart.demo.pages.common.FooterArea;
 
 /**
  * Created by shantonu on 5/16/16.
  */
-public class HomePage extends PageBase  {
+public class HomeOpenCartPage extends OpenCartPageBase {
     public SearchPanel search;
 
     public FooterArea footer;

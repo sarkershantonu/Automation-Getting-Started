@@ -1,15 +1,13 @@
-package org.automation.opencart.pages;
+package com.opencart.demo.pages;
 
 
-import org.automation.core.PageBase;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by shantonu on 6/4/16.
  */
-public class ResultPage extends PageBase {
+public class ResultOpenCartPage extends OpenCartPageBase {
 
     @FindBy(xpath = ".//*[@id='content']/p[2]")
     public WebElement invalid_search_result_message;

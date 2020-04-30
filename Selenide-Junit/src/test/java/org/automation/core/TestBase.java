@@ -1,4 +1,4 @@
-package org.automation;
+package org.automation.core;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -8,7 +8,7 @@ import java.util.Properties;
 /**
  * Created by shantonu on 8/14/17.
  */
-public abstract class TestBase {
+public class TestBase {
 
     protected TestBase(){
         Properties properties = System.getProperties();

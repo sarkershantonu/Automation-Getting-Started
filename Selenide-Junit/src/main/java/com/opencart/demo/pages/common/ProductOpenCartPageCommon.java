@@ -1,15 +1,11 @@
-package org.automation.opencart.pages.common;
+package com.opencart.demo.pages.common;
 
-import org.automation.core.PageBase;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
+import com.opencart.demo.pages.OpenCartPageBase;
 
 /**
  * Created by shantonu on 4/27/17.
  */
-public class ProductPageCommon extends PageBase{
+public class ProductOpenCartPageCommon extends OpenCartPageBase {
 
     public String description_tab_css="a[href='#tab-description']";
     public String review_tab_css="a[href='#tab-review']";

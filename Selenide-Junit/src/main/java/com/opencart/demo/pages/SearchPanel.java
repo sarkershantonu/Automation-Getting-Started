@@ -1,8 +1,6 @@
-package org.automation.opencart.pages;
+package com.opencart.demo.pages;
 
 
-import org.automation.core.PageBase;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -10,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  * Created by shantonu on 5/17/16.
  * todo item added for all locators
  */
-public class SearchPanel extends PageBase {
+public class SearchPanel extends OpenCartPageBase {
 
     @FindBy(xpath = "//div[@id='search']/input")
     public WebElement textBox ;

@@ -1,12 +1,10 @@
-package org.automation.opencart.pages.common;
+package com.opencart.demo.pages.common;
 
-import org.automation.core.PageBase;
+import com.opencart.demo.pages.OpenCartPageBase;
 
 import static org.automation.util.CssHelper.getLinkCSS;
 
-import org.openqa.selenium.support.FindBy;
-
-public class FooterArea extends PageBase {
+public class FooterArea extends OpenCartPageBase {
 
 
     public String aboutUsLink_css = getLinkCSS(base_url + "/index.php?route=information/information&information_id=4");

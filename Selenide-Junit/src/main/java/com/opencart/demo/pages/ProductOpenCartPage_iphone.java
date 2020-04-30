@@ -1,7 +1,5 @@
-package org.automation.opencart.pages;
+package com.opencart.demo.pages;
 
-import org.automation.core.PageBase;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -15,7 +13,7 @@ import org.openqa.selenium.support.How;
  * parse the source and get those links
  * complete the write a review function.
  */
-public class ProductPage_iphone extends PageBase {
+public class ProductOpenCartPage_iphone extends OpenCartPageBase {
 
 
     @FindBy(how= How.LINK_TEXT, linkText = "Description")

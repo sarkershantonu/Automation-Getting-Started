@@ -1,4 +1,4 @@
-package org.automation.google;
+package org.automation.tests.google;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

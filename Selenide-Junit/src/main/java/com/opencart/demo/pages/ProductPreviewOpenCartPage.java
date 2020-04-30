@@ -1,7 +1,5 @@
-package org.automation.opencart.pages;
+package com.opencart.demo.pages;
 
-import org.automation.core.PageBase;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -9,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
  * Created by shantonu on 12/14/16.
  */
 // this will be on the fly item creation.. so all item will be dynamic.. need to make a dom parser.
-public class ProductPreviewPage extends PageBase {
+public class ProductPreviewOpenCartPage extends OpenCartPageBase {
     public WebElement tile;
     public WebElement description;
     public WebElement price;
