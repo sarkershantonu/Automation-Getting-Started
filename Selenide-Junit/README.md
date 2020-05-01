@@ -9,10 +9,10 @@ Selenide is a selenium wrapper framework that makes selenium easy to use and org
 # Run Command 
 - mvn clean test 
 
+
 # Main Site Link  
 
-- http://selenide.org/2017/06/26/selenide-4.5/
-
+- https://selenide.org/quick-start.html
 
 # Test 1 
 Simple searching google (my name)
@@ -21,3 +21,9 @@ Simple searching google (my name)
 
 Adding steps logs 
 An annotaion way 
+
+# Opencart Structure
+- Page structure
+- WebPart structure
+- Header & Footer area
+- Preview element
