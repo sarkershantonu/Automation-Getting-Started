@@ -1,4 +1,4 @@
-package com.opencart.demo.pages.common;
+package org.automation.pages.opencart.common;
 
 /**
  * Created by shantonu on 4/10/17.

@@ -1,6 +1,6 @@
 package org.automation.tests.opencart;
 
-import com.opencart.demo.pages.common.FooterArea;
+import org.automation.pages.opencart.common.FooterArea;
 import org.automation.core.TestBase;
 
 import org.junit.Before;
@@ -20,9 +20,6 @@ import static org.automation.validation.validator.linkValidator;
 public class CheckAllFooterLinks extends TestBase {
     private static final Logger log = Logger.getLogger(CheckAllFooterLinks.class.getName());
 
-    static {
-        TestBase.loadProperties();
-    }
 
     private FooterArea footers;
 

@@ -1,4 +1,4 @@
-package org.automation.pages.opencart;
+package org.automation.pages.opencart.core;
 
 /**
  * Created by shantonu on 8/23/17.

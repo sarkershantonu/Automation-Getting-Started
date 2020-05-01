@@ -1,5 +1,6 @@
-package com.opencart.demo.pages;
+package org.automation.pages.opencart;
 
+import org.automation.pages.opencart.core.OpenCartPageBase;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

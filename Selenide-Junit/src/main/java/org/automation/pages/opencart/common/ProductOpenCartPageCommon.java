@@ -1,6 +1,6 @@
-package com.opencart.demo.pages.common;
+package org.automation.pages.opencart.common;
 
-import com.opencart.demo.pages.OpenCartPageBase;
+import org.automation.pages.opencart.core.OpenCartPageBase;
 
 /**
  * Created by shantonu on 4/27/17.

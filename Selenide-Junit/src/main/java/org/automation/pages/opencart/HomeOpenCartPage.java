@@ -1,7 +1,8 @@
-package com.opencart.demo.pages;
+package org.automation.pages.opencart;
 
 
-import com.opencart.demo.pages.common.FooterArea;
+import org.automation.pages.opencart.common.FooterArea;
+import org.automation.pages.opencart.core.OpenCartPageBase;
 
 /**
  * Created by shantonu on 5/16/16.

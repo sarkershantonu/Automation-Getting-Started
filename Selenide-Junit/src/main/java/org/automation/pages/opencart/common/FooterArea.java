@@ -1,7 +1,7 @@
-package com.opencart.demo.pages.common;
+package org.automation.pages.opencart.common;
 
-import com.opencart.demo.pages.OpenCartPageBase;
-import org.automation.util.CssHelper;
+
+import org.automation.pages.opencart.core.OpenCartPageBase;
 
 public class FooterArea extends OpenCartPageBase {
 
