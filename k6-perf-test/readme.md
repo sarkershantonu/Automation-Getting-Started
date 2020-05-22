@@ -43,7 +43,7 @@ you should be able to see this
 ![test report](./opencart-perf-test/first-run-single-user-opencart.jpg)
 
 
-# Main Project [Link] (https://k6.io/open-source)
+# Main Project [Link](https://k6.io/open-source)
 
 # CLI Options 
 
