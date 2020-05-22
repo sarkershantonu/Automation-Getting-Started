@@ -6,7 +6,9 @@
 - we can have request specific passing criteria 
 - it has tools to convert Jmeter/HAR/Postman to k6 converter
 - It has openAPI generator (automatically convert api to performace scripts)
-
+- it has nice integration with jenkins, teamCity, gitlab, githubActions, circleCI
+- we can save/send results in JSON, kafka, influxDB, datadog, StatsD.
+- it has cloud enable testing facility(paid). So, if you dont want to maintain local environment, you may use this. 
 
 # Installation 
 - [Windows](https://dl.bintray.com/loadimpact/windows/k6-latest-amd64.msi)
@@ -18,7 +20,7 @@
 
 # Run your test 
 
-		k6 run script.js
+		k6 run your_script.js
 
 # Running first sample test 
 
