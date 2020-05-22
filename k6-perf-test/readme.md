@@ -1,4 +1,4 @@
-# k6 perf testing(todo)
+# k6 perf testing
 
 # Basic Info 
 - Its JavaScript based performace testing 
@@ -35,7 +35,7 @@
 
 
 # Running a small test locally
-- go inside opencart-perf-test folder and run this 
+- go inside 'opencart-perf-test' folder and run this 
 
 		k6  run opencart-perf-test.js
 		
