@@ -18,15 +18,29 @@
 		echo "deb https://dl.bintray.com/loadimpact/deb stable main" | sudo tee -a /etc/apt/sources.list
 		sudo apt-get update && sudo apt-get install k6
 
+# Make IDE for k6
+- I am using VScode/VSCodium for scripting this. 
+- install [VSCodium](https://github.com/VSCodium/vscodium/releases)
+- Install k6 [extention](https://marketplace.visualstudio.com/items?itemName=k6.k6)
+
 # Run your test 
 
 		k6 run your_script.js
 
-# Running first sample test 
+# Running first sample test in cli
 
 		$ k6 run github.com/loadimpact/k6/samples/http_get.js
 		
 ![results](./images/first-test.jpg)
+
+
+# Running a small test locally
+- go inside opencart-perf-test folder and run this 
+
+		k6  run opencart-perf-test.js
+		
+you should be able to see this 
+![test report](./opencart-perf-test/first-run-single-user-opencart.jpg)
 
 
 # Main Project [Link] (https://k6.io/open-source)
