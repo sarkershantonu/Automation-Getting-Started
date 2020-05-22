@@ -22,6 +22,8 @@
 
 # CLI options
 
+- From CLI 
+
 	Usage: locust [OPTIONS] [UserClass ...]
 
 	Common options:
@@ -111,3 +113,6 @@
 
 	User classes:
 	  UserClass             Optionally specify which User classes that should be used (available User classes can be listed with -l or --list)
+	  
+	  
+- Original [Documentation] (https://docs.locust.io/en/stable/configuration.html#all-available-configuration-options)	  
