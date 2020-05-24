@@ -11,6 +11,9 @@ For my case, I am using windows 10 installation.
 
 ![installing option](./img/install.jpg)
 
+# Prepare your IDE
+- install VsCode 
+- install Gauge [Extension](https://marketplace.visualstudio.com/items?itemName=getgauge.gauge)
 
 # Use Maven Arc type
 -gauge-archetype-java
