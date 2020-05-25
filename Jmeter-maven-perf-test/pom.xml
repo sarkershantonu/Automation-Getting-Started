@@ -8,7 +8,8 @@
     <artifactId>Jmeter-maven-perf-test</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <jmeter.plugin.version>2.0.3</jmeter.plugin.version>
+        <!-- <jmeter.plugin.version>2.5.1</jmeter.plugin.version>-->
+        <jmeter.plugin.version>2.5.1</jmeter.plugin.version>
         <jmeter-analysis.plugin.version>1.0.6</jmeter-analysis.plugin.version>
         <app.protocol>http</app.protocol>
         <app.host>www.mozilla.com</app.host>
@@ -17,13 +18,12 @@
         <app.paths>${project.basedir}/src/test/uris/uris.txt</app.paths>
         <test.duration>30</test.duration>
         <test.threads>10</test.threads>
+        <encoding>UTF-8</encoding>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+        <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
     </properties>
     <build>
-       <!-- <resources>
-            <resource>
-                <directory>./jmeter/scripts</directory>
-            </resource>
-        </resources>-->
         <plugins>
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
@@ -32,20 +32,17 @@
                 <executions>
                     <execution>
                         <id>jmeter-tests</id>
-                        <goals><goal>jmeter</goal></goals>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
                     </execution>
                 </executions>
                 <configuration>
                     <propertiesUser>
-                        <!--A user which accesses all URLs-->
                         <threadgroup00.name>test</threadgroup00.name>
-                        <!--number of threads to use-->
                         <threadgroup00.numberOfThreads>${test.threads}</threadgroup00.numberOfThreads>
-                        <!--delay of the test in seconds-->
                         <threadgroup00.scheduledDelay>0</threadgroup00.scheduledDelay>
-                        <!--duration of the test in seconds-->
                         <threadgroup00.scheduledDuration>${test.duration}</threadgroup00.scheduledDuration>
-                        <!--how long till all threads are up and running in seconds-->
                         <threadgroup00.rampUp>1</threadgroup00.rampUp>
                         <threadgroup00.throughput>100000</threadgroup00.throughput>
                         <threadgroup00.dataFile>${app.paths}</threadgroup00.dataFile>
