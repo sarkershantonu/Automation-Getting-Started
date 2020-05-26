@@ -4,17 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>org.automation</groupId>
     <artifactId>Jmeter-maven-perf-test</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <!-- <jmeter.plugin.version>2.5.1</jmeter.plugin.version>-->
-        <jmeter.plugin.version>2.5.1</jmeter.plugin.version>
+        <jmeter.plugin.version>3.1.0</jmeter.plugin.version>
         <jmeter-analysis.plugin.version>1.0.6</jmeter-analysis.plugin.version>
         <app.protocol>http</app.protocol>
         <app.host>www.mozilla.com</app.host>
         <app.port>80</app.port>
-        <!--<app.paths>${project.basedir}/jmeter/path/paths.txt</app.paths>-->
         <app.paths>${project.basedir}/src/test/uris/uris.txt</app.paths>
         <test.duration>30</test.duration>
         <test.threads>10</test.threads>
@@ -30,10 +30,23 @@
                 <artifactId>jmeter-maven-plugin</artifactId>
                 <version>${jmeter.plugin.version}</version>
                 <executions>
+                    <!--see executions => https://github.com/jmeter-maven-plugin/jmeter-maven-plugin/tree/master/src/main/java/com/lazerycode/jmeter/mojo-->
+                    <execution>
+                        <id>configuration</id>
+                        <goals>
+                            <goal>configure</goal>
+                        </goals>
+                    </execution>
                     <execution>
                         <id>jmeter-tests</id>
                         <goals>
                             <goal>jmeter</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>check-results</id>
+                        <goals>
+                            <goal>results</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -53,7 +66,7 @@
                     <ignoreResultFailures>true</ignoreResultFailures>
                 </configuration>
             </plugin>
-            <plugin>
+           <!-- <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-analysis-maven-plugin</artifactId>
                 <version>${jmeter-analysis.plugin.version}</version>
@@ -69,7 +82,7 @@
                     <source>${project.build.directory}/jmeter/results/*</source>
                     <targetDirectory>${project.build.directory}/reports</targetDirectory>
                 </configuration>
-            </plugin>
+            </plugin>-->
 
         </plugins>
     </build>
