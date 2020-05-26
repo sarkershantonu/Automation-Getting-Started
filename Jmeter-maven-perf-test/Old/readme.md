@@ -12,8 +12,9 @@
 # Result Analysis(optional)
 
         mvn jmeter-analysis:analysis
+# Note : 
+- Plugin version 2.5.1 (this is last tested working version which needs reports)
+- this use Jmeter 3.3
+- Report version 1.0.6
 
-# Java Properties
-# User Properties
-# How to Script in Jmeter to run using this plugins
-# JVM Arguments
+This is OLD plugin example, unless you  need, use latest example
