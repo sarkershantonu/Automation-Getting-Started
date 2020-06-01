@@ -4,8 +4,14 @@
 
 # Maven POM
 - As this is performance testing , we will run test in maven verify phase(as integration test)
-- There is no Java coding involve, so, no source/test code. those will beempty folders. 
+- There is no Java coding involve, so, no source/test code. those will be empty folders. 
+- JMX Script folder : 
+- Properties folder : 
+- Test Data(CSV) folder : 
 
+
+# The jmeter JMX
+- 
 
 # Run test 
 
