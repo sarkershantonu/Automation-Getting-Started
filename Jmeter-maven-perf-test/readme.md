@@ -16,7 +16,7 @@
 3. results: it analyze the results and save as CSV (default) in results 
 ![folder](./images/results.JPG)
 
-# Maven Plugins ejections
+# Maven Plugins executions
 - Upto now,from [source code](https://github.com/jmeter-maven-plugin/jmeter-maven-plugin/tree/master/src/main/java/com/lazerycode/jmeter/mojo), i see there are 5 executions
 configure,gui,jmeter,results, remote-server. All will work under integration (verify) lifecycle of maven. 
 - In the test we have use configure , test & results. 
