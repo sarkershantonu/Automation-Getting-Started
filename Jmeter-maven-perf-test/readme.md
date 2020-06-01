@@ -1,6 +1,12 @@
 # Jmeter tests with maven plugins
 - We will run test 
 - we will analyze results
+
+# Maven POM
+- As this is performance testing , we will run test in maven verify phase(as integration test)
+- There is no Java coding involve, so, no source/test code. those will beempty folders. 
+
+
 # Run test 
 
         mvn clean verify 
