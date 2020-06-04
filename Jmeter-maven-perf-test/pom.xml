@@ -9,15 +9,20 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <!-- <jmeter.plugin.version>2.5.1</jmeter.plugin.version>-->
+        <BUILD_TAG>${project.version}</BUILD_TAG>
+        <base.url>www.bdjobs.com</base.url>
+        <jobs.url>jobs.bdjobs.com</jobs.url>
+        <protocol>https</protocol>
+        <port>443</port>
+        <connect.timeout>30000</connect.timeout>
+        <response.timeout>40000</response.timeout>
+        <thread.name>BDJOBS</thread.name>
+        <thread.number>20</thread.number>
+        <rampup>10</rampup>
+        <startup.delay>5</startup.delay>
+        <test.duration>600</test.duration>
+        <target.rpm>30</target.rpm>
         <jmeter.plugin.version>3.1.0</jmeter.plugin.version>
-        <jmeter-analysis.plugin.version>1.0.6</jmeter-analysis.plugin.version>
-        <app.protocol>http</app.protocol>
-        <app.host>www.mozilla.com</app.host>
-        <app.port>80</app.port>
-        <app.paths>${project.basedir}/src/test/uris/uris.txt</app.paths>
-        <test.duration>30</test.duration>
-        <test.threads>10</test.threads>
         <encoding>UTF-8</encoding>
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
@@ -38,7 +43,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>jmeter-tests</id>
+                        <id>tests</id>
                         <goals>
                             <goal>jmeter</goal>
                         </goals>
@@ -52,18 +57,30 @@
                 </executions>
                 <configuration>
                     <propertiesUser>
-                        <threadgroup00.name>test</threadgroup00.name>
-                        <threadgroup00.numberOfThreads>${test.threads}</threadgroup00.numberOfThreads>
-                        <threadgroup00.scheduledDelay>0</threadgroup00.scheduledDelay>
-                        <threadgroup00.scheduledDuration>${test.duration}</threadgroup00.scheduledDuration>
-                        <threadgroup00.rampUp>1</threadgroup00.rampUp>
-                        <threadgroup00.throughput>100000</threadgroup00.throughput>
-                        <threadgroup00.dataFile>${app.paths}</threadgroup00.dataFile>
-                        <protocol>${app.protocol}</protocol>
-                        <server>${app.host}</server>
-                        <port>${app.port}</port>
+                        <base.url>${base.url}</base.url>
+                        <jobs.url>${jobs.url}</jobs.url>
+                        <app.protocol>${protocol}</app.protocol>
+                        <app.port>${port}</app.port>
+                        <connect.timeout>${connect.timeout}</connect.timeout>
+                        <response.timeout>${response.timeout}</response.timeout>
+                        <thread.name>${thread.name}</thread.name>
+                        <thread.number>${thread.number}</thread.number>
+                        <rampup>${rampup}</rampup>
+                        <startup.delay>${startup.delay}</startup.delay>
+                        <test.duration>${test.duration}</test.duration>
+                        <target.rpm>${target.rpm}</target.rpm>
                     </propertiesUser>
+                    <jMeterProcessJVMSettings>
+                        <xms>3072</xms>
+                        <xmx>3072</xmx>
+                        <arguments>
+                            <argument>-Xprof</argument>
+                            <argument>-Xfuture</argument>
+                            <argument>-XX:MaxMetaspaceSize=768m</argument>
+                        </arguments>
+                    </jMeterProcessJVMSettings>
                     <ignoreResultFailures>true</ignoreResultFailures>
+                    <generateReports>true</generateReports>
                 </configuration>
             </plugin>
            <!-- <plugin>
