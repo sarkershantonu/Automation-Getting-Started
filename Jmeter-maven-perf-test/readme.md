@@ -1,12 +1,12 @@
 # Jmeter tests with maven plugins
 - We will run test 
-- we will analyze results
+- we will generate reports
 
 # Maven POM
 - As this is performance testing , we will run test in maven verify phase(as integration test)
 - There is no Java coding involve, so, no source/test code. those will be empty folders. 
-- JMX Script folder : 
-- Properties folder : 
+- JMX Script folder : /src/test/jmeter
+- Properties folder : /src/test/jmeter
 - Test Data(CSV) folder : 
 
 
@@ -19,7 +19,7 @@
 
 # What happens during test 
 - mvn clean => clean target folder (if it has old results)
-- mcn verify, it actually tests. In test plugins we have 3 execution goals. 
+- mvn verify, it actually tests. In test plugins we have 3 execution goals. 
 1. configure : it downloads and premiere Jmeter as confirmed by plugin. you will seen inside target folder this 
 ![image](./images/configure-step.jpg) 
 
@@ -37,9 +37,45 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 # Java Properties
 # User Properties
 # How to Script in Jmeter to run using this plugins
+
+
+
 # JVM Arguments
+- To add JVM argument , under plugins configuration section <jMeterProcessJVMSettings> will be present. Here are some examples. 
+- to run jmeter JVM with 3gb memory, and 768mb of metaSpace + enable profiling (for initial diagonysis) 
 
+		<jMeterProcessJVMSettings>
+			<xms>3072</xms>
+			<xmx>3072</xmx>
+			<arguments>
+				<argument>-Xprof</argument>
+				<argument>-Xfuture</argument>
+				<argument>-XX:MaxMetaspaceSize=768m</argument>
+			</arguments>
+         </jMeterProcessJVMSettings>
 
+- to increase JVM memory only 
+
+		<jMeterProcessJVMSettings>
+			<xms>3072</xms>
+			<xmx>3072</xmx>
+			<arguments>
+				<argument>-XX:MaxMetaspaceSize=768m</argument>
+			</arguments>
+         </jMeterProcessJVMSettings>
+		 
+- Another way , you can do the same thing
+
+		<jMeterProcessJVMSettings>
+			<arguments>
+				<argument>-XX:MaxMetaspaceSize=256m</argument>
+				<argument>-Xmx1024m</argument>
+				<argument>-Xms1024m</argument>
+			</arguments>
+		</jMeterProcessJVMSettings>		
+
+# Jmeter Plugins : 
+	 
 # Notes
 - plugins 3.1.0 use jmeter 5.3
 - This does not need analysis plugins, just need and extra execution step
