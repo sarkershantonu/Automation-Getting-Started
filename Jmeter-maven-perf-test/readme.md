@@ -87,7 +87,20 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 	</jmeterExtensions>
 
 All of the plugins artifacts are linked [here](https://mvnrepository.com/artifact/kg.apc)
+
+# Reporting 
+- To generate reports , put like this under <configuration> 
 	
+	<generateReports>true</generateReports>   
+- To ignore result failure 	
+
+	 <ignoreResultFailures>true</ignoreResultFailures>
+- 	 
+
+# Jmeter Remote Master POM 
+
+# Jmeter Remote Slave POM
+
 # Notes
 - plugins 3.1.0 use jmeter 5.3
 - This does not need analysis plugins, just need and extra execution step
