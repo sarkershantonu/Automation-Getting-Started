@@ -38,7 +38,12 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 # User Properties
 # How to Script in Jmeter to run using this plugins
 
-
+# Specify JMX
+- if you want to specify JMX file , under  <configuration> use this 
+			
+			<testFilesIncluded>
+                	<jMeterTestFile>your_test_file.jmx</jMeterTestFile>
+            </testFilesIncluded>
 
 # JVM Arguments
 - To add JVM argument , under plugins configuration section <jMeterProcessJVMSettings> will be present. Here are some examples. 
@@ -75,7 +80,14 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 		</jMeterProcessJVMSettings>		
 
 # Jmeter Plugins : 
-	 
+- To add Jmeter Plugins, you need to specify inside <configuration> like this 
+
+	<jmeterExtensions>
+		<artifact>kg.apc:jmeter-plugins-casutg:2.8</artifact>
+	</jmeterExtensions>
+
+All of the plugins artifacts are linked [here](https://mvnrepository.com/artifact/kg.apc)
+	
 # Notes
 - plugins 3.1.0 use jmeter 5.3
 - This does not need analysis plugins, just need and extra execution step
