@@ -80,7 +80,7 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 		</jMeterProcessJVMSettings>		
 
 # Jmeter Plugins : 
-- To add Jmeter Plugins, you need to specify inside <configuration> like this 
+- To add Jmeter Plugins, you need to specify inside <configuration> like this (i am adding extra thread groups)
 
 	<jmeterExtensions>
 		<artifact>kg.apc:jmeter-plugins-casutg:2.8</artifact>
