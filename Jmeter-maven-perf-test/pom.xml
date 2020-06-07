@@ -56,6 +56,51 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <proxyConfig>
+
+                    </proxyConfig>
+                    <propertiesFilesDirectory>
+
+                    </propertiesFilesDirectory>
+                    <propertiesGlobal>
+
+                    </propertiesGlobal>
+
+                    <propertiesJMeter>
+
+                    </propertiesJMeter>
+                    <propertiesReplacedByCustomFiles>
+
+                    </propertiesReplacedByCustomFiles>
+
+                    <propertiesSaveService>
+
+                    </propertiesSaveService>
+                    <propertiesSystem>
+
+                    </propertiesSystem>
+                    <propertiesUpgrade>
+
+                    </propertiesUpgrade>
+
+                    <customPropertiesFiles>
+
+                        <file>
+
+                        </file>
+                        <propertiesFile>
+
+                        </propertiesFile>
+                        <customPropertiesFile>
+
+                        </customPropertiesFile>
+                    </customPropertiesFiles>
+                    <confFilesDirectory>
+
+                    </confFilesDirectory>
+                    <jmeterExtensions>
+
+                    </jmeterExtensions>
                     <propertiesUser>
                         <base.url>${base.url}</base.url>
                         <jobs.url>${jobs.url}</jobs.url>
@@ -83,24 +128,6 @@
                     <generateReports>true</generateReports>
                 </configuration>
             </plugin>
-           <!-- <plugin>
-                <groupId>com.lazerycode.jmeter</groupId>
-                <artifactId>jmeter-analysis-maven-plugin</artifactId>
-                <version>${jmeter-analysis.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>analyze</goal>
-                        </goals>
-                        <phase>post-integration-test</phase>
-                    </execution>
-                </executions>
-                <configuration>
-                    <source>${project.build.directory}/jmeter/results/*</source>
-                    <targetDirectory>${project.build.directory}/reports</targetDirectory>
-                </configuration>
-            </plugin>-->
-
         </plugins>
     </build>
 </project>

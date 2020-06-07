@@ -33,4 +33,9 @@ public class TestAddition extends CalculatorTestBase {
         assertEquals(45.0,myCal.add(data_double));
         assertEquals(30,myCal.add(data_int));
     }
+    @Test
+    public void testAddDecimal(){
+        double a = 2.4, b =5.2;
+        assertEquals(7.6, myCal.add(a,b), "double adding ");
+    }
 }
