@@ -59,6 +59,7 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 			<startup.delay>${startup.delay}</startup.delay>
 			<test.duration>${test.duration}</test.duration>
 			<target.rpm>${target.rpm}</target.rpm>
+			<jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
 		</propertiesUser>
 		
 # How to Script in Jmeter to run using this plugins
@@ -131,6 +132,17 @@ All of the plugins artifacts are linked [here](https://mvnrepository.com/artifac
 
 	 <ignoreResultFailures>true</ignoreResultFailures>
 - 	 
+
+# Jmeter running under proxy 
+- if you want to specify corporate proxy configuration , under  <configuration> use this 
+
+		<proxyConfig>
+           <host>host_ip</host>
+           <port>proxy_port</port>
+           <username>user_name</username>
+           <password>password_of_proxy</password>
+           <hostExclusions>localhost|*.shantonu.com</hostExclusions>
+		</proxyConfig>
 
 # Jmeter Remote Master POM 
 
