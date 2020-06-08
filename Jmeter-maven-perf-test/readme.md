@@ -35,9 +35,32 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 - "remote-server" is used only when we are making slave-master configuration for distributed jmeter tests. 
 
 # Java Properties
+- To add Jmeter properties  under  <configuration> use this 
 
+		<propertiesJMeter>
+			<jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
+		</propertiesJMeter>
+
+- its best practice not to change jmeter properties, rather you should change in user properties
 # User Properties
+- To add user properties  under  <configuration> use this 
 
+
+		<propertiesUser>
+			<base.url>${base.url}</base.url>
+			<jobs.url>${jobs.url}</jobs.url>
+			<app.protocol>${protocol}</app.protocol>
+			<app.port>${port}</app.port>
+			<connect.timeout>${connect.timeout}</connect.timeout>
+			<response.timeout>${response.timeout}</response.timeout>
+			<thread.name>${thread.name}</thread.name>
+			<thread.number>${thread.number}</thread.number>
+			<rampup>${rampup}</rampup>
+			<startup.delay>${startup.delay}</startup.delay>
+			<test.duration>${test.duration}</test.duration>
+			<target.rpm>${target.rpm}</target.rpm>
+		</propertiesUser>
+		
 # How to Script in Jmeter to run using this plugins
 - Make variable for all possible information. 
 - Keep all these value injectable via jmeter properties using [__P](https://jmeter.apache.org/usermanual/functions.html#__P) or [__property](https://jmeter.apache.org/usermanual/functions.html#__property)
@@ -51,7 +74,11 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 			
 			<testFilesIncluded>
                 	<jMeterTestFile>your_test_file.jmx</jMeterTestFile>
+					<jMeterTestFile>your_test_file2.jmx</jMeterTestFile>
             </testFilesIncluded>
+* you can add multiple files 
+
+- you can specify
 
 # JVM Arguments
 - To add JVM argument , under plugins configuration section <jMeterProcessJVMSettings> will be present. Here are some examples. 
