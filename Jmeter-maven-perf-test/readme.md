@@ -35,10 +35,18 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 - "remote-server" is used only when we are making slave-master configuration for distributed jmeter tests. 
 
 # Java Properties
-# User Properties
-# How to Script in Jmeter to run using this plugins
 
-# Specify JMX
+# User Properties
+
+# How to Script in Jmeter to run using this plugins
+- Make variable for all possible information. 
+- Keep all these value injectable via jmeter properties using [__P](https://jmeter.apache.org/usermanual/functions.html#__P) or [__property](https://jmeter.apache.org/usermanual/functions.html#__property)
+- Keep these variable a default value
+- Do not change Test Plan name
+- 
+ 
+
+# Specify test script(JMX)
 - if you want to specify JMX file , under  <configuration> use this 
 			
 			<testFilesIncluded>
