@@ -7,6 +7,7 @@
 - There is no Java coding involve, so, no source/test code. those will be empty folders. 
 - JMX Script folder : /src/test/jmeter
 - Properties folder : /src/test/jmeter
+- jmeter config folder (like log4j2.xml) : /src/test/conf
 - Test Data(CSV) folder : 
 
 
@@ -43,7 +44,7 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 
 - its best practice not to change jmeter properties, rather you should change in user properties
 # User Properties
-- To add user properties  under  <configuration> use this 
+- To add user properties  under  <configuration> use propertiesUser . As example 
 
 
 		<propertiesUser>
@@ -70,17 +71,42 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 - 
  
 
+
 # Specify test script(JMX)
 - if you want to specify JMX file , under  <configuration> use this 
 			
-			<testFilesIncluded>
-                	<jMeterTestFile>your_test_file.jmx</jMeterTestFile>
-					<jMeterTestFile>your_test_file2.jmx</jMeterTestFile>
-            </testFilesIncluded>
+		<testFilesIncluded>
+			<jMeterTestFile>your_test_file.jmx</jMeterTestFile>
+			<jMeterTestFile>your_test_file2.jmx</jMeterTestFile>
+		</testFilesIncluded>
+
 * you can add multiple files 
 
-- you can specify
+- you can specify Regular Expression based test scripts
 
+			<testFilesIncluded>
+				<jMeterTestFile>your_scripts_prefix_*.jmx</jMeterTestFile>
+			</testFilesIncluded>
+
+# Excluding any JMX from default folder 
+- Use <testFilesExcluded> under <configuration>. Example
+
+		<testFilesExcluded>
+			<excludeJMeterTestFile>your_excluded_test_file.jmx</excludeJMeterTestFile>
+			<excludeJMeterTestFile>your_excluded_test_file2.jmx</excludeJMeterTestFile>
+		</testFilesExcluded>
+
+- Like include, exclude also supports regular expression 
+
+		<testFilesExcluded>
+			<excludeJMeterTestFile>your_scripts_prefix_*.jmx</excludeJMeterTestFile>
+		</testFilesExcluded>
+
+# Specify JMX folder (other than default)
+- Default JMX files are confiured in /src/test/jmeter , but if you want to change this location. you need this in configuration
+		
+		<testFilesDirectory>/scratch/testfiles/</testFilesDirectory>
+		
 # JVM Arguments
 - To add JVM argument , under plugins configuration section <jMeterProcessJVMSettings> will be present. Here are some examples. 
 - to run jmeter JVM with 3gb memory, and 768mb of metaSpace + enable profiling (for initial diagonysis) 
@@ -115,23 +141,74 @@ configure,gui,jmeter,results, remote-server. All will work under integration (ve
 			</arguments>
 		</jMeterProcessJVMSettings>		
 
-# Jmeter Plugins : 
-- To add Jmeter Plugins, you need to specify inside <configuration> like this (i am adding extra thread groups)
+# Specify Jmeter version to use
+- use <jmeterVersion> under configuration to specify jmeter version 
 
-	<jmeterExtensions>
-		<artifact>kg.apc:jmeter-plugins-casutg:2.8</artifact>
-	</jmeterExtensions>
+	<jmeterVersion>5.1.1</jmeterVersion>
+# Specify Jmeter Core components(optional) 
+- use <jmeterArtifacts> under configuration to specify artifact
+
+		<jmeterArtifacts>
+			<jmeterArtifact>org.apache.jmeter:ApacheJMeter:5.1.1</jmeterArtifact>
+			<jmeterArtifact>org.apache.jmeter:ApacheJMeter_components:5.1.1</jmeterArtifact>
+			<jmeterArtifact>org.apache.jmeter:ApacheJMeter_config:5.1.1</jmeterArtifact>
+		</jmeterArtifacts>
+# Including Libraries (this will put jars in lib)
+- you need to add under configuration section  as <testPlanLibraries>, for example
+
+		<testPlanLibraries>
+			<artifact>org.apache.activemq:activemq-spring:5.15.2</artifact>
+			<artifact>org.apache.activemq:activemq-client:5.15.2</artifact>
+			<artifact>org.apache.activemq:activemq-broker:5.15.2</artifact>
+		</testPlanLibraries>
+
+# Excluding Libraries that you dont use in test case 
+- you need to add under configuration section  as <excludedArtifacts>
+
+		<excludedArtifacts>
+			<exclusion>com.sun.jdmk:jmxtools</exclusion>
+			<exclusion>com.sun.jmx:jmxri</exclusion>
+		</excludedArtifacts>
+
+# Jmeter Plugins : (this will add Jar's in the /lib/ext)
+- To add Jmeter Plugins, you need to specify inside <configuration> like with <jmeterExtensions>
+
+		<jmeterExtensions>
+			<artifact>kg.apc:jmeter-plugins-casutg:2.8</artifact>
+		</jmeterExtensions>
 
 All of the plugins artifacts are linked [here](https://mvnrepository.com/artifact/kg.apc)
 
+if any plugin use outdated dependencies , use this 
+
+		<downloadExtensionDependencies>false</downloadExtensionDependencies>
+
+# Adding JAR in  /lib/junit directory
+- you need to use  <junitLibraries> under configuration 
+
+			<junitLibraries>
+				<artifact>com.lazerycode.junit:junit-test:1.0.0</artifact>
+			</junitLibraries>
+
+# Excluding JARs from class path 
+- To exclude jar from classpath , use   <excludedArtifacts>. for example
+
+		<excludedArtifacts>
+			<exclusion>log4j:log4j</exclusion>
+		</excludedArtifacts>
+		
 # Reporting 
 - To generate reports , put like this under <configuration> 
 	
 	<generateReports>true</generateReports>   
+	
 - To ignore result failure 	
 
 	 <ignoreResultFailures>true</ignoreResultFailures>
-- 	 
+- To disable test result time stamp
+	 
+		<testResultsTimestamp>false</testResultsTimestamp>
+
 
 # Jmeter running under proxy 
 - if you want to specify corporate proxy configuration , under  <configuration> use this 
