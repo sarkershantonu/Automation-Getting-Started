@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+  <groupId>org.automation</groupId>
+    <artifactId>jmeter-with-basic-report</artifactId>
+<version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <BUILD_TAG>${project.version}</BUILD_TAG>
+        <base.url>www.bdjobs.com</base.url>
+        <jobs.url>jobs.bdjobs.com</jobs.url>
+        <protocol>https</protocol>
+        <port>443</port>
+        <connect.timeout>30000</connect.timeout>
+        <response.timeout>40000</response.timeout>
+        <thread.name>BDJOBS</thread.name>
+        <thread.number>20</thread.number>
+        <rampup>10</rampup>
+        <startup.delay>5</startup.delay>
+        <test.duration>600</test.duration>
+        <target.rpm>30</target.rpm>
+        <jmeter.plugin.version>3.1.0</jmeter.plugin.version>
+        <encoding>UTF-8</encoding>
+        <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
+        <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
+
+    </properties>
+    <build><plugins>
+        <plugin>
+            <groupId>com.lazerycode.jmeter</groupId>
+            <artifactId>jmeter-maven-plugin</artifactId>
+            <version>${jmeter.plugin.version}</version>
+            <executions>
+                <execution>
+                    <id>configuration</id>
+                    <goals>
+                        <goal>configure</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>tests</id>
+                    <goals>
+                        <goal>jmeter</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>check-results</id>
+                    <goals>
+                        <goal>results</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <propertiesUser>
+                    <base.url>${base.url}</base.url>
+                    <jobs.url>${jobs.url}</jobs.url>
+                    <app.protocol>${protocol}</app.protocol>
+                    <app.port>${port}</app.port>
+                    <connect.timeout>${connect.timeout}</connect.timeout>
+                    <response.timeout>${response.timeout}</response.timeout>
+                    <thread.name>${thread.name}</thread.name>
+                    <thread.number>${thread.number}</thread.number>
+                    <rampup>${rampup}</rampup>
+                    <startup.delay>${startup.delay}</startup.delay>
+                    <test.duration>${test.duration}</test.duration>
+                    <target.rpm>${target.rpm}</target.rpm>
+                </propertiesUser>
+            </configuration>
+        </plugin>
+    </plugins></build>
+</project>
