@@ -36,6 +36,6 @@ public class TestAddition extends CalculatorTestBase {
     @Test
     public void testAddDecimal(){
         double a = 2.4, b =5.2;
-        assertEquals(7.6, myCal.add(a,b), "double adding ");
+        assertEquals(7.9, myCal.add(a,b), "double adding ");
     }
 }
