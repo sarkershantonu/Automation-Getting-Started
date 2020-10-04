@@ -21,7 +21,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>${maven.compiler.source}</java.version>
         <junit.api.version>${junit.jupiter.version}</junit.api.version>
-
     </properties>
 
     <build>
