@@ -10,8 +10,12 @@ a simple calculator with allure report
 
 mvn clean test 
 
-mvn jetty:run 
+
 
 # Report 
+
+mvn site
+
+mvn jetty:run
 
 See in your http://localhost:9100 
