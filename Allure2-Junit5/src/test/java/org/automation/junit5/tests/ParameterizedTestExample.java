@@ -35,4 +35,14 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     public void testEmptySource(String input_empty){
         Assertions.assertTrue(input_empty.equals(""));
     }
+
+    /***
+     * One of the test will fail as it gives array of one null & empty string
+     * @param input_Null_empty
+     */
+    @ParameterizedTest
+    @NullAndEmptySource
+    public void testEmptyNullSource(String input_Null_empty){
+        Assertions.assertTrue(input_Null_empty.equals(""));
+    }
 }
