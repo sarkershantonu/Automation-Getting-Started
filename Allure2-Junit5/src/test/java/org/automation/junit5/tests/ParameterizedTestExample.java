@@ -3,10 +3,7 @@ package org.automation.junit5.tests;
 import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.NullSource;
-import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.params.provider.*;
 
 public class ParameterizedTestExample extends CalculatorTestBase {
 
@@ -32,5 +29,10 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     @NullSource
     public void testNullSource(String input_null){
         Assertions.assertTrue(null==input_null);
+    }
+    @ParameterizedTest
+    @EmptySource
+    public void testEmptySource(String input_empty){
+        Assertions.assertTrue(input_empty.equals(""));
     }
 }
