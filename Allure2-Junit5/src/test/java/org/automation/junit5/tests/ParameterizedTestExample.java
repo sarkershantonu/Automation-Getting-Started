@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 public class ParameterizedTestExample extends CalculatorTestBase {
@@ -27,4 +28,9 @@ public class ParameterizedTestExample extends CalculatorTestBase {
         Assertions.assertEquals(input*2,myCal.add(input,input));
     }
 
+    @ParameterizedTest
+    @NullSource
+    public void testNullSource(String input_null){
+        Assertions.assertTrue(null==input_null);
+    }
 }
