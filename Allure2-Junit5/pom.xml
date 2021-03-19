@@ -30,6 +30,9 @@
                     ./src/test/resources
                 </directory>
             </resource>
+            <resource>
+                <directory>./data/</directory>
+            </resource>
         </resources>
         <plugins>
             <plugin>
