@@ -13,5 +13,10 @@ public class ParameterizedTestExample extends CalculatorTestBase {
 
     }
 
+    @ParameterizedTest
+    @CsvSource({})
+    public void testCSVParseParameter(){
+
+    }
 
 }
