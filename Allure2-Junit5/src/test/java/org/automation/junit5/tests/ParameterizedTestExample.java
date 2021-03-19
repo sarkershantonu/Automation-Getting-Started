@@ -1,5 +1,7 @@
 package org.automation.junit5.tests;
 
+import io.qameta.allure.Stories;
+import io.qameta.allure.Story;
 import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
