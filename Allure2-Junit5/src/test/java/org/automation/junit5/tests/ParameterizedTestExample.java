@@ -29,6 +29,11 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     }
 
     @ParameterizedTest
+    @MethodSource("org.automation.junit5.core.StringParameters#emptyStrings")
+    public void testMethodSource(String input){
+        assertTrue(input.isEmpty());
+    }
+    @ParameterizedTest
     @ValueSource(ints = {5,6,7})
     public void testValueSource(int input){
         assertEquals(input*2,myCal.add(input,input));
