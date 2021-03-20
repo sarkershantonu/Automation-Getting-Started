@@ -59,9 +59,15 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     public void testEnumSourceNoClass(Month month){
         assertTrue(month.getValue()>=1&& month.getValue()<=12);
     }
-    @ParameterizedTest
-    @EnumSource(value = Month.class, names = {"APRIL"})
-    public void testEnumSourceWithData(Month month){
 
+    /**
+     * Non Leap Year testing
+     * false = not leap year
+     * @param month
+     */
+    @ParameterizedTest
+    @EnumSource(value = Month.class, names = {"JANUARY","MARCH","MAY","JULY"})
+    public void testEnumSourceWithData(Month month){
+        assertEquals(31,month.length(false));
     }
 }
