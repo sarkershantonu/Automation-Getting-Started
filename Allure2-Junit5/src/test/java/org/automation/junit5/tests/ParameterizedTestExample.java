@@ -18,9 +18,9 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     }
 
     @ParameterizedTest
-    @CsvSource({})
-    public void testCSVParseParameter(){
-
+    @CsvSource({"shantonu,SHANTONU","teSt, TEST","Java,JAVA"})
+    public void testCSVParseParameter(String input, String expected){
+    assertEquals(expected,input.toUpperCase());
     }
 
     @ParameterizedTest
