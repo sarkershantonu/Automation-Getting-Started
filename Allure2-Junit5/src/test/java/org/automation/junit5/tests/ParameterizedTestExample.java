@@ -59,4 +59,5 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     public void testEnumSourceNoClass(Month month){
         assertTrue(month.getValue()>=1&& month.getValue()<=12);
     }
+
 }
