@@ -75,4 +75,10 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     public void testEnumSourceExcludeData(Month month){
         assertEquals(31,month.length(false));
     }
+    @ParameterizedTest
+    @EnumSource(value = Month.class, names = ".+Y",mode = EnumSource.Mode.MATCH_ANY)
+    public void testEnumWithDataRegex(Month month){
+        assertTrue(month.toString().endsWith("Y"),"Not Ends with Y");
+
+    }
 }
