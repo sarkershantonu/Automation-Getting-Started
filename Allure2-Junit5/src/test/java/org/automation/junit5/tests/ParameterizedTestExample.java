@@ -70,4 +70,9 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     public void testEnumSourceWithData(Month month){
         assertEquals(31,month.length(false));
     }
+    @ParameterizedTest
+    @EnumSource(value = Month.class, names = { "FEBRUARY","APRIL", "JUNE", "SEPTEMBER", "NOVEMBER"}, mode = EnumSource.Mode.EXCLUDE)
+    public void testEnumSourceExcludeData(Month month){
+        assertEquals(31,month.length(false));
+    }
 }
