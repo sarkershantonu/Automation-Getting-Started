@@ -19,8 +19,13 @@ public class ParameterizedTestExample extends CalculatorTestBase {
 
     @ParameterizedTest
     @CsvSource({"shantonu,SHANTONU","teSt, TEST","Java,JAVA"})
-    public void testCSVParseParameter(String input, String expected){
+    public void testCSV(String input, String expected){
     assertEquals(expected,input.toUpperCase());
+    }
+    @ParameterizedTest
+    @CsvSource(value = {"shantonu|SHANTONU","teSt|TEST","Java|JAVA",},delimiter = '|')
+    public void testCSVWithDelimiter(String input, String expected){
+        assertEquals(expected,input.toUpperCase());
     }
 
     @ParameterizedTest
