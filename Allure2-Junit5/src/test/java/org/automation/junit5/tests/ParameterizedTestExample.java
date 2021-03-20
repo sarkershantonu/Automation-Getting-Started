@@ -59,5 +59,9 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     public void testEnumSourceNoClass(Month month){
         assertTrue(month.getValue()>=1&& month.getValue()<=12);
     }
+    @ParameterizedTest
+    @EnumSource(value = Month.class, names = {"APRIL"})
+    public void testEnumSourceWithData(Month month){
 
+    }
 }
