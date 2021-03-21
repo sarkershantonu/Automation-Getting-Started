@@ -4,6 +4,8 @@ import io.qameta.allure.Stories;
 import io.qameta.allure.Story;
 import org.automation.junit5.core.CalculatorTestBase;
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.automation.junit5.core.ErrorStringProvider;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -31,6 +33,12 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     @ParameterizedTest
     @MethodSource("org.automation.junit5.core.StringParameters#emptyStrings")
     public void testMethodSource(String input){
+        assertTrue(input.isEmpty());
+    }
+
+    @ParameterizedTest
+    @ArgumentsSource(ErrorStringProvider.class)
+    public void testArgumentsSource(String input){
         assertTrue(input.isEmpty());
     }
     @ParameterizedTest
