@@ -9,7 +9,7 @@ import java.lang.reflect.Field;
 import java.util.function.Consumer;
 import java.util.stream.Stream;
 
-public class VariableArgumentProvider implements ArgumentsProvider, AnnotationConsumer<VariableStream> {
+public class StreamArgumentProvider implements ArgumentsProvider, AnnotationConsumer<VariableStream> {
 
     private String variableName;
     @Override

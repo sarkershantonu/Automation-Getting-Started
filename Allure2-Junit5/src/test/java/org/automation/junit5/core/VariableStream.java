@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-@ArgumentsSource(VariableArgumentProvider.class)
+@ArgumentsSource(StreamArgumentProvider.class)
 public @interface VariableStream {
     String value();
 }
