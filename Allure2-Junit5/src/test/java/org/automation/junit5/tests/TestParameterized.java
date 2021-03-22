@@ -10,6 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.automation.junit5.core.ErrorStringProvider;
 import org.automation.junit5.core.StringUtil;
 import org.automation.junit5.core.VariableStream;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -31,6 +32,7 @@ public class TestParameterized extends CalculatorTestBase {
      */
     @ParameterizedTest
     @VariableStream("arguments")
+    @Disabled
     public void customAnnotationForInput(String input, boolean expected){
     assertEquals(expected, isBlank(input));
     }
