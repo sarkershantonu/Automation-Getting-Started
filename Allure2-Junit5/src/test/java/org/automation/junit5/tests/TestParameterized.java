@@ -16,7 +16,7 @@ import org.junit.jupiter.params.provider.*;
 import java.time.Month;
 import java.util.stream.Stream;
 
-public class ParameterizedTestExample extends CalculatorTestBase {
+public class TestParameterized extends CalculatorTestBase {
 
     private static Stream<Arguments> arguments = Stream.of(
             Arguments.of(null,true),
@@ -87,7 +87,7 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     @ParameterizedTest
     @NullAndEmptySource
     public void testEmptyNullSource(String input_Null_empty){
-        assertTrue(input_Null_empty.equals(""));
+        assertTrue(isBlank(input_Null_empty));
     }
     @ParameterizedTest
     @EnumSource(Month.class)
