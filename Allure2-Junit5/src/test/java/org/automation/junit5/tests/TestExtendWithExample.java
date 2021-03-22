@@ -1,4 +1,4 @@
 package org.automation.junit5.tests;
 
-public class ExtendWithExample {
+public class TestExtendWithExample {
 }
