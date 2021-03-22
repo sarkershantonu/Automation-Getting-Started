@@ -1,4 +1,4 @@
-package org.automation.junit5.tests;
+package org.automation.junit5.tests.orders;
 
 import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.api.MethodOrderer;
