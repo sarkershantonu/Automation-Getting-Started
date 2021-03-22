@@ -32,7 +32,7 @@ public class TestParameterized extends CalculatorTestBase {
      */
     @ParameterizedTest
     @VariableStream("arguments")
-    @Disabled
+   // @Disabled
     public void customAnnotationForInput(String input, boolean expected){
     assertEquals(expected, isBlank(input));
     }
