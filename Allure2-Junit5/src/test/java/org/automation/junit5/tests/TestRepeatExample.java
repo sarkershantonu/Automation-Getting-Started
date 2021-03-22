@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class RepeatExample extends CalculatorTestBase {
+public class TestRepeatExample extends CalculatorTestBase {
 
     @Test
     @RepeatedTest(value = 5, name = "Test Repeat")
