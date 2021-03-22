@@ -3,9 +3,13 @@ package org.automation.junit5.tests;
 import io.qameta.allure.Stories;
 import io.qameta.allure.Story;
 import org.automation.junit5.core.CalculatorTestBase;
+
+import static org.automation.junit5.core.StringUtil.isBlank;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.automation.junit5.core.ErrorStringProvider;
+import org.automation.junit5.core.StringUtil;
+import org.automation.junit5.core.VariableStream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -14,12 +18,23 @@ import java.util.stream.Stream;
 
 public class ParameterizedTestExample extends CalculatorTestBase {
 
-    private static Stream<Arguments> arguments = Stream.of(Arguments.of(null,true), Arguments.of("",true), Arguments.of(" ",true), Arguments.of("shantonu",false));
+    private static Stream<Arguments> arguments = Stream.of(
+            Arguments.of(null,true),
+            Arguments.of("",true),
+            Arguments.of(" ",true),
+            Arguments.of("shantonu",false));
 
+    /**
+     * TO DO : Currently Not Working
+     * @param input
+     * @param expected
+     */
     @ParameterizedTest
-    public void customAnnotationForInput(){
-
+    @VariableStream("arguments")
+    public void customAnnotationForInput(String input, boolean expected){
+    assertEquals(expected, isBlank(input));
     }
+
     @ParameterizedTest
     @CsvFileSource(resources = "/addition.csv",numLinesToSkip = 1)
     public void testCSVfileParameter(String a, String b, String result){
@@ -40,13 +55,13 @@ public class ParameterizedTestExample extends CalculatorTestBase {
     @ParameterizedTest
     @MethodSource("org.automation.junit5.core.StringParameters#emptyStrings")
     public void testMethodSource(String input){
-        assertTrue(input.isEmpty());
+        assertTrue(isBlank(input));
     }
 
     @ParameterizedTest
     @ArgumentsSource(ErrorStringProvider.class)
     public void testArgumentsSource(String input){
-        assertTrue(input.isEmpty());
+        assertTrue(isBlank(input));
     }
     @ParameterizedTest
     @ValueSource(ints = {5,6,7})

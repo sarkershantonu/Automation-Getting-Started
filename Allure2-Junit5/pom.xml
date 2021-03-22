@@ -113,12 +113,11 @@
             <artifactId>junit-jupiter-api</artifactId>
             <version>${junit.jupiter.version}</version>
         </dependency>
-        <dependency>
+      <!--  <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-runner</artifactId>
             <version>${junit-platform.version}</version>
-            <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <!--to run junit 4 tests -->
         <!--<dependency>
             <groupId>org.junit.vintage</groupId>

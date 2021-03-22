@@ -18,8 +18,11 @@ public class StreamArgumentProvider implements ArgumentsProvider, AnnotationCons
 
     @Override
     public Stream<? extends Arguments> provideArguments(ExtensionContext context)  {
-        Stream<Arguments> field_load = context.getTestClass().map(this::getField).map(this::getValue).orElseThrow(() -> new IllegalArgumentException("field load"));
-        return field_load;
+        return context.getTestClass()
+                .map(this::getField)
+                .map(this::getValue)
+                .orElseThrow(() -> new IllegalArgumentException("failed to load test arguments"));
+
     }
     private Field getField(Class<?> klass)  {
 
