@@ -10,8 +10,6 @@ import org.junit.runner.RunWith;
  * Suite Example
  */
 @RunWith(JUnitPlatform.class)
-//@SelectClasses(ReleaseASuite.class)
 @SelectPackages({"org.automation.junit5.tests"})
-//@IncludeTags({"releaseB"})
 public class FunctionalTestSuite {
 }
