@@ -6,7 +6,6 @@ import org.junit.jupiter.params.provider.ArgumentsProvider;
 import org.junit.jupiter.params.support.AnnotationConsumer;
 
 import java.lang.reflect.Field;
-import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class StreamArgumentProvider implements ArgumentsProvider, AnnotationConsumer<VariableStream> {
@@ -18,14 +17,24 @@ public class StreamArgumentProvider implements ArgumentsProvider, AnnotationCons
     }
 
     @Override
-    public Stream<? extends Arguments> provideArguments(ExtensionContext context) throws Exception {
+    public Stream<? extends Arguments> provideArguments(ExtensionContext context)  {
         Stream<Arguments> field_load = context.getTestClass().map(this::getField).map(this::getValue).orElseThrow(() -> new IllegalArgumentException("field load"));
         return field_load;
     }
-    private Field getField(Class<?> klass) throws NoSuchFieldException {
-        return klass.getDeclaredField(variableName);
+    private Field getField(Class<?> klass)  {
+
+        try{ return klass.getDeclaredField(variableName);
+        }catch (Exception e){
+            return null;
+        }
     }
-    private Stream<Arguments> getValue(Field filed) throws IllegalAccessException {
-        return (Stream<Arguments>) filed.get(null);
+    private Stream<Arguments> getValue(Field filed)  {
+        Object val = null;
+        try{
+            val = filed.get(null);
+        }catch (Exception e){
+
+        }
+        return val == null? null : (Stream<Arguments>) val;
     }
 }
