@@ -10,9 +10,16 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
 import java.time.Month;
+import java.util.stream.Stream;
 
 public class ParameterizedTestExample extends CalculatorTestBase {
 
+    private static Stream<Arguments> arguments = Stream.of(Arguments.of(null,true), Arguments.of("",true), Arguments.of(" ",true), Arguments.of("shantonu",false));
+
+    @ParameterizedTest
+    public void customAnnotationForInput(){
+
+    }
     @ParameterizedTest
     @CsvFileSource(resources = "/addition.csv",numLinesToSkip = 1)
     public void testCSVfileParameter(String a, String b, String result){
