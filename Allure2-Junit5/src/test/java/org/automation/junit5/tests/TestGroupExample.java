@@ -5,5 +5,5 @@ import org.automation.junit5.core.CalculatorTestBase;
 /***
  * Tagging
  */
-public class GroupExample extends CalculatorTestBase {
+public class TestGroupExample extends CalculatorTestBase {
 }
