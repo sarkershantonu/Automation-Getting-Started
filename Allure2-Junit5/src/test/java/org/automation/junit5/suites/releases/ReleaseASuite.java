@@ -6,7 +6,7 @@ import org.junit.platform.suite.api.SelectPackages;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
-@IncludeTags({"releaseA"})
+@IncludeTags({"CalT","CalT2"})
 @SelectPackages("org.automation.junit5.tests")
 public class ReleaseASuite {
 }
