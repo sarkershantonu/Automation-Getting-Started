@@ -21,6 +21,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Lead("shantonu.sarker")
     @Owner("shantonu")
     @Story("An User should be able to add two numbers")
+    @Issue("WW-21")
     public void testAdd(){
         assertEquals(30,myCal.add(25,5));
     }
@@ -52,6 +53,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Lead("shantonu.sarker")
     @Owner("shantonu")
     @Story("An User should be able to add all items in an array if integers")
+    @Issue("WW-25")
     public void testAddIntegerArray(){
         Integer[] data = new Integer[]{5,10,25,6,4};
         assertEquals(50,myCal.add(data));
