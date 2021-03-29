@@ -1,5 +1,6 @@
 package org.automation.junit5.allure;
 
+import io.qameta.allure.Epic;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.automation.junit5.core.CalculatorTestBase;
@@ -11,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * Created by shantonu on 3/29/2021
  */
-
+@Epic("We Need to Develop A calculator")
 public class TestExamplesForAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.BLOCKER)

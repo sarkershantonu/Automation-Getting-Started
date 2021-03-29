@@ -4,6 +4,10 @@ import io.qameta.allure.Step;
 
 public class Calculator {
     @Step
+    public int sub(int a, int b) {
+        return a - b;
+    }
+    @Step
     public int add(int a, int b) {
         return a + b;
     }
@@ -46,4 +50,5 @@ public class Calculator {
             return sb.toString();
         }
     }
+
 }
