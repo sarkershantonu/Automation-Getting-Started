@@ -27,9 +27,12 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Test
     @Description("Adding two Strings ")
     @Owner("shantonu")
+    @Lead("shantonu.sarker")
     public void testAddStrings(){
         assertEquals("shantonusarker",myCal.add("shantonu","sharker"));
     }
+
+
     @Test
     @Severity(SeverityLevel.MINOR)
     @Lead("shantonu.sarker")
@@ -39,6 +42,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
         int[] data = {5,10,25,6,4};
         assertEquals(50,myCal.add(data));
     }
+
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("Adding all items from an Integer Array")
@@ -48,6 +52,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
         Integer[] data = new Integer[]{5,10,25,6,4};
         assertEquals(50,myCal.add(data));
     }
+
     @Test
     @Severity(SeverityLevel.TRIVIAL)
     @Description("Adding two integer & double values")
@@ -59,6 +64,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
         assertEquals(45.0,myCal.add(data_double));
         assertEquals(30,myCal.add(data_int));
     }
+
     @Test
     @Severity(SeverityLevel.NORMAL)
     @Description("Adding two decimal values")
