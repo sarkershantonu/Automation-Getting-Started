@@ -18,6 +18,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.BLOCKER)
     @Description("Adding two int ")
+    @Lead("shantonu.sarker")
     public void testAdd(){
         assertEquals(30,myCal.add(25,5));
     }
@@ -29,6 +30,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     }
     @Test
     @Severity(SeverityLevel.MINOR)
+    @Lead("shantonu.sarker")
     @Description("Adding all items from an int Array")
     public void testAddIntArray(){
         int[] data = {5,10,25,6,4};
@@ -37,6 +39,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("Adding all items from an Integer Array")
+    @Lead("shantonu.sarker")
     public void testAddIntegerArray(){
         Integer[] data = new Integer[]{5,10,25,6,4};
         assertEquals(50,myCal.add(data));
@@ -44,6 +47,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.TRIVIAL)
     @Description("Adding two integer & double values")
+    @Lead("shantonu.sarker")
     public void testAddMixType(){
         Double[] data_double = new Double[]{15.0,25.1,4.9};
         Integer[] data_int = new Integer[]{15,5,10};
@@ -54,6 +58,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Severity(SeverityLevel.NORMAL)
     @Description("Adding two decimal values")
     @Flaky
+    @Lead("shantonu.sarker")
     public void testAddDecimal(){
         double a = 2.4, b =5.2;
         assertEquals(7.6, myCal.add(a,b), "double adding ");
