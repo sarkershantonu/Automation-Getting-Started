@@ -13,18 +13,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Epic("We Need to Develop A calculator")
 @Feature("Adding two values")
 @Story("An User should be able to add two numbers")
-
+@Owner("shantonu")
 public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.BLOCKER)
     @Description("Adding two int ")
     @Lead("shantonu.sarker")
+    @Owner("shantonu")
     public void testAdd(){
         assertEquals(30,myCal.add(25,5));
     }
 
     @Test
     @Description("Adding two Strings ")
+    @Owner("shantonu")
     public void testAddStrings(){
         assertEquals("shantonusarker",myCal.add("shantonu","sharker"));
     }
@@ -32,6 +34,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Severity(SeverityLevel.MINOR)
     @Lead("shantonu.sarker")
     @Description("Adding all items from an int Array")
+    @Owner("shantonu")
     public void testAddIntArray(){
         int[] data = {5,10,25,6,4};
         assertEquals(50,myCal.add(data));
@@ -40,6 +43,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Severity(SeverityLevel.CRITICAL)
     @Description("Adding all items from an Integer Array")
     @Lead("shantonu.sarker")
+    @Owner("shantonu")
     public void testAddIntegerArray(){
         Integer[] data = new Integer[]{5,10,25,6,4};
         assertEquals(50,myCal.add(data));
@@ -48,6 +52,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Severity(SeverityLevel.TRIVIAL)
     @Description("Adding two integer & double values")
     @Lead("shantonu.sarker")
+    @Owner("shantonu")
     public void testAddMixType(){
         Double[] data_double = new Double[]{15.0,25.1,4.9};
         Integer[] data_int = new Integer[]{15,5,10};
@@ -59,6 +64,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Description("Adding two decimal values")
     @Flaky
     @Lead("shantonu.sarker")
+    @Owner("shantonu")
     public void testAddDecimal(){
         double a = 2.4, b =5.2;
         assertEquals(7.6, myCal.add(a,b), "double adding ");
