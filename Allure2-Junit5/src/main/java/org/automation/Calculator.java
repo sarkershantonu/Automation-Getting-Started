@@ -8,6 +8,12 @@ public class Calculator {
         return a - b;
     }
     @Step
+    public int mod(int a, int b) {
+        return a % b;
+    }
+
+
+    @Step
     public int add(int a, int b) {
         return a + b;
     }
