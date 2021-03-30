@@ -12,6 +12,5 @@ import org.junit.runner.RunWith;
  */
 @RunWith(JUnitPlatform.class)
 @SelectPackages({"org.automation.junit5.tests"})
-
 public class FunctionalTestSuite {
 }

@@ -34,5 +34,5 @@ public class CalculatorTestBase implements StepLifecycleListener {
     public void beforeStepStop(StepResult result) {
         logger.info("Finished step : {}",result.getName());
     }
-    
+
 }
