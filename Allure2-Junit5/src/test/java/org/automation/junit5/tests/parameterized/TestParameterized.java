@@ -1,4 +1,4 @@
-package org.automation.junit5.tests;
+package org.automation.junit5.tests.parameterized;
 
 import io.qameta.allure.Stories;
 import io.qameta.allure.Story;
