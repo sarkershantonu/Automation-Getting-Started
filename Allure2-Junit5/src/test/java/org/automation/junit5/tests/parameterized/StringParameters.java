@@ -1,4 +1,4 @@
-package org.automation.junit5.core;
+package org.automation.junit5.tests.parameterized;
 
 import java.util.stream.Stream;
 
