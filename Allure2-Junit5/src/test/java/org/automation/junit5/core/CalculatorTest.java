@@ -18,7 +18,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Test
 @Timeout(2)
-//@DisplayName("Calculator Test With Custom Annotation")
 @Epic("Epic Calculator")
 @Link("aLink")
 @Tag("CalT")
