@@ -5,6 +5,7 @@ import org.automation.junit5.core.CalculatorTestBase;
 import static org.automation.junit5.core.StringUtil.isBlank;
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -13,20 +14,20 @@ import java.util.stream.Stream;
 
 public class TestParameterized extends CalculatorTestBase {
 
-    private static Stream<Arguments> arguments = Stream.of(
+    static Stream<Arguments> arguments = Stream.of(
             Arguments.of(null,true),
             Arguments.of("",true),
             Arguments.of(" ",true),
             Arguments.of("shantonu",false));
 
     /**
+     * Custom Annotation
      * TO DO : Currently Not Working
      * @param input
      * @param expected
      */
     @ParameterizedTest
     @VariableStream("arguments")
-   // @Disabled
     public void customAnnotationForInput(String input, boolean expected){
     assertEquals(expected, isBlank(input));
     }
@@ -54,6 +55,10 @@ public class TestParameterized extends CalculatorTestBase {
         assertTrue(isBlank(input));
     }
 
+    /***
+     * Custom Argument Provider
+     * @param input
+     */
     @ParameterizedTest
     @ArgumentsSource(ErrorStringProvider.class)
     public void testArgumentsSource(String input){
