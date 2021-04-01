@@ -1,5 +1,6 @@
-package org.automation.junit5.core;
+package org.automation.junit5.tests.parameterized;
 
+import org.automation.junit5.core.StreamArgumentProvider;
 import org.junit.jupiter.params.provider.ArgumentsSource;
 
 import java.lang.annotation.ElementType;
