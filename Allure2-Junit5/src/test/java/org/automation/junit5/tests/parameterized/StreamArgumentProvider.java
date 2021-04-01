@@ -1,4 +1,4 @@
-package org.automation.junit5.core;
+package org.automation.junit5.tests.parameterized;
 
 import org.automation.junit5.tests.parameterized.VariableStream;
 import org.junit.jupiter.api.extension.ExtensionContext;
