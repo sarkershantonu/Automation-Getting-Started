@@ -48,7 +48,6 @@ public class TestsForEnumSource extends CalculatorTestBase {
     @ParameterizedTest(name = "{index} {0} is 30 days long")
     @EnumSource(value = Month.class, names = {"APRIL", "JUNE", "SEPTEMBER", "NOVEMBER"})
     public void testEnumSourceCustomName(Month month){
-        final boolean isALeapYear = false;
-        assertEquals(30, month.length(isALeapYear));
+        assertEquals(30, month.length(false));
     }
 }
