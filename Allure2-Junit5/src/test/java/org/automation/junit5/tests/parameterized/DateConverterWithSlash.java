@@ -12,6 +12,7 @@ import java.time.LocalDate;
 public class DateConverterWithSlash implements ArgumentConverter {
     @Override
     public Object convert(Object source, ParameterContext context) throws ArgumentConversionException {
+        System.out.println(source);
         if(!(source instanceof String)){
             throw new IllegalArgumentException("Date value is not string "+source );
         }
@@ -19,10 +20,12 @@ public class DateConverterWithSlash implements ArgumentConverter {
         {
             String[] dateTimeParts = ((String) source).split("/");
             int month = Integer.parseInt(dateTimeParts[0]);
-            int date = Integer.parseInt(dateTimeParts[0]);
-            int year = Integer.parseInt(dateTimeParts[0]);
-
-            return LocalDate.of(year,date,month);
+            System.out.println(month);
+            int date = Integer.parseInt(dateTimeParts[1]);
+            int year = Integer.parseInt(dateTimeParts[2]);
+            System.out.println(date);
+            System.out.println(year);
+            return LocalDate.of(year,month,date);
 
         }catch (Exception e){
             throw new IllegalArgumentException("Failed to convert",e);
