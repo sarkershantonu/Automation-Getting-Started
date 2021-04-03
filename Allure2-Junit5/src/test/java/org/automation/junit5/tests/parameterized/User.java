@@ -26,4 +26,16 @@ public class User {
     public String fullName(){
         return this.getName();
     }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public String getmName() {
+        return mName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
 }
