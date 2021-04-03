@@ -80,4 +80,16 @@ public class TestCSVSources extends CalculatorTestBase {
     public void testConvertWithSlashOnDate(int expected,@ConvertWith(DateConverterWithSlash.class)LocalDate date){
         assertEquals(expected,date.getYear());
     }
+
+    /***
+     * Explicit Conversion : Convert Date from MM|DD|YYYY format to local date.
+     * We have to handle separator |, where we need to use \\| as regex
+     * @param expected
+     * @param date
+     */
+    @ParameterizedTest
+    @CsvSource({"2020,12|16|2020","2019,08|15|2019"})
+    public void testConvertWithPipeOnDate(int expected,@ConvertWith(DateConverterWithPipe.class)LocalDate date){
+        assertEquals(expected,date.getYear());
+    }
 }
