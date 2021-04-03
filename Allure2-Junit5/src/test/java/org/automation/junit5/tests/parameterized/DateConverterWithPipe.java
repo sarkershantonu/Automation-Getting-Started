@@ -12,12 +12,13 @@ import java.time.LocalDate;
 public class DateConverterWithPipe implements ArgumentConverter {
     @Override
     public Object convert(Object source, ParameterContext context) throws ArgumentConversionException {
+
         if(!(source instanceof String)){
             throw new IllegalArgumentException("Date value is not string "+source );
         }
         try
         {
-            String[] dateTimeParts = ((String) source).split("|");
+            String[] dateTimeParts = ((String) source).split("\\|");
             int month = Integer.parseInt(dateTimeParts[0]);
             int date = Integer.parseInt(dateTimeParts[1]);
             int year = Integer.parseInt(dateTimeParts[2]);
