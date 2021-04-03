@@ -45,7 +45,12 @@ public class TestsEnumSources extends CalculatorTestBase {
         assertTrue(month.toString().endsWith("Y"),"Not Ends with Y");
 
     }
-    @ParameterizedTest(name = "{index} {0} is 30 days long")
+
+    /***
+     * Customizing Display Names
+     * @param month
+     */
+    @ParameterizedTest(name = "Test {index} : {0} has 30 dates")
     @EnumSource(value = Month.class, names = {"APRIL", "JUNE", "SEPTEMBER", "NOVEMBER"})
     public void testEnumSourceCustomName(Month month){
         assertEquals(30, month.length(false));
