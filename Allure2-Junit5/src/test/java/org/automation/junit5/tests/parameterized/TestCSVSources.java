@@ -30,6 +30,11 @@ public class TestCSVSources extends CalculatorTestBase {
     }
 
 
+    /***
+     * Argument Aggregator
+     * @param fullName
+     * @param user
+     */
     @ParameterizedTest
     @CsvSource({"shantonu kumar sarker, shantonu,kumar,sarker","shantonu sarker, shantonu,,sarker"})
     public void testAggregatedWithCSV(String fullName, @AggregateWith(UserAggregator.class) User user){
