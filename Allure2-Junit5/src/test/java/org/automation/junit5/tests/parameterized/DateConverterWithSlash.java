@@ -9,7 +9,7 @@ import java.time.LocalDate;
 /**
  * Created by shantonu on 4/3/2021
  */
-public class DataConverterWithSlash implements ArgumentConverter {
+public class DateConverterWithSlash implements ArgumentConverter {
     @Override
     public Object convert(Object source, ParameterContext context) throws ArgumentConversionException {
         if(!(source instanceof String)){
