@@ -2,6 +2,7 @@ package org.automation.junit5.tests.parameterized;
 
 import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.aggregator.AggregateWith;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -28,7 +29,11 @@ public class TestCSVSources extends CalculatorTestBase {
         assertEquals(expected,input.toUpperCase());
     }
 
-    public void testAggregatedWithCSV(){
+
+    @ParameterizedTest
+    @CsvSource({"shantonu kumar sarker, shantonu,kumar,sarker","shantonu sarker, shantonu,,sarker"})
+    public void testAggregatedWithCSV(String fullName, @AggregateWith(UserAggregator.class) User user){
+        assertEquals(fullName,user.fullName());
 
     }
 }
