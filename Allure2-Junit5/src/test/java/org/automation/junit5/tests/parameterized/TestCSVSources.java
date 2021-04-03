@@ -4,8 +4,11 @@ import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.AggregateWith;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
+import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -64,5 +67,11 @@ public class TestCSVSources extends CalculatorTestBase {
         String lName = accessor.getString(3);
         assertEquals(fullName,new User(fName,mName,lName).fullName());
 
+    }
+
+    @ParameterizedTest
+    @CsvSource({"2020,12/16/2020","2019,08/15/2019"})
+    public void testConvertWithSlashOnDate(int expected,@ConvertWith(DateConverterWithSlash.class)LocalDate date){
+        assertEquals(expected,date.getYear());
     }
 }
