@@ -19,10 +19,10 @@ public class DateConverterWithPipe implements ArgumentConverter {
         {
             String[] dateTimeParts = ((String) source).split("|");
             int month = Integer.parseInt(dateTimeParts[0]);
-            int date = Integer.parseInt(dateTimeParts[0]);
-            int year = Integer.parseInt(dateTimeParts[0]);
+            int date = Integer.parseInt(dateTimeParts[1]);
+            int year = Integer.parseInt(dateTimeParts[2]);
 
-            return LocalDate.of(year,date,month);
+            return LocalDate.of(year,month,date);
 
         }catch (Exception e){
             throw new IllegalArgumentException("Failed to convert",e);
