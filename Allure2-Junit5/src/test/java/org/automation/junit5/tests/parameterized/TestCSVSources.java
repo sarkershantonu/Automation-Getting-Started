@@ -3,6 +3,7 @@ package org.automation.junit5.tests.parameterized;
 import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.AggregateWith;
+import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -39,6 +40,21 @@ public class TestCSVSources extends CalculatorTestBase {
     @CsvSource({"shantonu kumar sarker, shantonu,kumar,sarker","shantonu sarker, shantonu,,sarker"})
     public void testAggregatedWithCSV(String fullName, @AggregateWith(UserAggregator.class) User user){
         assertEquals(fullName,user.fullName());
+
+    }
+
+    /***
+     * Argument Accessor
+     * @param accessor
+     */
+    @ParameterizedTest
+    @CsvSource({"shantonu kumar sarker, shantonu,kumar,sarker","shantonu sarker, shantonu,,sarker"})
+    public void testArgumentAccessor(ArgumentsAccessor accessor){
+        String fullName = accessor.getString(0);
+        String fName = accessor.getString(1);
+        String mName = accessor.getString(2);
+        String lName = accessor.getString(3);
+        assertEquals(fullName,new User(fName,mName,lName).fullName());
 
     }
 }
