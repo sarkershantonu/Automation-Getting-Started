@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 /**
  * Created by shantonu on 4/2/2021
  */
-public class TestsEnumSources extends CalculatorTestBase {
+public class TestEnumSources extends CalculatorTestBase {
     @ParameterizedTest
     @EnumSource(Month.class)
     public void testEnumSource(Month month){
