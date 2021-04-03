@@ -27,4 +27,8 @@ public class TestCSVSources extends CalculatorTestBase {
     public void testCSVWithDelimiter(String input, String expected){
         assertEquals(expected,input.toUpperCase());
     }
+
+    public void testAggregatedWithCSV(){
+
+    }
 }
