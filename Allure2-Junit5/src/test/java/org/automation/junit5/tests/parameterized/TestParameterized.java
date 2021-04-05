@@ -35,7 +35,7 @@ public class TestParameterized extends CalculatorTestBase {
 
 
     @ParameterizedTest
-    @MethodSource("org.automation.junit5.core.StringParameters#emptyStrings")
+    @MethodSource("org.automation.junit5.tests.parameterized.support.StringParameters#emptyStrings")
     public void testMethodSource(String input){
         assertTrue(isBlank(input));
     }
