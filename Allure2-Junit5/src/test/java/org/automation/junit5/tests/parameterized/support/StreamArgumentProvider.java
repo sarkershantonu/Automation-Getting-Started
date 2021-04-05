@@ -1,6 +1,6 @@
-package org.automation.junit5.tests.parameterized;
+package org.automation.junit5.tests.parameterized.support;
 
-import org.automation.junit5.tests.parameterized.VariableStream;
+import org.automation.junit5.tests.parameterized.support.VariableStream;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
