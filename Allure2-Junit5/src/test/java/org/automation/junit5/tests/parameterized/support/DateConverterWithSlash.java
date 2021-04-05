@@ -1,4 +1,4 @@
-package org.automation.junit5.tests.parameterized;
+package org.automation.junit5.tests.parameterized.support;
 
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.converter.ArgumentConversionException;
