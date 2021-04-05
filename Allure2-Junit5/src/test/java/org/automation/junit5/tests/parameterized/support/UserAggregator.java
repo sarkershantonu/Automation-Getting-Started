@@ -1,5 +1,6 @@
-package org.automation.junit5.tests.parameterized;
+package org.automation.junit5.tests.parameterized.support;
 
+import org.automation.junit5.tests.parameterized.support.User;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.aggregator.ArgumentsAggregationException;
