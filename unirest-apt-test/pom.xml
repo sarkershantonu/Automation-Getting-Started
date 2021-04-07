@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.automation.unirest</groupId>
+    <artifactId>unirest-apt-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <unirest.version>3.11.11</unirest.version>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version>
+               <dependencies>
+                   <dependency>
+                       <groupId>org.junit.jupiter</groupId>
+                       <artifactId>junit-jupiter-engine</artifactId>
+                       <version>5.7.1</version>
+                   </dependency>
+               </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+<dependencies>
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.7.1</version>
+    </dependency>
+    <dependency>
+        <groupId>com.konghq</groupId>
+        <artifactId>unirest-java</artifactId>
+        <version>${unirest.version}</version>
+        <classifier>standalone</classifier>
+    </dependency>
+    <dependency>
+        <groupId>com.konghq</groupId>
+        <artifactId>unirest-objectmapper-jackson</artifactId>
+        <version>${unirest.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.konghq</groupId>
+        <artifactId>unirest-mocks</artifactId>
+        <version>${unirest.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>com.konghq</groupId>
+        <artifactId>unirest-object-mappers-gson</artifactId>
+        <version>${unirest.version}</version>
+    </dependency>
+</dependencies>
+</project>
