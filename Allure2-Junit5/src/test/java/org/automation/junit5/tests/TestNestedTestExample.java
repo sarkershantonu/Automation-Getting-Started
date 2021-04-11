@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Nested;
 
 public class TestNestedTestExample {
     @Nested
-    class TestNEsted{
+    class TestNested{
 
     }
 }
