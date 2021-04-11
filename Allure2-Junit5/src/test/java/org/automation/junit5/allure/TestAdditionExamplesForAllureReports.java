@@ -31,6 +31,7 @@ public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
     @Owner("shantonu")
     @Lead("shantonu.sarker")
     @Story("An User should be able to add two strings")
+    @Severity(SeverityLevel.CRITICAL)
     public void testAddStrings(){
         assertEquals("shantonusarker",myCal.add("shantonu","sharker"));
     }
