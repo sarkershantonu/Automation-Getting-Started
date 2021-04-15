@@ -2,6 +2,7 @@ package org.automation.junit5.tests;
 
 import org.automation.junit5.core.CalculatorTestBase;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -15,8 +16,7 @@ public class TestGroupExample extends CalculatorTestBase {
         assertEquals(50,myCal.add(data));
     }
     @Test
-    @Tag("parallel")
-    @Tag("quick")
+    @Tags({@Tag("quick"),@Tag("parallel")})
     public void testAddGeneric(){
         Double[] data_double = new Double[]{15.0,25.1,4.9};
         Integer[] data_int = new Integer[]{15,5,10};
