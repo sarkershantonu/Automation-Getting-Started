@@ -14,9 +14,17 @@ public class TestCustomAnnotation extends CalculatorTestBase {
     public void initTest(){
         myCal = new Calculator();
     }
+
     @CalculatorTest
     @CalTest
     public void testWithCustomAnnotation(){
         assertEquals(30,myCal.add(25,5));
+    }
+    @CalculatorTest
+    public void testAddGeneric(){
+        Double[] data_double = new Double[]{15.0,25.1,4.9};
+        Integer[] data_int = new Integer[]{15,5,10};
+        assertEquals(45.0,myCal.add(data_double));
+        assertEquals(30,myCal.add(data_int));
     }
 }
