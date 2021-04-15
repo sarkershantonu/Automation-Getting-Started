@@ -1,4 +1,4 @@
-package org.automation.junit5.tests;
+package org.automation.junit5.tests.template;
 
 import org.automation.junit5.core.CalculatorTestBase;
 
