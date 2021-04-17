@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Feature("Adding two values")
 @Story("An User should be able to add ")
 @Owner("shantonu")
-public class TestAdditionExamplesForAllureReports extends CalculatorTestBase {
+public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.BLOCKER)
     @Description("Adding two int ")
