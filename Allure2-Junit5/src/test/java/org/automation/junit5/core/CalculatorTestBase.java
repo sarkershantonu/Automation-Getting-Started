@@ -9,7 +9,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.TestInstance;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CalculatorTestBase implements StepLifecycleListener {
     protected Calculator myCal;
