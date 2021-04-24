@@ -2,7 +2,11 @@ package org.automation.junit5.tests.allure;
 
 import io.qameta.allure.*;
 import org.automation.junit5.core.CalculatorTestBase;
+import org.automation.junit5.core.ScreenShotUtil;
 import org.junit.jupiter.api.Test;
+
+import java.awt.*;
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -25,6 +29,11 @@ public class TestWithAllureReports extends CalculatorTestBase {
         assertEquals(30,myCal.add(25,5));
     }
 
+    @Test
+    public void testAddWIthScreenshot() throws IOException, AWTException {
+        assertEquals(30,myCal.add(25,5));
+        ScreenShotUtil.capturePNG();
+    }
     @Test
     @Description("Adding two Strings ")
     @Owner("shantonu")
