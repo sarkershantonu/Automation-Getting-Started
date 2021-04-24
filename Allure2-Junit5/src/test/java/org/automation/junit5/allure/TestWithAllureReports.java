@@ -33,7 +33,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Story("An User should be able to add two strings")
     @Severity(SeverityLevel.CRITICAL)
     public void testAddStrings(){
-        assertEquals("shantonusarker",myCal.add("shantonu","sharker"));
+        assertEquals("shantonusarker",myCal.add("shantonu","sarker"));
     }
 
 
