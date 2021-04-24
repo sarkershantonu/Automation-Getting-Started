@@ -35,7 +35,23 @@ public class TestWithAttachmentExamples extends CalculatorTestBase {
             bo.close();
         return out;
     }
-
+    @Attachment
+    public byte[] capture() {
+        byte[] out = null;
+        try {
+            BufferedImage screencapture = new Robot().createScreenCapture(
+                    new Rectangle(Toolkit.getDefaultToolkit().getScreenSize()));
+            ByteArrayOutputStream bo = new ByteArrayOutputStream();
+            ImageIO.write(screencapture, "jpg", bo);
+            out = bo.toByteArray();
+            bo.close();
+        } catch (AWTException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return out;
+    }
 
 
 }
