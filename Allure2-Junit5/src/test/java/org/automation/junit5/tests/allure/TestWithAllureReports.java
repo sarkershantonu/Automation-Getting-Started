@@ -1,8 +1,7 @@
-package org.automation.junit5.allure;
+package org.automation.junit5.tests.allure;
 
 import io.qameta.allure.*;
 import org.automation.junit5.core.CalculatorTestBase;
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
