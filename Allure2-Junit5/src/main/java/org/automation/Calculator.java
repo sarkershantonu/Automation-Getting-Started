@@ -1,5 +1,6 @@
 package org.automation;
 
+import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 
 public class Calculator {
@@ -45,6 +46,7 @@ public class Calculator {
         return (T) sum;
     }
     @Step
+    @Attachment
     public String add(String... strings){
         if(null==strings || strings.length<=0)
         {
