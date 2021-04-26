@@ -25,11 +25,13 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Owner("shantonu")
     @Story("An User should be able to add two numbers")
     @Issue("WW-21")
+    @Epic("Adding functionality of Adding two int ")
     public void testAdd(){
         assertEquals(30,myCal.add(25,5));
     }
 
     @Test
+    @Epics({@Epic("Adding functionality of Adding two int "),@Epic("A screenshot should be taken when we are adding")})
     public void testAddWIthScreenshot() throws IOException, AWTException {
         assertEquals(30,myCal.add(25,5));
         ScreenShotUtil.capturePNG();
