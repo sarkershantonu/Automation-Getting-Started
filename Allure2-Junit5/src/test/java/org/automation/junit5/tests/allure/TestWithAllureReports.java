@@ -32,7 +32,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
 
     @Test
     @Epics({@Epic("Adding functionality of Adding two int "),@Epic("A screenshot should be taken when we are adding")})
-    @Feature("A  Screenshot ")
+    @Feature("A  Screenshot present when adding two integers")
     public void testAddWIthScreenshot() throws IOException, AWTException {
         assertEquals(30,myCal.add(25,5));
         ScreenShotUtil.capturePNG();
