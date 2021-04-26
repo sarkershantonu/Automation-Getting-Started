@@ -12,7 +12,7 @@ import java.io.IOException;
  * Created by shantonu on 4/25/2021
  */
 public class ScreenShotUtil {
-    @Attachment
+    @Attachment(value = "imageCaptured")
     public static byte[] capturePNG() throws IOException, AWTException {
         byte[] out = null;
         BufferedImage screencapture = new Robot().createScreenCapture(
