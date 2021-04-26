@@ -78,6 +78,9 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Lead("shantonu.sarker")
     @Owner("shantonu")
     @Story("An User should be able to add integer & double numbers")
+    @Features({@Feature("Addition of two Integer"),
+            @Feature("Addition of two Floating point number"),
+            @Feature("Adding Integer & Floating point number")})
     public void testAddMixType(){
         Double[] data_double = new Double[]{15.0,25.1,4.9};
         Integer[] data_int = new Integer[]{15,5,10};
