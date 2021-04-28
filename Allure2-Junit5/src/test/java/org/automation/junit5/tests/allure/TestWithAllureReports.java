@@ -79,8 +79,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Owner("shantonu")
     @Stories({@Story("An User should be able to add Multi data type numbers (integer & double)"),
             @Story("An User should be able to add integer"),
-    @Story("An User should be able to add integer numbers")})
-    @Story("An User should be able to add  double numbers")
+    @Story("An User should be able to add  double numbers")})
     @Features({@Feature("Addition of two Integer"),
             @Feature("Addition of two Floating point number"),
             @Feature("Adding Integer & Floating point number")})
