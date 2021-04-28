@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 @Epic("We Need to Develop A calculator")
 @Feature("Adding two values")
-@Story("An User should be able to add ")
+@Story("An User should be able to perform calculator operations ")
 @Owner("shantonu")
 public class TestWithAllureReports extends CalculatorTestBase {
     @Test
@@ -77,6 +77,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Description("Adding two integer & double values")
     @Lead("shantonu.sarker")
     @Owner("shantonu")
+    @Stories({@Story(""),@Story("")})
     @Story("An User should be able to add integer & double numbers")
     @Features({@Feature("Addition of two Integer"),
             @Feature("Addition of two Floating point number"),
@@ -94,7 +95,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Flaky
     @Lead("shantonu.sarker")
     @Owner("shantonu")
-    @Story("An User should be able to add two numbers")
+    @Story("An User should be able to add two Decimal Numbers")
     public void testAddDecimal(){
         double a = 2.4, b =5.2;
         assertEquals(7.6, myCal.add(a,b), "double adding ");
