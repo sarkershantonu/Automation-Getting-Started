@@ -18,6 +18,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Feature("Adding two values")
 @Story("An User should be able to perform calculator operations ")
 @Owner("shantonu")
+@Issues({@Issue("WW-22"),@Issue("WW-21"),@Issue("WW-23")})
 public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.BLOCKER)
@@ -84,6 +85,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Features({@Feature("Addition of two Integer"),
             @Feature("Addition of two Floating point number"),
             @Feature("Adding Integer & Floating point number")})
+    @Issues({@Issue("WW-22"),@Issue("WW-23")})
     public void testAddMixType(){
         Double[] data_double = new Double[]{15.0,25.1,4.9};
         Integer[] data_int = new Integer[]{15,5,10};
