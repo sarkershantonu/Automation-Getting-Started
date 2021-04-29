@@ -51,6 +51,11 @@ public class TestWithAllureReports extends CalculatorTestBase {
         assertEquals("shantonusarker",myCal.add("shantonu","sarker"));
     }
 
+    @Test
+    @Muted
+    public void mutedTestExample(){
+        Assertions.fail(" A muted test which wont be shown in report");
+    }
 
     @Test
     @Severity(SeverityLevel.MINOR)
