@@ -3,6 +3,7 @@ package org.automation.junit5.tests.allure;
 import io.qameta.allure.*;
 import org.automation.junit5.core.CalculatorTestBase;
 import org.automation.junit5.core.ScreenShotUtil;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.awt.*;
@@ -90,6 +91,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
         assertEquals(30,myCal.add(data_int));
     }
 
+
     @Test
     @Severity(SeverityLevel.NORMAL)
     @Description("Adding two decimal values")
@@ -101,4 +103,11 @@ public class TestWithAllureReports extends CalculatorTestBase {
         double a = 2.4, b =5.2;
         assertEquals(7.6, myCal.add(a,b), "double adding ");
     }
+
+    @Test
+    @Flaky
+    public void flakyTestExample(){
+        Assertions.fail("Flaky Test");
+    }
+
 }
