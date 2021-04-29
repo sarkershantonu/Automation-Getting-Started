@@ -19,6 +19,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Story("An User should be able to perform calculator operations ")
 @Owner("shantonu")
 @Issues({@Issue("WW-22"),@Issue("WW-21"),@Issue("WW-23")})
+@Links({ @Link(name = "requirements", url="https://www.programiz.com/c-programming/examples/add-numbers",type = "Trello"),
+        @Link(name = "requirements", url="https://www.programiz.com/c-programming/examples/product-numbers",type = "Trello")})
 public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.BLOCKER)
