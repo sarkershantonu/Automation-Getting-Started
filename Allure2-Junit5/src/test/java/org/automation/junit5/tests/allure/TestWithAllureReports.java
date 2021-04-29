@@ -61,7 +61,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.MINOR)
     @Description("Adding all items from an int Array")
-    @Story("An User should be able to add all items in an array if integers")
+    @Story("An User should be able to add all items in an array of integers")
     public void testAddIntArray(){
         int[] data = {5,10,25,6,4};
         assertEquals(50,myCal.add(data));
@@ -70,7 +70,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("Adding all items from an Integer Array")
-    @Story("An User should be able to add all items in an array if integers")
+    @Story("An User should be able to add all items in an array of integers")
     @Issue("WW-25")
     @Link(name = "requirements", url="https://www.programiz.com/c-programming/examples/add-numbers",type = "Trello")
     public void testAddIntegerArray(){
