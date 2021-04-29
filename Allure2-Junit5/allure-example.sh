@@ -1,1 +1,0 @@
-./mvnw -Dtest.suite=org.automation.junit5.suites.AllureExamples.class celan test site io.qameta.allure:allure-maven:report

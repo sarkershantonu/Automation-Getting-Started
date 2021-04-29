@@ -1,0 +1,1 @@
+mvnw -Dtest.suite=org.automation.junit5.suites.AllureExamples.class clean test
