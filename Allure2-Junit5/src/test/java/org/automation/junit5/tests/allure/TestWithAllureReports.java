@@ -43,8 +43,6 @@ public class TestWithAllureReports extends CalculatorTestBase {
     }
     @Test
     @Description("Adding two Strings ")
-    @Owner("shantonu")
-    @Lead("shantonu.sarker")
     @Story("An User should be able to add two strings")
     @Severity(SeverityLevel.CRITICAL)
     public void testAddStrings(){
@@ -59,9 +57,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
 
     @Test
     @Severity(SeverityLevel.MINOR)
-    @Lead("shantonu.sarker")
     @Description("Adding all items from an int Array")
-    @Owner("shantonu")
     @Story("An User should be able to add all items in an array if integers")
     public void testAddIntArray(){
         int[] data = {5,10,25,6,4};
@@ -71,8 +67,6 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.CRITICAL)
     @Description("Adding all items from an Integer Array")
-    @Lead("shantonu.sarker")
-    @Owner("shantonu")
     @Story("An User should be able to add all items in an array if integers")
     @Issue("WW-25")
     @Link(name = "requirements", url="https://www.programiz.com/c-programming/examples/add-numbers",type = "Trello")
@@ -84,8 +78,6 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Severity(SeverityLevel.TRIVIAL)
     @Description("Adding two integer & double values")
-    @Lead("shantonu.sarker")
-    @Owner("shantonu")
     @Stories({@Story("An User should be able to add Multi data type numbers (integer & double)"),
             @Story("An User should be able to add integer"),
     @Story("An User should be able to add  double numbers")})
@@ -105,8 +97,6 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Severity(SeverityLevel.NORMAL)
     @Description("Adding two decimal values")
     @Flaky
-    @Lead("shantonu.sarker")
-    @Owner("shantonu")
     @Story("An User should be able to add two Decimal Numbers")
     public void testAddDecimal(){
         double a = 2.4, b =5.2;
