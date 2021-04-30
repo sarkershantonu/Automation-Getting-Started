@@ -19,8 +19,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @Story("An User should be able to perform calculator operations ")
 @Owner("shantonu")
 @Issues({@Issue("WW-22"),@Issue("WW-21"),@Issue("WW-23")})
-@Links({ @Link(name = "requirements", url="https://www.programiz.com/c-programming/examples/add-numbers",type = "Trello"),
-        @Link(name = "requirements", url="https://www.programiz.com/c-programming/examples/product-numbers",type = "Trello")})
+@Links({ @Link(name = "RQ-1", url="https://www.programiz.com/c-programming/examples/add-numbers",type = "Trello"),
+        @Link(name = "RQ-2", url="https://www.programiz.com/c-programming/examples/product-numbers",type = "Trello")})
 @Severity(SeverityLevel.NORMAL)
 @TmsLinks({@TmsLink("tc-257"), @TmsLink("tc-258"), @TmsLink("tc-256")})
 public class TestWithAllureReports extends CalculatorTestBase {
@@ -28,7 +28,6 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Severity(SeverityLevel.BLOCKER)
     @Description("Adding two int ")
     @Lead("shantonu.sarker")
-    @Owner("shantonu")
     @Story("An User should be able to add two numbers")
     @Issue("WW-21")
     @Epic("Adding functionality of Adding two int ")
@@ -40,6 +39,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
     @Test
     @Epics({@Epic("Adding functionality of Adding two int "),@Epic("A screenshot should be taken when we are adding")})
     @Feature("A  Screenshot present when adding two integers")
+    @Owner("shantonu")
     public void testAddWIthScreenshot() throws IOException, AWTException {
         assertEquals(30,myCal.add(25,5));
         ScreenShotUtil.capturePNG();
@@ -88,7 +88,7 @@ public class TestWithAllureReports extends CalculatorTestBase {
             @Feature("Addition of two Floating point number"),
             @Feature("Adding Integer & Floating point number")})
     @Issues({@Issue("WW-22"),@Issue("WW-23")})
-    @TmsLinks({@TmsLink("tc-257"), @TmsLink("tc-258")})
+    @TmsLinks({@TmsLink("tc-300"), @TmsLink("tc-301")})
     public void testAddMixType(){
         Double[] data_double = new Double[]{15.0,25.1,4.9};
         Integer[] data_int = new Integer[]{15,5,10};
