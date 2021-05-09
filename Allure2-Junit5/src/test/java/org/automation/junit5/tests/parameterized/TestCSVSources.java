@@ -29,7 +29,7 @@ public class TestCSVSources extends CalculatorTestBase {
      */
     @ParameterizedTest
     @CsvFileSource(resources = "/addition.csv",numLinesToSkip = 1)
-    public void testCSVfileParameter(String a, String b, String result){
+    public void testCSVFileParameter(String a, String b, String result){
         assertEquals(Double.valueOf(result).doubleValue(),myCal.add(Double.valueOf(a).doubleValue(),Double.valueOf(b).doubleValue()));
     }
 
