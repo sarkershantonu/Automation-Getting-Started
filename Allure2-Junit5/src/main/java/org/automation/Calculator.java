@@ -29,7 +29,7 @@ public class Calculator {
         }
         return result;
     }
-    @Step("adding Integers with {} ")
+    @Step("adding Integers ")
     public Integer add(Integer... numbers) {
         Integer result = new Integer(0);
         for (Integer i : numbers) {
