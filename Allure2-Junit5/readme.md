@@ -1,5 +1,5 @@
 # Allure 2 with Junit 5 examples
-- I have added TODOs with blank class covering al most all important topic of junit5
+- [Blog](https://sarkershantonu.github.io/2021/04/29/allure2-annotations/)
 
 # Maven Run commands 
 - To test 
