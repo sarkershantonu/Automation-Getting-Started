@@ -1,37 +1,37 @@
-import org.automation.core.ScreenFactory;
+package org.automation.utils;
+import org.automation.putty.core.ScreenFactory;
 import org.sikuli.basics.Debug;
 import org.sikuli.basics.Settings;
 import org.sikuli.script.*;
-import org.utils.ConfigUtils;
 
 public class SikuliUtil {
-    
-    public static Screen typeOnScreen(Screen screen, String pathOfScreenImage, String text) throws FindFailed {
+
+    public static Screen typeOnScreen(Screen screen, String pathOfScreenImage, String text) throws FindFailed, InterruptedException {
         screen.wait(pathOfScreenImage).click();
         defaultWait(screen);
         screen.type(text);
         return screen;
     }
 
-    
-    public static Screen typeOnScreenWithCordinates(Screen screen, String pathOfScreenImage, String text, int x, int y) throws FindFailed {
+
+    public static Screen typeWithCoordinates(Screen screen, String pathOfScreenImage, String text, int x, int y) throws FindFailed {
         Match match = screen.find(pathOfScreenImage);
         match.setTargetOffset(x, y);
         match.click();
-        waitFor(screen, 2 * ConfigUtils.defaultWait);
+        waitFor(screen, 2 * AppProperties.defaultWait);
         screen.type(text);
         return screen;
     }
 
     
-    public static Screen clickOnScreen(Screen screen, String pathOfScreenImage) throws FindFailed {
+    public static Screen clickOn(Screen screen, String pathOfScreenImage) throws FindFailed, InterruptedException {
         screen.wait(pathOfScreenImage).click();
         defaultWait(screen);
         return screen;
     }
 
     
-    public static Screen clickOnScreenWithCordinates(Screen screen, String pathOfScreenImage, int x, int y) throws FindFailed {
+    public static Screen clickWithCoordinatesOn(Screen screen, String pathOfScreenImage, int x, int y) throws FindFailed, InterruptedException {
         Match match = screen.find(pathOfScreenImage);
         match.setTargetOffset(x, y);
         match.click();
@@ -40,15 +40,15 @@ public class SikuliUtil {
     }
 
     
-    public static void defaultWait(Screen screen) {
-        screen.wait(ConfigUtils.defaultWait);
+    public static void defaultWait(Screen screen) throws InterruptedException {
+        screen.wait(AppProperties.defaultWait);
     }
 
     public static void waitFor(Screen screen, double second) {
         screen.wait(second);
     }
 
-    ("{method}")
+
     public static void clearField(Screen screen) {
         screen.type("a", KeyModifier.CMD);
         screen.type(Key.BACKSPACE);
@@ -64,11 +64,11 @@ public class SikuliUtil {
     }
 
     public static String getUserExtPath() {
-        return Settings.getUserExtPath();
+        return Settings.getDataPath();
     }
 
     public static String getSikuliDataPath() {
-        return Settings.getSikuliDataPath();
+        return Settings.getDataPath();
     }
 
     public static void log(int level, Class t, String message, Object... args) {
@@ -118,10 +118,9 @@ public class SikuliUtil {
 
         return "";
     }
+    //todo
     public static boolean getImageFromRegion(String imagePathOfRegion, String targetImagePath) {
-        String region = new Finder().find(imagePathOfRegion);// fine tune // TODO: 5/9/2016  
 
-        new ImageFinder().find(targetImagePath);// todo check object format
         return false;
     }
 

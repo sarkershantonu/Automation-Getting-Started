@@ -2,13 +2,13 @@ package org.automation.utils;
 
 import org.sikuli.basics.Debug;
 import org.sikuli.basics.Settings;
-import org.sikuli.script.TextRecognizer;
+
 /**
  * Created by shantonu on 7/7/16.
  */
 public class SettingsUtil {
    public static void setDefaultSettings(){
-        TextRecognizer recog = TextRecognizer.getInstance();
+        //TextRecognizer
         Settings.ActionLogs=true;
         Settings.setShowActions(true);
         Settings.setImageCache(128);//64 default

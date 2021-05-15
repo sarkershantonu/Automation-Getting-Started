@@ -1,6 +1,6 @@
 package org.automation.utils;
 
-import org.automation.api.ScreenBase;
+import org.automation.putty.core.ScreenBase;
 import org.sikuli.script.Image;
 
 /**
@@ -20,5 +20,16 @@ public class MatcherUtil extends ScreenBase{
     }
     public static boolean areEqual(Image subjectImagePath, Image targetImagePath){
         return false; //// TODO: 7/7/16
+    }
+
+    /***
+     * todo
+     * Takes 2 images, points differences in red marking
+     * @param subjectImagePath
+     * @param targetImagePath
+     * @return
+     */
+    public static Image getDifference(Image subjectImagePath, Image targetImagePath){
+        return null;
     }
 }
