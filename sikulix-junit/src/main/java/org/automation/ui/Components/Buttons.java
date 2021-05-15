@@ -7,6 +7,6 @@ import org.automation.ui.UiBase;
  */
 public class Buttons extends UiBase{
     public Buttons() {
-        super(folder);
+        super(this.folder);
     }
 }

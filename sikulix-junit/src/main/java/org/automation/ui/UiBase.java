@@ -7,7 +7,7 @@ import org.sikuli.script.FindFailed;
  * Created by shantonu on 7/7/16.
  */
 public abstract class UiBase extends ScreenBase{
-    private String folder;
+    protected String folder;
 
     public UiBase(String folder) {
         this.folder = folder;
@@ -17,7 +17,7 @@ public abstract class UiBase extends ScreenBase{
         screen.wait(image).click();
     }
 
-    public void defaultwait(){
+    public void defaultWait(){
         wait(2.0);
     }
     public void wait(double sec){

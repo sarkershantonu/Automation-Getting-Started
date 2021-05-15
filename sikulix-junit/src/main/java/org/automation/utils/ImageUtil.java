@@ -1,3 +1,5 @@
+package org.automation.utils;
+
 import org.sikuli.script.Image;
 
 public class ImageUtil {

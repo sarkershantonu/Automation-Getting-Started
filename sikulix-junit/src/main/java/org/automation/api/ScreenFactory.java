@@ -1,5 +1,4 @@
 import org.sikuli.script.Screen;
-import ru.yandex.qatools.allure.annotations.Step;
 
 /**
  * Created by sarkers on 4/15/2016.
