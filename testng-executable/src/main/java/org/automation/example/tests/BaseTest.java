@@ -1,4 +1,5 @@
 package org.automation.example.tests;
 
-public class BaseTest {
+public abstract class BaseTest {
+
 }
