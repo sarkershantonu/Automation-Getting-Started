@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Exception Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="Exception Tests">
+        <classes>
+            <class name="org.automation.example.tests.ExceptionTests">
+                <methods>
+                    <include name="testAdd"/>
+                    <include name="testFail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
