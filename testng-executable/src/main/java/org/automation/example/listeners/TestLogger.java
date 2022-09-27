@@ -12,24 +12,24 @@ public class TestLogger implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         ITestListener.super.onTestSuccess(result);
-        logger.info(result.getMethod().getMethodName()+" Test ran Successfully");
+        logger.debug(result.getMethod().getMethodName()+" Test ran Successfully");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
         ITestListener.super.onTestFailure(result);
-        logger.error(result.getMethod().getMethodName()+" Test failed");
+        logger.error(result.getMethod().getMethodName()+" >>> Test failed");
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
         ITestListener.super.onTestSkipped(result);
-        logger.info(result.getMethod().getMethodName()+" Test skipped");
+        logger.debug(result.getMethod().getMethodName()+" Test skipped");
     }
 
     @Override
     public void onFinish(ITestContext context) {
         ITestListener.super.onFinish(context);
-        logger.info(context.getClass().getCanonicalName()+" Test ran finished");
+        logger.debug(context.getClass().getCanonicalName()+" Test ran finished");
     }
 }
