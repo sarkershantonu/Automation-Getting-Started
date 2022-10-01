@@ -3,22 +3,17 @@ package org.automation.example;
 import org.automation.example.runner.TestNgRunner;
 
 import java.io.IOException;
-import java.util.Properties;
+import java.util.List;
 
 import static org.automation.example.config.AppConfigHelper.initiateProperties;
-import static org.automation.example.config.SuiteFileLoader.getFilePaths;
+import static org.automation.example.config.SuiteLoaderFromFile.*;
 
 public class Application {
     public static void main(String[] args) throws IOException {
         System.out.println(" Trying to run test");
         initiateProperties();
-        String[] suiteNames = {getFilePaths("AdhocTests.xml"), getFilePaths("ExceptionTests.xml")};
-
-        TestNgRunner runner = new TestNgRunner(suiteNames);
+        List<String> files = getSuitesWithPath();
+        TestNgRunner runner = new TestNgRunner(files);
         runner.run();
     }
-
-
-
-
 }
