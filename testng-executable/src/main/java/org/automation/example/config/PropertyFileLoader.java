@@ -1,4 +1,4 @@
-package org.automation.example.utils;
+package org.automation.example.config;
 
 import java.io.File;
 import java.io.FileInputStream;
