@@ -15,6 +15,13 @@ public class AppConfigHelper {
         setSystemProperty(new PropertyFileLoader("app.properties").load());
     }
 
-
+    public static void setSystemPropertyKeepingExisting(final Properties properties) {
+        for (String key : properties.stringPropertyNames()) {
+            if((null==System.getProperty(key))||System.getProperty(key)==""||(System.getProperty(key)==" "))
+            {
+                System.setProperty(key, properties.getProperty(key));
+            }
+        }
+    }
 
 }
