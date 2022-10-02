@@ -17,13 +17,13 @@ Making executable JAR file to run tests
 # Running 
 - A folder containing this 
 
-![test_folder.png](/doc/test_folder.png)
+![test_folder.png](./doc/test_folder.png)
 
 type cmd ```java -jar CalculatorTests-1.1.0.jar``` 
 
 and you should see results like this 
 
-![RunningFromJar.png](/doc/RunningFromJar.png)
+![RunningFromJar.png](./doc/RunningFromJar.png)
 
 Expected output : 
 1. CMD output of log
