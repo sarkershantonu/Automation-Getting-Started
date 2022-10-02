@@ -29,3 +29,11 @@ Expected output :
 1. CMD output of log
 2. Test Results in HTML
 3. Log output 
+
+The output folder 
+
+![output_folder.png](./doc/outputFolder.PNG)
+
+inside the folder 
+
+![results.png](./doc/results.PNG)
