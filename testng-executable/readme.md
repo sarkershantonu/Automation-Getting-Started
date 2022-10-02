@@ -24,3 +24,8 @@ type cmd ```java -jar CalculatorTests-1.1.0.jar```
 and you should see results like this 
 
 ![RunningFromJar.png](/doc/RunningFromJar.png)
+
+Expected output : 
+1. CMD output of log
+2. Test Results in HTML
+3. Log output 
