@@ -1,6 +1,5 @@
 package org.automation.example.config;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -12,7 +11,7 @@ public class AppConfigHelper {
     }
 
     public static void initiateProperties() throws IOException {
-        setSystemProperty(new PropertyFileLoader("app.properties").load());
+        setSystemProperty(new PropertyFileReader("app.properties").load());
     }
 
     public static void setSystemPropertyKeepingExisting(final Properties properties) {
