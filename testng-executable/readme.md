@@ -19,6 +19,7 @@ Making executable JAR file to run tests
 
 ![test_folder.png](./doc/test_folder.png)
 
+
 type cmd ```java -jar CalculatorTests-1.1.0.jar``` 
 
 and you should see results like this 
