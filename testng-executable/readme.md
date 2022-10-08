@@ -38,3 +38,5 @@ The output folder
 inside the folder 
 
 ![results.png](./doc/results.PNG)
+
+# How to run
