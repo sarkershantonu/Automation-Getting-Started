@@ -5,7 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
-public class PropertyFileLoader {
+public class PropertyFileReader {
     protected Properties properties;
     protected final String propertyFileName;
 
@@ -17,7 +17,7 @@ public class PropertyFileLoader {
         this.properties.load(new FileInputStream(new File(this.propertyFileName)));
         return this.properties;
     }
-    public PropertyFileLoader(final String fileName) {
+    public PropertyFileReader(final String fileName) {
         this.propertyFileName = fileName;
     }
 

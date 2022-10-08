@@ -20,6 +20,8 @@ public class TestNgRunner {
     public void run(){
         TestNG ng = new TestNG();
         ng.setTestSuites(suites);
+        ng.setDefaultTestName("Calculator Test");
+        ng.setUseDefaultListeners(false);
         ng.run();
     }
 }
