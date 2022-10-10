@@ -21,7 +21,8 @@ public class TestNgRunner {
         TestNG ng = new TestNG();
         ng.setTestSuites(suites);
         ng.setDefaultTestName(System.getProperty("test.name"));
-        ng.setUseDefaultListeners(false);
+        ng.setUseDefaultListeners(Boolean.valueOf(System.getProperty("enableDefaultListeners")).booleanValue());
         ng.run();
     }
+
 }
