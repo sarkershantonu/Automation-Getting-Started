@@ -52,7 +52,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.automation.example.Application</mainClass>
+                            <mainClass>org.automation.example.TestingApplication</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
