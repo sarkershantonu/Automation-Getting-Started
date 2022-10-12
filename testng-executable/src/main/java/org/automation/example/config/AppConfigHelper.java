@@ -11,7 +11,7 @@ public class AppConfigHelper {
     }
 
     public static void loadAppProperties() throws IOException {
-        setSystemProperty(new PropertyFileReader("app.properties").load());
+        setSystemProperty(new PropertyFileReader("test.properties").load());
     }
 
     public static void setSystemPropertyKeepingExisting(final Properties properties) {
