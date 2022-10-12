@@ -1,11 +1,11 @@
 package org.automation.example.tests;
 
 import org.automation.example.app.Calculator;
-import org.automation.example.listeners.TestLogger;
+import org.automation.example.listeners.CalculatorTestLogger;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Listeners;
 
-@Listeners(TestLogger.class)
+@Listeners(CalculatorTestLogger.class)
 public abstract class CalculatorBaseTest {
     protected Calculator calculator;
     @BeforeClass

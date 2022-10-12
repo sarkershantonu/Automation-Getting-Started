@@ -6,9 +6,9 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class TestLogger implements ITestListener {
+public class CalculatorTestLogger implements ITestListener {
 
-    private final Logger logger = LoggerFactory.getLogger(TestLogger.class);
+    private final Logger logger = LoggerFactory.getLogger(CalculatorTestLogger.class);
     @Override
     public void onTestSuccess(ITestResult result) {
         ITestListener.super.onTestSuccess(result);

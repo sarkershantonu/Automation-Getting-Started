@@ -13,6 +13,6 @@
         </classes>
     </test>
     <listeners>
-        <listener class-name="org.automation.example.listeners.TestLogger"></listener>
+        <listener class-name="org.automation.example.listeners.CalculatorTestLogger"></listener>
     </listeners>
 </suite>
