@@ -55,7 +55,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.automation.example.TestingApplication</mainClass>
+              <mainClass>org.automation.example.Junit5TestingApp</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
