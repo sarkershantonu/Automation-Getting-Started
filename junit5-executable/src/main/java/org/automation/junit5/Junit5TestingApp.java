@@ -4,7 +4,7 @@ package org.automation.junit5;
  * Hello world!
  *
  */
-public class App 
+public class Junit5TestingApp
 {
     public static void main( String[] args )
     {
