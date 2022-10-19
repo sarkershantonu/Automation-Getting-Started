@@ -61,7 +61,7 @@
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
-          <finalName>CalculatorTests-${project.version}</finalName>
+          <finalName>CalculatorTestsByJunit5-${project.version}</finalName>
           <appendAssemblyId>false</appendAssemblyId>
         </configuration>
         <executions>
