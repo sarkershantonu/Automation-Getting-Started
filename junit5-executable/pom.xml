@@ -15,14 +15,28 @@
     <maven.compiler.target>8</maven.compiler.target>
     <slf4j.version>2.0.2</slf4j.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit5.version>5.9.1</junit5.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.9.1</version>
+      <version>${junit5.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit5.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>${junit5.version}</version>
+    </dependency>
+
+
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
