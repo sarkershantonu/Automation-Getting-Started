@@ -10,4 +10,8 @@ public class Junit5TestingApp
     {
         System.out.println( "Hello World!" );
     }
+
+    public static void runJunit5Tests(){
+
+    }
 }
