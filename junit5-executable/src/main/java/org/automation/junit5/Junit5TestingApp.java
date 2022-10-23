@@ -8,10 +8,11 @@ public class Junit5TestingApp
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        runJunit5Tests();
+
     }
 
     public static void runJunit5Tests(){
-
+        System.out.println( "Starting Junit5 Test Runner" );
     }
 }
