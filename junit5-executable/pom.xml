@@ -16,6 +16,7 @@
     <slf4j.version>2.0.2</slf4j.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit5.version>5.9.1</junit5.version>
+    <junit5.pioneer>1.7.1</junit5.pioneer>
   </properties>
 
   <dependencies>
@@ -35,7 +36,11 @@
       <artifactId>junit-jupiter-params</artifactId>
       <version>${junit5.version}</version>
     </dependency>
-
+    <dependency>
+      <groupId>org.junit-pioneer</groupId>
+      <artifactId>junit-pioneer</artifactId>
+      <version>${junit5.pioneer}</version>
+    </dependency>
 
     <dependency>
       <groupId>org.slf4j</groupId>
