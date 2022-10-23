@@ -1,5 +1,8 @@
 package org.automation.junit5.runner;
 
+import org.junit.jupiter.engine.JupiterTestEngine;
+import org.junit.platform.engine.ExecutionRequest;
+import org.junit.platform.engine.TestExecutionResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,6 +21,12 @@ public class Junit5Runner implements Runnable{
 
    public void run(){
       logging.debug("Starting the executor");
+      TestExecutionResult result ;
+      ExecutionRequest testRequest = new ExecutionRequest();
+
+
+      JupiterTestEngine engine = new JupiterTestEngine();
+      engine.execute(testRequest);
 
    }
 }
