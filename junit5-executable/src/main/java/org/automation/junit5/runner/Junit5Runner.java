@@ -36,6 +36,7 @@ public class Junit5Runner implements Runnable {
     }
 
     public void singleClassRunner(Class<?> kLass) {
+        logging.debug("Running Single Class : "+kLass.getCanonicalName());
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request().selectors(selectClass(kLass)).build();
         Launcher launcher = LauncherFactory.create();
         TestPlan testPlan = launcher.discover(request);
@@ -44,6 +45,7 @@ public class Junit5Runner implements Runnable {
 
     public void multiClassRunner(List<Class<?>> kLasses){
 
+        logging.info("Running Multiple Classes");
         for(Class<?> aClass : kLasses){
             singleClassRunner(aClass);
         }
