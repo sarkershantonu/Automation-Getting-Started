@@ -15,11 +15,15 @@ import java.util.List;
 public class Junit5Runner implements Runnable {
     private static final Logger logging = LoggerFactory.getLogger(Junit5Runner.class);
     private final List<Class<?>> testClasses;
+    private List<Class<?>> listeners;
 
     public Junit5Runner(List<Class<?>> testClasses) {
         this.testClasses = testClasses;
     }
 
+    public void setListeners(List<Class<?>> listeners) {
+        this.listeners = listeners;
+    }
 
     public void run() {
         logging.debug("Starting the executor");
