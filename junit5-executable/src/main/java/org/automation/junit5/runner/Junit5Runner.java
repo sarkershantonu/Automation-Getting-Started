@@ -2,9 +2,11 @@ package org.automation.junit5.runner;
 
 import org.junit.platform.launcher.Launcher;
 import org.junit.platform.launcher.LauncherDiscoveryRequest;
+import org.junit.platform.launcher.TestExecutionListener;
 import org.junit.platform.launcher.TestPlan;
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
+import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -44,14 +46,22 @@ public class Junit5Runner implements Runnable {
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request().selectors(selectClass(kLass)).build();
         Launcher launcher = LauncherFactory.create();
         TestPlan testPlan = launcher.discover(request);
-        launcher.registerTestExecutionListeners();
+        launcher.registerTestExecutionListeners(getDefaultListener());
+        launcher.execute(request);
     }
 
     public void multiClassRunner(List<Class<?>> kLasses){
-
         logging.info("Running Multiple Classes");
         for(Class<?> aClass : kLasses){
             singleClassRunner(aClass);
         }
+    }
+
+    public TestExecutionListener getDefaultListener(){
+        return new SummaryGeneratingListener();
+    }
+
+    public void runAll(){
+        multiClassRunner(this.testClasses);
     }
 }
