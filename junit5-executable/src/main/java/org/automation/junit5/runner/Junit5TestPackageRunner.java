@@ -16,13 +16,14 @@ public class Junit5TestPackageRunner extends Junit5Runner implements Runnable {
         this.packageName = packageName;
     }
     public void run(){
+        logging.info("Starting the package runner");
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                 .selectors( DiscoverySelectors.selectPackage(packageName))
-                .filters(ClassNameFilter.includeClassNamePatterns("*Test*")
+                .filters(ClassNameFilter.includeClassNamePatterns(".*Tests")
         ).build();
         Launcher launcher = LauncherFactory.create();
         TestPlan plan = launcher.discover(request);
-        launcher.registerTestExecutionListeners();
+        launcher.registerTestExecutionListeners(getDefaultListener());
         launcher.execute(request);
     }
 }
