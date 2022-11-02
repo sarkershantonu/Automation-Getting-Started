@@ -2,43 +2,35 @@ package org.automation.junit5.runner;
 
 import org.junit.platform.launcher.Launcher;
 import org.junit.platform.launcher.LauncherDiscoveryRequest;
-import org.junit.platform.launcher.TestExecutionListener;
 import org.junit.platform.launcher.TestPlan;
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
-import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static org.junit.platform.engine.discovery.DiscoverySelectors.selectClass;
 
+import java.util.Arrays;
 import java.util.List;
 
-public class Junit5TestClassRunner implements Runnable {
+public class Junit5TestClassRunner extends Junit5Runner implements Runnable {
     private static final Logger logging = LoggerFactory.getLogger(Junit5TestClassRunner.class);
-    private final List<Class<?>> testClasses;
-    private List<Class<?>> listeners;
+    private final List<Class<?>> classes;
 
-    public Junit5TestClassRunner(List<Class<?>> testClasses) {
-        this.testClasses = testClasses;
-    }
 
-    public void setListeners(List<Class<?>> listeners) {
-        this.listeners = listeners;
+    public Junit5TestClassRunner(Class<?>... testClasses) {
+        this.classes = Arrays.asList(testClasses);
     }
 
     public void run() {
         logging.debug("Starting the executor");
-    /*  JunitCore
-      TestExecutionResult result ;
-      TestReporter
-      EngineDiscoveryListener
-      ExecutionRequest testRequest = new ExecutionRequest();
+        if(classes.size()==1){
+            singleClassRunner(classes.get(0));
+        }
+        else {
+            multiClassRunner();
+        }
 
-
-      JupiterTestEngine engine = new JupiterTestEngine();
-      engine.execute(testRequest);
-*/
     }
 
     public void singleClassRunner(Class<?> kLass) {
@@ -50,18 +42,11 @@ public class Junit5TestClassRunner implements Runnable {
         launcher.execute(request);
     }
 
-    public void multiClassRunner(List<Class<?>> kLasses){
+    public void multiClassRunner(){
         logging.info("Running Multiple Classes");
-        for(Class<?> aClass : kLasses){
+        for(Class<?> aClass : classes){
             singleClassRunner(aClass);
         }
     }
 
-    public TestExecutionListener getDefaultListener(){
-        return new SummaryGeneratingListener();
-    }
-
-    public void runAll(){
-        multiClassRunner(this.testClasses);
-    }
 }
