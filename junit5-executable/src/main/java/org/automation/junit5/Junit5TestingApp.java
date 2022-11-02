@@ -21,7 +21,7 @@ public class Junit5TestingApp
     public static void runJunit5Tests(){
         System.out.println( "Starting Junit5 Test Runner" );
 
-        Junit5TestClassRunner runner = new Junit5TestClassRunner(Arrays.asList(new Class[]{AdhocTests.class, ExceptionTests.class}));
-        runner.runAll();
+        Junit5TestClassRunner runner = new Junit5TestClassRunner(new Class[]{AdhocTests.class, ExceptionTests.class});
+        runner.run();
     }
 }
