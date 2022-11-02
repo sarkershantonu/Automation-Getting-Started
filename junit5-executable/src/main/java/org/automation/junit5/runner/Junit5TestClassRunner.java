@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Junit5TestClassRunner extends Junit5Runner implements Runnable {
-    private static final Logger logging = LoggerFactory.getLogger(Junit5TestClassRunner.class);
+
     private final List<Class<?>> classes;
 
 
@@ -23,7 +23,7 @@ public class Junit5TestClassRunner extends Junit5Runner implements Runnable {
     }
 
     public void run() {
-        logging.debug("Starting the executor");
+        logging.info("Starting the runner");
         if(classes.size()==1){
             singleClassRunner(classes.get(0));
         }
