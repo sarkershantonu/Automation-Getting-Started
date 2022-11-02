@@ -14,12 +14,12 @@ import static org.junit.platform.engine.discovery.DiscoverySelectors.selectClass
 
 import java.util.List;
 
-public class Junit5Runner implements Runnable {
-    private static final Logger logging = LoggerFactory.getLogger(Junit5Runner.class);
+public class Junit5TestClassRunner implements Runnable {
+    private static final Logger logging = LoggerFactory.getLogger(Junit5TestClassRunner.class);
     private final List<Class<?>> testClasses;
     private List<Class<?>> listeners;
 
-    public Junit5Runner(List<Class<?>> testClasses) {
+    public Junit5TestClassRunner(List<Class<?>> testClasses) {
         this.testClasses = testClasses;
     }
 
