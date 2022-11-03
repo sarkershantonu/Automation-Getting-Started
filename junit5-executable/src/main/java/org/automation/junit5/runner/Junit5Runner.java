@@ -8,7 +8,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 public abstract class Junit5Runner {
-    protected static final Logger logging = LoggerFactory.getLogger("CalculatorLogger");
+    protected static final Logger logger = LoggerFactory.getLogger("CalculatorLogger");
     private List<Class<?>> listeners;
 
     public TestExecutionListener getDefaultListener(){
@@ -18,4 +18,6 @@ public abstract class Junit5Runner {
     public void setListeners(List<Class<?>> listeners) {
         this.listeners = listeners;
     }
+
+    public static Logger getLogger(){return logger;}
 }
