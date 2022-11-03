@@ -21,7 +21,7 @@ public class PropertyLoaders {
 
         setAsSystemProperty(read(runnerProperties));
         if(readBoolean(System.getProperty("is.package.runner"))){
-            setAsSystemProperty();
+            //
         } else if (readBoolean(System.getProperty("is.class.runner"))) {
 
         }
