@@ -16,7 +16,7 @@ public class Junit5TestPackageRunner extends Junit5Runner implements Runnable {
         this.packageName = packageName;
     }
     public void run(){
-        logging.info("Starting the package runner");
+        logger.info("Starting the package runner");
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                 .selectors( DiscoverySelectors.selectPackage(packageName))
                 .filters(ClassNameFilter.includeClassNamePatterns(".*Tests")
