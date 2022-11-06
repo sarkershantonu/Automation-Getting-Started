@@ -13,7 +13,7 @@ public class PropertyLoaders {
 
     private static Logger logger = getLogger();
 
-    public final static String classConfig="test-class.ini";
+    public final static String classConfig="test-classes.ini";
     public final static String packageProperties="package.properties";
     public final static String runnerProperties="runner.properties";
 
@@ -21,7 +21,7 @@ public class PropertyLoaders {
 
         setAsSystemProperty(read(runnerProperties));
         if(readBoolean(System.getProperty("is.package.runner"))){
-            //
+            new PackageConfigLoader(packageProperties).load();
         } else if (readBoolean(System.getProperty("is.class.runner"))) {
 
         }
