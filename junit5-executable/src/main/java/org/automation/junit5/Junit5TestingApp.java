@@ -5,8 +5,6 @@ import org.automation.junit5.runner.Junit5TestPackageRunner;
 import org.automation.junit5.tests.AdhocTests;
 import org.automation.junit5.tests.ExceptionTests;
 
-import java.util.Arrays;
-
 /**
  * Hello world!
  *
