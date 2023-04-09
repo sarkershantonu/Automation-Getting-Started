@@ -3,6 +3,7 @@ package org.automation;
 
 import org.automation.unitTests.TestingCalculator;
 
+import org.automation.util.annotation.AppId;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.*;
@@ -15,6 +16,8 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 @Features("CR 256 : Changing home screen template")
 @Stories({"User can add two numbers", "User can sub two numbers", "User can multiply two numbers"})
 @Description("This is class ")
+//@Listeners({RetryListener.class})
+
 public class TestCalculatorFullExample extends TestingCalculator {
 
     @Test
@@ -35,6 +38,7 @@ public class TestCalculatorFullExample extends TestingCalculator {
     @Description("This is method")
     @Features("CR 256B :This is Subtraction ")
     @Stories("User can sub two numbers")
+    @AppId( profileIds = "256")
     public void testSub(){
         Assert.assertEquals(25.0, aCalculator.sub(10.0,15.0), 0.01);
     }

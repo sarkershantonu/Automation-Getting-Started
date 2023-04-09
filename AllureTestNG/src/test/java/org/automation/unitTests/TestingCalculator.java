@@ -12,6 +12,7 @@ import ru.yandex.qatools.allure.annotations.Step;
 /**
  * Created by shantonu on 9/10/16.
  */
+
 public abstract class TestingCalculator {
     protected Calculator aCalculator = null;
 
