@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="AllureReportingExamples" parallel="false">
-    <test name="Single Test with all annotations">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="TestCalculatorFullExample">
         <classes>
-            <class name="org.automation.TestCalculatorFullExample"/>
+            <class name="org.automation.TestCalculatorFullExample">
+                <methods>
+                    <include name="testAddition"/>
+                    <include name="testSub"/>
+                </methods>
+            </class>
         </classes>
     </test>
-    <test name="Tests for All annotations">
-        <packages>
-            <package name="org.automation.unitTests"/>
-        </packages>
-    </test>
+    <listeners>
+        <listener class-name="org.automation.testng.listeners.CombineTransFormListener"></listener>
+    </listeners>
 </suite>
