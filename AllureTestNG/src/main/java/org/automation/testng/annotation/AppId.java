@@ -1,4 +1,4 @@
-package org.automation.util.annotation;
+package org.automation.testng.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

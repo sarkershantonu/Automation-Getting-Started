@@ -1,6 +1,6 @@
 package org.automation.testng.listeners;
 
-import org.automation.util.annotation.AppId;
+import org.automation.testng.annotation.AppId;
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
 

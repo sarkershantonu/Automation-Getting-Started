@@ -3,7 +3,7 @@ package org.automation;
 
 import org.automation.unitTests.TestingCalculator;
 
-import org.automation.util.annotation.AppId;
+import org.automation.testng.annotation.AppId;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.*;
