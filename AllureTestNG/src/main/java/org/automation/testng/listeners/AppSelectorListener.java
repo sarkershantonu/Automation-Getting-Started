@@ -16,5 +16,11 @@ public class AppSelectorListener implements IAnnotationTransformer {
         if (appId != null) {
             System.out.println("Total Profiles = "+ appId.profileIds().length);
         }
+        else if(appId.profileIds().length==0){
+            System.out.println("No profile selected");
+        }
+        else if(appId.profileIds()[0]=="256"){
+            System.out.println("Running app 256");
+        }
     }
 }
