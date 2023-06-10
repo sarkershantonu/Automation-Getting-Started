@@ -18,7 +18,7 @@
         <selenium.test.mode>local</selenium.test.mode>
         <webdrivermanager.version>3.4.0</webdrivermanager.version>
         <allure.version>1.5.4</allure.version>
-        <jackson.version>2.13.4.1</jackson.version>
+        <jackson.version>2.13.4.2</jackson.version>
     </properties>
 <build>
     <resources>
