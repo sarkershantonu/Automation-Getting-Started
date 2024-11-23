@@ -1,6 +1,6 @@
 package org.automation.validation;
 
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -13,6 +13,6 @@ public class validator {
 
     public static void linkValidator(By by, String title){
         $(by).click();
-        Assert.assertEquals(title, title());
+        Assertions.assertEquals(title, title());
     }
 }
