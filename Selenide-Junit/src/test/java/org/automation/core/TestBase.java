@@ -1,11 +1,6 @@
 package org.automation.core;
 
-import org.junit.BeforeClass;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.Properties;
+import org.junit.jupiter.api.BeforeAll;
 
 /**
  * Created by shantonu on 8/14/17.
@@ -13,8 +8,8 @@ import java.util.Properties;
 public class TestBase {
 
 
-    @BeforeClass
-    public void initAllTests(){
+    @BeforeAll
+    public static void initAllTests(){
         PropertyLoader.loadProperties();
     }
 
