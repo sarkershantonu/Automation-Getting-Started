@@ -8,7 +8,7 @@
     <artifactId>selenide-junit</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <selenide.version>5.11.1</selenide.version>
+        <selenide.version>7.5.1</selenide.version>
         <slf4j.version>1.7.30</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -18,11 +18,17 @@
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
         </dependency>
+
         <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.11.3</version>
+        </dependency>
+       <!-- <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-        </dependency>
+            <version>4.13.2</version>
+        </dependency>-->
         <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
@@ -53,10 +59,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
             </plugin>
         </plugins>
     </build>
