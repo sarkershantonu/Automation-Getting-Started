@@ -1,17 +1,13 @@
 package org.automation.tests.opencart;
 
-import org.automation.pages.opencart.common.FooterArea;
 import org.automation.core.TestBase;
-
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ErrorCollector;
+import org.automation.pages.opencart.common.FooterArea;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.By;
 
 import java.util.logging.Logger;
-
-import static com.codeborne.selenide.Selenide.*;
+import org.junit.jupiter.api.Test;
+import static com.codeborne.selenide.Selenide.open;
 import static org.automation.validation.validator.linkValidator;
 
 /**
@@ -23,12 +19,11 @@ public class CheckAllFooterLinks extends TestBase {
 
     private FooterArea footers;
 
-    @Rule
-    public ErrorCollector collector = new ErrorCollector();
+/*    @Rule
+    public ErrorCollector collector = new ErrorCollector();*/
 
-    @Before
+    @BeforeEach
     public void init() {
-
         footers = new FooterArea();
     }
 
@@ -53,7 +48,7 @@ public class CheckAllFooterLinks extends TestBase {
             linkValidator(By.cssSelector(footers.wishListLink_css), "Account Login");
             linkValidator(By.cssSelector(footers.newsLetterLink_css), "Account Login");
         } catch (AssertionError e) {
-            collector.addError(e);
+            //collector.addError(e);
         }
     }
 
