@@ -5,17 +5,20 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
+/***
+ * todo : fixing bugs
+ */
 public class PropertyLoader {
     public static final String PROP_PATH="./properties/";
     public static void loadProperties(){
 
         try {
             loadProperties(PROP_PATH+"test.properties");
-            loadProperties(PROP_PATH+ "properties/selenide.properties");
-            loadProperties(PROP_PATH
-                            +System.getProperty("test.app.name")
-                            +System.lineSeparator()
-                            +System.getProperty("test.env")+".properties");
+            loadProperties(PROP_PATH+ "selenide.properties");
+            final String appPath = PROP_PATH +System.getProperty("test.app.name") +System.lineSeparator()
+                    +"env."+System.getProperty("test.env")+".properties";
+            System.out.printf(appPath);
+            loadProperties(appPath);
         } catch (IOException e) {
             e.printStackTrace();
         }

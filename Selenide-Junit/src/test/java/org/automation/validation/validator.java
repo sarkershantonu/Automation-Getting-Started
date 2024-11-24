@@ -15,4 +15,9 @@ public class validator {
         $(by).click();
         Assertions.assertEquals(title, title());
     }
+
+    public static void link(By by, String title){
+        $(by).click();
+        Assertions.assertEquals(title, title());
+    }
 }
