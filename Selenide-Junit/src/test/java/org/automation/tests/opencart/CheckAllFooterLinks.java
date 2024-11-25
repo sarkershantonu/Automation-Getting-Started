@@ -1,18 +1,14 @@
 package org.automation.tests.opencart;
 
 import org.automation.core.TestBase;
-import org.automation.gui.actions.WebElementActions;
 import org.automation.pages.opencart.common.FooterArea;
 import org.automation.validation.LinkValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.By;
 
 import java.util.logging.Logger;
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Selenide.open;
-import static com.codeborne.selenide.Selenide.title;
-import static org.automation.validation.validator.linkValidator;
 
 /**
  * Created by shantonu on 8/27/17.
