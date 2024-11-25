@@ -1,4 +1,4 @@
-package org.automation.gui.actions;
+package org.automation.app.webgoat.actions;
 
 import com.codeborne.selenide.ClickOptions;
 import org.openqa.selenium.By;
