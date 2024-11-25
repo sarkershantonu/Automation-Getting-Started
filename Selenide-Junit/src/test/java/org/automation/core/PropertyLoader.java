@@ -11,13 +11,12 @@ import java.util.Properties;
 public class PropertyLoader {
     public static final String PROP_PATH="./properties/";
     public static void loadProperties(){
-
         try {
             loadProperties(PROP_PATH+"test.properties");
             loadProperties(PROP_PATH+ "selenide.properties");
-            final String appPath = PROP_PATH +System.getProperty("test.app.name") +System.lineSeparator()
+            final String appPath = PROP_PATH +System.getProperty("test.app.name") +File.separator
                     +"env."+System.getProperty("test.env")+".properties";
-            System.out.printf(appPath);
+
             loadProperties(appPath);
         } catch (IOException e) {
             e.printStackTrace();
@@ -30,4 +29,5 @@ public class PropertyLoader {
             System.setProperty(k,p.getProperty(k));
         }
     }
+
 }
