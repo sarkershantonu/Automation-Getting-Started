@@ -29,6 +29,16 @@ An annotaion way
 - Preview element
 
 # WebGoat Structure 
+
 ### Project Link 
 - [Standalone JAR](https://github.com/WebGoat/WebGoat/releases)
-### Installation
+
+### Installation : Standalone 
+
+if you run locally, quickest way is to runs as standalone JAR. 
+- You should have Java 17+ 
+- download from [Releases](https://github.com/WebGoat/WebGoat/releases) 
+- Run Command with selected port ***java -jar webgoat-Version_Number.jar --webgoat.port=8001 --webwolf.port=800***
+  - Example ```java -jar webgoat-2023.8.jar --webgoat.port=8001 --webwolf.port=8002```
+  
+### Installation : Build your self 
