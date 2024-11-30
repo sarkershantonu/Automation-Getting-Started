@@ -1,5 +1,6 @@
 # Automation-Getting-Started
 ** Notice ** : All projects are outdated, I will update this in october with latest libraries 
+current work : selenide-junit updates
 
 To Do : Seperate all projects to their own 
 Todo : Update all library 
