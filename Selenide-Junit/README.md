@@ -27,3 +27,8 @@ An annotaion way
 - WebPart structure
 - Header & Footer area
 - Preview element
+
+# WebGoat Structure 
+### Project Link 
+- [Standalone JAR](https://github.com/WebGoat/WebGoat/releases)
+### Installation
