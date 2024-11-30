@@ -42,3 +42,18 @@ if you run locally, quickest way is to runs as standalone JAR.
   - Example ```java -jar webgoat-2023.8.jar --webgoat.port=8001 --webwolf.port=8002```
   
 ### Installation : Build your self 
+Clone Project Repo Link 
+
+```shell
+git clone git@github.com:WebGoat/WebGoat.git
+```
+
+- You should have Java 17+
+- Clean & Install using Maven 
+```shell
+./mvnw clean install
+``` 
+- Run As SpringBoot App with maven (with default port)
+```shell
+./mvnw spring-boot:run
+```
