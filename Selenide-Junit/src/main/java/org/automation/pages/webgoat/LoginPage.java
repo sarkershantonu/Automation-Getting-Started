@@ -10,8 +10,12 @@ public class LoginPage extends PageBase {
     public static String path ="/WebGoat/login";
 
     public LoginPage load(){
-        open(new WebGoatConfig());
+        //open(new WebGoatConfig());
+        open(WebGoatConfig.BASE_URL+path);
         return this;
     }
 
+    public static void main(String[] args) {
+        new LoginPage().load();
+    }
 }

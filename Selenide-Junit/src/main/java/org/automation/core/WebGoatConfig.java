@@ -3,12 +3,16 @@ package org.automation.core;
 import com.codeborne.selenide.*;
 import org.openqa.selenium.MutableCapabilities;
 
+import static com.codeborne.selenide.FileDownloadMode.HTTPGET;
+import static com.codeborne.selenide.SelectorMode.CSS;
+import static com.codeborne.selenide.TextCheck.PARTIAL_TEXT;
+
 public class WebGoatConfig implements Config {
-    public final String BASE_URL="http://127.0.0.1:8080";
+    public static final String BASE_URL="http://127.0.0.1:8080";
 
     @Override
     public String browser() {
-        return "";
+        return "chrome";
     }
 
     @Override
@@ -18,22 +22,22 @@ public class WebGoatConfig implements Config {
 
     @Override
     public String remote() {
-        return "";
+        return "No";
     }
 
     @Override
     public String browserSize() {
-        return "";
+        return "1920x1080";
     }
 
     @Override
     public String browserVersion() {
-        return "";
+        return "";//any
     }
 
     @Override
     public String browserPosition() {
-        return "";
+        return "";//maximize
     }
 
     @Override
@@ -43,7 +47,7 @@ public class WebGoatConfig implements Config {
 
     @Override
     public String browserBinary() {
-        return "";
+        return "";//default
     }
 
     @Override
@@ -53,7 +57,7 @@ public class WebGoatConfig implements Config {
 
     @Override
     public long pageLoadTimeout() {
-        return 0;
+        return 5;
     }
 
     @Override
@@ -63,17 +67,17 @@ public class WebGoatConfig implements Config {
 
     @Override
     public String baseUrl() {
-        return "";
+        return "http://127.0.0.1:8080";
     }
 
     @Override
     public long timeout() {
-        return 0;
+        return 15;
     }
 
     @Override
     public long pollingInterval() {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -103,17 +107,17 @@ public class WebGoatConfig implements Config {
 
     @Override
     public String reportsFolder() {
-        return "";
+        return "./reports";
     }
 
     @Override
     public String downloadsFolder() {
-        return "";
+        return "./reports/downloads";
     }
 
     @Override
     public String reportsUrl() {
-        return "";
+        return "./reports/html/";
     }
 
     @Override
@@ -123,22 +127,22 @@ public class WebGoatConfig implements Config {
 
     @Override
     public TextCheck textCheck() {
-        return null;
+        return PARTIAL_TEXT;
     }
 
     @Override
     public SelectorMode selectorMode() {
-        return null;
+        return CSS;
     }
 
     @Override
     public AssertionMode assertionMode() {
-        return null;
+        return AssertionMode.SOFT;
     }
 
     @Override
     public FileDownloadMode fileDownload() {
-        return null;
+        return HTTPGET;
     }
 
     @Override
