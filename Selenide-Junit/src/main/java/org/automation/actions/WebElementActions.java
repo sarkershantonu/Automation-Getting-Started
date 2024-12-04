@@ -1,11 +1,10 @@
-package org.automation.app.webgoat.actions;
+package org.automation.actions;
 
 import com.codeborne.selenide.ClickOptions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.title;
 
 /***
  * List of all action performable to an web element.

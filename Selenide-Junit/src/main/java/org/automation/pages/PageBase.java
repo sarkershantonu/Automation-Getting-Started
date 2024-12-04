@@ -1,4 +1,4 @@
-package org.automation.app.webgoat.actions.gui;
+package org.automation.pages;
 
 /***
  * Base page for webgoa
