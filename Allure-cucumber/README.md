@@ -9,13 +9,11 @@ a simple calculator with allure report
 ### Running Tests 
 (use maven 3.3.9)
 
-mvn clean test 
+- Run test ```mvn clean test``` 
 
-### Running Report 
-
-mvn site
-
-mvn jetty:run
+### Running Report
+ - Build Site ```mvn site```
+ - Run Site ```mvn jetty:run```
 
 See in your http://localhost:9100 
 
