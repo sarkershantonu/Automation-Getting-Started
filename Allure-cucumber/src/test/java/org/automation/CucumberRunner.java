@@ -1,18 +1,15 @@
 package org.automation;
 
-/*import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;*/
 
-import org.junit.Test;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 /**
  * Created by shantonu on 5/9/16.
+ * updated on mar 29, 25
  */
-/*@RunWith(Cucumber.class)
-@CucumberOptions(plugin = {"pretty", "html:target/cucumberReport","json:target/cucumberReport/cucumber.json" }
-        , features = {"src/test/resources/org/automation/calculator.feature"}
-        , glue = {""})*/
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
