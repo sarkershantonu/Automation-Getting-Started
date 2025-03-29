@@ -7,6 +7,8 @@ import io.cucumber.java.en.When;
 import org.calculator.Calculator;
 import org.junit.Assert;
 
+import static io.qameta.allure.Allure.step;
+
 /**
  * Created by shantonu on 5/11/16.
  */
@@ -26,7 +28,6 @@ public class CalculatorStepdefinations {
     }
     @When("^I in insert (.+) and (.+)$")
     public void i_in_insert(double arg1, double arg2) throws Throwable {
-
         result = calculator.add(arg1,arg2);
     }
 

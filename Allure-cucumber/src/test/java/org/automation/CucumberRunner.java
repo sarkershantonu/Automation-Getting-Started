@@ -12,8 +12,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
+        features = "src/test/resources/features",
         plugin = {
-                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "progress",
+                "summary"
         }
 )
 public class CucumberRunner {
