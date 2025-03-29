@@ -4,6 +4,7 @@ package org.automation;
 import cucumber.api.junit.Cucumber;*/
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 /**
  * Created by shantonu on 5/9/16.
@@ -12,7 +13,7 @@ import org.junit.Test;
 @CucumberOptions(plugin = {"pretty", "html:target/cucumberReport","json:target/cucumberReport/cucumber.json" }
         , features = {"src/test/resources/org/automation/calculator.feature"}
         , glue = {""})*/
-@Test
+@RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
