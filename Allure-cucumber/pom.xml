@@ -12,7 +12,8 @@
         <allure.version>2.24.0</allure.version>
         <jetty.http.port>9100</jetty.http.port>
        <!-- <allure.version>1.4.24.RC3</allure.version>-->
-        <aspectj.version>1.9.20.1</aspectj.version>
+        <aspectj.version>        <test.runner>org.automation.CucumberRunner.class</test.runner>
+        </aspectj.version>
         <test.runner>org.automation.CucumberRunner.class</test.runner>
         <slf4j.version>2.0.17</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -52,10 +53,10 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-        <dependency>
+<!--        <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber7-jvm</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit4</artifactId>
@@ -115,11 +116,19 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>3.2.3</version>
                 <configuration>
+                    <testFailureIgnore>false</testFailureIgnore>
                     <argLine>
+                        -Dfile.encoding=${project.build.sourceEncoding}
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                        </property>
+                    </properties>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -130,6 +139,7 @@
                     <dependency>
                         <groupId>io.qameta.allure</groupId>
                         <artifactId>allure-junit4-aspect</artifactId>
+                        <scope>test</scope>
                     </dependency>
                 </dependencies>
             </plugin>
