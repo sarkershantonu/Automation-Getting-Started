@@ -11,8 +11,8 @@ a simple calculator with allure report
 - Run test ```mvn clean test``` 
 
 ### Running Report
- - Build Site ```mvn site```
- - Run Site ```mvn jetty:run```
+ - Build Site ```mvn allure:report```
+ - Run Site ```mvn allure:serve```
 
 See in your http://localhost:9100 
 
