@@ -1,7 +1,9 @@
 package org.automation;
 
-import cucumber.api.java.Before;
-import cucumber.api.java.en.*;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.calculator.Calculator;
 import org.junit.Assert;
 

@@ -7,8 +7,6 @@ import io.cucumber.java.en.When;
 import org.calculator.Calculator;
 import org.junit.Assert;
 
-import static io.qameta.allure.Allure.step;
-
 /**
  * Created by shantonu on 5/11/16.
  */

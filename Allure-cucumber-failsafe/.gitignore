@@ -9,3 +9,4 @@ target/
 bin/
 obj/
 screenshots
+.allure
