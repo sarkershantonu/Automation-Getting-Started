@@ -108,6 +108,7 @@
                 <artifactId>allure-maven</artifactId>
                 <version>2.15.2</version>
                 <configuration>
+                    <servePort>9099</servePort>
                     <reportVersion>${allure.version}</reportVersion>
                     <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>
 <!--                    <allureDownloadUrl>

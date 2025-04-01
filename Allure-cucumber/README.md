@@ -41,6 +41,7 @@ Make sure ```allure-maven``` has same version as ```allure-commandline``` in mav
     <allure.cmd.version>2.33.0</allure.cmd.version>
     <allure.version>2.29.0</allure.version>
 
+- Change port : in plugin configuration use ```<servePort>9099</servePort>``` to use port 9099. you can use properties section to inject property with maven command. 
 
 # Allure installations (optional)
 - Download from https://github.com/allure-framework/allure2/releases
