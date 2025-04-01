@@ -6,8 +6,12 @@ This is example for integration tests
 a simple calculator with allure report
 this will show how can we run in verify phase as integration test using maven failsafe plugins. 
 
-# Mavan command 
+# Testing commands
 
-mvn clean verify
+### Running Tests
 
-mvn jetty:run
+- Run test ```mvn clean verify```
+
+### Running Report
+- Build Site ```mvn allure:report```
+- Run Site ```mvn allure:serve```
