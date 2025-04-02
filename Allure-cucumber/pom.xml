@@ -10,8 +10,6 @@
 
     <properties>
         <allure.version>2.29.0</allure.version>
-<!--        <allure.cmd.version>2.33.0</allure.cmd.version>-->
-        <jetty.http.port>9100</jetty.http.port>
         <aspectj.version>1.9.23</aspectj.version>
         <cucumber.version>7.21.1</cucumber.version>
         <test.runner>org.automation.CucumberRunner.class</test.runner>
