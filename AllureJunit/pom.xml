@@ -46,14 +46,14 @@
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.7.14</version>
+            <artifactId>slf4j-reload4j</artifactId>
+            <version>2.0.17</version>
+            <scope>compile</scope>
         </dependency>
         <!-- allure part -->
         <dependency>
-            <groupId>ru.yandex.qatools.allure</groupId>
-            <artifactId>allure-junit-adaptor</artifactId>
-            <version>${allure.version}</version>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit4</artifactId>
         </dependency>
     </dependencies>
     <build>
@@ -61,7 +61,38 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <!-- does not work <artifactId>maven-failsafe-plugin</artifactId>-->
+                <version>3.2.3</version>
+                <configuration>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <argLine>
+                        -Dfile.encoding=${project.build.sourceEncoding}
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
+                    <properties>
+                        <property>
+                            <name>listener</name>
+                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                        </property>
+                    </properties>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>io.qameta.allure</groupId>
+                        <artifactId>allure-junit4-aspect</artifactId>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+        <!--<plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                &lt;!&ndash; does not work <artifactId>maven-failsafe-plugin</artifactId>&ndash;&gt;
                 <version>2.19.1</version>
                 <configuration>
                     <argLine>
@@ -75,11 +106,11 @@
                     </properties>
                 </configuration>
                 <dependencies>
-                    <!--<dependency> need with failsafe
+                    &lt;!&ndash;<dependency> need with failsafe
                         <groupId>org.apache.maven.surefire</groupId>
                         <artifactId>surefire-junit47</artifactId>
                         <version>2.19.1</version>
-                    </dependency>-->
+                    </dependency>&ndash;&gt;
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
@@ -100,9 +131,9 @@
                     <stopPort>1234</stopPort>
                 </configuration>
             </plugin>
-        </plugins>
+        </plugins>-->
     </build>
-    <reporting>
+   <!-- <reporting>
         <excludeDefaults>true</excludeDefaults>
         <plugins>
             <plugin>
@@ -111,5 +142,5 @@
                 <version>2.5</version>
             </plugin>
         </plugins>
-    </reporting>
+    </reporting>-->
 </project>
