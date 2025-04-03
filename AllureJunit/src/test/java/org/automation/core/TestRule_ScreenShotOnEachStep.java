@@ -1,9 +1,9 @@
 package org.automation.core;
 
+import io.qameta.allure.Attachment;
 import org.automation.util.ScreenShot;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
-import ru.yandex.qatools.allure.annotations.Attachment;
 
 /**
  * Created by shantonu on 9/11/16.
