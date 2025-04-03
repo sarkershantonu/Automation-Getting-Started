@@ -1,6 +1,7 @@
 package org.automation;
 
-import ru.yandex.qatools.allure.annotations.Step;
+
+import io.qameta.allure.Step;
 
 /**
  * Created by shantonu on 3/5/16.
