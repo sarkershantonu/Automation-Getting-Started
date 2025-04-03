@@ -1,22 +1,22 @@
 package org.automation.unitTests.parameter;
 
+import io.qameta.allure.Param;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.Parameter;
 
 /**
  * Created by shantonu on 9/11/16.
- * Allure parameters are all about environment parameters
+ * Allure Params are all about environment Params
  * This is default way to use this
  */
 public class TestWithParameterDefaultExample extends TestingCalculator {
 
-    @Parameter("PC OS Name")
+    @Param("PC OS Name")
     private String osName;
-    @Parameter("PC browser")
+    @Param("PC browser")
     private String browser;
-    @Parameter("PC Resolution")
+    @Param("PC Resolution")
     private String resolution;
     @Test
     public void testAddition() {
@@ -26,6 +26,7 @@ public class TestWithParameterDefaultExample extends TestingCalculator {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
     }
     @Test
+
     public void testSub(){//fail example
         osName = "Win7";
         resolution = "1920x1080";
