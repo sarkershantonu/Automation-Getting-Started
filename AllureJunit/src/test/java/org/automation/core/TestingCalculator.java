@@ -1,17 +1,10 @@
 package org.automation.core;
 
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 import org.automation.Calculator;
 import org.automation.util.ScreenShot;
 import org.junit.Before;
-import ru.yandex.qatools.allure.annotations.Attachment;
-import ru.yandex.qatools.allure.annotations.Step;
-
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 
 /**
  * Created by shantonu on 9/10/16.
