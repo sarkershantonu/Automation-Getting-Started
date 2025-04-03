@@ -8,11 +8,9 @@
 
     <properties>
         <allure.version>2.29.0</allure.version>
-        <jetty.http.port>9100</jetty.http.port>
-        <aspectj.version>1.9.23</aspectj.version>
-        <cucumber.version>7.21.1</cucumber.version>
+        <!--<jetty.http.port>9100</jetty.http.port>-->
+        <aspectj.version>1.9.21</aspectj.version>
         <test.runner>org.automation.TestSuitForAttachment.class</test.runner>
-        <slf4j.version>2.0.17</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <repo.base.url>https://repo.maven.apache.org/maven2</repo.base.url>
@@ -55,6 +53,7 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit4</artifactId>
         </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -84,6 +83,7 @@
                     <dependency>
                         <groupId>io.qameta.allure</groupId>
                         <artifactId>allure-junit4-aspect</artifactId>
+                        <version>${allure.version}</version>
                     </dependency>
                 </dependencies>
             </plugin>
