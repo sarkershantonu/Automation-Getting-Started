@@ -1,11 +1,10 @@
 package org.automation;
 
 
+import io.qameta.allure.*;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.*;
-import ru.yandex.qatools.allure.model.SeverityLevel;
 
 /**
  * Created by shantonu on 3/5/16.
@@ -13,7 +12,6 @@ import ru.yandex.qatools.allure.model.SeverityLevel;
 @Title("This is for testing calculator")
 @Features("CR 256 : Changing home screen template")
 @Stories({"User can add two numbers", "User can sub two numbers", "User can multiply two numbers"})
-@Description("This is class ")
 public class TestCalculatorFullExample extends TestingCalculator {
 
     @Test
