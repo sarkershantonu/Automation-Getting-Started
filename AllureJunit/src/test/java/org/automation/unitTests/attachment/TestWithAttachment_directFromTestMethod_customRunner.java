@@ -1,5 +1,6 @@
 package org.automation.unitTests.attachment;
 
+import io.qameta.allure.Attachment;
 import junit.framework.AssertionFailedError;
 import org.automation.core.MyRunner;
 import org.automation.util.ScreenShot;
@@ -7,7 +8,6 @@ import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import ru.yandex.qatools.allure.annotations.Attachment;
 
 
 /**
