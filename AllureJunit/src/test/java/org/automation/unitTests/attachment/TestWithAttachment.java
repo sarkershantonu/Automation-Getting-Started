@@ -1,9 +1,9 @@
 package org.automation.unitTests.attachment;
 
+import io.qameta.allure.Issue;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.*;
 
 /**
  * Created by shantonu on 9/11/16.
