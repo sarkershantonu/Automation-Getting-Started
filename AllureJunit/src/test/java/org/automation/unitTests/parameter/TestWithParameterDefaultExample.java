@@ -1,5 +1,6 @@
 package org.automation.unitTests.parameter;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Param;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
@@ -10,6 +11,7 @@ import org.junit.Test;
  * Allure Params are all about environment Params
  * This is default way to use this
  */
+
 public class TestWithParameterDefaultExample extends TestingCalculator {
 
     @Param("PC OS Name")
@@ -24,6 +26,7 @@ public class TestWithParameterDefaultExample extends TestingCalculator {
         resolution = "1024x768";
         browser = "Firefox";
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
+        Allure.addAttachment();
     }
     @Test
 
