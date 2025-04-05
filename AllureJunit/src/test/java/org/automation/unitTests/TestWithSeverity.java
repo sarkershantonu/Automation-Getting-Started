@@ -1,10 +1,10 @@
 package org.automation.unitTests;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
-import ru.yandex.qatools.allure.annotations.Severity;
-import ru.yandex.qatools.allure.model.SeverityLevel;
 
 /**
  * Created by shantonu on 9/11/16.
