@@ -9,31 +9,30 @@ import org.junit.Test;
 /**
  * Created by shantonu on 3/5/16.
  */
-@Title("This is for testing calculator")
-@Features("CR 256 : Changing home screen template")
-@Stories({"User can add two numbers", "User can sub two numbers", "User can multiply two numbers"})
+
+@Features({@Feature("CR 256 : Changing home screen template"),@Feature("F123423")})
+@Stories({@Story("User can add two numbers"), @Story("User can sub two numbers"), @Story("User can multiply two numbers")})
 public class TestCalculatorFullExample extends TestingCalculator {
 
     @Test
-    @Title("This will add two numbers")
+
     @Step("Assertion for Addition")
     @Severity(SeverityLevel.CRITICAL)
-    @Features("CR 256A :This is adding ")
-    @Stories("User can add two numbers")
+    @Feature("CR 256A :This is adding ")
+    @Story("User can add two numbers")
     public void testAddition(){
         Assert.assertEquals(25.0, aCalculator.add(10.0,15.0), 0.01);
     }
 
     @Test
-    @Title("This will substract two numbers")
+
     @Step("Assertion for Subtraction\n"+"\n SUB \n"+"New Line added")//does not work in multiple lines
     @Severity(SeverityLevel.BLOCKER)
     @Issue(value = "Ticket id 250")
     @Description("This is method")
-    @Features("CR 256B :This is Subtraction ")
-    @Stories({"User can sub two numbers",
-            "This will do substruction\n" +
-                    "Among two numbers"} )   //multi line stories
+    @Feature("CR 256B :This is Subtraction ")
+    @Stories({@Story("User can sub two numbers"),@Story("This will do substruction"),
+            @Story("Among two numbers")} )   //multi line stories
     public void testSub(){
         Assert.assertEquals(25.0, aCalculator.sub(10.0,15.0), 0.01);
     }
