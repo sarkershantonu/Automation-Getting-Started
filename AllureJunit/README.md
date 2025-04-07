@@ -11,20 +11,20 @@ This repository contains
 
 And in sider POM : 
 
-3. Zohhak, for parametrized example
-4. Junit for test
-5. SLF4J/log4j for logging support of allure
-6. Allure Junit Adapter
-7. Allure support plugins & reporters 
-8. Jetty server to deploy report locally : pre-configured port 9000 
+3. Junit for test
+4. SLF4J/log4j for logging support of allure
+5. Allure Junit Adapter
+6. Allure support plugins & reporters 
+7. Jetty server to deploy report locally : pre-configured port 9000 
 
 # How to start :
 1. Download this project
-2. mvn clean test [for testing]
-3. mvn site [make allure report]
-4. mvn jetty:run 
+2. ```mvn clean test ``` [for testing]
+3. ```mvn allure:report``` [make allure report]
+4. ```mvn allure:serve``` [show report]
 
-or if you want to run in your own port 
-jetty:run -Djetty.port=<port>
+to change port include this option in mavn command  , -Dallure.port=YourPort like 
+
+```mvn -Dallure.port=9000 allure:serve```
 
 Then from browser , if you goto http://localhost:9000 you can see the report. 
