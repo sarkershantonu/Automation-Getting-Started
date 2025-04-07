@@ -1,5 +1,6 @@
 package org.automation.unitTests.parameter;
 
+import io.qameta.allure.Param;
 import org.automation.core.TestingCalculator;
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,14 +18,14 @@ import java.util.Collection;
  */
 @RunWith(Parameterized.class)
 public class TestWithParameters_constructor extends TestingCalculator{
-	@ru.yandex.qatools.allure.annotations.Parameter("Expected")
+
 	private int expected;
-	@ru.yandex.qatools.allure.annotations.Parameter("First")
+
 	private int first;
-	@ru.yandex.qatools.allure.annotations.Parameter("Second")
+
 	private int second;
 
-	public TestWithParameters_constructor(int expecte, int f, int s) {
+	public TestWithParameters_constructor(@Param int expecte, @Param int f, @Param int s) {
 		this.expected = expecte;
 		this.first = f;
 		this.second = s;
