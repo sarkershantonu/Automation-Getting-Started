@@ -10,3 +10,4 @@ bin/
 obj/
 Images
 logs
+.allure

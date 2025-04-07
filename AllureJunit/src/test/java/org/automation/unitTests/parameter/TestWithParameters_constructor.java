@@ -25,10 +25,10 @@ public class TestWithParameters_constructor extends TestingCalculator{
 
 	private int second;
 
-	public TestWithParameters_constructor(@Param int expecte, @Param int f, @Param int s) {
-		this.expected = expecte;
-		this.first = f;
-		this.second = s;
+	public TestWithParameters_constructor(@Param("expect") int expect, @Param int first, @Param int second) {
+		this.expected = expect;
+		this.first = first;
+		this.second = second;
 	}
 
 	@Parameterized.Parameters(name = "Test : {index} : add({1}+{2})= Expecting {0}")
