@@ -25,7 +25,7 @@ import java.util.Collection;
 @RunWith(Parameterized.class)
 public class TestWithParameters extends TestingCalculator{
 
-	@ru.yandex.qatools.allure.annotations.Parameter("Expected")
+	@Parameter("Expected")
 	@Parameter(value=0)
 	public int expected;
 
