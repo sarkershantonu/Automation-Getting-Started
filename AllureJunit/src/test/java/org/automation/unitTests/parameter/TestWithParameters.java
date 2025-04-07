@@ -39,11 +39,6 @@ public class TestWithParameters extends TestingCalculator {
 
     @Test
     public void testAddWithParameters() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         Assert.assertEquals(expected, aCalculator.add(first, second), 0.01);
     }
 
