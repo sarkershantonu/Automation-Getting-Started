@@ -1,22 +1,24 @@
 package org.automation.unitTests;
 
+import io.qameta.allure.Stories;
+import io.qameta.allure.Story;
+import org.automation.core.TestCalculatorBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Stories;
 
 /**
  * Created by shantonu on 9/11/16.
  */
-@Stories(value = {"Class Story : An user should be able to calculate with two numbers",
-        "Class Story : An user should be able to add & divide"})
-public class TestWithStories extends TestingCalculator {
+@Stories({@Story("Class Story : An user should be able to calculate with two numbers"),
+        @Story("Class Story : An user should be able to add & divide")})
+public class TestWithStories extends TestCalculatorBase {
     @Test
-    @Stories(value = "Method Story : An user should be able to add two numbers")
+    @Story(value = "Method Story : An user should be able to add two numbers")
     public void testAddition() {
         Assert.assertEquals(25.0, aCalculator.add(10.0, 15.0), 0.01);
     }
     @Test
-    @Stories("Method Story : An user should be able to divide two numbers ")
+    @Story("Method Story : An user should be able to divide two numbers ")
     public void testDiv(){
         Assert.assertEquals(5.0, aCalculator.div(250.0,50.0), 0.01);
     }
