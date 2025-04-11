@@ -1,15 +1,17 @@
 package org.automation.unitTests;
 
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import org.automation.core.TestCalculatorBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Severity;
-import ru.yandex.qatools.allure.model.SeverityLevel;
+
 
 /**
  * Created by shantonu on 9/11/16.
  */
 
-public class TestWithSeverity extends TestingCalculator {
+public class TestWithSeverity extends TestCalculatorBase {
     @Test
     @Severity(value = SeverityLevel.CRITICAL)
     public void testAddition() {
