@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="TestCalculatorFullExample">
         <classes>
-            <class name="org.automation.TestCalculatorFullExample">
+            <class name="org.automation.TestCalculatorBaseFullExample">
                 <methods>
                     <include name="testAddition"/>
                     <include name="testSub"/>
@@ -11,7 +11,4 @@
             </class>
         </classes>
     </test>
-    <listeners>
-        <listener class-name="org.automation.testng.listeners.CombineTransFormListener"></listener>
-    </listeners>
 </suite>
