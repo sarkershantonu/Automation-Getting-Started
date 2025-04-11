@@ -1,14 +1,16 @@
 package org.automation.unitTests;
 
+import io.qameta.allure.Description;
+import org.automation.core.TestCalculatorBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Description;
+
 
 /**
  * Created by shantonu on 9/11/16.
  */
-@Description("Class Description : This will test calculator")
-public class TestWithDescription extends TestingCalculator {
+
+public class TestWithDescription extends TestCalculatorBase {
     @Test
     @Description("Method Description : This will test addidtion")
     public void testAddition() {
