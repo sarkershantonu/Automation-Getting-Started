@@ -1,19 +1,18 @@
-package org.automation.unitTests;
+package org.automation.core;
 
 
 
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 import org.automation.Calculator;
 import org.automation.util.ScreenShot;
 import org.testng.annotations.BeforeClass;
-import ru.yandex.qatools.allure.annotations.Attachment;
-import ru.yandex.qatools.allure.annotations.Step;
-
 
 /**
  * Created by shantonu on 9/10/16.
  */
 
-public abstract class TestingCalculator {
+public abstract class TestCalculatorBase {
     protected Calculator aCalculator = null;
 
     @BeforeClass
