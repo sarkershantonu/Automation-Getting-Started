@@ -6,16 +6,16 @@ This repository contains
 3. This is maven surefire plugins base execution. if you want integration tests, use failsafe. 
 
 # Project Requirements
-1. JDK 8
-2. maven 3.3.9
+1. JDK 8+ (tested upto 21)
+2. maven 3.3.9 + 
 
-And in sider POM : 
+And inside POM : 
 
 3. Junit for test
 4. SLF4J/log4j for logging support of allure
 5. Allure Junit Adapter
-6. Allure support plugins & reporters 
-7. Jetty server to deploy report locally : pre-configured port 9000 
+6. Allure plugins for reporting + surefire listener  
+
 
 # How to start :
 1. Download this project
