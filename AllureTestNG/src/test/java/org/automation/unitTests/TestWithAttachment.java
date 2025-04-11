@@ -1,14 +1,14 @@
 package org.automation.unitTests;
 
-import org.automation.unitTests.TestingCalculator;
+import io.qameta.allure.Issue;
+import org.automation.core.TestCalculatorBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.*;
 
 /**
  * Created by shantonu on 9/11/16.
  */
-public class TestWithAttachment extends TestingCalculator {
+public class TestWithAttachment extends TestCalculatorBase {
     @Test
     public void testAdditionFail() {
         Assert.assertEquals(35.0, aCalculator.add(10.0, 15.0), 0.01);
