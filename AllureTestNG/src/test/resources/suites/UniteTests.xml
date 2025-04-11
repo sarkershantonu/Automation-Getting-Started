@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Only Unit Tests">
+    <test verbose="2" preserve-order="true" name="TestCalculatorFullExample">
+        <classes>
+            <class name="org.automation.unitTests.TestWithAttachment">
+            </class>
+            <class name="org.automation.unitTests.TestWithDescription">
+            </class>
+            <class name="org.automation.unitTests.TestWithFeatures">
+            </class>
+            <class name="org.automation.unitTests.TestWithIssue">
+            </class>
+            <class name="org.automation.unitTests.TestWithSeverity">
+            </class>
+            <class name="org.automation.unitTests.TestWithStories">
+            </class>
+            <class name="org.automation.unitTests.TestWithTestCaseId">
+            </class>
+        </classes>
+    </test>
+</suite>
