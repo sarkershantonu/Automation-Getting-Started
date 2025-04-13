@@ -13,7 +13,7 @@
         <aspectj.version>1.9.21</aspectj.version>
         <allure.version>2.29.0</allure.version>
         <junit.jupiter.version>5.12.2</junit.jupiter.version>
-<!--        <test.suite>org.automation.junit5.suites.FunctionalTestSuite.class</test.suite>-->
+        <test.suite>org.automation.junit5.suites.FunctionalTestSuite.class</test.suite>
         <slf4j.version>1.7.30</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -21,7 +21,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>${maven.compiler.source}</java.version>
         <junit.api.version>${junit.jupiter.version}</junit.api.version>
-        <allure.port>9099</allure.port>
+        <allure.port>9009</allure.port>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -63,6 +63,9 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <includes>
+                        <include>${test.suite}</include>
+                    </includes>
                 </configuration>
                 <dependencies>
                     <dependency>
