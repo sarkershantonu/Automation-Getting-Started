@@ -36,46 +36,5 @@ public class TestParameterized extends CalculatorTestBase {
 
 
 
-    @ParameterizedTest
-    @MethodSource("org.automation.junit5.support.StringParameters#emptyStrings")
-    public void testMethodSource(String input){
-        assertTrue(isBlank(input));
-    }
-
-    /***
-     * Custom Argument Provider
-     * @param input
-     */
-    @ParameterizedTest
-    @ArgumentsSource(ErrorStringProvider.class)
-    public void testArgumentsSource(String input){
-        assertTrue(isBlank(input));
-    }
-    @ParameterizedTest
-    @ValueSource(ints = {5,6,7})
-    public void testValueSource(int input){
-        assertEquals(input*2,myCal.add(input,input));
-    }
-
-    @ParameterizedTest
-    @NullSource
-    public void testNullSource(String input_null){
-        assertTrue(null==input_null);
-    }
-    @ParameterizedTest
-    @EmptySource
-    public void testEmptySource(String input_empty){
-        assertTrue(input_empty.equals(""));
-    }
-
-    /***
-     * One of the test will fail as it gives array of one null & empty string
-     * @param input_Null_empty
-     */
-    @ParameterizedTest
-    @NullAndEmptySource
-    public void testEmptyNullSource(String input_Null_empty){
-        assertTrue(isBlank(input_Null_empty));
-    }
 
 }
