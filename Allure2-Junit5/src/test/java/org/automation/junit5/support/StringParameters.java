@@ -1,4 +1,4 @@
-package org.automation.junit5.tests.parameterized.support;
+package org.automation.junit5.support;
 
 import java.util.stream.Stream;
 

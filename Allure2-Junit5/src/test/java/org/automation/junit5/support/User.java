@@ -1,4 +1,4 @@
-package org.automation.junit5.tests.parameterized.support;
+package org.automation.junit5.support;
 
 /**
  * Created by shantonu on 4/3/2021

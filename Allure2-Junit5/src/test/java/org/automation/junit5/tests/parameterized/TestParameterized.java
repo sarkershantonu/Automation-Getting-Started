@@ -5,8 +5,8 @@ import org.automation.junit5.core.CalculatorTestBase;
 import static org.automation.junit5.core.StringUtil.isBlank;
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.automation.junit5.tests.parameterized.support.ErrorStringProvider;
-import org.automation.junit5.tests.parameterized.support.VariableStream;
+import org.automation.junit5.support.ErrorStringProvider;
+import org.automation.junit5.support.VariableStream;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -37,7 +37,7 @@ public class TestParameterized extends CalculatorTestBase {
 
 
     @ParameterizedTest
-    @MethodSource("org.automation.junit5.tests.parameterized.support.StringParameters#emptyStrings")
+    @MethodSource("org.automation.junit5.support.StringParameters#emptyStrings")
     public void testMethodSource(String input){
         assertTrue(isBlank(input));
     }
