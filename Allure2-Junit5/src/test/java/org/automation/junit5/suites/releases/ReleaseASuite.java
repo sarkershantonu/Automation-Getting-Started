@@ -7,6 +7,6 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 @IncludeTags({"CalT","CalT2"})
-@SelectPackages("org.automation.junit5.tests")
+@SelectPackages("org.automation.junit5.tests.extentions")
 public class ReleaseASuite {
 }
