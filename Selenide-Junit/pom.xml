@@ -8,7 +8,7 @@
     <artifactId>selenide-junit</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <selenide.version>7.5.1</selenide.version>
+        <selenide.version>7.8.1</selenide.version>
         <slf4j.version>1.7.30</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -22,7 +22,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.11.3</version>
+            <version>5.12.2</version>
         </dependency>
        <!-- <dependency>
             <groupId>junit</groupId>
@@ -55,11 +55,5 @@
         <resources>
             <resource><directory>./properties/default/</directory></resource>
         </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-            </plugin>
-        </plugins>
     </build>
 </project>
