@@ -7,6 +7,6 @@ import org.junit.runner.RunWith;
 
 @RunWith(JUnitPlatform.class)
 @IncludeTags({"releaseB"})
-@SelectPackages("org.automation.junit5.tests")
+@SelectPackages("org.automation.junit5.tests.orders")
 public class ReleaseBSuite {
 }
