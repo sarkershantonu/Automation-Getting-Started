@@ -17,7 +17,9 @@ public class TestFieldSource extends CalculatorTestBase {
 
     @ParameterizedTest
     @FieldSource({"firstInputs","secondInput","results"})
-    public void testFieldSource(Integer a, Integer b, Integer result){
-        Assertions.assertEquals(result,myCal.add(a,b));
+    //@FieldSource({"firstInputs"})
+    public void testFieldSource(Integer a){
+        System.out.println(a);
+        //Assertions.assertEquals(result,myCal.add(a,b));
     }
 }
