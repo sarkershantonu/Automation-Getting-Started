@@ -12,22 +12,21 @@ public class TestCustomValueSource extends CalculatorTestBase {
     @MyStringArraySource
     public void testStateNamesILived(String names){
         String operator = getOperator(names);
-        System.out.println("RESULT >> "+getResult(names));
+        int result = 0;
         switch (operator){
             case "+" :
-                Assertions.assertEquals(getResult(names),myCal.add(getA(names,"+"),getB(names,"+"))); break;
+                result = myCal.add(getA(names,"+"),getB(names,"+")); break;
             case "/" :
-                Assertions.assertEquals(getResult(names),myCal.div(getA(names,"/"),getB(names,"/"))); break;
+                result = myCal.div(getA(names,"/"),getB(names,"/")); break;
             case "*" :
-                Assertions.assertEquals(getResult(names),myCal.mul(getA(names,"*"),getB(names,"*"))); break;
+                result = myCal.mul(getA(names,"*"),getB(names,"*")); break;
             case "-" :
-                Assertions.assertEquals(getResult(names),myCal.sub(getA(names,"-"),getB(names,"-"))); break;
+                result = myCal.sub(getA(names,"-"),getB(names,"-")); break;
             case "%" :
-                Assertions.assertEquals(getResult(names),myCal.mod(getA(names,"%"),getB(names,"%"))); break;
+                result = myCal.mod(getA(names,"%"),getB(names,"%")); break;
             default: fail();break;
         }
-
-
+        Assertions.assertEquals(result, getResult(names));
     }
     private int getA(String name, String operator){
         return Integer.valueOf(name.substring(0,name.indexOf(operator))).intValue();
