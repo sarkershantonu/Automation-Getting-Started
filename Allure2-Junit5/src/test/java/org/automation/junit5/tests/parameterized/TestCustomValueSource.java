@@ -2,43 +2,56 @@ package org.automation.junit5.tests.parameterized;
 
 import org.automation.junit5.core.CalculatorTestBase;
 import org.automation.junit5.support.MyStringArraySource;
-import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class TestCustomValueSource extends CalculatorTestBase {
     @ParameterizedTest
     @MyStringArraySource
     public void testStateNamesILived(String names){
-        System.out.println(getResult(names));
+        String operator = getOperator(names);
+        System.out.println("RESULT >> "+getResult(names));
+        switch (operator){
+            case "+" :
+                Assertions.assertEquals(getResult(names),myCal.add(getA(names,"+"),getB(names,"+"))); break;
+            case "/" :
+                Assertions.assertEquals(getResult(names),myCal.div(getA(names,"/"),getB(names,"/"))); break;
+            case "*" :
+                Assertions.assertEquals(getResult(names),myCal.mul(getA(names,"*"),getB(names,"*"))); break;
+            case "-" :
+                Assertions.assertEquals(getResult(names),myCal.sub(getA(names,"-"),getB(names,"-"))); break;
+            case "%" :
+                Assertions.assertEquals(getResult(names),myCal.mod(getA(names,"%"),getB(names,"%"))); break;
+            default: fail();break;
+        }
+
 
     }
-
-    private int getA(String name){
-
+    private int getA(String name, String operator){
+        return Integer.valueOf(name.substring(0,name.indexOf(operator))).intValue();
     }
-    private int getA(String name){
-        return Integer.valueOf(name.substring(name.indexOf("="))).intValue();
+    private int getB(String name, String operator){
+        return Integer.valueOf(name.substring(name.indexOf(operator)+1,name.indexOf("="))).intValue();
     }
     private int getResult(String name){
         return Integer.valueOf(name.substring(name.indexOf("=")+1)).intValue();
     }
-    private int getOperatorAt(String name){
-        Pattern p = Pattern.compile("[+\\-\\*\\/\\%]");
-        Matcher matcher = p.matcher(name);
-        while (matcher.find()){
-            return name.
-        }
+    private String getOperator(final String name){
+        if(name.indexOf("+")>0){
+            return "+";
+        } else if (name.indexOf("-")>0) {
+            return "-";
+        }else if (name.indexOf("*")>0) {
+            return "*";
+        }else if (name.indexOf("/")>0) {
+            return "/";
+        }else if (name.indexOf("%")>0) {
+            return "%";
+        }else
+            return "";
     }
 
-    private int getOperator(String name){
-        int result = name.indexOf("+");;
-        do{
-            result = name.indexOf("");
-        }while (result==-1);
 
-       return result;
-    }
 }
