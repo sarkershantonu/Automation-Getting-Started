@@ -14,9 +14,12 @@ public class Calculator {
     }
     @Step
     public int div(int a, int b) {
-        return a % b;
+        return a / b;
     }
-
+    @Step
+    public int mul(int a, int b) {
+        return a * b;
+    }
     @Step
     public int add(int a, int b) {
         return a + b;
@@ -60,6 +63,22 @@ public class Calculator {
             }
             return sb.toString();
         }
+    }
+    @Step
+    public double sub(double a, double b) {
+        return a - b;
+    }
+    @Step
+    public double mod(double a, double b) {
+        return a % b;
+    }
+    @Step
+    public double div(double a, double b) {
+        return a % b;
+    }
+    @Step
+    public double mul(double a, double b) {
+        return a * b;
     }
 
 }
