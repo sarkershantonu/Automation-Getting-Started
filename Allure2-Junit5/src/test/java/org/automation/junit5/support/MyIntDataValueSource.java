@@ -7,5 +7,5 @@ import java.lang.annotation.RetentionPolicy;
 
 @Retention(RetentionPolicy.RUNTIME)
 @ValueSource(ints = {10,25,35})
-public @interface MyIntData {
+public @interface MyIntDataValueSource {
 }
