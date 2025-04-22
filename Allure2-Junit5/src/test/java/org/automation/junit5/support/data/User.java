@@ -1,4 +1,4 @@
-package org.automation.junit5.support;
+package org.automation.junit5.support.data;
 
 /**
  * Created by shantonu on 4/3/2021
