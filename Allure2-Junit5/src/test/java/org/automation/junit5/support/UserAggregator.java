@@ -1,5 +1,6 @@
 package org.automation.junit5.support;
 
+import org.automation.junit5.support.data.User;
 import org.junit.jupiter.api.extension.ParameterContext;
 import org.junit.jupiter.params.aggregator.ArgumentsAccessor;
 import org.junit.jupiter.params.aggregator.ArgumentsAggregationException;
