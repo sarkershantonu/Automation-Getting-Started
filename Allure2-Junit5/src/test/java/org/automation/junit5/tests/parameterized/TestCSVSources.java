@@ -3,7 +3,7 @@ package org.automation.junit5.tests.parameterized;
 import org.automation.junit5.core.CalculatorTestBase;
 import org.automation.junit5.support.DateConverterWithPipe;
 import org.automation.junit5.support.DateConverterWithSlash;
-import org.automation.junit5.support.User;
+import org.automation.junit5.support.data.User;
 import org.automation.junit5.support.UserAggregator;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.aggregator.AggregateWith;
