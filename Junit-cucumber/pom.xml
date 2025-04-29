@@ -11,7 +11,7 @@
     <properties>
         <cucumber.version>1.2.4</cucumber.version>
         <selenium.version>3.0.1</selenium.version>
-
+        <junit4.version>4.13.2</junit4.version>
     </properties>
     <dependencies>
         <dependency>
@@ -45,7 +45,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.13.1</version>
+            <version>${junit4.version}</version>
         </dependency>
         <dependency>
             <groupId>ru.yandex.qatools.ashot</groupId>
