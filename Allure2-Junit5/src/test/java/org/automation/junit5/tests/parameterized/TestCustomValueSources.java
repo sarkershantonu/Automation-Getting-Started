@@ -52,5 +52,4 @@ public class TestCustomValueSources {
         System.out.println(input.getDeclaredFields()[0]);//first field , usually ID
     }
 
-
 }
