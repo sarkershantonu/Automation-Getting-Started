@@ -1,8 +1,9 @@
-package org.automation;
+package org.automation.tests.opencart;
 
 
 
 import cucumber.api.java.en.*;
+import org.automation.Browser;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.BeforeClass;
