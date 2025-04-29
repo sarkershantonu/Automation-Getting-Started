@@ -1,1 +1,1 @@
-mvnw site io.qameta.allure:allure-maven:report io.qameta.allure:allure-maven:serve
+./mvnw site io.qameta.allure:allure-maven:report io.qameta.allure:allure-maven:serve
