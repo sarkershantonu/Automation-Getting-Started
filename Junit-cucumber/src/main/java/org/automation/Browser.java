@@ -1,11 +1,12 @@
 package org.automation;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -44,51 +45,21 @@ public class Browser {
 
     private Browser() {
     }
-
-    private static WebDriver getABrowser(String nameOfBrowser) {
-
-       // System.out.println("OS>>>" + os);
-        if ("firefox".equals(nameOfBrowser)) {
-            //running old version(46) firefox, download link => https://ftp.mozilla.org/pub/firefox/releases/46.0/linux-x86_64-EME-free/en-US/
-            if (os.contains("Windows")) {
-                System.setProperty("webdriver.firefox.bin", firefoxPathWIN);
-                //System.setProperty("webdriver.firefox.marionette",firefoxGekoDriverPathWIN);
-                // if not working
-                System.setProperty("webdriver.gecko.driver", firefoxGekoDriverPathWIN);
-            } else {
-                System.setProperty("webdriver.firefox.bin",firefoxPathLINUX);
+    private static WebDriver getABrowser(String nameOfBrowser){
+        switch (nameOfBrowser){
+            case  "chrome" : {
+                WebDriverManager.chromedriver().setup();
+                return new ChromeDriver();
             }
-           // System.out.println("PROPERTY >>> " + System.getProperty("webdriver.firefox.bin"));
-            return new FirefoxDriver();
-        } else if ("opera".equals(nameOfBrowser)) {
-            return new OperaDriver();
-        } else if ("ie".equals(nameOfBrowser)) {
-            File iedriver = new File(IEServerPath);//todo for your PC
-            System.setProperty("webdriver.ie.driver", iedriver.getAbsolutePath());
-            //-Dwebdriver.ie.driver=physicall
-            return new InternetExplorerDriver();
-        } else {
-            ChromeDriverService service;
-            if (os.contains("Windows")) {
-                System.setProperty("webdriver.chrome.driver", chromeDriverPathWIN);
-                service = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(chromeDriverPathWIN))
-                        .usingAnyFreePort()
-                        .build();
-            } else {
-                System.setProperty("webdriver.chrome.driver", chromeDriverPathLINUX);
-                service = new ChromeDriverService.Builder()
-                        .usingDriverExecutable(new File(chromeDriverPathLINUX))
-                        .usingAnyFreePort()
-                        .build();
+            case  "firefox" : {
+                WebDriverManager.firefoxdriver().setup();
+                return new ChromeDriver();
             }
-            try {
-                service.start();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            // return new ChromeDriver(getLocalChromeOptions()); // => this is chrome driver with custom options
-            return new RemoteWebDriver(service.getUrl(), DesiredCapabilities.chrome());
+            case  "safari" : {
+                WebDriverManager.safaridriver().setup();
+                return new ChromeDriver();
+            } default: WebDriverManager.chromedriver().setup();
+                return new ChromeDriver();
         }
     }
 
