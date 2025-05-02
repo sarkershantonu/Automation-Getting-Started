@@ -8,7 +8,7 @@
     <artifactId>selenide-junit</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <selenide.version>7.8.1</selenide.version>
+        <selenide.version>7.9.1</selenide.version>
         <slf4j.version>1.7.30</slf4j.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -44,12 +44,7 @@
             <artifactId>slf4j-api</artifactId>
             <version>${slf4j.version}</version>
         </dependency>
-       <!-- <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>phantomjsdriver</artifactId>
-            <version>1.4.4</version>
-        </dependency>
--->
+
     </dependencies>
     <build>
         <resources>
