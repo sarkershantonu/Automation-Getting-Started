@@ -2,7 +2,7 @@ package org.automation.junit;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.junit.runner.Description;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
@@ -15,7 +15,7 @@ import java.net.UnknownHostException;
  * Created by shantonu on 7/12/17.
  */
 public class HtmlReportListner extends RunListener {
-    private ExtentHtmlReporter htmlReporter;
+    private ExtentSparkReporter htmlReporter;
     private ExtentTest testLogger;
     private ExtentReports report;
     @Override
@@ -65,7 +65,7 @@ public class HtmlReportListner extends RunListener {
 
     private void init(){
         report = new ExtentReports();
-        htmlReporter = new ExtentHtmlReporter("./Reports/index.html");
+        htmlReporter = new ExtentSparkReporter("./Reports/index.html");
         report.attachReporter(htmlReporter);
         try {
             report.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostAddress());
