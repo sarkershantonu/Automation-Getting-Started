@@ -1,6 +1,7 @@
-package org.automation.junit;
+package org.automation.tests;
 
 import org.automation.calculator.Calculator;
+import org.automation.junit.HTMLReportWatcher;
 import org.junit.*;
 import org.junit.rules.TestRule;
 
