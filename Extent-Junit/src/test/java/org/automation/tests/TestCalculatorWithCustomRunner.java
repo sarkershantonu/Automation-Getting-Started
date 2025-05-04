@@ -1,6 +1,7 @@
-package org.automation.junit;
+package org.automation.tests;
 
 import org.automation.calculator.Calculator;
+import org.automation.junit.HtmlReportRunner;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Ignore;
