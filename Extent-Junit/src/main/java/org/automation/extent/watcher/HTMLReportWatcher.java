@@ -1,4 +1,4 @@
-package org.automation.junit;
+package org.automation.extent.watcher;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -61,7 +61,7 @@ public class HTMLReportWatcher extends TestWatcher{
 
     private void init(){
         report = new ExtentReports();
-        htmlReporter = new ExtentSparkReporter("./Reports/"+System.currentTimeMillis()+"_index.html");
+        htmlReporter = new ExtentSparkReporter("./Reports/watcher/"+System.currentTimeMillis()+"_index.html");
         report.attachReporter(htmlReporter);
         try {
             report.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostAddress());

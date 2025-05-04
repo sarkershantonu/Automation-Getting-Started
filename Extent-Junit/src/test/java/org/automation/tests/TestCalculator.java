@@ -1,7 +1,7 @@
 package org.automation.tests;
 
 import org.automation.calculator.Calculator;
-import org.automation.junit.HTMLReportWatcher;
+import org.automation.extent.watcher.HTMLReportWatcher;
 import org.junit.*;
 import org.junit.rules.TestRule;
 

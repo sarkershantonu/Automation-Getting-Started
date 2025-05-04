@@ -1,4 +1,4 @@
-package org.automation.junit;
+package org.automation.extent.listener;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -65,7 +65,7 @@ public class HtmlReportListner extends RunListener {
 
     private void init(){
         report = new ExtentReports();
-        htmlReporter = new ExtentSparkReporter("./Reports/index.html");
+        htmlReporter = new ExtentSparkReporter("./Reports/listeners/"+System.currentTimeMillis()+"index.html");
         report.attachReporter(htmlReporter);
         try {
             report.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostAddress());
