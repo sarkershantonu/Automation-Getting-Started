@@ -2,7 +2,7 @@ package org.automation.junit;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import org.junit.AssumptionViolatedException;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
@@ -16,7 +16,7 @@ import java.net.UnknownHostException;
  * this is a junit test rule, so applied for each and every test
  */
 public class HTMLReportWatcher extends TestWatcher{
-    private ExtentHtmlReporter htmlReporter;
+    private ExtentSparkReporter htmlReporter;
     private ExtentTest testLogger;
     private ExtentReports report;
 
@@ -61,7 +61,7 @@ public class HTMLReportWatcher extends TestWatcher{
 
     private void init(){
         report = new ExtentReports();
-        htmlReporter = new ExtentHtmlReporter("./Reports/"+System.currentTimeMillis()+"_index.html");
+        htmlReporter = new ExtentSparkReporter("./Reports/"+System.currentTimeMillis()+"_index.html");
         report.attachReporter(htmlReporter);
         try {
             report.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostAddress());
