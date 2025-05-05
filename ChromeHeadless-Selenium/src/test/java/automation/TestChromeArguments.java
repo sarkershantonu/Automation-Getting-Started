@@ -1,7 +1,6 @@
 package automation;
 
-import org.automation.Browser;
-import org.automation.chrome.ChromeBrowser;
+import org.automation.ChromeManager;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,12 +21,12 @@ public class TestChromeArguments {
 
     @Test
     public void testChrome() {
-        driver = Browser.getBrowser();
+        driver = ChromeManager.getBrowser();
         driver.get("https://www.linkedin.com");
     }
 
     @Test public void testChromeHeadless() throws InterruptedException {
-        driver = Browser.getBrowser();
+        driver = ChromeManager.getBrowser();
         driver.get("https://www.facebook.com");
         Assert.assertEquals("Facebook - Log In or Sign Up",driver.getTitle());
 
