@@ -1,7 +1,6 @@
 package org.automation;
 
-import org.automation.chrome.ChromeBrowser;
-import org.omg.CORBA.TIMEOUT;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,12 +13,12 @@ import java.util.concurrent.TimeUnit;
 
 import static org.automation.chrome.ChromeBrowser.*;
 
-public class Browser {
+public class ChromeManager {
 
     private static WebDriver driver;
     private static void initChrome(){
+        WebDriverManager.chromedriver().setup();
         headLessChrome();
-
     }
     private static void initDefaultChrome(){
         driver = new ChromeDriver();
