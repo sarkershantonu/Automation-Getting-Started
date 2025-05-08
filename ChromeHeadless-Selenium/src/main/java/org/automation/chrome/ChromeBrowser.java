@@ -24,9 +24,9 @@ public class ChromeBrowser {
         return options;
     }
 
+    // changed => https://www.selenium.dev/blog/2023/headless-is-going-away/#what-are-the-two-headless-modes
     public static ChromeOptions setHeadless(ChromeOptions options) {
-        options.setHeadless(true);
-
+        options.addArguments("--headless=new");
         return options;
     }
 
@@ -65,13 +65,7 @@ public class ChromeBrowser {
 
         return options;
     }
-     public static DesiredCapabilities getDesiredCapabilities() {
-	     DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-          	ChromeOptions options = new ChromeOptions();
-         	options.addArguments("--headless");
-		capabilities.setCapability(ChromeOptions.CAPABILITY, options);         
-          return capabilities;
-     }
+
     public static ChromeOptions getUIOptions() {
         ChromeOptions options = new ChromeOptions();
         options = setBinary(options, System.getProperty("linux.chrome.bin"));
@@ -90,17 +84,6 @@ public class ChromeBrowser {
         return options;
     }
 
-    public static DesiredCapabilities getChromeCapabilities() {
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-
-        ChromeOptions options = getHeadlessOptions();
-
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-        capabilities.setPlatform(Platform.LINUX);
-
-        return capabilities;
-    }
 
     public static ChromeOptions setExperimentOptions(ChromeOptions options) {
         options.setExperimentalOption("", "");
