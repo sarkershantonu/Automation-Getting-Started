@@ -24,6 +24,7 @@ public interface ChromeArgConstants {
     String PRINT_DOM = "dump-dom";
 
     String PRINT_PDF = "print-to-pdf";
+    String ARG_PARAM = "--";
 
     String[] DEBUG_ARG = {HEADLESS, DEBUG};
     String accept_Resource_Provider = "accept-resource-provider";
