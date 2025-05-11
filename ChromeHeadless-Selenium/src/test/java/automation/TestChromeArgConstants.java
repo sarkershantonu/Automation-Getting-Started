@@ -12,9 +12,9 @@ public class TestChromeArgConstants {
     WebDriver driver;
 
     @Before public void init(){
-        System.setProperty("webdriver.chrome.driver","/home/shantonu/env/chromedriver");
+/*        System.setProperty("webdriver.chrome.driver","/home/shantonu/env/chromedriver");
         System.setProperty("chrome.log.path","./logs/chrome.log");
-        System.setProperty("linux.chrome.bin", "/usr/bin/google-chrome");
+        System.setProperty("linux.chrome.bin", "/usr/bin/google-chrome");*/
         System.setProperty("chrome.verbose", "true");
 
     }

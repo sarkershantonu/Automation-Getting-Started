@@ -54,7 +54,7 @@ public class ChromeBrowser {
 
     public static ChromeOptions getHeadlessOptions() {
         ChromeOptions options = new ChromeOptions();
-        options = setBinary(options, System.getProperty("linux.chrome.bin"));
+        //options = setBinary(options, System.getProperty("linux.chrome.bin"));
         options = setHeadless(options);
         options = acceptsCertificates(options);
         options.addArguments(stable_release_mode);
