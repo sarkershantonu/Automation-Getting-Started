@@ -39,6 +39,8 @@ public class ChromeManager {
         driver = new ChromeDriver(service, options);
     }
     private static void initHeadLessChromeServiceWithLog(){
+        WebDriverManager.chromedriver().setup();
+
         ChromeOptions options = getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
@@ -49,6 +51,7 @@ public class ChromeManager {
         driver = new ChromeDriver(service, options);
     }
     private static void initChromeServiceWithEnvParameter(Map<String,String> env){
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = getHeadlessOptions();
         final ChromeDriverService service = new ChromeDriverService.Builder().
                 usingAnyFreePort().
