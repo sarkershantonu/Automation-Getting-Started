@@ -17,10 +17,10 @@ public class ChromeManager {
 
     private static WebDriver driver;
     private static void initChrome(){
-
         headLessChrome();
     }
     private static void initDefaultChrome(){
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
     private static void headLessChrome(){
@@ -28,6 +28,7 @@ public class ChromeManager {
         driver = new ChromeDriver(getHeadlessOptions());
     }
     private static void uiChrome(){
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(getUIOptions());
     }
     private static void initHeadlessChromeAsService(){
@@ -75,5 +76,11 @@ public class ChromeManager {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.MINUTES);
         driver.manage().window().setSize(new Dimension(1366,768));
         driver.manage().deleteAllCookies();
+    }
+
+    public static void destroyBrowser(){
+        driver.close();
+        driver.quit();
+        driver = null;
     }
 }
