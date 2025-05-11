@@ -17,13 +17,14 @@ public class ChromeManager {
 
     private static WebDriver driver;
     private static void initChrome(){
-        WebDriverManager.chromedriver().setup();
+
         headLessChrome();
     }
     private static void initDefaultChrome(){
         driver = new ChromeDriver();
     }
     private static void headLessChrome(){
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(getHeadlessOptions());
     }
     private static void uiChrome(){
