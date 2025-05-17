@@ -2,8 +2,11 @@ package org.automation.testng;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import org.testng.*;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import org.testng.IConfigurationListener2;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
+import org.testng.ITestResult;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -14,12 +17,12 @@ import java.net.UnknownHostException;
 public class TestListnerForReporting implements ITestListener, IConfigurationListener2 {
 
 
-    private ExtentHtmlReporter htmlReporter;
+    private ExtentSparkReporter htmlReporter;
     private ExtentTest testLogger;
     private ExtentReports report;
     public TestListnerForReporting(){
         report = new ExtentReports();
-        htmlReporter = new ExtentHtmlReporter("./Reports/index.html");
+        htmlReporter = new ExtentSparkReporter("./Reports/index.html");
         report.attachReporter(htmlReporter);
         try {
             report.setSystemInfo("Host Name", InetAddress.getLocalHost().getHostAddress());
