@@ -12,8 +12,8 @@ http://extentreports.com/community/
 
 # Run 
 1. You can run with you IDE runner (eclipse/intelliJ)
-2. With maven : mvn clean test
-
+2. With maven : ```mvn clean test```
+3. [Report Location is => /Reports/index.html](./Reports/index.html)
 # Running in IDE 
 ![IDE Running ](run_ide.jpg)
 
