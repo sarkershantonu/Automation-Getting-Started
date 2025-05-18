@@ -1,6 +1,7 @@
 package org.automation;
 
-import cucumber.api.java.en.*;
+
+import io.cucumber.java.en.*;
 import org.junit.Assert;
 
 /**
