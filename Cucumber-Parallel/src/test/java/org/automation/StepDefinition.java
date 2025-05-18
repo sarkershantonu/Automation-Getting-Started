@@ -6,7 +6,7 @@ import org.junit.Assert;
 /**
  * Created by shantonu on 5/11/16.
  */
-public class Stepdefinations {
+public class StepDefinition {
 
     private Calculator calculator;
     private double result;
