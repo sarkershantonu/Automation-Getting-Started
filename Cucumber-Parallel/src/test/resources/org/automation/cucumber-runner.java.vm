@@ -7,14 +7,13 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
 
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 
 import java.io.File;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        strict = $strict,
         features = {"$featureFile"},
         plugin = #stringArray($plugins),
         monochrome = $monochrome,
