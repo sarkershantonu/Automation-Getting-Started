@@ -1,0 +1,37 @@
+#parse("/array.java.vm")
+#if ($packageName)
+package $packageName;
+
+#end
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.runner.RunWith;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+
+import java.io.File;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        strict = $strict,
+        features = {"$featureFile"},
+        plugin = #stringArray($plugins),
+        monochrome = $monochrome,
+#if(!$featureFile.contains(".feature:") && $tags)
+        tags = #stringArray($tags),
+#end
+        glue = #stringArray($glue))
+public class $className {
+
+    @BeforeClass
+    public static void beforeClass(){
+      //Do things
+    }
+
+    @AfterClass
+    public static void afterClass(){
+
+    }
+}
+This is a simple note for testing the IPAD with my blue tooth keyboard as 3rd device.
