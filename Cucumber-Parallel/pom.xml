@@ -12,6 +12,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <test.runner>org.automation.CucumberRunner.java</test.runner>
         <cucumber.version>7.22.1</cucumber.version>
+        <test.plugin.version>3.5.3</test.plugin.version>
         <featuresDirectory>src/test/resources/org/automation</featuresDirectory>
     </properties>
     <dependencies>
@@ -82,12 +83,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.22.0</version>
+                <version>${test.plugin.version}</version>
                 <dependencies>
                     <dependency>
                         <groupId>org.apache.maven.surefire</groupId>
                         <artifactId>surefire-junit47</artifactId>
-                        <version>2.22.0</version>
+                        <version>${test.plugin.version}</version>
                     </dependency>
                 </dependencies>
                 <executions>
