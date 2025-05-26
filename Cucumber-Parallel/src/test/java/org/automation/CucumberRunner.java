@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         plugin = {"pretty",
-                "html:target/cucumberReports/",
+                //"html:target/cucumberReports/",
                 "json:target/cucumberReports/cucumber.json" }
         , features = {"src/test/resources/org/automation"}
         , glue = {""})
