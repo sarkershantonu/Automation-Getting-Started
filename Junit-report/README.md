@@ -1,5 +1,6 @@
 # Simple Report Example for Junit (TODO)
 Junit Test Reports similar to cucumber pretty reports 
+This is default surefire report 
 
 # Target 
 Run & See junit reports
@@ -10,5 +11,4 @@ Run & See junit reports
 ```shell
 mvn clean test
 ```
-# Jenkins Config 
-https://github.com/jenkinsci/cucumber-reports-plugin/wiki/Detailed-Configuration
+
