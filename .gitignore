@@ -1,9 +1,12 @@
+.project
 *.iml
-*.idea
-*.classpath
-*.project
+.idea
+.classpath
 target/
-*.settings
+.settings/
 .class
 bin/
 obj/
+Images
+logs
+
