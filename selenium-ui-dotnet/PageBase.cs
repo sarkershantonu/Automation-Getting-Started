@@ -1,6 +1,6 @@
 namespace ConsoleApp1;
 
-public Class PageBase
+public class PageBase
 
 {
     
