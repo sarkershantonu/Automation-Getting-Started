@@ -1,6 +1,6 @@
 ﻿namespace Pages;
 
-public class PageBase
+public abstract class PageBase
 {
 
 }
