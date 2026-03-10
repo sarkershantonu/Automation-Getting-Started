@@ -1,0 +1,11 @@
+<Project>
+<ItemGroup>
+    <PackageReference Update="NUnit" Version="4.5.1" />
+    <PackageReference Update="Selenium.Support" Version="4.41.0" />
+    <PackageReference Update="Selenium.WebDriver" Version="4.41.0" />
+    <PackageReference Update="Selenium.WebDriver.ChromeDriver" Version="146.0.7680.6600-beta" />
+    <PackageReference Update="NUnit3TestAdapter" Version="6.1.0" />
+    <PackageReference Update="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Update="NUnit.Analyzers" Version="4.11.2"/>
+</ItemGroup>
+</Project>
