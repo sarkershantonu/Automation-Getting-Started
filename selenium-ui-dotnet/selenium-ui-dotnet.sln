@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common", "common\common.csproj", "{98F9A95B-277F-4A6C-8BD0-32564B52BCF5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common", "src\Test.Commons\common.csproj", "{98F9A95B-277F-4A6C-8BD0-32564B52BCF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pages", "Pages\Pages.csproj", "{0C8136D9-B5DE-434E-8808-56FE80A95820}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pages", "src\UI.Pages\Pages.csproj", "{0C8136D9-B5DE-434E-8808-56FE80A95820}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{D7DA8F62-40EE-4626-992D-357EF28316C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "src\UI.Tests\Tests.csproj", "{D7DA8F62-40EE-4626-992D-357EF28316C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "utils", "utils\utils.csproj", "{CE072A31-A11C-4949-BE35-F793D37ED5D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "utils", "src\Test.Utils\utils.csproj", "{CE072A31-A11C-4949-BE35-F793D37ED5D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "models", "models\models.csproj", "{BE54AA9A-8A4C-44F2-8110-473D10F1283A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "models", "src\UI.Models\models.csproj", "{BE54AA9A-8A4C-44F2-8110-473D10F1283A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
